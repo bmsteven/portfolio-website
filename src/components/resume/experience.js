@@ -21,7 +21,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section class="experience">
+    <section className="experience">
       <h2 className="experience-header tertiary-header">My Experience</h2>
       <div class="showcase">
         {experiences.map(experience => (
