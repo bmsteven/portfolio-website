@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaCheck } from "react-icons/all";
 
@@ -8,6 +8,9 @@ import projects from "../../data/projects";
 const Project = () => {
   let param = useParams();
   let obj = projects.find(o => o.slug === param.project);
+  useEffect(() => {
+    document.title = `${obj.name} - Benedict's Portfolio`;
+  }, []);
   return (
     <main className="projects-content project-content">
       {obj ? (

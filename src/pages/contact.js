@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import routes from "../data/routes";
 
@@ -10,6 +10,9 @@ import Nav from "../components/nav";
 import Footer from "../components/footer";
 
 const Contact = ({ ...rest }) => {
+  useEffect(() => {
+    document.title = "Contact me - Benedict's Portfolio ";
+  }, []);
   return (
     <div className="contact-page">
       <Nav {...rest} navProps="nav-header" routes={routes} />

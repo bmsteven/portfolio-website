@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 //components
@@ -11,6 +11,9 @@ import Typical from "react-typical";
 // }
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Benedict's Portfolio";
+  }, []);
   return (
     <div>
       <Header headerClass="home-header">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import projects from "../../data/projects";
@@ -23,6 +23,10 @@ const Projects = () => {
   };
 
   let displayProjects = projects.filter(o => o.category.includes(keyWord));
+
+  useEffect(() => {
+    document.title = "Project Collections - Benedict's Portfolio ";
+  }, []);
   return (
     <main className="projects-content">
       <div class="container">
@@ -55,7 +59,7 @@ const Projects = () => {
               {item.src.length > 0 && (
                 <>
                   <section className="project-image">
-                    <img src={item.src} alt={item.name} />}
+                    <img src={item.src} alt={item.name} />
                   </section>
                   <section className="project-info">
                     <div className="project-name">

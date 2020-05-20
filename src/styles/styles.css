@@ -14,6 +14,10 @@ a {
 ul {
   list-style: none;
 }
+
+label {
+  display: block;
+}
 .App {
   padding: 20px;
   min-height: 100vh;

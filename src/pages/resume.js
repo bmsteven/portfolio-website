@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import routes from "../data/routes";
 
@@ -11,6 +11,9 @@ import Nav from "../components/nav";
 import Footer from "../components/footer";
 
 const Resume = ({ ...rest }) => {
+  useEffect(() => {
+    document.title = "My Resume - Benedict's Portfolio ";
+  }, []);
   return (
     <div>
       <Nav {...rest} navProps="nav-header" routes={routes} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 //components
 import Header from "../components/header";
@@ -9,6 +9,9 @@ import Social from "../components/social";
 import Footer from "../components/footer";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About Me - Benedict's Portfolio ";
+  }, []);
   return (
     <div>
       <Header headerClass="about-header">
