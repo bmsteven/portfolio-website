@@ -1,19 +1,20 @@
 import React from "react";
 import { FaCalendarAlt } from "react-icons/all";
 
+import ResumeTemplate from "./resume";
+
 import education from "../../data/education";
 
 const Education = () => {
   return (
-    <section className="education">
-      <h2 className="education-header tertiary-header">Education Background</h2>
-      <div class="showcase">
+    <ResumeTemplate classname="education" title="Education Background">
+      <div className="showcase">
         {education.map(item => (
           <article key={item.id}>
             <h2>{item.course}</h2>
             <div className="">
               <span>
-                <FaCalendarAlt class="icon" />
+                <FaCalendarAlt className="icon" />
               </span>
               <span>
                 {item.started} - {item.finished}
@@ -24,7 +25,7 @@ const Education = () => {
           </article>
         ))}
       </div>
-    </section>
+    </ResumeTemplate>
   );
 };
 

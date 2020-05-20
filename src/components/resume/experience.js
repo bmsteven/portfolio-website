@@ -1,5 +1,6 @@
 import React from "react";
 import { FaMedal, IoIosRocket, GiPaperWindmill } from "react-icons/all";
+import ResumeTemplate from "./resume";
 
 const experiences = [
   {
@@ -21,9 +22,8 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="experience">
-      <h2 className="experience-header tertiary-header">My Experience</h2>
-      <div class="showcase">
+    <ResumeTemplate title="Experience" classname="experience">
+      <div className="showcase">
         {experiences.map(experience => (
           <article key={experience.id}>
             <span className="icon-container">{experience.icon}</span>
@@ -31,7 +31,7 @@ const Experience = () => {
           </article>
         ))}
       </div>
-    </section>
+    </ResumeTemplate>
   );
 };
 

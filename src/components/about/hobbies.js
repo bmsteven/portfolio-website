@@ -3,7 +3,7 @@ import {
   FaCode,
   BsMusicNoteBeamed,
   FaBaseballBall,
-  GrGamepad,
+  GiGamepad,
   FaBook,
   GiCycling,
   MdLocalMovies,
@@ -30,7 +30,7 @@ const hobbies = [
   {
     id: 4,
     title: "Video Games",
-    icon: <GrGamepad className="icon" />
+    icon: <GiGamepad className="icon" />
   },
   {
     id: 5,

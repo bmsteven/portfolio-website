@@ -76,7 +76,7 @@ const Project = () => {
           {obj.gallery.length > 0 && (
             <section className="gallery">
               <h2>Gallery</h2>
-              <div class="showcase">
+              <div className="showcase">
                 {obj.gallery.map((item, index) => (
                   <article key={index}>
                     <img src={item} alt={`${obj.name} gallery`} />

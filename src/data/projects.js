@@ -13,9 +13,9 @@ const projects = [
     source: "",
     category: ["Web", "Design", "All"],
     about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+      "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
     demo: "http://kodemunit.com",
-    tools: ["HTML", "CSS", "SASS", "React", "Redux", "Figma", "Firebase"],
+    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
     roles: ["UX/UI Designer", "Developer"],
     gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
   },
@@ -26,10 +26,9 @@ const projects = [
     src: ceeptz,
     source: "",
     category: ["Web", "Design", "All"],
-    about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+    about: "CEEPTz website with all information about CEEPTZ startup",
     demo: "http://ceeptz.netlify.app",
-    tools: ["HTML", "CSS", "SASS", "JavaScript", "Figma"],
+    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
     roles: ["UX/UI Designer", "Developer"],
     gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
   },
@@ -41,7 +40,7 @@ const projects = [
     source: "http://github.com/bmsteven/corona",
     category: ["Web"],
     about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+      "Corona Covid19 tracker special made for Tanzanians to provide necessary information on Corona Virus pandemic made in Swahili",
     demo: "http://covid19-tz.netlify.app",
     tools: ["HTML", "CSS", "SASS", "React"],
     roles: ["Frontend Developer"],
@@ -54,10 +53,9 @@ const projects = [
     src: kodemunit,
     source: "",
     category: ["Web", "Design", "All"],
-    about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+    about: "Agritech website with all information about kilimoshare startup",
     demo: "http://kilimoshare.netlify.app",
-    tools: ["HTML", "CSS", "SASS", "JavaScript", "Figma"],
+    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
     roles: ["UX/UI Designer", "Developer"],
     gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
   },
@@ -69,7 +67,7 @@ const projects = [
     source: "",
     category: ["Others", "All"],
     about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+      "First trial on designing graphics, If you like it I can make one for you",
     demo: "",
     tools: ["Figma"],
     roles: ["Graphic Designer"],
@@ -80,12 +78,12 @@ const projects = [
     name: "Jitangaze App",
     slug: "jitangaze",
     src: jitangaze,
-    source: "",
+    source:
+      "A platform where users can create account, upload their informations like their resume, contact info, projects and many more and share their portfolios to the world",
     category: ["Web", "Design", "All"],
-    about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+    about: "",
     demo: "http://jitangaze.netlify.app",
-    tools: ["HTML", "CSS", "SASS", "React", "Redux", "Figma", "Firebase"],
+    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
     roles: ["UX/UI Designer", "Frontend Developer", "Backend Developer"],
     gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
   },
@@ -96,10 +94,9 @@ const projects = [
     src: portfolio,
     source: "http://github.com/bmsteven/bm-dev",
     category: ["Web", "Design", "All"],
-    about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+    about: "My Personal Portfolio website which you are looking at right now",
     demo: "http://bm-dev.netlify.app",
-    tools: ["HTML", "CSS", "SASS", "React", "Redux", "Figma"],
+    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux"],
     roles: ["UX/UI Designer", "Developer"],
     gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
   },
@@ -110,8 +107,7 @@ const projects = [
     src: kodemunit,
     source: "",
     category: ["Design", "All"],
-    about:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+    about: "A simple design for showing the blogposts",
     demo: "",
     tools: ["Figma"],
     roles: ["UI Designer"],

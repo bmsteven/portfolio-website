@@ -6,6 +6,7 @@ import {
   DiGitBranch
 } from "react-icons/all";
 
+import ResumeTemplate from "./resume";
 import tools from "../../data/tools";
 
 const skills = [
@@ -28,9 +29,8 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section class="skills">
-      <h2 className="skills-header tertiary-header">My Skills</h2>
-      <div class="showcase">
+    <ResumeTemplate classname="skills" title="My Skills">
+      <div className="showcase">
         {skills.map(skill => (
           <article key={skill.id}>
             <span className="icon-container">{skill.icon}</span>
@@ -38,9 +38,9 @@ const Skills = () => {
           </article>
         ))}
       </div>
-      <div class="tools">
+      <div className="tools">
         <h2>Tools, languages and libraries</h2>
-        <div class="showcase">
+        <div className="showcase">
           {tools.map((tool, index) => (
             <article key={index}>
               <span className="icon-container" />
@@ -51,7 +51,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </section>
+    </ResumeTemplate>
   );
 };
 

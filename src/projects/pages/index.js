@@ -29,8 +29,8 @@ const Projects = () => {
   }, []);
   return (
     <main className="projects-content">
-      <div class="container">
-        <h2 class="">My Projects</h2>
+      <div className="container">
+        <h2 className="">My Projects</h2>
         <nav>
           <ul>
             <li onClick={setAll} className={keyWord === "All" ? "active" : ""}>
@@ -53,7 +53,7 @@ const Projects = () => {
             </li>
           </ul>
         </nav>
-        <div class="showcase">
+        <div className="showcase">
           {displayProjects.map(item => (
             <article key={item.id} className="project-container project">
               {item.src.length > 0 && (
@@ -65,7 +65,7 @@ const Projects = () => {
                     <div className="project-name">
                       <h2>{item.name}</h2>
                     </div>
-                    <div class="btns">
+                    <div className="btns">
                       <Link
                         to={`/portfolio/${item.slug}`}
                         className="btn btn-primary"

@@ -6,27 +6,26 @@ const services = [
     id: 1,
     title: "Web design",
     description:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+      "I provide the best and current trending UI/UX designs for the websites that suits the theme of the website",
     icon: <AiOutlineAntDesign className="icon" />
   },
   {
     id: 2,
     title: "Web development",
     description:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+      "I bring designs to life, I develop fast and accessible websites and webapps",
     icon: <FaCode className="icon" />
   },
   {
     id: 3,
     title: "Quick support",
     description:
-      "Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+      "I work with startups on how to improve their business/services by using tech solutions like e-marketing for free and I develop websites starting from free of cost depending on the complexity of work",
     icon: <RiQuestionLine className="icon" />
   }
 ];
 
 const Services = () => {
-  console.log(services[0].icon);
   return (
     <section className="services">
       <header className="header service-header primary-header">

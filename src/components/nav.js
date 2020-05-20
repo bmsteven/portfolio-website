@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-import { FaMoon, FaSun } from "react-icons/all";
+import { FaMoon, FaSun, RiMenu3Line, IoMdClose } from "react-icons/all";
 import { useDarkMode, useLightMode } from "../redux/actions";
 import logo from "../images/logo.png";
 import logoLight from "../images/logo-dark.png";
@@ -19,6 +19,16 @@ const Nav = ({
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
 
+  const [navOpen, setNavOpen] = useState(false);
+
+  const openMenu = () => {
+    setNavOpen(true);
+  };
+
+  const closeMenu = () => {
+    setNavOpen(false);
+  };
+
   return (
     <div className={`nav ${navProps}`}>
       <div className="logo">
@@ -26,14 +36,20 @@ const Nav = ({
           <img src={darkMode ? `${logo}` : `${logoLight}`} alt="bm dev logo" />
         </Link>
       </div>
-      <div className="burger">
-        <span />
+      <div className="burger open-menu" onClick={openMenu}>
+        <RiMenu3Line />
       </div>
-      <nav>
+      <nav className={navOpen ? "open" : ""}>
+        <div className="burger close-menu" onClick={closeMenu}>
+          <IoMdClose />
+        </div>
         <ul>
           {routes.map((prop, key) => {
             return (
-              <li key={key}>
+              <li
+                key={key}
+                className={navOpen ? `navlink navlink-${prop.id}` : ""}
+              >
                 <Link
                   to={prop.path}
                   className={
