@@ -1,0 +1,128 @@
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body 
+  text-align: center
+
+a 
+  color: rgb(24, 87, 168)
+  margin-right: 10px
+  text-decoration: none
+
+
+ul 
+  list-style: none
+
+
+label 
+  display: block
+
+.App 
+  //padding: 20px 
+  min-height: 100vh
+  min-width: 100vw
+  color: black
+  background: #ffffff
+  transition: 0.4s
+
+.App.darkmode 
+  color: #ffffff
+  background: #000
+  transition: 0.4s
+
+.darkmode a 
+  color: gray
+
+span 
+  margin-right: 10px
+
+img 
+  width: 100%
+  max-width: 250px
+
+
+header .page-header 
+  height: 70px
+  width: 100%
+  position: relative
+
+
+div.nav 
+  height: 100%
+  width: 95%
+  margin: auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+
+div.nav nav 
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background: black
+  z-index: 10
+  transform: translateY(-100%)
+  transition: 0.4s
+
+
+div.nav nav.open 
+  transform: translateY(0)
+
+
+.close-menu 
+  position: absolute
+  top: 20px
+  right: 20px
+  font-size: 20px
+  color: white
+
+
+.logo a img 
+  height: 50px
+  width: auto
+
+
+.navlink 
+  opacity: 0
+  animation-name: navLink
+  animation-fill-mode: forwards
+  animation-duration: 0.6s
+  animation-iteration-count: 1
+  animation-timing-function: ease-in-out
+
+
+.navlink.navlink-1 
+  animation-delay: 0.3s
+
+
+.navlink.navlink-2 
+  animation-delay: 0.4s
+
+.navlink.navlink-3 
+  animation-delay: 0.5s
+
+.navlink.navlink-4 
+  animation-delay: 0.6s
+
+.navlink.navlink-5 
+  animation-delay: 0.7s
+
+
+.change-mode 
+  position: absolute
+  right: 60px
+
+@keyframes navLink 
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+
