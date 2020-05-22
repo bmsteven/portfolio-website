@@ -23,8 +23,11 @@
             right: 12.5%
             cursor: pointer
             color: $dark-icon
+            .icon-dark
+                color: $dark
         .burger
             font-size: 24px
+            cursor: pointer
             &.close-menu
                 position: absolute
                 top: 20px
@@ -50,7 +53,7 @@
                 display: flex
                 flex-direction: column
                 align-items: center
-                padding: 30px 0
+                margin: 30px 0
                 li
                     min-width: 200px
                     height: 50px
@@ -61,7 +64,7 @@
                         background: $link-bg
                         height: 100%
                         width: 100%
-                        font-size: 24px
+                        font-size: 20px
                         letter-spacing: 2px
                         display: flex
                         justify-content: center
@@ -79,7 +82,7 @@
 
 .navlink
     opacity: 0
-    animation: navlink .4s ease-in-out .3s 1 forwards
+    animation: navlink .3s ease-in .2s 1 forwards
 
 // .navlink
 
@@ -90,7 +93,7 @@
 @keyframes navlink
     0%
         opacity: 0
-        transform: rotateZ(20deg) translateX(-20px)
+        transform: rotateZ(20deg) translateX(-40px)
     100%
         opacity: 1
         transform: rotateZ(0) translateX(0)

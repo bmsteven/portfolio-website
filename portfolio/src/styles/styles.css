@@ -11,7 +11,7 @@ body {
 }
 
 body.no-scrolling {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 body, html {
@@ -38,7 +38,7 @@ button {
 }
 
 .App {
-  background: #ffffff !important;
+  background: #ffffff;
   color: #000000;
   -webkit-transition: all .4s;
   transition: all .4s;
@@ -199,8 +199,13 @@ button {
   color: #F7A614;
 }
 
+.nav .container .change-mode .icon-dark {
+  color: #1D2122;
+}
+
 .nav .container .burger {
   font-size: 24px;
+  cursor: pointer;
 }
 
 .nav .container .burger.close-menu {
@@ -252,7 +257,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0;
+  margin: 30px 0;
 }
 
 .nav .container nav ul li {
@@ -267,7 +272,7 @@ button {
   background: #08303F;
   height: 100%;
   width: 100%;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -301,8 +306,8 @@ button {
 
 .navlink {
   opacity: 0;
-  -webkit-animation: navlink .4s ease-in-out .3s 1 forwards;
-          animation: navlink .4s ease-in-out .3s 1 forwards;
+  -webkit-animation: navlink .3s ease-in .2s 1 forwards;
+          animation: navlink .3s ease-in .2s 1 forwards;
 }
 
 .navlink-1 {
@@ -333,8 +338,8 @@ button {
 @-webkit-keyframes navlink {
   0% {
     opacity: 0;
-    -webkit-transform: rotateZ(20deg) translateX(-20px);
-            transform: rotateZ(20deg) translateX(-20px);
+    -webkit-transform: rotateZ(20deg) translateX(-40px);
+            transform: rotateZ(20deg) translateX(-40px);
   }
   100% {
     opacity: 1;
@@ -346,13 +351,17 @@ button {
 @keyframes navlink {
   0% {
     opacity: 0;
-    -webkit-transform: rotateZ(20deg) translateX(-20px);
-            transform: rotateZ(20deg) translateX(-20px);
+    -webkit-transform: rotateZ(20deg) translateX(-40px);
+            transform: rotateZ(20deg) translateX(-40px);
   }
   100% {
     opacity: 1;
     -webkit-transform: rotateZ(0) translateX(0);
             transform: rotateZ(0) translateX(0);
   }
+}
+
+.App.darkmode .nav {
+  background: #191C1D;
 }
 /*# sourceMappingURL=styles.css.map */
