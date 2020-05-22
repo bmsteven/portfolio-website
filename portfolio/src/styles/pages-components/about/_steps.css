@@ -51,11 +51,11 @@
   text-align: left;
 }
 
-.steps .container .showcase .showcase__col.col2 {
+.steps .container .showcase .col2 {
   padding: 0 40px;
 }
 
-.steps .container .showcase .showcase__col.col2 .circle {
+.steps .container .showcase .col2 .circle {
   position: relative;
   height: 100%;
   width: 100%;
@@ -67,7 +67,7 @@
   align-items: center;
 }
 
-.steps .container .showcase .showcase__col.col2 .circle::before {
+.steps .container .showcase .col2 .circle::before {
   content: "";
   position: absolute;
   top: 20px;
@@ -119,14 +119,14 @@
   .how .container .showcase .col1 .row {
     margin: 20px 0;
   }
-  .how .container .showcase .showcase__col.col2 {
+  .how .container .showcase .col2 {
     padding: 0;
   }
-  .how .container .showcase .showcase__col.col2 .circle {
+  .how .container .showcase .col2 .circle {
     display: none;
     padding: 0;
   }
-  .how .container .showcase .showcase__col.col2 .circle::before {
+  .how .container .showcase .col2 .circle::before {
     display: none;
   }
 }
@@ -147,13 +147,16 @@
   .how .container .showcase {
     display: flex;
     flex-direction: column;
-    padding: 0px 0;
+    padding: 0px;
   }
   .how .container .showcase::before {
     display: none;
   }
   .how .container .showcase::after {
     display: none;
+  }
+  .how .container .showcase .col1 {
+    width: 100%;
   }
   .how .container .showcase .col1 .row {
     height: 100%;
