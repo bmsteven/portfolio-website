@@ -10,9 +10,12 @@ body {
   width: 100vw;
 }
 
+body.no-scrolling {
+  overflow-y: hidden;
+}
+
 body, html {
   scroll-behavior: smooth;
-  max-height: 100vh;
   position: relative;
   background: #1D2122;
 }
@@ -35,11 +38,10 @@ button {
 }
 
 .App {
-  background: #ffffff;
+  background: #ffffff !important;
   color: #000000;
   -webkit-transition: all .4s;
   transition: all .4s;
-  min-height: 100vh;
 }
 
 .App.darkmode {
@@ -157,18 +159,20 @@ button {
   height: 70px;
   width: 100%;
   background: #ffffff;
-  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   z-index: 19;
 }
 
 .nav.nav-header {
   position: fixed;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav.nav__sticky {
   position: fixed;
   top: 0;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav .container {
@@ -190,11 +194,20 @@ button {
 
 .nav .container .change-mode {
   position: absolute;
-  right: calc( 10%);
+  right: 12.5%;
+  cursor: pointer;
+  color: #F7A614;
 }
 
 .nav .container .burger {
   font-size: 24px;
+}
+
+.nav .container .burger.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  color: #ffffff;
 }
 
 .nav .container nav {
@@ -220,6 +233,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   z-index: 20;
+  overflow-y: auto;
 }
 
 .nav .container nav.open {
@@ -231,5 +245,114 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+.nav .container nav ul li {
+  min-width: 200px;
+  height: 50px;
+  margin-left: -10px;
+  margin-bottom: 2px;
+}
+
+.nav .container nav ul li a {
+  color: #ffffff;
+  background: #08303F;
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  letter-spacing: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-box-shadow: 4px 7px 15px 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 7px 15px 12px rgba(0, 0, 0, 0.5);
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.nav .container nav ul li a:hover {
+  background: #021F2B;
+}
+
+.nav .container nav ul li:nth-child(even) {
+  margin-left: 10px;
+}
+
+.nav .container nav ul li:nth-child(even) a {
+  -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+          clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+}
+
+.navlink {
+  opacity: 0;
+  -webkit-animation: navlink .4s ease-in-out .3s 1 forwards;
+          animation: navlink .4s ease-in-out .3s 1 forwards;
+}
+
+.navlink-1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.navlink-2 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.navlink-3 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.navlink-4 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.navlink-5 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes navlink {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateZ(20deg) translateX(-20px);
+            transform: rotateZ(20deg) translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateZ(0) translateX(0);
+            transform: rotateZ(0) translateX(0);
+  }
+}
+
+@keyframes navlink {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateZ(20deg) translateX(-20px);
+            transform: rotateZ(20deg) translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateZ(0) translateX(0);
+            transform: rotateZ(0) translateX(0);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

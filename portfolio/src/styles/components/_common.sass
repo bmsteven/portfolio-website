@@ -8,10 +8,13 @@
 body
     overflow-x: hidden
     width: 100vw 
+
+body.no-scrolling
+    overflow-y: hidden
     
 body, html
     scroll-behavior: smooth
-    max-height: 100vh
+    // max-height: 100vh
     position: relative
     background: $dark
 
@@ -30,10 +33,10 @@ button
     background: none
 
 .App
-    background: $white
+    background: $white !important
     color: $black
     transition: all .4s
-    min-height: 100vh
+    // height: 100vh
 
 .App.darkmode
     background: $dark

@@ -2,13 +2,14 @@
     height: 70px
     width: 100%
     background: $white
-    box-shadow: 4px 4px 4px rgba(0,0,0,.1)
     z-index: 19
     &.nav-header
         position: fixed
+        box-shadow: 4px 4px 4px rgba(0,0,0,.1)
     &.nav__sticky
         position: fixed
         top: 0
+        box-shadow: 4px 4px 4px rgba(0,0,0,.1)
     .container
         height: 100%
         display: flex
@@ -19,9 +20,16 @@
                 height: 50px
         .change-mode
             position: absolute
-            right: calc( 10% )
+            right: 12.5%
+            cursor: pointer
+            color: $dark-icon
         .burger
             font-size: 24px
+            &.close-menu
+                position: absolute
+                top: 20px
+                right: 5%
+                color: $white
         nav
             position: absolute
             background: $menu-bg
@@ -35,8 +43,54 @@
             justify-content: center
             align-items: center
             z-index: 20
+            overflow-y: auto
             &.open
                 transform: translateX(0)
             ul
                 display: flex
+                flex-direction: column
+                align-items: center
+                padding: 30px 0
+                li
+                    min-width: 200px
+                    height: 50px
+                    margin-left: -10px
+                    margin-bottom: 2px
+                    a
+                        color: $white
+                        background: $link-bg
+                        height: 100%
+                        width: 100%
+                        font-size: 24px
+                        letter-spacing: 2px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        transition: .3s
+                        box-shadow: 4px 7px 15px 12px rgba(0, 0, 0, .5)
+                        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)
+                        &:hover
+                            background: $menu-bg
+                    &:nth-child(even)
+                        margin-left: 10px
+                        a
+                            clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%)
+                            
 
+.navlink
+    opacity: 0
+    animation: navlink .4s ease-in-out .3s 1 forwards
+
+// .navlink
+
+@for $i from 1 through 5
+    .navlink-#{$i}
+        animation-delay: (.2s * $i)
+
+@keyframes navlink
+    0%
+        opacity: 0
+        transform: rotateZ(20deg) translateX(-20px)
+    100%
+        opacity: 1
+        transform: rotateZ(0) translateX(0)

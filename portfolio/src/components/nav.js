@@ -23,10 +23,12 @@ const Nav = ({
 
   const openMenu = () => {
     setNavOpen(true);
+    document.body.classList.add("no-scrolling");
   };
 
   const closeMenu = () => {
     setNavOpen(false);
+    document.body.classList.remove("no-scrolling");
   };
 
   return (
