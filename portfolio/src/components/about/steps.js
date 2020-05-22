@@ -13,8 +13,8 @@ const Steps = () => {
           <div className='col-1'>
             {steps.slice(0,2).map((step) => (
               <article key={step.id} className={`row row-${step.id}`}>
-                <h2>{step.id}</h2>
-                <h1>{step.title}</h1>
+                <h4>{step.id}</h4>
+                <h3>{step.title}</h3>
                 <p>{step.description}</p>
               </article>
             ))}
