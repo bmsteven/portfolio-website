@@ -179,11 +179,14 @@ button {
 .home-page footer {
   position: absolute;
   bottom: 0px;
+}
+
+footer {
   height: 50px;
   width: 100%;
 }
 
-.home-page footer .container {
+footer .container {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
