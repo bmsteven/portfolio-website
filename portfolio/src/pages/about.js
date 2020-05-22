@@ -5,7 +5,6 @@ import Header from "../components/header";
 import Services from "../components/about/services";
 import Hobbies from "../components/about/hobbies";
 import Steps from "../components/about/steps";
-import Social from "../components/social";
 import Footer from "../components/footer";
 
 const About = () => {
@@ -30,7 +29,6 @@ const About = () => {
           page or using the social media links.
         </p>
       </Header>
-      <Social />
       <main className="main-content">
         <Services />
         <Hobbies />
