@@ -12,13 +12,15 @@ function useOnScreen(options) {
       setIntersect(entry.isIntersecting);
     }, options);
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    let el = ref.current;
+
+    if (el) {
+      observer.observe(el);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (el) {
+        observer.unobserve(el);
       }
     };
   }, [ref, options]);
@@ -28,8 +30,10 @@ function useOnScreen(options) {
 
 const Header = ({ children, image, headerClass, ...rest }) => {
   const [ref, intersect] = useOnScreen({
-    rootMargin: "100px"
+    rootMargin: "-100px",
   });
+  console.log(intersect);
+  console.log(ref);
   return (
     <header ref={ref} className={`page-header ${headerClass}`}>
       <Nav

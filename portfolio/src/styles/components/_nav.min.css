@@ -1,0 +1,1 @@
+.nav{height:70px;width:100%;background:lightgrey;box-shadow:4px 4px 4px rgba(0,0,0,0.1)}.nav.nav-header{position:fixed}.nav .container{height:100%;display:flex;justify-content:space-between;align-items:center}.nav .container .logo img{height:50px}.nav .container .change-mode{position:absolute}

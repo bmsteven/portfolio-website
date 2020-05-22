@@ -1,0 +1,42 @@
+.nav
+    height: 70px
+    width: 100%
+    background: $white
+    box-shadow: 4px 4px 4px rgba(0,0,0,.1)
+    z-index: 19
+    &.nav-header
+        position: fixed
+    &.nav__sticky
+        position: fixed
+        top: 0
+    .container
+        height: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .logo
+            img
+                height: 50px
+        .change-mode
+            position: absolute
+            right: calc( 10% )
+        .burger
+            font-size: 24px
+        nav
+            position: absolute
+            background: $menu-bg
+            left: 0
+            top: 0
+            width: 100%
+            min-height: 100vh
+            transform: translateX(-100%)
+            transition: transform .35s ease-in-out
+            display: flex
+            justify-content: center
+            align-items: center
+            z-index: 20
+            &.open
+                transform: translateX(0)
+            ul
+                display: flex
+

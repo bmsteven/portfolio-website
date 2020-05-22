@@ -1,0 +1,106 @@
+@import "../_variable"
+  
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+    overflow-x: hidden
+    width: 100vw 
+    
+body, html
+    scroll-behavior: smooth
+    max-height: 100vh
+    position: relative
+    background: $dark
+
+a
+    text-decoration: none
+
+li
+    list-style: none
+
+//focus
+input:focus, select:focus, textarea:focus, button:focus
+    outline: none !important
+
+button
+    border: none
+    background: none
+
+.App
+    background: $white
+    color: $black
+    transition: all .4s
+    min-height: 100vh
+
+.App.darkmode
+    background: $dark
+    color: $white
+
+.btn-primary
+    position: relative
+    overflow: hidden
+    border-radius: 7px
+    height: 40px
+    width: 150px
+    padding: 0 10px
+    text-transform: capitalize
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    background: $light-dark
+    color: $white
+    transition: .3s ease-in-out
+    span
+        z-index: 2
+    &::before, &::after
+        content: ""
+        position: absolute
+        left: 0
+        transition: .3s ease-in-out
+    &::before
+        background: $lighter-dark
+        top: 0
+        height: 100%
+        width: 30%
+        border-radius: 7px
+    &::after
+        background: $primary
+        left: 10%
+        width: 80%
+        height: 3px
+        bottom: 7px
+    &:hover
+        border-radius: 0
+    &:hover::before
+        width: 100%
+        border-radius: 0
+    &:hover::after
+        left: 0
+        top: 0
+        bottom: 0
+        height: 3px
+        width: 40px
+        transform: rotate(90deg) translate(20px, 19px)
+
+.container
+    width: 95%
+    margin: auto
+
+.social-media-container
+    position: fixed
+    left: 0
+    bottom: 0
+    min-height: 50vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $darker
+    ul
+        display: flex
+        flex-direction: column
+
+.hero-bg
+    overflow-x: hidden

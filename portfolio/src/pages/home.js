@@ -36,8 +36,8 @@ const Home = () => {
             />
           </h2>
           <p>Create unique and innovative websites and webapps with me.</p>
-          <Link to="/portfolio" className="btn bnt-primary">
-            My Portfolio
+          <Link to="/portfolio" className="btn btn-primary">
+            <span>My Portfolio</span>
           </Link>
         </div>
       </Header>

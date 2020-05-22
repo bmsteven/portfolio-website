@@ -10,7 +10,7 @@ const Project = () => {
   let obj = projects.find(o => o.slug === param.project);
   useEffect(() => {
     document.title = `${obj.name} - Benedict's Portfolio`;
-  }, []);
+  }, [obj.name]);
   return (
     <main className="projects-content project-content">
       {obj ? (

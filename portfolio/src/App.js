@@ -1,5 +1,8 @@
 import React from "react";
 
+//pose
+import posed, { PoseGroup } from "react-pose";
+
 //redux
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -18,30 +21,46 @@ import Error from "./pages/error";
 //styles
 import "./styles/styles.css";
 
+// page transition animations with pose
+const RouteContainer = posed.div({
+  enter: { opacity: 1, delay: 200, beforeChildren: false },
+  exit: { opacity: 0 },
+});
+
 const App = ({ ui: { darkMode } }) => {
   return (
-    <div className={darkMode ? "App darkmode" : "App"}>
-      <Switch>
-        <Route exact path="/" component={Home} key="home" />
-        <Route exact path="/about" component={About} key="about" />
-        <Route exact path="/resume" component={Resume} key="resume" />
-        <Route path="/portfolio" component={Portfolio} key="projects" />
-        <Route exact path="/contact" component={Contact} key="contact" />
-        <Route component={Error} key="error" />
-      </Switch>
-    </div>
+    <Route
+      render={({ location }) => (
+        <PoseGroup>
+          <RouteContainer key={location.pathname}>
+            <div className={darkMode ? "App darkmode" : "App"}>
+              <Switch>
+                <Route exact path='/' component={Home} key='home' />
+                <Route exact path='/about' component={About} key='about' />
+                <Route exact path='/resume' component={Resume} key='resume' />
+                <Route path='/portfolio' component={Portfolio} key='projects' />
+                <Route
+                  exact
+                  path='/contact'
+                  component={Contact}
+                  key='contact'
+                />
+                <Route component={Error} key='error' />
+              </Switch>
+            </div>
+          </RouteContainer>
+        </PoseGroup>
+      )}
+    />
   );
 };
 
-const mapStateToProps = state => ({
-  ui: state.ui
+const mapStateToProps = (state) => ({
+  ui: state.ui,
 });
 
 App.propTypes = {
-  ui: PropTypes.object.isRequired
+  ui: PropTypes.object.isRequired,
 };
 
-export default connect(
-  mapStateToProps,
-  {}
-)(App);
+export default connect(mapStateToProps, {})(App);
