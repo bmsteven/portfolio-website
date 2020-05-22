@@ -8,7 +8,7 @@ import {
 
 const Social = () => {
   return (
-    <div clas="social-media-container">
+    <div className="social-media-container">
       <ul>
         <li>
           <a
