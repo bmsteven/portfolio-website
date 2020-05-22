@@ -158,12 +158,12 @@ button {
 .nav {
   height: 70px;
   width: 100%;
-  background: #ffffff;
   z-index: 19;
 }
 
 .nav.nav-header {
   position: fixed;
+  background: #ffffff;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
@@ -361,7 +361,11 @@ button {
   }
 }
 
-.App.darkmode .nav {
+.App.darkmode .nav.nav-header {
+  background: #191C1D;
+}
+
+.App.darkmode .nav.nav__sticky {
   background: #191C1D;
 }
 /*# sourceMappingURL=styles.css.map */
