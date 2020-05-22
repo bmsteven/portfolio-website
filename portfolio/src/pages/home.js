@@ -15,7 +15,7 @@ const Home = () => {
     document.title = "Benedict's Portfolio";
   }, []);
   return (
-    <div>
+    <div className="home-page">
       <Header headerClass="home-header">
         <div className="container">
           <h1 className="span">Hello, I'm Benedict Steven</h1>

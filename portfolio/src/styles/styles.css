@@ -8,6 +8,8 @@
 body {
   overflow-x: hidden;
   width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 body.no-scrolling {
@@ -125,7 +127,7 @@ button {
 }
 
 .social-media-container {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   min-height: 50vh;
@@ -149,6 +151,26 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.home-page footer {
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+}
+
+.home-page footer .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav {
@@ -368,11 +390,11 @@ button {
   background: #191C1D;
   z-index: 5;
   position: absolute;
-  top: 50%;
+  top: calc( 50% - 25px);
   width: 100%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  min-height: calc( 70vh - 50px);
+  min-height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,7 +414,7 @@ button {
 .banner .main-content .container {
   height: 100%;
   width: 100%;
-  padding: 30px 30px 30px 60px;
+  padding: 30px 30px 30px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,15 +431,15 @@ button {
 }
 
 .banner .main-content .container h1 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 100;
   margin-left: 30px;
   margin-bottom: -5px;
 }
 
 .banner .main-content .container h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 30px;
   padding: 0 0 15px;
   position: relative;
 }
@@ -434,11 +456,11 @@ button {
 
 .banner .main-content .container p {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .banner .hero-bg {
-  overflow-x: hidden;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;

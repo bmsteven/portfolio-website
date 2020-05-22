@@ -8,6 +8,8 @@
 body
     overflow-x: hidden
     width: 100vw 
+    height: 100vh
+    position: relative
 
 body.no-scrolling
     overflow: hidden
@@ -92,7 +94,8 @@ button
     margin: auto
 
 .social-media-container
-    position: fixed
+    position: absolute
+    // display: none
     left: 0
     bottom: 0
     min-height: 50vh
@@ -103,4 +106,17 @@ button
     ul
         display: flex
         flex-direction: column
+
+.home-page
+    footer
+        position: absolute
+        bottom: 0px
+        height: 50px
+        width: 100%
+        .container
+            height: 100%
+            display: flex
+            justify-content: flex-end
+            align-items: center
+
 
