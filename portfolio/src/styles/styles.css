@@ -166,6 +166,10 @@ button {
   font-size: 14px;
 }
 
+.social-media-container ul li a:hover {
+  color: #00A3E1;
+}
+
 .home-page footer {
   position: absolute;
   bottom: 0px;
