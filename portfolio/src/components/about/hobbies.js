@@ -61,10 +61,10 @@ const hobbies = [
 
 const Hobbies = () => {
   return (
-    <section className='steps'>
+    <section className='hobbies'>
       <div className='container'>
         <header className='header hobbies-header primary-header'>
-          <h1>My Hobbies</h1>
+          <h1>My Interests</h1>
         </header>
         <div className='showcase'>
           {hobbies.map((hobby) => (

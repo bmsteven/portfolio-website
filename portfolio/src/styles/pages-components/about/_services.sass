@@ -2,3 +2,71 @@
     margin-top: 50px
     padding: 50px 0
     text-align: center
+    .showcase
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        flex-wrap: wrap
+        margin: 30px 0
+        article
+            max-width: 300px
+            min-height: 250px
+            height: 100%
+            // height: 350px
+            width: 100%
+            // margin: 40px 20px
+            margin: 0
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+            padding: 30px 20px
+            transition: all .3s
+            position: relative
+            span
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 70px
+                width: 70px
+                border-radius: 50%
+                margin-bottom: 20px
+                transition: all .3s
+                .icon
+                    font-size: 50px
+                    color: $primary
+                    transition: all .3s
+            h2
+                font-size: 24px
+                margin-bottom: 15px
+            p
+                font-size: 16px
+                line-height: 25px
+            &::before, &::after
+                content: ""
+                position: absolute
+                left: 50%
+                transform: translateX(-50%) 
+                transition: all .3s
+            &::before
+                height: 18px
+                width: 0
+                top: -9px
+                border-radius: 9px
+                background: $white
+            &::after
+                height: 2px
+                top: -1px
+                width: 0
+                background: $primary
+            &:hover
+                box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff
+                &::before
+                    width: 100px
+                    border: 1px solid $link-color
+                &::after
+                    width: 70px
+                span
+                    border: 1px solid $primary
+                    .icon
+                        font-size: 35px

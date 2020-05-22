@@ -30,7 +30,7 @@ function useOnScreen(options) {
 
 const Header = ({ children, image, headerClass, ...rest }) => {
   const [ref, intersect] = useOnScreen({
-    rootMargin: "-100px",
+    rootMargin: "-70px",
   });
   console.log(intersect);
   console.log(ref);

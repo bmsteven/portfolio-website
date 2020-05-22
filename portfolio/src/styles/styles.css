@@ -123,6 +123,10 @@ button {
           transform: rotate(90deg) translate(20px, 19px);
 }
 
+.primary-header {
+  font-size: 36px;
+}
+
 .container {
   width: 95%;
   margin: auto;
@@ -196,6 +200,11 @@ button {
   font-family: 'Raleway', sans-serif;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .nav {
   height: 70px;
   width: 100%;
@@ -234,6 +243,7 @@ button {
 
 .nav .container .logo img {
   height: 50px;
+  width: auto;
 }
 
 .nav .container .change-mode {
@@ -522,11 +532,182 @@ button {
   text-align: center;
 }
 
+.services .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.services .showcase article {
+  max-width: 300px;
+  min-height: 250px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+}
+
+.services .showcase article span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.services .showcase article span .icon {
+  font-size: 50px;
+  color: #00A3E1;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.services .showcase article h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.services .showcase article p {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.services .showcase article::before, .services .showcase article::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.services .showcase article::before {
+  height: 18px;
+  width: 0;
+  top: -9px;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.services .showcase article::after {
+  height: 2px;
+  top: -1px;
+  width: 0;
+  background: #00A3E1;
+}
+
+.services .showcase article:hover {
+  -webkit-box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+.services .showcase article:hover::before {
+  width: 100px;
+  border: 1px solid #C4C4C4;
+}
+
+.services .showcase article:hover::after {
+  width: 70px;
+}
+
+.services .showcase article:hover span {
+  border: 1px solid #00A3E1;
+}
+
+.services .showcase article:hover span .icon {
+  font-size: 35px;
+}
+
+.hobbies {
+  background: #1D2122;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hobbies .icon {
+  color: #00A3E1;
+}
+
+.hobbies .container {
+  padding: 30px 0;
+}
+
+.hobbies .container header {
+  margin-bottom: 20px;
+}
+
+.hobbies .container header .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .App.darkmode .nav.nav-header {
   background: #191C1D;
 }
 
 .App.darkmode .nav.nav__sticky {
+  background: #191C1D;
+}
+
+.App.darkmode .services .showcase article span .icon {
+  color: #00A3E1;
+}
+
+.App.darkmode .services .showcase article::before {
+  background: #1D2122;
+}
+
+.App.darkmode .services .showcase article::after {
+  background: #00A3E1;
+}
+
+.App.darkmode .services .showcase article:hover {
+  -webkit-box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2e3536;
+          box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2e3536;
+}
+
+.App.darkmode .services .showcase article:hover::before {
+  border: 1px solid #323738;
+}
+
+.App.darkmode .hobbies {
   background: #191C1D;
 }
 /*# sourceMappingURL=styles.css.map */
