@@ -2,7 +2,7 @@
     min-height: calc( 100vh - 70px )
     display: flex
     position: relative
-    .main-content
+    .content
         background: $darker
         z-index: 5
         position: absolute
@@ -44,6 +44,8 @@
             p
                 font-size: 18px
                 margin-bottom: 30px
+                line-height: 30px
+                color: $link-color
             // .btn
                 // align-self: flex-end
 
@@ -57,3 +59,17 @@
         height: calc( 100% - 50px )
         img
             height: 100%
+
+.about-header
+    .banner
+        .content
+            position: relative
+            top: 50px
+            transform: translateY(0)
+            min-height: 70%
+            .container
+                width: 90%
+                margin: auto
+                padding: 30px 0 
+                p
+                    font-size: 16px

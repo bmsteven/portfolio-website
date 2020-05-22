@@ -7,7 +7,7 @@ import heroDark from "../images/hero-bg-dark.png";
 const Banner = ({ children, ui: { darkMode } }) => {
   return (
     <div className="banner">
-      <div className="main-content">{children}</div>
+      <div className="content">{children}</div>
       <div className="hero-bg">
         <img src={darkMode ? heroDark : heroLight} alt="hero-bg" />
       </div>

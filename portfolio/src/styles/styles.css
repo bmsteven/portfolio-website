@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,100;1,200&family=Saira+Semi+Condensed:wght@200;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +45,7 @@ button {
   color: #000000;
   -webkit-transition: all .4s;
   transition: all .4s;
+  font-family: 'Saira Semi Condensed', sans-serif;
 }
 
 .App.darkmode {
@@ -188,6 +190,10 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.steps {
+  font-family: 'Raleway', sans-serif;
 }
 
 .nav {
@@ -403,7 +409,7 @@ button {
   position: relative;
 }
 
-.banner .main-content {
+.banner .content {
   background: #191C1D;
   z-index: 5;
   position: absolute;
@@ -428,7 +434,7 @@ button {
   color: #ffffff;
 }
 
-.banner .main-content .container {
+.banner .content .container {
   height: 100%;
   width: 100%;
   padding: 30px 30px 30px 50px;
@@ -447,21 +453,21 @@ button {
           align-items: flex-start;
 }
 
-.banner .main-content .container h1 {
+.banner .content .container h1 {
   font-size: 14px;
   font-weight: 100;
   margin-left: 30px;
   margin-bottom: -5px;
 }
 
-.banner .main-content .container h2 {
+.banner .content .container h2 {
   font-size: 30px;
   margin-bottom: 30px;
   padding: 0 0 15px;
   position: relative;
 }
 
-.banner .main-content .container h2::before {
+.banner .content .container h2::before {
   content: "";
   position: absolute;
   left: 0;
@@ -471,9 +477,11 @@ button {
   background: #00A3E1;
 }
 
-.banner .main-content .container p {
+.banner .content .container p {
   font-size: 18px;
   margin-bottom: 30px;
+  line-height: 30px;
+  color: #C4C4C4;
 }
 
 .banner .hero-bg {
@@ -487,6 +495,24 @@ button {
 
 .banner .hero-bg img {
   height: 100%;
+}
+
+.about-header .banner .content {
+  position: relative;
+  top: 50px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  min-height: 70%;
+}
+
+.about-header .banner .content .container {
+  width: 90%;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.about-header .banner .content .container p {
+  font-size: 16px;
 }
 
 .App.darkmode .nav.nav-header {
