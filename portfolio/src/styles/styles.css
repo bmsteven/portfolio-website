@@ -173,6 +173,7 @@ button {
 .nav.nav__sticky {
   position: fixed;
   top: 0;
+  background: #ffffff;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
