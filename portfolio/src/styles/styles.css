@@ -499,7 +499,7 @@ button {
 
 .about-header .banner .content {
   position: relative;
-  top: 50px;
+  top: 30px;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   min-height: 70%;
