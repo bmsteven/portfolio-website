@@ -517,6 +517,10 @@ img {
   padding: 30px 0;
 }
 
+.about-header .banner .content .container h1 {
+  font-size: 30px;
+}
+
 .about-header .banner .content .container p {
   font-size: 16px;
   line-height: 25px;
