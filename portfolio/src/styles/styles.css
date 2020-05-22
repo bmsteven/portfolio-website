@@ -159,6 +159,8 @@ button {
   height: 70px;
   width: 100%;
   z-index: 19;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .nav.nav-header {
