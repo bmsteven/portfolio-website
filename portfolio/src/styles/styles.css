@@ -392,7 +392,7 @@ button {
 .banner .main-content .container {
   height: 100%;
   width: 100%;
-  padding: 30px 30px 30px 80px;
+  padding: 30px 30px 30px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -406,6 +406,40 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.banner .main-content .container h1 {
+  font-size: 16px;
+  font-weight: 100;
+  margin-left: 30px;
+  margin-bottom: -5px;
+}
+
+.banner .main-content .container h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  padding: 0 0 15px;
+  position: relative;
+}
+
+.banner .main-content .container h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100px;
+  background: #00A3E1;
+}
+
+.banner .main-content .container p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.banner .main-content .container .btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .banner .hero-bg {

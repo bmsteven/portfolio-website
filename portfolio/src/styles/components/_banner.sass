@@ -18,11 +18,36 @@
         .container
             height: 100%
             width: 100%
-            padding: 30px 30px 30px 80px
+            padding: 30px 30px 30px 60px
             display: flex
             flex-direction: column
             justify-content: center
             align-items: flex-start
+            h1
+                font-size: 16px
+                font-weight: 100
+                margin-left: 30px
+                margin-bottom: -5px
+            h2
+                font-size: 48px
+                margin-bottom: 20px
+                padding: 0 0 15px
+                position: relative
+                &::before
+                    content: ""
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    height: 3px
+                    width: 100px
+                    background: $primary
+            p
+                font-size: 18px
+                margin-bottom: 15px
+            .btn
+                align-self: flex-end
+
+
     .hero-bg
         overflow-x: hidden
         position: absolute
