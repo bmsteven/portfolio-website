@@ -437,11 +437,6 @@ button {
   margin-bottom: 15px;
 }
 
-.banner .main-content .container .btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
 .banner .hero-bg {
   overflow-x: hidden;
   position: absolute;
