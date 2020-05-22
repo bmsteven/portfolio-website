@@ -718,6 +718,10 @@ img {
   padding-left: 20px;
 }
 
+.steps {
+  margin: 30px 0;
+}
+
 .App.darkmode .nav.nav-header {
   background: #191C1D;
 }
