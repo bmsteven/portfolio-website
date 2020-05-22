@@ -68,7 +68,7 @@ const Hobbies = () => {
         </header>
         <div className='showcase'>
           {hobbies.map((hobby) => (
-            <article key={hobby.id}>
+            <article key={hobby.id} className="hobby">
               <span>{hobby.icon}</span>
               <p>{hobby.title}</p>
             </article>

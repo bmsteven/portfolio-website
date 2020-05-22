@@ -124,7 +124,7 @@ button {
 }
 
 .primary-header {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .container {
@@ -672,10 +672,50 @@ img {
   margin-bottom: 20px;
 }
 
-.hobbies .container header .showcase {
+.hobbies .container .showcase {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hobbies .container .showcase .hobby {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #191C1D;
+  width: 230px;
+  height: 40px;
+  margin: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.hobbies .container .showcase .hobby span {
+  width: 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  border-right: 3px solid #1D2122;
+}
+
+.hobbies .container .showcase .hobby p {
+  padding-left: 20px;
 }
 
 .App.darkmode .nav.nav-header {
@@ -709,5 +749,13 @@ img {
 
 .App.darkmode .hobbies {
   background: #191C1D;
+}
+
+.App.darkmode .hobbies .showcase .hobby {
+  background: #1D2122;
+}
+
+.App.darkmode .hobbies .showcase .hobby span {
+  border-right: 3px solid #191C1D;
 }
 /*# sourceMappingURL=styles.css.map */
