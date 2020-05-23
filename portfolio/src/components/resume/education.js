@@ -12,14 +12,14 @@ const Education = () => {
         {education.map(item => (
           <article key={item.id}>
             <h2>{item.course}</h2>
-            <div className="">
+            <div className="date-school">
               <span>
                 <FaCalendarAlt className="icon" />
               </span>
               <span>
                 {item.started} - {item.finished}
               </span>{" "}
-              | <span>{item.school}</span>
+              | <span className="school">{item.school}</span>
             </div>
             <p>{item.description}</p>
           </article>

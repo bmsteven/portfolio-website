@@ -809,7 +809,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 16px;
 }
 
 .resume.main-content .experience .showcase article {
@@ -823,8 +822,8 @@ img {
 }
 
 .resume.main-content .experience .showcase article .icon-container {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -839,6 +838,69 @@ img {
   border-radius: 50%;
   margin-right: 20px;
   font-size: 24px;
+}
+
+.resume.main-content .experience .showcase article h2 {
+  font-size: 20px;
+  color: #08303F;
+}
+
+.resume.main-content .education .showcase article {
+  padding: 2px 0 10px 30px;
+  margin: 20px 15px;
+  border-left: 2px solid #00A3E1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resume.main-content .education .showcase article::before, .resume.main-content .education .showcase article::after {
+  content: "";
+  position: absolute;
+}
+
+.resume.main-content .education .showcase article::before {
+  top: 10px;
+  left: -10px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #00A3E1;
+}
+
+.resume.main-content .education .showcase article::after {
+  top: 18px;
+  left: 9px;
+  height: 2px;
+  width: 15px;
+  background: #00A3E1;
+}
+
+.resume.main-content .education .showcase article h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #08303F;
+}
+
+.resume.main-content .education .showcase article .date-school {
+  color: #00A3E1;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.resume.main-content .education .showcase article .date-school .icon {
+  margin-right: 10px;
+}
+
+.resume.main-content .education .showcase article .date-school .school {
+  font-weight: 700;
 }
 
 .App.darkmode .nav.nav-header {

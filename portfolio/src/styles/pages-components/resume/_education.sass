@@ -1,0 +1,40 @@
+.education
+    .showcase
+        article
+            padding: 2px 0 10px 30px
+            margin: 20px 15px
+            border-left: 2px solid $primary
+            position: relative 
+            display: flex
+            flex-direction: column
+            &::before, &::after
+                content: ""
+                position: absolute 
+                // left: 0
+            &::before
+                top: 10px
+                left: -10px
+                height: 15px
+                width: 15px
+                border-radius: 50%
+                background: $white
+                border: 2px solid $primary
+            &::after
+                top: 18px
+                left: 9px
+                height: 2px
+                width: 15px
+                background: $primary
+            h2
+                margin: 0
+                margin-bottom: 15px
+                font-size: 20px
+                color: $link-bg
+            .date-school
+                color: $primary
+                font-size: 14px
+                margin-bottom: 7px
+                .icon
+                    margin-right: 10px
+                .school
+                    font-weight: 700
