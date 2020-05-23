@@ -803,6 +803,61 @@ img {
   padding: 20px;
 }
 
+.resume.main-content .skills .showcase {
+  margin: 15px 0;
+}
+
+.resume.main-content .skills .showcase article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.resume.main-content .skills .showcase article .icon-container {
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00A3E1;
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.resume.main-content .skills .showcase article h2 {
+  font-size: 20px;
+  color: #08303F;
+}
+
+.resume.main-content .skills .tools h2 {
+  margin-left: 20px;
+}
+
+.resume.main-content .skills .tools .showcase article span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resume.main-content .skills .tools .showcase article span .icon {
+  margin-right: 50px;
+  color: #00A3E1;
+}
+
 .resume.main-content .experience .showcase {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -946,5 +1001,22 @@ img {
 
 .App.darkmode .steps .container .showcase .col .row h4 {
   color: #C4C4C4;
+}
+
+.App.darkmode .resume.main-content .resume-template {
+  background: #191C1D;
+}
+
+.App.darkmode .resume.main-content .resume-template .showcase article .icon-container {
+  border-color: #00A3E1;
+  color: #ffffff;
+}
+
+.App.darkmode .resume.main-content .resume-template .showcase article::before {
+  background: #191C1D;
+}
+
+.App.darkmode .resume.main-content .resume-template .showcase article h2 {
+  color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */

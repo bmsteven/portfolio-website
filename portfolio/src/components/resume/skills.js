@@ -43,7 +43,6 @@ const Skills = () => {
         <div className="showcase">
           {tools.map((tool, index) => (
             <article key={index}>
-              <span className="icon-container" />
               <span>
                 <FaCheck className="icon" /> {tool}
               </span>
