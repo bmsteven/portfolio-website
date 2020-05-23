@@ -758,6 +758,8 @@ img {
 
 .steps .container .showcase .col .row {
   margin: 20px 0;
+  border-left: 2px solid #00A3E1;
+  padding: 0 20px;
 }
 
 .steps .container .showcase .col .row h4 {
@@ -773,6 +775,8 @@ img {
 
 .steps .container .showcase .col .row:nth-child(odd) {
   text-align: right;
+  border-right: 2px solid #00A3E1;
+  border-left: none;
 }
 
 .App.darkmode .nav.nav-header {
