@@ -31,7 +31,9 @@ const Projects = () => {
     <main className='projects-content'>
       <div className='container'>
         <header className='primary-header portfolio-header'>
-          <h2>My Projects</h2>
+          <h2>
+            <span></span>My Projects
+          </h2>
         </header>
         <nav>
           <ul>

@@ -7,8 +7,10 @@ const Form = () => {
   return (
     <section className='form'>
       <header className='primary-header form-header'>
-          <h2>Send A Message</h2>
-        </header>
+        <h2>
+          <span></span>Send A Message
+        </h2>
+      </header>
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>

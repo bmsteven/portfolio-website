@@ -64,11 +64,13 @@ const Hobbies = () => {
     <section className='hobbies'>
       <div className='container'>
         <header className='header hobbies-header primary-header'>
-          <h1>My Interests</h1>
+          <h1>
+            <span></span>My Interests
+          </h1>
         </header>
         <div className='showcase'>
           {hobbies.map((hobby) => (
-            <article key={hobby.id} className="hobby">
+            <article key={hobby.id} className='hobby'>
               <span>{hobby.icon}</span>
               <p>{hobby.title}</p>
             </article>

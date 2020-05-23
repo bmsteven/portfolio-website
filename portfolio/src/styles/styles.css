@@ -127,6 +127,39 @@ button {
   font-size: 24px;
 }
 
+.tertiary-header {
+  color: #191C1D;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+}
+
+.tertiary-header div {
+  width: 20px;
+  height: 40px;
+  background-color: #C6E0EA;
+  position: relative;
+  top: 3px;
+}
+
+.tertiary-header span.span {
+  width: 7px;
+  height: 40px;
+  background-color: #60828F;
+  display: block;
+  -webkit-transform: skewY(-30deg);
+          transform: skewY(-30deg);
+  position: relative;
+  top: 1.5px;
+}
+
+.tertiary-header span.title {
+  padding: 0 20px;
+  background: #C6E0EA;
+}
+
 .container {
   width: 95%;
   margin: auto;

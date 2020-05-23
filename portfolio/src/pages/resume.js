@@ -16,14 +16,16 @@ const Resume = ({ ...rest }) => {
   }, []);
   return (
     <div>
-      <Nav {...rest} navProps="nav-header" routes={routes} />
-      <main className="main-content resume">
-        <div className="container">
-        <header className='primary-header resume-header'>
-          <h2>My Resume</h2>
-        </header>
+      <Nav {...rest} navProps='nav-header' routes={routes} />
+      <main className='main-content resume'>
+        <div className='container'>
+          <header className='primary-header resume-header'>
+            <h2>
+              <span></span>My Resume
+            </h2>
+          </header>
           <Experience />
-          <div className="row">
+          <div className='row'>
             <Education />
             <Skills />
           </div>

@@ -30,7 +30,9 @@ const Services = () => {
     <section className='services'>
       <div className='container'>
         <header className='header service-header primary-header'>
-          <h1>Services</h1>
+          <h1>
+            <span></span>Services
+          </h1>
         </header>
         <div className='showcase'>
           {services.map((service) => (
