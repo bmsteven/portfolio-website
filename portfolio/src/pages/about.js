@@ -19,12 +19,12 @@ const About = () => {
             <h2 className='header secondary-header'>About Me</h2>
           </header>
           <p>
-            Hello, I'm Benedict Steven. I'm a Web developer who can create
-            unique websites. I am a passionate self-taught developer who fell in
-            love with programming and creating websites one and a half year ago.
-            Since then, I've been experimenting, creating, and learning
-            everything that I can about web development. Nothing compares to the
-            feeling of creating something from nothing.
+            Hello, I'm Benedict Steven. I'm a Designer and Developer. I am a
+            passionate self-taught developer who fell in love with programming
+            and creating websites one and a half year ago. Since then, I've been
+            experimenting, creating, and learning everything that I can about
+            web development. Nothing compares to the feeling of creating
+            something from nothing.
           </p>
           <p>
             I am currently available for any small freelance projects, as well
