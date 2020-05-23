@@ -701,8 +701,8 @@ img {
       -ms-flex-align: center;
           align-items: center;
   background: #191C1D;
-  width: 230px;
-  height: 40px;
+  width: 250px;
+  height: 50px;
   margin: 15px;
   border-radius: 10px;
   font-size: 18px;
@@ -732,10 +732,6 @@ img {
 
 .hobbies .container .showcase .hobby:hover {
   background: none;
-}
-
-.hobbies .container .showcase .hobby:hover span {
-  border-right: none;
 }
 
 .steps {
@@ -838,6 +834,7 @@ img {
 .resume.main-content .skills .showcase article h2 {
   font-size: 20px;
   color: #08303F;
+  font-weight: 400;
 }
 
 .resume.main-content .skills .tools h2 {
