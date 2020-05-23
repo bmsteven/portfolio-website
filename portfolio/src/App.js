@@ -7,6 +7,9 @@ import posed, { PoseGroup } from "react-pose";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
+//protected-route
+import AuthRoute from "./util/auth-route";
+
 //router
 import { Switch, Route } from "react-router-dom";
 
@@ -16,6 +19,9 @@ import About from "./pages/about";
 import Resume from "./pages/resume";
 import Portfolio from "./projects";
 import Contact from "./pages/contact";
+import Admin from "./admin";
+import Blog from "./blog/";
+import Login from "./pages/login";
 import Error from "./pages/error";
 
 //styles
@@ -45,6 +51,9 @@ const App = ({ ui: { darkMode } }) => {
                   component={Contact}
                   key='contact'
                 />
+                <Route path='/blog' component={Blog} key='blog' />
+                <Route exact path='/login' key='login' component={Login} />
+                <AuthRoute path='/admin' component={Admin} key='admin' />
                 <Route component={Error} key='error' />
               </Switch>
             </div>
