@@ -8,7 +8,7 @@ import Footer from "../components/footer";
 
 const Login = ({ ...rest }) => {
   useEffect(() => {
-    document.title = "404 Page Not Found - Benedict's Portfolio ";
+    document.title = "Admin Login - Benedict's Portfolio ";
   }, []);
   return (
     <div className='contact-page'>
