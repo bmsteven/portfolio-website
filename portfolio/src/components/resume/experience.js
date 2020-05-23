@@ -22,7 +22,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <ResumeTemplate title="Experience" classname="experience">
+    <ResumeTemplate title="My Experience" classname="experience">
       <div className="showcase">
         {experiences.map(experience => (
           <article key={experience.id}>

@@ -17,9 +17,11 @@ const Resume = ({ ...rest }) => {
   return (
     <div>
       <Nav {...rest} navProps="nav-header" routes={routes} />
-      <main className="main-content">
+      <main className="main-content resume">
         <div className="container">
-          <h1 className="resume-header primary-header">My Resume</h1>
+        <header className='primary-header resume-header'>
+          <h2>My Resume</h2>
+        </header>
           <Experience />
           <div className="row">
             <Education />

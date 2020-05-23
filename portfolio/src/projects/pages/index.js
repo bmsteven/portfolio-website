@@ -22,15 +22,17 @@ const Projects = () => {
     setKeyWord("Others");
   };
 
-  let displayProjects = projects.filter(o => o.category.includes(keyWord));
+  let displayProjects = projects.filter((o) => o.category.includes(keyWord));
 
   useEffect(() => {
     document.title = "Project Collections - Benedict's Portfolio ";
   }, []);
   return (
-    <main className="projects-content">
-      <div className="container">
-        <h2 className="">My Projects</h2>
+    <main className='projects-content'>
+      <div className='container'>
+        <header className='primary-header portfolio-header'>
+          <h2>My Projects</h2>
+        </header>
         <nav>
           <ul>
             <li onClick={setAll} className={keyWord === "All" ? "active" : ""}>
@@ -53,30 +55,30 @@ const Projects = () => {
             </li>
           </ul>
         </nav>
-        <div className="showcase">
-          {displayProjects.map(item => (
-            <article key={item.id} className="project-container project">
+        <div className='showcase'>
+          {displayProjects.map((item) => (
+            <article key={item.id} className='project-container project'>
               {item.src.length > 0 && (
                 <>
-                  <section className="project-image">
+                  <section className='project-image'>
                     <img src={item.src} alt={item.name} />
                   </section>
-                  <section className="project-info">
-                    <div className="project-name">
+                  <section className='project-info'>
+                    <div className='project-name'>
                       <h2>{item.name}</h2>
                     </div>
-                    <div className="btns">
+                    <div className='btns'>
                       <Link
                         to={`/portfolio/${item.slug}`}
-                        className="btn btn-primary"
+                        className='btn btn-primary'
                       >
                         About
                       </Link>
                       {item.demo && (
                         <a
                           href={item.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target='_blank'
+                          rel='noopener noreferrer'
                         >
                           Live App
                         </a>

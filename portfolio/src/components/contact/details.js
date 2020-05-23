@@ -13,7 +13,9 @@ import {
 const Details = () => {
   return (
     <section className="form">
-      <h1 className="contact-header primary-header">Get In Touch</h1>
+      <header className='primary-header contact-header'>
+          <h2>Get In Touch</h2>
+        </header>
       <div class="address-info">
         <ul>
           <li>
