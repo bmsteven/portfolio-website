@@ -124,12 +124,16 @@ button {
 }
 
 .primary-header {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .container {
   width: 95%;
   margin: auto;
+}
+
+main.main-content {
+  padding-top: 70px;
 }
 
 .social-media-container {
@@ -384,6 +388,11 @@ img {
           animation-delay: 1s;
 }
 
+.navlink-6 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
 @-webkit-keyframes navlink {
   0% {
     opacity: 0;
@@ -530,8 +539,6 @@ img {
 }
 
 .services {
-  margin-top: 50px;
-  padding: 50px 0;
   text-align: center;
 }
 

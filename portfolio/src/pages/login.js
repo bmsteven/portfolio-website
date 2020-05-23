@@ -11,7 +11,7 @@ const Login = ({ ...rest }) => {
     document.title = "Admin Login - Benedict's Portfolio ";
   }, []);
   return (
-    <div className='contact-page'>
+    <div className='login-page'>
       <Nav {...rest} navProps='nav-header' routes={routes} />
       <main className='main-content'>
         <div className='container'>

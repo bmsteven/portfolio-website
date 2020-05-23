@@ -14,16 +14,18 @@ import Footer from "../components/footer";
 const Portfolio = ({ ...rest }) => {
   let { path } = useRouteMatch();
   return (
-    <div className="page portfolio-content">
-      <Nav {...rest} navProps="nav-header" routes={routes} />
-      <Switch>
-        <Route exact path={`${path}`} key="projects">
-          <Projects />
-        </Route>
-        <Route path={`${path}/:project`}>
-          <Project />
-        </Route>
-      </Switch>
+    <div className='page portfolio-content'>
+      <Nav {...rest} navProps='nav-header' routes={routes} />
+      <main class='main-content'>
+        <Switch>
+          <Route exact path={`${path}`} key='projects'>
+            <Projects />
+          </Route>
+          <Route path={`${path}/:project`}>
+            <Project />
+          </Route>
+        </Switch>
+      </main>
       <Footer />
     </div>
   );
