@@ -125,6 +125,39 @@ button {
 
 .primary-header {
   font-size: 24px;
+  position: relative;
+  padding: 0 0 25px;
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.primary-header span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 15px;
+  width: 15px;
+  border: 2px solid #00A3E1;
+  border-radius: 50%;
+}
+
+.primary-header::before, .primary-header::after {
+  content: "";
+  position: absolute;
+  bottom: 6.5px;
+  height: 2px;
+  width: 40px;
+  background: #00A3E1;
+}
+
+.primary-header::before {
+  left: calc( 50% - 60px);
+}
+
+.primary-header::after {
+  right: calc( 50% - 60px);
 }
 
 .tertiary-header {
@@ -174,6 +207,7 @@ button {
 .container {
   width: 95%;
   margin: auto;
+  text-align: center;
 }
 
 main.main-content {
@@ -783,8 +817,30 @@ img {
   padding: 30px 0;
 }
 
-.steps .container header {
+.steps .container {
+  text-align: left;
+}
+
+.steps .container header.primary-header {
   margin: 7px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px;
+}
+
+.steps .container header.primary-header::after {
+  display: none;
+}
+
+.steps .container header.primary-header::before {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
 }
 
 .steps .container .showcase {

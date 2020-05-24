@@ -91,6 +91,31 @@ button
 
 .primary-header
     font-size: 24px
+    position: relative
+    padding: 0 0 25px
+    margin: 15px 0
+    display: inline-block
+    span
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        height: 15px
+        width: 15px
+        border: 2px solid $primary
+        border-radius: 50%
+    &::before, &::after
+        content: ""
+        position: absolute
+        bottom: 6.5px
+        height: 2px
+        width: 40px
+        background: $primary
+    &::before
+        left: calc( 50% - 60px )
+    &::after
+        right: calc( 50% - 60px )
+
 
 .tertiary-header
     color: $darker
@@ -123,6 +148,7 @@ button
 .container
     width: 95%
     margin: auto
+    text-align: center
 
 main.main-content
     padding-top: 80px
