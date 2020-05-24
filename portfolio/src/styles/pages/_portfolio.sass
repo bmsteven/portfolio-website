@@ -22,6 +22,8 @@
                 color: $dark
                 cursor: pointer
                 transition: all .25s
+                &:hover
+                    opacity: .7
                 &.active
                     background: $link-bg
                     color: $white
@@ -37,9 +39,8 @@
             position: relative
             border-radius: 30px
             height: 100%
-            // .project-image
-            //     img
-            //         height: 100%
+            margin: 10px 0
+            overflow: hidden
             .project-info
                 position: absolute
                 top: 0
@@ -48,13 +49,14 @@
                 width: 100%
                 background: rgba(0, 163, 225, .8)
                 border-radius: 30px
-                opacity: 0
-                transition: opacity .35s
+                transform: translateY(-100%)
+                transition: all .35s
                 display: flex
                 flex-direction: column
                 justify-content: center
                 align-items: center
+                color: $white
             &:hover
                 .project-info
-                    opacity: 1
+                    transform: translateY(0)
 

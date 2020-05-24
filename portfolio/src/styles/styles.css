@@ -1152,6 +1152,10 @@ form .field-group textarea {
   transition: all .25s;
 }
 
+.projects-content nav ul li:hover {
+  opacity: .7;
+}
+
 .projects-content nav ul li.active {
   background: #08303F;
   color: #ffffff;
@@ -1177,6 +1181,8 @@ form .field-group textarea {
   position: relative;
   border-radius: 30px;
   height: 100%;
+  margin: 10px 0;
+  overflow: hidden;
 }
 
 .projects-content .showcase article .project-info {
@@ -1187,9 +1193,10 @@ form .field-group textarea {
   width: 100%;
   background: rgba(0, 163, 225, 0.8);
   border-radius: 30px;
-  opacity: 0;
-  -webkit-transition: opacity .35s;
-  transition: opacity .35s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all .35s;
+  transition: all .35s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1203,10 +1210,12 @@ form .field-group textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #ffffff;
 }
 
 .projects-content .showcase article:hover .project-info {
-  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .contact-page footer {
