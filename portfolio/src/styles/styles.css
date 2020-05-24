@@ -1115,6 +1115,7 @@ form .field-group textarea {
   position: absolute;
   bottom: 0;
   position: relative;
+  color: #ffffff;
 }
 
 .contact-page .main-content .container {
@@ -1152,11 +1153,97 @@ form .field-group textarea {
   background: #08303F;
   background: linear-gradient(90.45deg, rgba(0, 0, 0, 0.9) 0.8%, rgba(0, 0, 0, 0.5) 99.36%, rgba(0, 0, 0, 0.5) 99.37%, rgba(0, 0, 0, 0.140539) 99.38%, rgba(0, 0, 0, 0) 99.39%), url(../images/contact-bg.jpg);
   background-size: cover;
-  background-position: left top;
+  background-position: left center;
   background-repeat: no-repeat;
   padding: 30px  5% 50px;
   margin: 0 0 -50px;
   color: #ffffff;
+}
+
+.contact-page .main-content .container .details .address-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-page .main-content .container .details .address-info ul li {
+  margin: 15px auto;
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-page .main-content .container .details .address-info ul li .left {
+  margin-right: 25px;
+}
+
+.contact-page .main-content .container .details .address-info ul li .left .icon {
+  font-size: 24px;
+}
+
+.contact-page .main-content .container .details .address-info ul li .right a {
+  color: #C6E0EA;
+}
+
+.contact-page .main-content .container .details .address-info ul li .right a:hover {
+  text-decoration: underline;
+}
+
+.contact-page .main-content .container .details .contact-social-media h2 {
+  margin: 20px 0;
+}
+
+.contact-page .main-content .container .details .contact-social-media .showcase ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-page .main-content .container .details .contact-social-media .showcase ul li {
+  width: 180px;
+  height: 35px;
+  margin: 10px;
+}
+
+.contact-page .main-content .container .details .contact-social-media .showcase ul li a {
+  background: #C6E0EA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #08303F;
+  font-size: 14px;
+}
+
+.contact-page .main-content .container .details .contact-social-media .showcase ul li a .icon {
+  margin-right: 15px;
+}
+
+.contact-page .main-content .container .details .contact-social-media .showcase ul li a:hover {
+  color: #00A3E1;
 }
 
 .App.darkmode .nav.nav-header {

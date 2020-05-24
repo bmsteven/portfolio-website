@@ -18,31 +18,31 @@ const Details = () => {
           <span></span>Get In Touch
         </h2>
       </header>
-      <div class='address-info'>
+      <div className='address-info'>
         <ul>
           <li>
-            <div class='left'>
+            <div className='left'>
               <FaMapMarkerAlt className='icon' />
             </div>
-            <div class='right'>
+            <div className='right'>
               <span>Dar Es Salaam, Tanzania</span>
             </div>
           </li>
           <li>
-            <div class='left'>
+            <div className='left'>
               <FaPaperPlane className='icon' />
             </div>
-            <div class='right'>
+            <div className='right'>
               <span>
                 <a href='mailto:bmsteve@yahoo.com'>bmsteve@yahoo.com</a>
               </span>
             </div>
           </li>
           <li>
-            <div class='left'>
+            <div className='left'>
               <FaPhone className='icon' />
             </div>
-            <div class='right'>
+            <div className='right'>
               <span>
                 <a href='tel:+255655392445'>+255 655 392 445</a>
               </span>
@@ -50,7 +50,7 @@ const Details = () => {
           </li>
         </ul>
       </div>
-      <div class='contact-social-media'>
+      <div className='contact-social-media'>
         <h2>Lets Connect Via</h2>
         <div className='showcase'>
           <ul>
@@ -92,7 +92,7 @@ const Details = () => {
             </li>
             <li>
               <a
-                href='https://instagram.com/bmsteven_'
+                href='https://github.com/bmsteven'
                 target='_blank'
                 rel='noopener noreferrer'
               >
