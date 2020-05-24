@@ -1010,6 +1010,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: left;
 }
 
 .resume.main-content .education .showcase article::before, .resume.main-content .education .showcase article::after {
