@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import FlipMove from "react-flip-move";
 
 import projects from "../../data/projects";
 
@@ -59,37 +60,39 @@ const Projects = () => {
         </nav>
         <div className='showcase'>
           {displayProjects.map((item) => (
-            <article key={item.id} className='project-container project'>
-              {item.src.length > 0 && (
-                <>
-                  <section className='project-image'>
-                    <img src={item.src} alt={item.name} />
-                  </section>
-                  <section className='project-info'>
-                    <div className='project-name'>
-                      <h2>{item.name}</h2>
-                    </div>
-                    <div className='btns'>
-                      <Link
-                        to={`/portfolio/${item.slug}`}
-                        className='btn btn-primary'
-                      >
-                        About
-                      </Link>
-                      {item.demo && (
-                        <a
-                          href={item.demo}
-                          target='_blank'
-                          rel='noopener noreferrer'
+            <FlipMove>
+              <article key={item.id} className='project-container project'>
+                {item.src.length > 0 && (
+                  <>
+                    <section className='project-image'>
+                      <img src={item.src} alt={item.name} />
+                    </section>
+                    <section className='project-info'>
+                      <div className='project-name'>
+                        <h2>{item.name}</h2>
+                      </div>
+                      <div className='btns'>
+                        <Link
+                          to={`/portfolio/${item.slug}`}
+                          className='btn btn-primary'
                         >
-                          Live App
-                        </a>
-                      )}
-                    </div>
-                  </section>
-                </>
-              )}
-            </article>
+                          <span>About</span>
+                        </Link>
+                        {item.demo && (
+                          <a
+                            href={item.demo}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            Live App
+                          </a>
+                        )}
+                      </div>
+                    </section>
+                  </>
+                )}
+              </article>
+            </FlipMove>
           ))}
         </div>
       </div>

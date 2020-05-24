@@ -5,6 +5,7 @@
         margin: 10px auto 20px
         background: $white
         box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0
+        transition: .35s
         height: 50px
         border-radius: 25px
         ul
@@ -41,6 +42,8 @@
             height: 100%
             margin: 10px 0
             overflow: hidden
+            .project-image
+                transition: all .35s
             .project-info
                 position: absolute
                 top: 0
@@ -59,4 +62,6 @@
             &:hover
                 .project-info
                     transform: translateY(0)
+                .project-image
+                    transform: scale(1.1)
 

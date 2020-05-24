@@ -213,6 +213,7 @@ button {
 
 main.main-content {
   padding-top: 80px;
+  min-height: calc( 100vh - 50px);
 }
 
 .social-media-container {
@@ -1118,6 +1119,8 @@ form .field-group textarea {
   background: #ffffff;
   -webkit-box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
           box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
+  -webkit-transition: .35s;
+  transition: .35s;
   height: 50px;
   border-radius: 25px;
 }
@@ -1185,6 +1188,11 @@ form .field-group textarea {
   overflow: hidden;
 }
 
+.projects-content .showcase article .project-image {
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
 .projects-content .showcase article .project-info {
   position: absolute;
   top: 0;
@@ -1216,6 +1224,11 @@ form .field-group textarea {
 .projects-content .showcase article:hover .project-info {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.projects-content .showcase article:hover .project-image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .contact-page footer {
