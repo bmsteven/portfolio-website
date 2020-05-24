@@ -1,5 +1,4 @@
 import kodemunit from "../images/kodemunit.png";
-import ceeptz from "../images/ceeptz.png";
 import jitangaze from "../images/jitangaze.png";
 import portfolio from "../images/portfolio.png";
 import gramath from "../images/gramath.png";
@@ -17,26 +16,26 @@ const projects = [
     demo: "http://kodemunit.com",
     tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
     roles: ["UX/UI Designer", "Developer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   },
   {
     id: 2,
-    name: "CEEPTZ",
+    name: "portfolio",
     slug: "ceeptz",
-    src: ceeptz,
+    src: portfolio,
     source: "",
     category: ["Web", "Design", "All"],
     about: "CEEPTz website with all information about CEEPTZ startup",
     demo: "http://ceeptz.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
     roles: ["UX/UI Designer", "Developer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   },
   {
     id: 3,
     name: "COVID19-TZ",
     slug: "covid19-tz",
-    src: "kodemunit",
+    src: kodemunit,
     source: "http://github.com/bmsteven/corona",
     category: ["Web"],
     about:
@@ -44,7 +43,7 @@ const projects = [
     demo: "http://covid19-tz.netlify.app",
     tools: ["HTML", "CSS", "SASS", "React"],
     roles: ["Frontend Developer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   },
   {
     id: 4,
@@ -57,7 +56,7 @@ const projects = [
     demo: "http://kilimoshare.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
     roles: ["UX/UI Designer", "Developer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   },
   {
     id: 5,
@@ -71,21 +70,21 @@ const projects = [
     demo: "",
     tools: ["Figma"],
     roles: ["Graphic Designer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   },
   {
     id: 6,
     name: "Jitangaze App",
     slug: "jitangaze",
     src: jitangaze,
-    source:
-      "A platform where users can create account, upload their informations like their resume, contact info, projects and many more and share their portfolios to the world",
+    source: "",
     category: ["Web", "Design", "All"],
-    about: "",
+    about:
+      "A platform where users can create account, upload their informations like their resume, contact info, projects and many more and share their portfolios to the world",
     demo: "http://jitangaze.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
     roles: ["UX/UI Designer", "Frontend Developer", "Backend Developer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   },
   {
     id: 7,
@@ -98,7 +97,7 @@ const projects = [
     demo: "http://bm-dev.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux"],
     roles: ["UX/UI Designer", "Developer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   },
   {
     id: 8,
@@ -111,8 +110,8 @@ const projects = [
     demo: "",
     tools: ["Figma"],
     roles: ["UI Designer"],
-    gallery: [kodemunit, ceeptz, jitangaze, portfolio, gramath]
-  }
+    gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
+  },
 ];
 
 export default projects;

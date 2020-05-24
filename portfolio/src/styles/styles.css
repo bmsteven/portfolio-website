@@ -1114,7 +1114,7 @@ form .field-group textarea {
 .projects-content nav {
   width: 100%;
   max-width: 350px;
-  margin: 10px auto;
+  margin: 10px auto 20px;
   background: #ffffff;
   -webkit-box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
           box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
@@ -1166,7 +1166,47 @@ form .field-group textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 25px;
+  margin-top: 50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.projects-content .showcase article {
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: relative;
+  border-radius: 30px;
+  height: 100%;
+}
+
+.projects-content .showcase article .project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 163, 225, 0.8);
+  border-radius: 30px;
+  opacity: 0;
+  -webkit-transition: opacity .35s;
+  transition: opacity .35s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-content .showcase article:hover .project-info {
+  opacity: 1;
 }
 
 .contact-page footer {
