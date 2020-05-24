@@ -78,6 +78,7 @@ button {
 
 .btn-primary span {
   z-index: 2;
+  letter-spacing: 1px;
 }
 
 .btn-primary::before, .btn-primary::after {
@@ -284,6 +285,58 @@ footer .container {
 img {
   width: 100%;
   height: auto;
+}
+
+form {
+  width: 100%;
+}
+
+form .field-group {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+form .field-group label {
+  display: block;
+  color: #1D2122;
+  margin-bottom: 5px;
+}
+
+form .field-group input, form .field-group textarea {
+  background: none;
+  width: 100%;
+  height: 35px;
+  outline: 1px solid #c6e0ea;
+  border: none;
+  padding: 7px 10px;
+  -webkit-transition: .15s;
+  transition: .15s;
+  resize: none;
+}
+
+form .field-group input:focus, form .field-group textarea:focus {
+  outline: 2px solid #00A3E1 !important;
+}
+
+form .field-group input::-webkit-input-placeholder, form .field-group textarea::-webkit-input-placeholder {
+  color: #7b9daa;
+}
+
+form .field-group input:-ms-input-placeholder, form .field-group textarea:-ms-input-placeholder {
+  color: #7b9daa;
+}
+
+form .field-group input::-ms-input-placeholder, form .field-group textarea::-ms-input-placeholder {
+  color: #7b9daa;
+}
+
+form .field-group input::placeholder, form .field-group textarea::placeholder {
+  color: #7b9daa;
+}
+
+form .field-group textarea {
+  height: 70px;
+  font-size: 1.1em;
 }
 
 .nav {
@@ -1058,6 +1111,53 @@ img {
   font-weight: 700;
 }
 
+.contact-page footer {
+  position: absolute;
+  bottom: 0;
+  position: relative;
+}
+
+.contact-page .main-content .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.contact-page .main-content .container span.span {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+  margin: 30px 0;
+}
+
+.contact-page .main-content .container .form {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 20px 2.5%;
+}
+
+.contact-page .main-content .container .details {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  background: #08303F;
+  background: linear-gradient(90.45deg, rgba(0, 0, 0, 0.9) 0.8%, rgba(0, 0, 0, 0.5) 99.36%, rgba(0, 0, 0, 0.5) 99.37%, rgba(0, 0, 0, 0.140539) 99.38%, rgba(0, 0, 0, 0) 99.39%), url(../images/contact-bg.jpg);
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  padding: 30px  2.5% 50px;
+  margin: 0 0 -50px;
+}
+
 .App.darkmode .nav.nav-header {
   background: #191C1D;
 }
@@ -1118,5 +1218,34 @@ img {
 
 .App.darkmode .resume.main-content .resume-template .showcase article h2 {
   color: #ffffff;
+}
+
+.App.darkmode form .field-group label {
+  color: #ffffff;
+}
+
+.App.darkmode form .field-group input, .App.darkmode form .field-group textarea {
+  outline: 1px solid #3E4C51;
+  color: #C4C4C4;
+}
+
+.App.darkmode form .field-group input:focus, .App.darkmode form .field-group textarea:focus {
+  outline: 2px solid #08303F !important;
+}
+
+.App.darkmode form .field-group input::-webkit-input-placeholder, .App.darkmode form .field-group textarea::-webkit-input-placeholder {
+  color: #60828F;
+}
+
+.App.darkmode form .field-group input:-ms-input-placeholder, .App.darkmode form .field-group textarea:-ms-input-placeholder {
+  color: #60828F;
+}
+
+.App.darkmode form .field-group input::-ms-input-placeholder, .App.darkmode form .field-group textarea::-ms-input-placeholder {
+  color: #60828F;
+}
+
+.App.darkmode form .field-group input::placeholder, .App.darkmode form .field-group textarea::placeholder {
+  color: #60828F;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -17,11 +17,11 @@ const Form = () => {
           <input type='text' placeholder='Name' id='Name' name='Name' />
         </div>
         <div className='field-group'>
-          <label htmlFor='Name'>Email:</label>
+          <label htmlFor='Email'>Email:</label>
           <input type='email' placeholder='Email' id='Email' name='Email' />
         </div>
         <div className='field-group'>
-          <label htmlFor='Name'>Subject:</label>
+          <label htmlFor='Subject'>Subject:</label>
           <input
             type='text'
             placeholder='Subject'
@@ -30,7 +30,7 @@ const Form = () => {
           />
         </div>
         <div className='field-group'>
-          <label htmlFor='Name'>Brief Me:</label>
+          <label htmlFor='msg'>Brief Me:</label>
           <textarea placeholder='Write a message' id='msg' name='msg' />
         </div>
         <button className='btn btn-primary'>

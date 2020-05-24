@@ -19,7 +19,7 @@ const Contact = ({ ...rest }) => {
       <main className="main-content">
         <div className="container">
           <Details />
-          <span>Or</span>
+          <span className="span">Or</span>
           <Form />
         </div>
       </main>

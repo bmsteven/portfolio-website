@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import heroLight from "../images/hero-bg-light.png";
-import heroDark from "../images/hero-bg-dark.png";
+import heroLight from "../images/hero-bg-light.jpeg";
+import heroDark from "../images/hero-bg-dark.jpg";
 
 const Banner = ({ children, ui: { darkMode } }) => {
   return (

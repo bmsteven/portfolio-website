@@ -12,7 +12,7 @@ import {
 
 const Details = () => {
   return (
-    <section className='form'>
+    <section className='details'>
       <header className='primary-header contact-header'>
         <h2>
           <span></span>Get In Touch
