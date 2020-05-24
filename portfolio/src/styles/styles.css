@@ -1111,6 +1111,64 @@ form .field-group textarea {
   font-weight: 700;
 }
 
+.projects-content nav {
+  width: 100%;
+  max-width: 350px;
+  margin: 10px auto;
+  background: #ffffff;
+  -webkit-box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
+          box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.projects-content nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects-content nav ul li {
+  padding: 7px 10px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 70px;
+  margin: 0 5px;
+  border-radius: 25px;
+  color: #1D2122;
+  cursor: pointer;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.projects-content nav ul li.active {
+  background: #08303F;
+  color: #ffffff;
+}
+
+.projects-content .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+}
+
 .contact-page footer {
   position: absolute;
   bottom: 0;
@@ -1335,5 +1393,21 @@ form .field-group textarea {
 
 .App.darkmode form .field-group input::placeholder, .App.darkmode form .field-group textarea::placeholder {
   color: #60828F;
+}
+
+.App.darkmode .projects-content nav {
+  background: #191C1D;
+  -webkit-box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2b2f30;
+          box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2b2f30;
+}
+
+.App.darkmode .projects-content nav ul li {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.App.darkmode .projects-content nav ul li.active {
+  background: #00A3E1;
+  color: #000000;
 }
 /*# sourceMappingURL=styles.css.map */
