@@ -665,6 +665,34 @@ form .field-group textarea {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .nav.nav__static .container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .nav.nav__static .container .logo {
+    position: absolute;
+    top: 80px;
+    left: 7.5%;
+  }
+  .nav.nav__static .container .logo a img {
+    height: 70px;
+  }
+  .nav .container .change-mode {
+    right: 3%;
+  }
+  .nav .container nav ul li {
+    margin-left: 50px;
+  }
+  .nav .container nav ul li a {
+    font-size: 18px;
+  }
+  .nav .container nav ul li:nth-child(even) {
+    margin-left: 50px;
+  }
+}
+
 .banner {
   min-height: calc( 100vh - 70px);
   max-height: 900px;
@@ -847,6 +875,18 @@ form .field-group textarea {
   .about-header .banner .content .container p {
     font-size: 16px;
     line-height: 25px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner .content .container {
+    padding-left: 60px;
+    width: 600px;
+    margin: 0;
+  }
+  .banner .content .container .btn {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
@@ -1493,7 +1533,50 @@ form .field-group textarea {
   }
 }
 
-.projects-content nav {
+.projects-content.project-content {
+  padding: 30px 0;
+}
+
+.projects-content.project-content img {
+  width: 100%;
+  max-width: 477px;
+  height: auto;
+}
+
+.projects-content.project-content .container span {
+  color: gray;
+}
+
+.projects-content.project-content .container span a {
+  color: #00A3E1;
+}
+
+.projects-content.project-content .container section {
+  margin: 50px 0;
+}
+
+.projects-content.project-content .container section .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects-content.project-content .container section .showcase article {
+  width: 20%;
+}
+
+.projects-content.project-content .container section.gallery .showcase article {
+  width: 40%;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.projects-content .container nav {
   width: 100%;
   max-width: 350px;
   margin: 10px auto 20px;
@@ -1506,7 +1589,7 @@ form .field-group textarea {
   border-radius: 25px;
 }
 
-.projects-content nav ul {
+.projects-content .container nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1515,7 +1598,7 @@ form .field-group textarea {
           justify-content: center;
 }
 
-.projects-content nav ul li {
+.projects-content .container nav ul li {
   padding: 7px 10px;
   height: 50px;
   display: -webkit-box;
@@ -1536,45 +1619,47 @@ form .field-group textarea {
   transition: all .25s;
 }
 
-.projects-content nav ul li:hover {
+.projects-content .container nav ul li:hover {
   opacity: .7;
 }
 
-.projects-content nav ul li.active {
+.projects-content .container nav ul li.active {
   background: #08303F;
   color: #ffffff;
 }
 
-.projects-content .showcase {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.projects-content .container .showcase {
   margin-top: 50px;
   -webkit-transition: .3s;
   transition: .3s;
+  text-align: center;
+  margin: 1.5em auto;
+  max-width: 768px;
+  -webkit-column-gap: 1.5em;
+          column-gap: 1.5em;
 }
 
-.projects-content .showcase article {
+.projects-content .container .showcase article {
   -webkit-transition: .3s;
   transition: .3s;
   position: relative;
   border-radius: 30px;
   height: 100%;
-  margin: 10px 0;
+  margin: 7px;
+  width: 100%;
+  max-width: 377px;
   overflow: hidden;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
 }
 
-.projects-content .showcase article .project-image {
+.projects-content .container .showcase article .project-image {
   -webkit-transition: all .35s;
   transition: all .35s;
 }
 
-.projects-content .showcase article .project-info {
+.projects-content .container .showcase article .project-info {
   position: absolute;
   top: 0;
   left: 0;
@@ -1602,14 +1687,44 @@ form .field-group textarea {
   color: #ffffff;
 }
 
-.projects-content .showcase article:hover .project-info {
+.projects-content .container .showcase article:hover .project-info {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.projects-content .showcase article:hover .project-image {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.projects-content .showcase {
+  margin: 1.5em auto;
+  max-width: 1400px;
+  -webkit-column-gap: 1.5em;
+          column-gap: 1.5em;
+  padding: 1em;
+  margin: 0 0 1.5em;
+  min-width: 377px;
+}
+
+.projects-content footer {
+  clear: both;
+}
+
+@media only screen and (min-width: 1024px) {
+  .showcase {
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .showcase {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .showcase {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
 }
 
 .contact-page footer {
@@ -1953,6 +2068,15 @@ form .field-group textarea {
 .App.darkmode .projects-content nav ul li.active {
   background: #00A3E1;
   color: #000000;
+}
+
+@media screen and (min-width: 1080px) {
+  .App.darkmode .steps .container .showcase .col.col2 .circle {
+    border: 1px solid #ffffff;
+  }
+  .App.darkmode .steps .container .showcase .col.col2 .circle::before {
+    border: 1px solid #ffffff;
+  }
 }
 
 @media screen and (min-width: 768px) {

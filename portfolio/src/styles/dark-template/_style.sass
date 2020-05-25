@@ -84,8 +84,18 @@
                         background: $primary
                         color: $black
 
+@media screen and ( min-width: 1080px )
+    .App.darkmode
+        .steps
+            .container
+                .showcase
+                    .col  
+                        &.col2
+                            .circle
+                                border: 1px solid $white
+                                &::before
+                                    border: 1px solid $white    
                     
-                        
 @media screen and ( min-width: 768px )
     .App.darkmode
         .nav

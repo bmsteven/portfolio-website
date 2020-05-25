@@ -60,25 +60,29 @@ const Project = () => {
             }
 
             {obj.tools.length > 0 && (
-              <div>
+              <section>
                 <h2>Tool(s) Used</h2>
-                {obj.tools.map((tool) => (
-                  <div key={tool}>
-                    <FaCheck className='icon' /> {tool}
-                  </div>
-                ))}
-              </div>
+                <div className='showcase'>
+                  {obj.tools.map((tool) => (
+                    <article key={tool}>
+                      <FaCheck className='icon' /> {tool}
+                    </article>
+                  ))}
+                </div>
+              </section>
             )}
 
             {obj.roles.length > 0 && (
-              <div className='roles'>
+              <section className='roles'>
                 <h2>My Role(s) In This Project</h2>
-                {obj.roles.map((role) => (
-                  <div key={role}>
-                    <FaCheck className='icon' /> {role}
-                  </div>
-                ))}
-              </div>
+                <div className='showcase'>
+                  {obj.roles.map((role) => (
+                    <article key={role}>
+                      <FaCheck className='icon' /> {role}
+                    </article>
+                  ))}
+                </div>
+              </section>
             )}
 
             {obj.gallery.length > 0 && (
