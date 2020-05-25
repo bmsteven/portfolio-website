@@ -12,7 +12,7 @@ const About = () => {
     document.title = "About Me - Benedict's Portfolio ";
   }, []);
   return (
-    <div>
+    <div className="about-page">
       <Header headerClass='about-header'>
         <div className='container'>
           <header>

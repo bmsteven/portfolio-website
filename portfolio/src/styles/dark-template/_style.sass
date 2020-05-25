@@ -1,9 +1,8 @@
 .App.darkmode
     .nav
-        &.nav-header
+        &.nav-header, &.nav__sticky
             background: $darker
-        &.nav__sticky
-            background: $darker
+            box-shadow: 4px 4px 12px #0c0d0e
     .banner
         .content
             background: $darker
@@ -28,6 +27,8 @@
                 background: $dark
                 span
                     border-right: 3px solid $darker
+                &:hover
+                    background: none
                 
     .steps
         .container
@@ -41,6 +42,7 @@
         &.main-content
             .resume-template
                 background: $darker
+                box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b
                 .showcase
                     article
                         .icon-container

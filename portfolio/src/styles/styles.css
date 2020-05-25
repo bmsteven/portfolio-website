@@ -344,6 +344,18 @@ form .field-group textarea {
   .container {
     width: 85%;
   }
+  main.main-content .container {
+    width: 80%;
+  }
+  footer .container {
+    width: 80%;
+  }
+  .home-page footer .container {
+    width: 90%;
+  }
+  .about-page main.main-content {
+    padding: 0;
+  }
 }
 
 .nav {
@@ -645,6 +657,7 @@ form .field-group textarea {
 
 .banner {
   min-height: calc( 100vh - 70px);
+  max-height: 900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -801,6 +814,11 @@ form .field-group textarea {
   .banner .hero-bg {
     width: 45%;
     height: calc( 80% - 50px);
+  }
+  .about-header .banner {
+    min-height: 700px;
+    height: 100vh;
+    max-height: 700px;
   }
   .about-header .banner .content {
     position: relative;
@@ -1517,12 +1535,10 @@ form .field-group textarea {
   color: #00A3E1;
 }
 
-.App.darkmode .nav.nav-header {
+.App.darkmode .nav.nav-header, .App.darkmode .nav.nav__sticky {
   background: #191C1D;
-}
-
-.App.darkmode .nav.nav__sticky {
-  background: #191C1D;
+  -webkit-box-shadow: 4px 4px 12px #0c0d0e;
+          box-shadow: 4px 4px 12px #0c0d0e;
 }
 
 .App.darkmode .banner .content {
@@ -1562,12 +1578,18 @@ form .field-group textarea {
   border-right: 3px solid #191C1D;
 }
 
+.App.darkmode .hobbies .showcase .hobby:hover {
+  background: none;
+}
+
 .App.darkmode .steps .container .showcase .col .row h4 {
   color: #C4C4C4;
 }
 
 .App.darkmode .resume.main-content .resume-template {
   background: #191C1D;
+  -webkit-box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b;
+          box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b;
 }
 
 .App.darkmode .resume.main-content .resume-template .showcase article .icon-container {
