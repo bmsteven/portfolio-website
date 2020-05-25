@@ -16,3 +16,16 @@
         @import "../pages-components/resume/_skills"
         @import "../pages-components/resume/_experience"
         @import "../pages-components/resume/_education"
+
+@media screen and ( min-width: 992px )
+    .resume
+        &.main-content
+            .row
+                flex-wrap: nowrap
+                .resume-template
+                    margin-right: 20px
+                    height: 100%
+                    &:nth-child(2)
+                        margin-right: 0
+                        margin-left: 20px
+                        

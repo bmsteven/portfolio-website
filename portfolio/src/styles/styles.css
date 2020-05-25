@@ -207,6 +207,7 @@ button {
 
 .container {
   width: 95%;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -1366,6 +1367,21 @@ form .field-group textarea {
 
 .resume.main-content .education .showcase article .date-school .school {
   font-weight: 700;
+}
+
+@media screen and (min-width: 992px) {
+  .resume.main-content .row {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .resume.main-content .row .resume-template {
+    margin-right: 20px;
+    height: 100%;
+  }
+  .resume.main-content .row .resume-template:nth-child(2) {
+    margin-right: 0;
+    margin-left: 20px;
+  }
 }
 
 .projects-content nav {
