@@ -268,7 +268,7 @@ main.main-content {
 
 footer {
   height: 50px;
-  width: 100%;
+  width: 100vw;
 }
 
 footer .container {
@@ -367,7 +367,7 @@ form .field-group textarea {
 
 .nav {
   height: 70px;
-  width: 100%;
+  width: 100vw;
   z-index: 19;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -1633,10 +1633,6 @@ form .field-group textarea {
   -webkit-transition: .3s;
   transition: .3s;
   text-align: center;
-  margin: 1.5em auto;
-  max-width: 768px;
-  -webkit-column-gap: 1.5em;
-          column-gap: 1.5em;
 }
 
 .projects-content .container .showcase article {
@@ -1647,11 +1643,9 @@ form .field-group textarea {
   height: 100%;
   margin: 7px;
   width: 100%;
-  max-width: 377px;
   overflow: hidden;
   display: inline-block;
   margin: 0 0 1em;
-  width: 100%;
 }
 
 .projects-content .container .showcase article .project-image {
@@ -1697,9 +1691,11 @@ form .field-group textarea {
   max-width: 1400px;
   -webkit-column-gap: 1.5em;
           column-gap: 1.5em;
+}
+
+.projects-content .showcase article {
   padding: 1em;
   margin: 0 0 1.5em;
-  min-width: 377px;
 }
 
 .projects-content footer {
@@ -1720,10 +1716,14 @@ form .field-group textarea {
   }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 540px) {
+@media only screen and (max-width: 767px) {
   .showcase {
     -webkit-column-count: 1;
             column-count: 1;
+  }
+  .showcase article {
+    padding: 1em;
+    margin: 0 0 1.5em;
   }
 }
 
