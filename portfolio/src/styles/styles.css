@@ -1183,6 +1183,112 @@ form .field-group textarea {
   border-left: none;
 }
 
+@media screen and (min-width: 635px) {
+  .steps .container .showcase {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 0 1fr;
+        grid-template-columns: 1fr 0 1fr;
+    position: relative;
+  }
+  .steps .container .showcase::before, .steps .container .showcase::after {
+    content: "";
+    position: absolute;
+    background: #00A3E1;
+  }
+  .steps .container .showcase::before {
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 1px;
+    width: 100%;
+  }
+  .steps .container .showcase::after {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 100%;
+    width: 1px;
+  }
+  .steps .container .showcase .col {
+    text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .steps .container .showcase .col .row {
+    border-left: none;
+    height: 200px;
+  }
+  .steps .container .showcase .col .row:nth-child(odd) {
+    border: none;
+  }
+  .steps .container .showcase .col.col3 .row {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .steps .container .showcase {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1.5fr 1fr;
+        grid-template-columns: 1fr 1.5fr 1fr;
+  }
+  .steps .container .showcase .col {
+    text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .steps .container .showcase .col .row {
+    height: 200px;
+  }
+  .steps .container .showcase .col.col3 .row {
+    text-align: left;
+  }
+  .steps .container .showcase .col.col2 {
+    padding: 0 40px;
+  }
+  .steps .container .showcase .col.col2 .circle {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .steps .container .showcase .col.col2 .circle::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+}
+
 .resume.main-content header.primary-header {
   text-align: center;
 }

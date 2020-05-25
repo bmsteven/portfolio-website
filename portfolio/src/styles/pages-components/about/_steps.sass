@@ -13,8 +13,7 @@
                 left: 0
                 top: 0
                 height: 100%
-                width: 3px
-                    
+                width: 3px   
         .showcase
             display: flex
             flex-direction: column
@@ -34,5 +33,78 @@
                         text-align: right
                         border-right: 2px solid $primary
                         border-left: none
+
+@media screen and ( min-width: 635px )
+    .steps
+        .container
+            .showcase
+                display: grid
+                grid-template-columns: 1fr 0 1fr
+                position: relative
+                &::before, &::after
+                    content: ""
+                    position: absolute
+                    background: $primary
+                &::before
+                    left: 0
+                    top: 50%
+                    transform: translateY(-50%)
+                    height: 1px
+                    width: 100%
+                &::after
+                    top: 0
+                    left: 50%
+                    transform: translateX(-50%)
+                    height: 100%
+                    width: 1px
+                .col
+                    text-align: right
+                    display: flex
+                    flex-direction: column
+                    .row
+                        border-left: none
+                        height: 200px
+                        &:nth-child(odd)
+                            border: none
+                    &.col3
+                        .row
+                            text-align: left   
+
+@media screen and ( min-width: 1080px )
+    .steps
+        .container
+            .showcase
+                display: grid
+                grid-template-columns: 1fr 1.5fr 1fr
+                .col
+                    text-align: right
+                    display: flex
+                    flex-direction: column
+                    .row
+                        height: 200px
+                    &.col3
+                        .row
+                            text-align: left  
+                    &.col2
+                        padding: 0 40px
+                        .circle
+                            position: relative
+                            height: 100%
+                            width: 100%
+                            border: 1px solid $black
+                            border-radius: 50%
+                            padding: 20px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            &::before
+                                content: ""
+                                position: absolute
+                                top: 20px
+                                left: 20px
+                                right: 20px
+                                bottom: 20px
+                                border: 1px solid $black
+                                border-radius: 50%                          
+    
                     
-                        

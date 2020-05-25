@@ -29,7 +29,7 @@ import "./styles/styles.css";
 
 // page transition animations with pose
 const RouteContainer = posed.div({
-  enter: { opacity: 1, delay: 200, beforeChildren: false },
+  enter: { opacity: 1, delay: 100, beforeChildren: false },
   exit: { opacity: 0 },
 });
 

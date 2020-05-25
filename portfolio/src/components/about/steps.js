@@ -11,7 +11,7 @@ const Steps = () => {
         </header>
         <div className='showcase'>
           <div className='col col1'>
-            {steps.slice(0,2).map((step) => (
+            {steps.slice(0, 2).map((step) => (
               <article key={step.id} className={`row row-${step.id}`}>
                 <h4>{step.id}</h4>
                 <h3>{step.title}</h3>
@@ -19,7 +19,9 @@ const Steps = () => {
               </article>
             ))}
           </div>
-          <div class="col col2"></div>
+          <div class='col col2'>
+            <div className='circle'></div>
+          </div>
           <div className='col col3'>
             {steps.slice(-2).map((step) => (
               <article key={step.id} className={`row row-${step.id}`}>
