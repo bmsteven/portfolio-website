@@ -1169,6 +1169,7 @@ form .field-group textarea {
 
 .resume.main-content .skills .tools h2 {
   margin-left: 20px;
+  text-align: left;
 }
 
 .resume.main-content .skills .tools .showcase article span {
@@ -1255,6 +1256,8 @@ form .field-group textarea {
   border-radius: 50%;
   background: #ffffff;
   border: 2px solid #00A3E1;
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 .resume.main-content .education .showcase article::after {
