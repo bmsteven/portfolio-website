@@ -1568,6 +1568,7 @@ form .field-group textarea {
 
 .projects-content.project-content .container section .showcase article {
   width: 20%;
+  min-width: 140px;
 }
 
 .projects-content.project-content .container section.gallery .showcase article {
