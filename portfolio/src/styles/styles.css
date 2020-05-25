@@ -1241,6 +1241,9 @@ form .field-group textarea {
     -ms-grid-columns: 1fr 1.5fr 1fr;
         grid-template-columns: 1fr 1.5fr 1fr;
   }
+  .steps .container .showcase::before, .steps .container .showcase::after {
+    background: none;
+  }
   .steps .container .showcase .col {
     text-align: right;
     display: -webkit-box;
