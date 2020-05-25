@@ -1,6 +1,5 @@
 .contact-page
     footer
-        position: absolute
         bottom: 0
         position: relative
         color: $white
@@ -30,3 +29,51 @@
                 margin: 0 0 -50px
                 color: $white
                 @import "../pages-components/contact/_contact-info"
+
+@media screen and ( min-width: 480px )
+    .contact-page
+        .main-content
+            .container
+                .form
+                    order: 1
+                    width: 800px
+                    margin: auto
+                    padding: 0 0 20px
+                .details
+                    order: 3
+
+@media screen and ( min-width: 768px )
+    .contact-page
+        .main-content
+            .container
+                .form
+                    order: 1
+                    padding: 0 15% 20px
+                .details
+                    order: 3
+
+@media screen and ( min-width: 992px )
+    .contact-page
+        footer
+            color: $black
+        .main-content
+            .container
+                width: 85%
+                max-width: 1200px
+                margin: 30px auto 20px
+                flex-direction: row
+                box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff
+                height: 700px
+                transition: .35s
+                section
+                    height: 100%
+                span.span
+                    display: none
+                .form
+                    order: 3
+                    padding: 30px
+                    width: 55%
+                .details
+                    width: 45%
+                    order: 1
+                    padding: 30px
