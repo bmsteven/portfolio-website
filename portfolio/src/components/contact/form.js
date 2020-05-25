@@ -33,6 +33,7 @@ const Form = () => {
           <label htmlFor='msg'>Brief Me:</label>
           <textarea placeholder='Write a message' id='msg' name='msg' />
         </div>
+        <p className="alert" id="alert"></p>
         <button className='btn btn-primary'>
           <span>Submit</span>
         </button>
