@@ -3,6 +3,13 @@
         &.nav-header, &.nav__sticky
             background: $darker
             box-shadow: 4px 4px 12px #0c0d0e
+        .container
+            nav
+                ul
+                    li
+                        a
+                            &.active
+                                color: $white
     .banner
         .content
             background: $darker
@@ -42,7 +49,9 @@
         &.main-content
             .resume-template
                 background: $darker
-                box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b
+                box-shadow: none
+                &:hover
+                    box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b
                 .showcase
                     article
                         .icon-container
