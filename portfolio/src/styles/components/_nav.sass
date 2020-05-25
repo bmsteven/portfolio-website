@@ -14,6 +14,7 @@
         box-shadow: 4px 4px 4px rgba(0,0,0,.1)
     .container
         height: 100%
+        max-width: 1400px
         display: flex
         justify-content: space-between
         align-items: center
@@ -100,3 +101,56 @@
     100%
         opacity: 1
         transform: rotateZ(0) translateX(0)
+
+
+@media screen and ( min-width: 768px )
+    .nav
+        .container
+            .change-mode
+                right: 2%
+            .burger
+                font-size: 30px
+                cursor: pointer
+                display: none
+            nav
+                position: relative
+                background: none
+                width: auto
+                min-height: 0
+                transform: translateX(0)
+                transition: transform .35s ease-in-out
+                display: flex
+                justify-content: center
+                align-items: center
+                ul
+                    display: flex
+                    flex-direction: row
+                    justify-content: flex-end
+                    margin: 0
+                    li
+                        min-width: 0
+                        height: 100%
+                        margin-left: 25px
+                        margin-bottom: 0
+                        a
+                            color: $link-bg
+                            background: none
+                            height: 100%
+                            width: 100%
+                            font-size: 16px
+                            letter-spacing: 1px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            transition: .3s
+                            box-shadow: none
+                            clip-path: none
+                            &:hover
+                                background: none
+                                color: $black
+                        &:nth-child(even)
+                            margin-left: 25px
+                            a
+                                clip-path: none
+                                
+    

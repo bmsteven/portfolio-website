@@ -340,6 +340,12 @@ form .field-group textarea {
   font-size: 1.1em;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    width: 85%;
+  }
+}
+
 .nav {
   height: 70px;
   width: 100%;
@@ -365,6 +371,7 @@ form .field-group textarea {
 
 .nav .container {
   height: 100%;
+  max-width: 1400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,6 +558,91 @@ form .field-group textarea {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .nav .container .change-mode {
+    right: 2%;
+  }
+  .nav .container .burger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  .nav .container nav {
+    position: relative;
+    background: none;
+    width: auto;
+    min-height: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform .35s ease-in-out;
+    transition: -webkit-transform .35s ease-in-out;
+    transition: transform .35s ease-in-out;
+    transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 0;
+  }
+  .nav .container nav ul li {
+    min-width: 0;
+    height: 100%;
+    margin-left: 25px;
+    margin-bottom: 0;
+  }
+  .nav .container nav ul li a {
+    color: #08303F;
+    background: none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .nav .container nav ul li a:hover {
+    background: none;
+    color: #000000;
+  }
+  .nav .container nav ul li:nth-child(even) {
+    margin-left: 25px;
+  }
+  .nav .container nav ul li:nth-child(even) a {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+}
+
 .banner {
   min-height: calc( 100vh - 70px);
   display: -webkit-box;
@@ -646,6 +738,9 @@ form .field-group textarea {
 
 .banner .hero-bg img {
   height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-header .banner .content {
@@ -669,6 +764,61 @@ form .field-group textarea {
 .about-header .banner .content .container p {
   font-size: 16px;
   line-height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    min-height: calc( 100vh - 70px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  .banner .content {
+    top: calc( 50% - 25px);
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    -webkit-transform: translateY(calc( -41.5% + 35px));
+            transform: translateY(calc( -41.5% + 35px));
+    min-height: calc( 70% + 70px);
+  }
+  .banner .content .container h1 {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+  .banner .content .container h2 {
+    font-size: 40px;
+  }
+  .banner .content .container .btn {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .banner .hero-bg {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    min-height: calc( 70% - 50px);
+  }
+  .about-header .banner .content {
+    position: relative;
+    top: 100px;
+    height: 50%;
+  }
+  .about-header .banner .content .container {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+  }
+  .about-header .banner .content .container h1 {
+    font-size: 30px;
+  }
+  .about-header .banner .content .container p {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 .services {
@@ -1471,5 +1621,14 @@ form .field-group textarea {
 .App.darkmode .projects-content nav ul li.active {
   background: #00A3E1;
   color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .App.darkmode .nav .container nav ul li a {
+    color: #C4C4C4;
+  }
+  .App.darkmode .nav .container nav ul li a:hover {
+    color: #ffffff;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
