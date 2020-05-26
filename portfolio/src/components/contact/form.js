@@ -16,11 +16,11 @@ const Form = () => {
       <form onSubmit={(e) => handleSubmit(e)} action='POST' data-netlify='true'>
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>
-          <input type='text' placeholder='Name' id='Name' name='Name' />
+          <input type='text' placeholder='Name' id='Name' name='Name' required/>
         </div>
         <div className='field-group'>
           <label htmlFor='Email'>Email:</label>
-          <input type='email' placeholder='Email' id='Email' name='Email' z />
+          <input type='email' placeholder='Email' id='Email' name='Email' required />
         </div>
         <div className='field-group'>
           <label htmlFor='Subject'>Subject:</label>
@@ -33,7 +33,7 @@ const Form = () => {
         </div>
         <div className='field-group'>
           <label htmlFor='msg'>Brief Me:</label>
-          <textarea placeholder='Write a message' id='msg' name='msg' />
+          <textarea placeholder='Write a message' id='msg' name='msg' required/>
         </div>
         <div className='field-group'>
           <div data-netlify-recaptcha='true'></div>
