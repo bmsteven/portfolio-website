@@ -15,9 +15,9 @@ const Form = () => {
       </header>
       <form
         // onSubmit={(e) => handleSubmit(e)}
-        method='POST'
+        // method='POST'
         data-netlify='true'
-        action='/'
+        action='POST'
       >
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>
