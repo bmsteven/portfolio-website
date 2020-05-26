@@ -32,8 +32,6 @@ const Header = ({ children, image, headerClass, ...rest }) => {
   const [ref, intersect] = useOnScreen({
     rootMargin: "-70px",
   });
-  console.log(intersect);
-  console.log(ref);
   return (
     <header ref={ref} className={`page-header ${headerClass}`}>
       <Nav

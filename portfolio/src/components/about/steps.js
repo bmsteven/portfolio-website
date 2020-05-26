@@ -19,7 +19,7 @@ const Steps = () => {
               </article>
             ))}
           </div>
-          <div class='col col2'>
+          <div className='col col2'>
             <div className='circle'></div>
           </div>
           <div className='col col3'>

@@ -16,7 +16,7 @@ const Portfolio = ({ ...rest }) => {
   return (
     <div className='page portfolio-content'>
       <Nav {...rest} navProps='nav-header' routes={routes} />
-      <main class='main-content'>
+      <main className='main-content'>
         <Switch>
           <Route exact path={`${path}`} key='projects'>
             <Projects />
