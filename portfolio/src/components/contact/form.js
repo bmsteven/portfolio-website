@@ -14,7 +14,7 @@ const Form = () => {
         </h2>
       </header>
       <form
-        onSubmit={(e) => handleSubmit(e)}
+        // onSubmit={(e) => handleSubmit(e)}
         method='POST'
         data-netlify='true'
         action='/'
