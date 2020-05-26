@@ -59,7 +59,8 @@ const Projects = () => {
           </ul>
         </nav>
         <div className='showcase'>
-          {displayProjects.map((item) => (
+          <h2>No Project added yet!</h2>
+          {/* {displayProjects.map((item) => (
             <FlipMove>
               <article key={item.id} className='project-container project'>
                 {item.src.length > 0 && (
@@ -93,7 +94,7 @@ const Projects = () => {
                 )}
               </article>
             </FlipMove>
-          ))}
+          ))} */}
         </div>
       </div>
     </main>
