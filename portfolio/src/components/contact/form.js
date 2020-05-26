@@ -18,6 +18,7 @@ const Form = () => {
         method='POST'
         data-netlify='true'
         // action='/'
+        netlify-honeypot="bot-field"
       >
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>
