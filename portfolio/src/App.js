@@ -1,7 +1,7 @@
 import React from "react";
 
 //pose
-import posed, { PoseGroup } from "react-pose";
+// import posed, { PoseGroup } from "react-pose";
 
 //redux
 import PropTypes from "prop-types";
@@ -28,37 +28,28 @@ import Error from "./pages/error";
 import "./styles/styles.css";
 
 // page transition animations with pose
-const RouteContainer = posed.div({
-  enter: { opacity: 1, delay: 100, beforeChildren: false },
-  exit: { opacity: 0 },
-});
+// const RouteContainer = posed.div({
+//   enter: { opacity: 1, delay: 100, beforeChildren: false },
+//   exit: { opacity: 0 },
+// });
 
 const App = ({ ui: { darkMode } }) => {
   return (
     <Route
       render={({ location }) => (
-        <PoseGroup>
-          <RouteContainer key={location.pathname}>
-            <div className={darkMode ? "App darkmode" : "App"}>
-              <Switch>
-                <Route exact path='/' component={Home} key='home' />
-                <Route exact path='/about' component={About} key='about' />
-                <Route exact path='/resume' component={Resume} key='resume' />
-                <Route path='/portfolio' component={Portfolio} key='projects' />
-                <Route
-                  exact
-                  path='/contact'
-                  component={Contact}
-                  key='contact'
-                />
-                <Route path='/blog' component={Blog} key='blog' />
-                <Route exact path='/login' key='login' component={Login} />
-                <AuthRoute path='/admin' component={Admin} key='admin' />
-                <Route component={Error} key='error' />
-              </Switch>
-            </div>
-          </RouteContainer>
-        </PoseGroup>
+        <div className={darkMode ? "App darkmode" : "App"}>
+          <Switch>
+            <Route exact path='/' component={Home} key='home' />
+            <Route exact path='/about' component={About} key='about' />
+            <Route exact path='/resume' component={Resume} key='resume' />
+            <Route path='/portfolio' component={Portfolio} key='projects' />
+            <Route exact path='/contact' component={Contact} key='contact' />
+            <Route path='/blog' component={Blog} key='blog' />
+            <Route exact path='/login' key='login' component={Login} />
+            <AuthRoute path='/admin' component={Admin} key='admin' />
+            <Route component={Error} key='error' />
+          </Switch>
+        </div>
       )}
     />
   );
