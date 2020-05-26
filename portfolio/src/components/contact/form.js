@@ -17,7 +17,7 @@ const Form = () => {
         // onSubmit={(e) => handleSubmit(e)}
         name='contact'
         method='POST'
-        netlify
+        netlify="true"
         action='/'
         // netlify-honeypot="bot-field"
       >
