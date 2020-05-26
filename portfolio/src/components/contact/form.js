@@ -13,7 +13,7 @@ const Form = () => {
           <span></span>Send A Message
         </h2>
       </header>
-      <form onSubmit={(e) => handleSubmit(e)} action='POST' data-netlify='true'>
+      <form onSubmit={(e) => handleSubmit(e)} method='POST' data-netlify='true'>
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>
           <input type='text' placeholder='Name' id='Name' name='Name' required/>
