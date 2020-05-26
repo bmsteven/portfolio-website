@@ -15,11 +15,11 @@ const Form = () => {
       </header>
       <form
         // onSubmit={(e) => handleSubmit(e)}
-        name="contact"
+        name='contact'
         method='POST'
-        data-netlify='true'
-        // action='/'
-        netlify-honeypot="bot-field"
+        netlify
+        action='/'
+        // netlify-honeypot="bot-field"
       >
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>
