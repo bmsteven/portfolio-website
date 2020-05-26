@@ -65,9 +65,7 @@ const Form = () => {
             {message}
           </p>
         )}
-        <button className='btn btn-primary'>
-          <span>Submit</span>
-        </button>
+        <input type='submit' value='Submit' className='btn btn-primary' />
       </form>
     </section>
   );
