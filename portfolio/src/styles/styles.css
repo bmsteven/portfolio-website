@@ -1360,6 +1360,13 @@ form .field-group textarea {
 
 .resume.main-content .skills .showcase {
   margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .resume.main-content .skills .showcase article {
@@ -1399,6 +1406,16 @@ form .field-group textarea {
 .resume.main-content .skills .tools h2 {
   margin-left: 20px;
   text-align: left;
+}
+
+.resume.main-content .skills .tools .showcase {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .resume.main-content .skills .tools .showcase article span {
@@ -1455,6 +1472,16 @@ form .field-group textarea {
 .resume.main-content .experience .showcase article h2 {
   font-size: 20px;
   color: #08303F;
+}
+
+.resume.main-content .education .showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .resume.main-content .education .showcase article {
@@ -1701,31 +1728,6 @@ form .field-group textarea {
 
 .projects-content footer {
   clear: both;
-}
-
-@media only screen and (min-width: 1024px) {
-  .showcase {
-    -webkit-column-count: 3;
-            column-count: 3;
-  }
-}
-
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .showcase {
-    -webkit-column-count: 2;
-            column-count: 2;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .showcase {
-    -webkit-column-count: 1;
-            column-count: 1;
-  }
-  .showcase article {
-    padding: 1em;
-    margin: 0 0 1.5em;
-  }
 }
 
 .contact-page footer {
