@@ -1656,6 +1656,10 @@ form .field-group textarea {
   color: #ffffff;
 }
 
+.projects-content .container nav ul li.active:hover {
+  opacity: 1;
+}
+
 .projects-content .container .showcase {
   margin-top: 50px;
   -webkit-transition: .3s;

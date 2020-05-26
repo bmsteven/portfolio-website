@@ -23,7 +23,7 @@ const Projects = () => {
     setKeyWord("Others");
   };
 
-  let displayProjects = projects.filter((o) => o.category.includes(keyWord));
+  let filteredProjects = projects.filter((o) => o.category.includes(keyWord));
 
   useEffect(() => {
     document.title = "Project Collections - Benedict's Portfolio ";
@@ -60,7 +60,7 @@ const Projects = () => {
         </nav>
         <div className='showcase'>
           <h2>No Project added yet!</h2>
-          {/* {displayProjects.map((item) => (
+          {/* {filteredProjects.map((item) => (
             <FlipMove>
               <article key={item.id} className='project-container project'>
                 {item.src.length > 0 && (
