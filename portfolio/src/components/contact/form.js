@@ -15,6 +15,7 @@ const Form = () => {
       </header>
       <form
         // onSubmit={(e) => handleSubmit(e)}
+        name="contact"
         method='POST'
         data-netlify='true'
         // action='/'
