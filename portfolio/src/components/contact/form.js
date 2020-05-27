@@ -20,6 +20,8 @@ const Form = () => {
     msg: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const { Email } = formData;
 
   const handleChange = (e) => {
@@ -32,6 +34,7 @@ const Form = () => {
     if (!Email.match(emailReg)) {
       setError("Please enter a valid Email Address");
     } else {
+      setLoading(true);
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -40,8 +43,10 @@ const Form = () => {
         .then(() => {
           setMessage("Success");
           setError("");
+          setLoading(false);
         })
         .catch((error) => {
+          setLoading(false);
           setMessage("Error");
         });
     }
@@ -108,15 +113,12 @@ const Form = () => {
           </p>
         )}
         {error && (
-          <p
-            className="alert error"
-            id='alert'
-          >
+          <p className='alert error' id='alert'>
             {error}
           </p>
         )}
-        <button type='submit' className='btn btn-primary'>
-          <span>Submit</span>
+        <button type='submit' className='btn btn-primary' disabled={loading}>
+          <span>{loading ? "Submitting..." : "Submit"}</span>
         </button>
       </form>
     </section>
