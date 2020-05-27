@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
+  FaYoutube,
   FaMapMarkerAlt,
   FaPaperPlane,
   FaPhone,
@@ -97,6 +98,15 @@ const Details = () => {
                 rel='noopener noreferrer'
               >
                 <FaGithub className='icon' /> Github
+              </a>
+            </li>
+            <li>
+              <a
+                href='https://www.youtube.com/channel/UCiqoE5aylKjq_052PfJtU7Q'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <FaYoutube className='icon' /> Youtube
               </a>
             </li>
           </ul>
