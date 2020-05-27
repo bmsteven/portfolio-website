@@ -31,6 +31,8 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError("");
+    setMessage("");
     if (!Email.match(emailReg)) {
       setError("Please enter a valid Email Address");
       setMessage("");
