@@ -33,6 +33,7 @@ const Form = () => {
     e.preventDefault();
     if (!Email.match(emailReg)) {
       setError("Please enter a valid Email Address");
+      setMessage("");
     } else {
       setLoading(true);
       fetch("/", {
