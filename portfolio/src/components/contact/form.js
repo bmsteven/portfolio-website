@@ -6,14 +6,21 @@ const encode = (data) => {
     .join("&");
 };
 
+const emailReg = RegExp(
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+);
+
 const Form = () => {
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     Name: "",
     Email: "",
     Subject: "",
     msg: "",
   });
+
+  const { Email } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,19 +29,21 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formData }),
-    })
-      .then(() => {
-        setMessage("Success");
-        alert("Success!");
+    if (!Email.match(emailReg)) {
+      setError("Please enter a valid Email Address");
+    } else {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formData }),
       })
-      .catch((error) => {
-        setMessage("Error");
-        alert(error);
-      });
+        .then(() => {
+          setMessage("Success");
+        })
+        .catch((error) => {
+          setMessage("Error");
+        });
+    }
   };
   return (
     <section className='form'>
@@ -43,10 +52,7 @@ const Form = () => {
           <span></span>Send A Message
         </h2>
       </header>
-      <form
-        onSubmit={(e) => handleSubmit(e)}
-        name='contact'
-      >
+      <form onSubmit={(e) => handleSubmit(e)} name='contact'>
         <input type='hidden' name='form-name' value='contact' />
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>
@@ -90,12 +96,22 @@ const Form = () => {
             onChange={(e) => handleChange(e)}
           />
         </div>
-        {/* <div className='field-group'>
-          <div data-netlify-recaptcha='true'></div>
-        </div> */}
         {message && (
-          <p className='alert success' id='alert'>
-            {message}
+          <p
+            className={message === "Success" ? "alert success" : "alert error"}
+            id='alert'
+          >
+            {message === "Success"
+              ? "Your message was sent successful, will get back to you ASAP"
+              : "Error while submitting you message, please try again"}
+          </p>
+        )}
+        {error && (
+          <p
+            className="alert error"
+            id='alert'
+          >
+            {error}
           </p>
         )}
         <button type='submit' className='btn btn-primary'>
