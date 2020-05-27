@@ -46,10 +46,6 @@ const Form = () => {
       <form
         onSubmit={(e) => handleSubmit(e)}
         name='contact'
-        method='POST'
-        netlify='true'
-        action='/'
-        netlify-honeypot='bot-field'
       >
         <input type='hidden' name='form-name' value='contact' />
         <div className='field-group'>
