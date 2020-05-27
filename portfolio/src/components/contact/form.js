@@ -39,6 +39,7 @@ const Form = () => {
       })
         .then(() => {
           setMessage("Success");
+          setError("");
         })
         .catch((error) => {
           setMessage("Error");
