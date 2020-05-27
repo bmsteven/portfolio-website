@@ -60,9 +60,9 @@ const Form = () => {
             required
           />
         </div>
-        {/* <div className='field-group'>
+        <div className='field-group'>
           <div data-netlify-recaptcha='true'></div>
-        </div> */}
+        </div>
         {message && (
           <p className='alert success' id='alert'>
             {message}
