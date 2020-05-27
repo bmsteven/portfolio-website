@@ -1,10 +1,40 @@
 import React, { useState } from "react";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const Form = () => {
   const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Subject: "",
+    msg: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage("Your message was sent, I'll get back to you ASAP");
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData }),
+    })
+      .then(() => {
+        setMessage("Success");
+        alert("Success!");
+      })
+      .catch((error) => {
+        setMessage("Error");
+        alert(error);
+      });
   };
   return (
     <section className='form'>
@@ -14,14 +44,14 @@ const Form = () => {
         </h2>
       </header>
       <form
-        // onSubmit={(e) => handleSubmit(e)}
+        onSubmit={(e) => handleSubmit(e)}
         name='contact'
         method='POST'
-        netlify="true"
+        netlify='true'
         action='/'
-        // netlify-honeypot="bot-field"
+        netlify-honeypot='bot-field'
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type='hidden' name='form-name' value='contact' />
         <div className='field-group'>
           <label htmlFor='Name'>Name:</label>
           <input
@@ -30,6 +60,7 @@ const Form = () => {
             id='Name'
             name='Name'
             required
+            onChange={(e) => handleChange(e)}
           />
         </div>
         <div className='field-group'>
@@ -39,6 +70,7 @@ const Form = () => {
             placeholder='Email'
             id='Email'
             name='Email'
+            onChange={(e) => handleChange(e)}
             required
           />
         </div>
@@ -48,6 +80,7 @@ const Form = () => {
             type='text'
             placeholder='Subject'
             id='Subject'
+            onChange={(e) => handleChange(e)}
             name='Subject'
           />
         </div>
@@ -58,11 +91,12 @@ const Form = () => {
             id='msg'
             name='msg'
             required
+            onChange={(e) => handleChange(e)}
           />
         </div>
-        <div className='field-group'>
+        {/* <div className='field-group'>
           <div data-netlify-recaptcha='true'></div>
-        </div>
+        </div> */}
         {message && (
           <p className='alert success' id='alert'>
             {message}
