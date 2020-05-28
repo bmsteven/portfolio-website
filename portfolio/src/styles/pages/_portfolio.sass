@@ -1,6 +1,8 @@
 .projects-content
     @import "../pages-components/portfolio/_project"
     .container
+        width: 70%
+        max-width: 1000px
         nav
             width: 100%
             max-width: 350px 
@@ -56,31 +58,34 @@
                 // max-width: 377px
                 overflow: hidden
                 // background-color: #eee
-                display: inline-block
+                display: flex
                 margin: 0 0 1em
                 // width: 100%
                 .project-image
                     transition: all .35s
+                    width: 100%
                 .project-info
-                    position: absolute
-                    top: 0
-                    left: 0
+                    // position: absolute
+                    // top: 0
+                    // left: 0
+                    padding-left: 30px
                     height: 100%
                     width: 100%
-                    background: rgba(0, 163, 225, .8)
+                    // background: rgba(0, 163, 225, .8)
                     border-radius: 30px
-                    transform: translateY(-100%)
+                    // transform: translateY(-100%)
                     transition: all .35s
                     display: flex
                     flex-direction: column
                     justify-content: center
-                    align-items: center
+                    align-items: flex-start
+                    // width: 100%
                     color: $white
-                &:hover
-                    .project-info
-                        transform: translateY(0)
-                    .project-image
-                        // transform: scale(1.1)
+                // &:hover
+                //     .project-info
+                //         transform: translateY(0)
+                //     .project-image
+                //         // transform: scale(1.1)
 
     .showcase
         margin: 1.5em auto

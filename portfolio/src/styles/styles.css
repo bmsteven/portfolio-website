@@ -1604,6 +1604,11 @@ form .field-group textarea {
   margin: 10px;
 }
 
+.projects-content .container {
+  width: 70%;
+  max-width: 1000px;
+}
+
 .projects-content .container nav {
   width: 100%;
   max-width: 350px;
@@ -1676,25 +1681,23 @@ form .field-group textarea {
   margin: 7px;
   width: 100%;
   overflow: hidden;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 0 1em;
 }
 
 .projects-content .container .showcase article .project-image {
   -webkit-transition: all .35s;
   transition: all .35s;
+  width: 100%;
 }
 
 .projects-content .container .showcase article .project-info {
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding-left: 30px;
   height: 100%;
   width: 100%;
-  background: rgba(0, 163, 225, 0.8);
   border-radius: 30px;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
   -webkit-transition: all .35s;
   transition: all .35s;
   display: -webkit-box;
@@ -1707,15 +1710,10 @@ form .field-group textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: #ffffff;
-}
-
-.projects-content .container .showcase article:hover .project-info {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .projects-content .showcase {

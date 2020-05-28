@@ -59,42 +59,47 @@ const Projects = () => {
           </ul>
         </nav>
         <div className='showcase'>
-          <h2>No Project added yet!</h2>
-          {/* {filteredProjects.map((item) => (
-            <FlipMove>
-              <article key={item.id} className='project-container project'>
-                {item.src.length > 0 && (
-                  <>
-                    <figure className='project-image'>
-                      <img src={item.src} alt={item.name} />
-                    </figure>
-                    <figcaption className='project-info'>
-                      <div className='project-name'>
-                        <h2>{item.name}</h2>
-                      </div>
-                      <div className='btns'>
-                        <Link
-                          to={`/portfolio/${item.slug}`}
-                          className='btn'
-                        >
-                          <span>About</span>
-                        </Link>
-                        {item.demo && (
-                          <a
-                            href={item.demo}
-                            target='_blank'
-                            rel='noopener noreferrer'
-                          >
-                            Live App
-                          </a>
-                        )}
-                      </div>
-                    </figcaption>
-                  </>
-                )}
-              </article>
-            </FlipMove>
-          ))} */}
+          {filteredProjects.length > 0 ? (
+            <>
+              {filteredProjects.map((item) => (
+                <FlipMove>
+                  <article key={item.id} className='project-container project'>
+                    {item.src.length > 0 && (
+                      <>
+                        <figure className='project-image'>
+                          <img src={item.src} alt={item.name} />
+                        </figure>
+                        <figcaption className='project-info'>
+                          <div className='project-name'>
+                            <h2>{item.name}</h2>
+                          </div>
+                          <div className='btns'>
+                            <Link
+                              to={`/portfolio/${item.slug}`}
+                              className='btn'
+                            >
+                              <span>About</span>
+                            </Link>
+                            {item.demo && (
+                              <a
+                                href={item.demo}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                              >
+                                Live App
+                              </a>
+                            )}
+                          </div>
+                        </figcaption>
+                      </>
+                    )}
+                  </article>
+                </FlipMove>
+              ))}
+            </>
+          ) : (
+            <h2>No Project Found</h2>
+          )}
         </div>
       </div>
     </main>
