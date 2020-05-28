@@ -1709,7 +1709,6 @@ form .field-group textarea {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  color: #ffffff;
 }
 
 @media screen and (max-width: 635px) {
@@ -1751,7 +1750,6 @@ form .field-group textarea {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    color: #ffffff;
   }
 }
 
