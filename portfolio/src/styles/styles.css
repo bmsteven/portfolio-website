@@ -1673,10 +1673,7 @@ form .field-group textarea {
 }
 
 .projects-content .container .showcase article {
-  -webkit-transition: .3s;
-  transition: .3s;
   position: relative;
-  border-radius: 30px;
   height: 100%;
   margin: 7px;
   width: 100%;
@@ -1684,20 +1681,19 @@ form .field-group textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 0 1em;
 }
 
 .projects-content .container .showcase article .project-image {
-  -webkit-transition: all .35s;
-  transition: all .35s;
-  width: 100%;
+  width: 50%;
 }
 
 .projects-content .container .showcase article .project-info {
   padding-left: 30px;
   height: 100%;
-  width: 100%;
-  border-radius: 30px;
+  width: 50%;
   -webkit-transition: all .35s;
   transition: all .35s;
   display: -webkit-box;
@@ -1716,20 +1712,47 @@ form .field-group textarea {
   color: #ffffff;
 }
 
-.projects-content .showcase {
-  margin: 1.5em auto;
-  max-width: 1400px;
-  -webkit-column-gap: 1.5em;
-          column-gap: 1.5em;
-}
-
-.projects-content .showcase article {
-  padding: 1em;
-  margin: 0 0 1.5em;
-}
-
-.projects-content footer {
-  clear: both;
+@media screen and (max-width: 635px) {
+  .projects-content .container {
+    width: 90%;
+  }
+  .projects-content .container .showcase article {
+    position: relative;
+    height: 100%;
+    margin: 7px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 1em;
+  }
+  .projects-content .container .showcase article .project-image {
+    width: 100%;
+  }
+  .projects-content .container .showcase article .project-info {
+    padding-left: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    color: #ffffff;
+  }
 }
 
 .contact-page footer {

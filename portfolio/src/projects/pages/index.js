@@ -62,7 +62,7 @@ const Projects = () => {
           {filteredProjects.length > 0 ? (
             <>
               {filteredProjects.map((item) => (
-                <FlipMove>
+                // <FlipMove>
                   <article key={item.id} className='project-container project'>
                     {item.src.length > 0 && (
                       <>
@@ -73,6 +73,7 @@ const Projects = () => {
                           <div className='project-name'>
                             <h2>{item.name}</h2>
                           </div>
+                          <span>#{item.category[0]}</span>
                           <div className='btns'>
                             <Link
                               to={`/portfolio/${item.slug}`}
@@ -94,7 +95,7 @@ const Projects = () => {
                       </>
                     )}
                   </article>
-                </FlipMove>
+                // </FlipMove>
               ))}
             </>
           ) : (

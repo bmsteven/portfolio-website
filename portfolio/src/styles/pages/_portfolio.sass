@@ -36,80 +36,59 @@
                             opacity: 1
 
         .showcase
-            // display: flex
-            // flex-wrap: wrap
-            // justify-content: center
             margin-top: 50px
             transition: .3s
             text-align: center
-            // column-count: 3
-            // column-gap: 1em
-            // margin: 1.5em auto
-            // max-width: 768px
-            // column-gap: 1.5em
             article
-                transition: .3s
-                // float: left
                 position: relative
-                border-radius: 30px
                 height: 100%
                 margin: 7px
                 width: 100%
-                // max-width: 377px
                 overflow: hidden
-                // background-color: #eee
                 display: flex
+                flex-wrap: wrap
+                // justify-content: flex-start
                 margin: 0 0 1em
-                // width: 100%
                 .project-image
-                    transition: all .35s
-                    width: 100%
+                    width: 50%
                 .project-info
-                    // position: absolute
-                    // top: 0
-                    // left: 0
                     padding-left: 30px
                     height: 100%
-                    width: 100%
-                    // background: rgba(0, 163, 225, .8)
-                    border-radius: 30px
-                    // transform: translateY(-100%)
+                    width: 50%
                     transition: all .35s
                     display: flex
                     flex-direction: column
                     justify-content: center
                     align-items: flex-start
-                    // width: 100%
                     color: $white
-                // &:hover
-                //     .project-info
-                //         transform: translateY(0)
-                //     .project-image
-                //         // transform: scale(1.1)
 
-    .showcase
-        margin: 1.5em auto
-        max-width: 1400px
-        column-gap: 1.5em
+@media screen and ( max-width: 635px )
+    .projects-content
+        .container
+            width: 90%
+            .showcase
+                article
+                    position: relative
+                    height: 100%
+                    margin: 7px
+                    width: 100%
+                    overflow: hidden
+                    display: flex
+                    flex-wrap: wrap
+                    // justify-content: flex-start
+                    margin: 0 0 1em
+                    .project-image
+                        width: 100%
+                    .project-info
+                        padding-left: 0
+                        height: 100%
+                        width: 100%
+                        transition: all .35s
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: flex-start
+                        color: $white
+    
 
-        article
-            padding: 1em
-            margin: 0 0 1.5em
-            // min-width: 377px
-    footer
-        clear: both
-
-// @media only screen and (min-width: 1024px) 
-//     .showcase
-//         column-count: 3
-// @media only screen and (max-width: 1023px) and (min-width: 768px) 
-//     .showcase
-//         column-count: 2
-
-// @media only screen and (max-width: 767px)
-//     .showcase
-//         column-count: 1
-//         article
-//             padding: 1em
-//             margin: 0 0 1.5em
-//             // min-width: 100%
+    
