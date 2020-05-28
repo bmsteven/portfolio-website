@@ -22,7 +22,11 @@ const Project = () => {
           ""
         )}
         {obj ? (
-          <div>
+          <div
+            style={{
+              width: "100%",
+            }}
+          >
             <header className='project-header primary-header'>
               <h1>
                 <span></span>
@@ -30,8 +34,20 @@ const Project = () => {
               </h1>
             </header>
             {obj.src.length > 0 && (
-              <div className='image-container'>
-                <img src={obj.src} alt={obj.name} />
+              <div
+                className='image-container'
+                style={{
+                  width: "100%",
+                }}
+              >
+                <img
+                  src={obj.src}
+                  alt={obj.name}
+                  style={{
+                    width: "100%",
+                    maxWidth: "100%"
+                  }}
+                />
               </div>
             )}
             {obj.about.length > 0 && (

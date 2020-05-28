@@ -2,6 +2,7 @@ import kodemunit from "../images/kodemunit.png";
 import jitangaze from "../images/jitangaze.png";
 import portfolio from "../images/portfolio.png";
 import gramath from "../images/gramath.png";
+import covid from "../images/covid19-tz.png";
 
 const projects = [
   {
@@ -35,7 +36,7 @@ const projects = [
     id: 3,
     name: "COVID19-TZ",
     slug: "covid19-tz",
-    src: kodemunit,
+    src: covid,
     source: "http://github.com/bmsteven/corona",
     category: ["Web", "All"],
     about:
@@ -116,7 +117,7 @@ const projects = [
 
 export default projects;
 
-//todo 
+//todo
 //add progress to every project maybe??
 //big and sound projects first, small projects follows
 
