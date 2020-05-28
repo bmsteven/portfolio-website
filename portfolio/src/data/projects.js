@@ -115,3 +115,19 @@ const projects = [
 ];
 
 export default projects;
+
+//todo 
+//add progress to every project maybe??
+//big and sound projects first, small projects follows
+
+//lists of the projects
+//kodemunit(kodemunit)(web)
+//ceeptz(ceeptz)(web)
+//covid19-tz(covid19-tz)(web)
+//my portfolio(bm-dev)(web)
+//jitangaze app(jitangaze-app)(design)
+//kodemunit-version one(kodemunit-v01)(design)
+//simple blog(simple-blog)(design) --figma
+//gravitas family(gravitas-family)(others) --from my local machine
+//gramath(gramath)(design) --figma
+//kilimoshare(kilimoshare)(design) --currently changing the design
