@@ -1675,7 +1675,7 @@ form .field-group textarea {
 .projects-content .container .showcase article {
   position: relative;
   height: 100%;
-  margin: 7px;
+  margin: 30px 7px;
   width: 100%;
   overflow: hidden;
   display: -webkit-box;
@@ -1683,11 +1683,11 @@ form .field-group textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 0 1em;
 }
 
 .projects-content .container .showcase article .project-image {
   width: 50%;
+  width: 33.19%;
 }
 
 .projects-content .container .showcase article .project-info {
@@ -1718,7 +1718,6 @@ form .field-group textarea {
   .projects-content .container .showcase article {
     position: relative;
     height: 100%;
-    margin: 7px;
     width: 100%;
     overflow: hidden;
     display: -webkit-box;
@@ -1726,7 +1725,6 @@ form .field-group textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 0 0 1em;
   }
   .projects-content .container .showcase article .project-image {
     width: 100%;
@@ -1747,9 +1745,9 @@ form .field-group textarea {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
