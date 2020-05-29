@@ -74,7 +74,7 @@ const Projects = () => {
                         </LazyLoad> */}
                         <ProgressiveImage
                           src={item.src}
-                          placeholder='https://placehold.it/30x20/a334d2/ffffff/&text=TinyPlaceholder'
+                          placeholder={`https://placehold.it/30x20/a334d2/ffffff/&text=${item.name}`}
                         >
                           {(src) => (
                             <img
