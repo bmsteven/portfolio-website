@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import FlipMove from "react-flip-move";
 import LazyLoad from "react-lazy-load";
+import ProgressiveImage from "react-progressive-graceful-image";
 
 import projects from "../../data/projects";
 
@@ -68,12 +69,23 @@ const Projects = () => {
                   {item.src.length > 0 && (
                     <>
                       <figure className='project-image'>
-                        <LazyLoad
-                          debounce={false}
-                          offsetVertical={500}
-                        >
+                        {/* <LazyLoad debounce={false} offsetVertical={500}>
                           <img src={item.src} alt={item.name} />
-                        </LazyLoad>
+                        </LazyLoad> */}
+                        <ProgressiveImage
+                          src={item.src}
+                          placeholder='https://placehold.it/30x20/a334d2/ffffff/&text=TinyPlaceholder'
+                        >
+                          {(src) => (
+                            <img
+                              src={src}
+                              alt='an alternative text'
+                              style={{
+                                width: "100%",
+                              }}
+                            />
+                          )}
+                        </ProgressiveImage>
                       </figure>
                       <figcaption className='project-info'>
                         <div className='project-name'>
