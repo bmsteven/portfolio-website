@@ -102,7 +102,7 @@ const Projects = () => {
               ))}
             </>
           ) : (
-            <h2>No Project Found</h2>
+            <h2>No Project Added</h2>
           )}
         </div>
       </div>

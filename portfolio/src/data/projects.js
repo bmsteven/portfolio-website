@@ -5,47 +5,47 @@ import gramath from "../images/gramath.png";
 import covid from "../images/covid19-tz.png";
 
 const projects = [
-  {
-    id: 1,
-    name: "Kodemunit",
-    slug: "kodemunit",
-    src: covid,
-    source: "",
-    category: ["Web", "All"],
-    about:
-      "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
-    demo: "http://kodemunit.com",
-    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
-    roles: ["UX/UI Designer", "Developer"],
-    gallery: [],
-  },
-  {
-    id: 2,
-    name: "CEEPTz",
-    slug: "ceeptz",
-    src: covid,
-    source: "",
-    category: ["Web", "All"],
-    about: "CEEPTz website with all information about CEEPTZ startup",
-    demo: "http://ceeptz.netlify.app",
-    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
-    roles: ["UX/UI Designer", "Developer"],
-    gallery: [],
-  },
-  {
-    id: 3,
-    name: "COVID19-TZ",
-    slug: "covid19-tz",
-    src: covid,
-    source: "http://github.com/bmsteven/corona",
-    category: ["Web", "All"],
-    about:
-      "Corona Covid19 tracker special made for Tanzanians to provide necessary information on Corona Virus pandemic made in Swahili",
-    demo: "http://covid19-tz.netlify.app",
-    tools: ["HTML", "CSS", "SASS", "React"],
-    roles: ["Frontend Developer"],
-    gallery: [],
-  },
+  // {
+  //   id: 1,
+  //   name: "Kodemunit",
+  //   slug: "kodemunit",
+  //   src: covid,
+  //   source: "",
+  //   category: ["Web", "All"],
+  //   about:
+  //     "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
+  //   demo: "http://kodemunit.com",
+  //   tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
+  //   roles: ["UX/UI Designer", "Developer"],
+  //   gallery: [],
+  // },
+  // {
+  //   id: 2,
+  //   name: "CEEPTz",
+  //   slug: "ceeptz",
+  //   src: covid,
+  //   source: "",
+  //   category: ["Web", "All"],
+  //   about: "CEEPTz website with all information about CEEPTZ startup",
+  //   demo: "http://ceeptz.netlify.app",
+  //   tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
+  //   roles: ["UX/UI Designer", "Developer"],
+  //   gallery: [],
+  // },
+  // {
+  //   id: 3,
+  //   name: "COVID19-TZ",
+  //   slug: "covid19-tz",
+  //   src: covid,
+  //   source: "http://github.com/bmsteven/corona",
+  //   category: ["Web", "All"],
+  //   about:
+  //     "Corona Covid19 tracker special made for Tanzanians to provide necessary information on Corona Virus pandemic made in Swahili",
+  //   demo: "http://covid19-tz.netlify.app",
+  //   tools: ["HTML", "CSS", "SASS", "React"],
+  //   roles: ["Frontend Developer"],
+  //   gallery: [],
+  // },
   // {
   //   id: 4,
   //   name: "Kilimoshare",
@@ -59,20 +59,20 @@ const projects = [
   //   roles: ["UX/UI Designer", "Developer"],
   //   gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   // },
-  {
-    id: 5,
-    name: "Gramath Products",
-    slug: "gramath-products",
-    src: gramath,
-    source: "",
-    category: ["Others", "All"],
-    about:
-      "First trial on designing graphics, If you like it I can make one for you",
-    demo: "",
-    tools: ["Figma"],
-    roles: ["Graphic Designer"],
-    gallery: [],
-  },
+  // {
+  //   id: 5,
+  //   name: "Gramath Products",
+  //   slug: "gramath-products",
+  //   src: gramath,
+  //   source: "",
+  //   category: ["Others", "All"],
+  //   about:
+  //     "First trial on designing graphics, If you like it I can make one for you",
+  //   demo: "",
+  //   tools: ["Figma"],
+  //   roles: ["Graphic Designer"],
+  //   gallery: [],
+  // },
   // {
   //   id: 6,
   //   name: "Jitangaze App",
@@ -120,6 +120,7 @@ export default projects;
 //todo
 //add progress to every project maybe??
 //big and sound projects first, small projects follows
+//add prototype link for websites with specific design in figma
 
 //lists of the projects
 //kodemunit(kodemunit)(web)
