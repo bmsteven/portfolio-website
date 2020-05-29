@@ -1683,6 +1683,7 @@ form .field-group textarea {
   width: 100%;
   overflow: hidden;
   display: block;
+  border: 1px solid lightgray;
 }
 
 .projects-content .container .showcase article .project-image {
@@ -1692,6 +1693,7 @@ form .field-group textarea {
 .projects-content .container .showcase article .project-info {
   height: 100%;
   width: 100%;
+  padding: 20px;
   -webkit-transition: all .35s;
   transition: all .35s;
   display: -webkit-box;
