@@ -39,29 +39,35 @@
             margin-top: 50px
             transition: .3s
             text-align: center
+            column-count: 2
+            // margin-bottom: 2em
+            column-gap: 2em
+            // row-gap: 2em
             article
                 position: relative
                 height: 100%
-                margin: 30px 7px
+                margin-bottom: 3em
                 width: 100%
                 overflow: hidden
-                display: flex
-                flex-wrap: wrap
+                display: block
+                // display: flex
+                // flex-wrap: wrap
+                // flex-direction: column
                 // justify-content: flex-start
                 // margin: 0 0 1em
                 .project-image
-                    width: 50%
+                    width: 100%
                     // width: 33.19%
-                    height: 33.19%
+                    // height: 33.19%
                 .project-info
-                    padding-left: 30px
+                    // padding-left: 30px
                     height: 100%
-                    width: 50%
+                    width: 100%
                     transition: all .35s
                     display: flex
                     flex-direction: column
                     justify-content: center
-                    align-items: flex-start
+                    align-items: center
                     // color: $white
 
 @media screen and ( max-width: 635px )
@@ -69,14 +75,15 @@
         .container
             width: 90% !important
             .showcase
+                column-count: 1
                 article
                     position: relative
                     height: 100%
-                    // margin: 7px
+                    margin: 20px 0
                     width: 100%
                     overflow: hidden
-                    display: flex
-                    flex-wrap: wrap
+                    // display: flex
+                    // flex-wrap: wrap
                     // justify-content: flex-start
                     // margin: 0 0 1em
                     .project-image

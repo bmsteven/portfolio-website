@@ -1,37 +1,52 @@
-// import kodemunit from "../images/kodemunit.png";
+import kodemunit from "../images/kodemunit.png";
+import kodemunit2 from "../images/kodemunit-v01.png";
 // import jitangaze from "../images/jitangaze.png";
-// import portfolio from "../images/portfolio.png";
-import gramath from "../images/gramath.png";
+import ceeptz from "../images/ceeptz.png";
+// import gramath from "../images/gramath.png";
 import covid from "../images/covid19-tz.png";
 
 const projects = [
-  // {
-  //   id: 1,
-  //   name: "Kodemunit",
-  //   slug: "kodemunit",
-  //   src: covid,
-  //   source: "",
-  //   category: ["Web", "All"],
-  //   about:
-  //     "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
-  //   demo: "http://kodemunit.com",
-  //   tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
-  //   roles: ["UX/UI Designer", "Developer"],
-  //   gallery: [],
-  // },
-  // {
-  //   id: 2,
-  //   name: "CEEPTz",
-  //   slug: "ceeptz",
-  //   src: covid,
-  //   source: "",
-  //   category: ["Web", "All"],
-  //   about: "CEEPTz website with all information about CEEPTZ startup",
-  //   demo: "http://ceeptz.netlify.app",
-  //   tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
-  //   roles: ["UX/UI Designer", "Developer"],
-  //   gallery: [],
-  // },
+  {
+    id: 1,
+    name: "Kodemunit",
+    slug: "kodemunit",
+    src: kodemunit,
+    source: "",
+    category: ["Web", "All"],
+    about:
+      "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
+    demo: "http://kodemunit.com",
+    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
+    roles: ["UX/UI Designer", "Developer"],
+    gallery: [],
+  },
+  {
+    id: 2,
+    name: "CEEPTz",
+    slug: "ceeptz",
+    src: ceeptz,
+    source: "",
+    category: ["Web", "All"],
+    about: "CEEPTz website with all information about CEEPTZ startup",
+    demo: "http://ceeptz.netlify.app",
+    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
+    roles: ["UX/UI Designer", "Developer"],
+    gallery: [],
+  },
+  {
+    id: 1,
+    name: "Kodemunit",
+    slug: "kodemunit",
+    src: kodemunit2,
+    source: "",
+    category: ["Design", "All"],
+    about:
+      "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
+    demo: "http://kodemunit.com",
+    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
+    roles: ["UX/UI Designer", "Developer"],
+    gallery: [],
+  },
   {
     id: 3,
     name: "COVID19-TZ",
