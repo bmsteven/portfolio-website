@@ -1713,7 +1713,7 @@ form .field-group textarea {
 
 @media screen and (max-width: 635px) {
   .projects-content .container {
-    width: 90%;
+    width: 90% !important;
   }
   .projects-content .container .showcase article {
     position: relative;
