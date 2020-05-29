@@ -1687,7 +1687,7 @@ form .field-group textarea {
 
 .projects-content .container .showcase article .project-image {
   width: 50%;
-  width: 33.19%;
+  height: 33.19%;
 }
 
 .projects-content .container .showcase article .project-info {
@@ -1728,6 +1728,7 @@ form .field-group textarea {
   }
   .projects-content .container .showcase article .project-image {
     width: 100%;
+    height: 66.38%;
   }
   .projects-content .container .showcase article .project-info {
     padding-left: 0;
