@@ -20,7 +20,7 @@ const services = [
     id: 3,
     title: "Quick support",
     description:
-      "I help startups improve their business/services by advising the best way to implement/add value to their products with tech solutions and I develop websites at cheap rates depending on the complexity of work",
+      "I help startups and small businesses improve their business/services by advising the best way to implement/add value to their products with tech solutions and I develop websites at cheap rates depending on the complexity of work",
     icon: <RiQuestionLine className='icon' />,
   },
 ];

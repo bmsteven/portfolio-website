@@ -1,37 +1,37 @@
 // import kodemunit from "../images/kodemunit.png";
 // import jitangaze from "../images/jitangaze.png";
 // import portfolio from "../images/portfolio.png";
-// import gramath from "../images/gramath.png";
+import gramath from "../images/gramath.png";
 import covid from "../images/covid19-tz.png";
 
 const projects = [
-  // {
-  //   id: 1,
-  //   name: "Kodemunit",
-  //   slug: "kodemunit",
-  //   src: kodemunit,
-  //   source: "",
-  //   category: ["Web", "All"],
-  //   about:
-  //     "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
-  //   demo: "http://kodemunit.com",
-  //   tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
-  //   roles: ["UX/UI Designer", "Developer"],
-  //   gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
-  // },
-  // {
-  //   id: 2,
-  //   name: "CEEPTz",
-  //   slug: "ceeptz",
-  //   src: portfolio,
-  //   source: "",
-  //   category: ["Web", "All"],
-  //   about: "CEEPTz website with all information about CEEPTZ startup",
-  //   demo: "http://ceeptz.netlify.app",
-  //   tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
-  //   roles: ["UX/UI Designer", "Developer"],
-  //   gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
-  // },
+  {
+    id: 1,
+    name: "Kodemunit",
+    slug: "kodemunit",
+    src: covid,
+    source: "",
+    category: ["Web", "All"],
+    about:
+      "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
+    demo: "http://kodemunit.com",
+    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
+    roles: ["UX/UI Designer", "Developer"],
+    gallery: [],
+  },
+  {
+    id: 2,
+    name: "CEEPTz",
+    slug: "ceeptz",
+    src: covid,
+    source: "",
+    category: ["Web", "All"],
+    about: "CEEPTz website with all information about CEEPTZ startup",
+    demo: "http://ceeptz.netlify.app",
+    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
+    roles: ["UX/UI Designer", "Developer"],
+    gallery: [],
+  },
   {
     id: 3,
     name: "COVID19-TZ",
@@ -59,20 +59,20 @@ const projects = [
   //   roles: ["UX/UI Designer", "Developer"],
   //   gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
   // },
-  // {
-  //   id: 5,
-  //   name: "Gramath Products",
-  //   slug: "gramath-products",
-  //   src: gramath,
-  //   source: "",
-  //   category: ["Others", "All"],
-  //   about:
-  //     "First trial on designing graphics, If you like it I can make one for you",
-  //   demo: "",
-  //   tools: ["Figma"],
-  //   roles: ["Graphic Designer"],
-  //   gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
-  // },
+  {
+    id: 5,
+    name: "Gramath Products",
+    slug: "gramath-products",
+    src: gramath,
+    source: "",
+    category: ["Others", "All"],
+    about:
+      "First trial on designing graphics, If you like it I can make one for you",
+    demo: "",
+    tools: ["Figma"],
+    roles: ["Graphic Designer"],
+    gallery: [],
+  },
   // {
   //   id: 6,
   //   name: "Jitangaze App",

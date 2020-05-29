@@ -1605,8 +1605,8 @@ form .field-group textarea {
 }
 
 .projects-content .container {
-  width: 70%;
-  max-width: 1000px;
+  width: 60% !important;
+  max-width: 800px !important;
 }
 
 .projects-content .container nav {
