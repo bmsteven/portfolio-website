@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import FlipMove from "react-flip-move";
-import LazyLoad from "react-lazy-load";
+// import LazyLoad from "react-lazy-load";
 import ProgressiveImage from "react-progressive-graceful-image";
 
 import projects from "../../data/projects";
@@ -79,7 +79,7 @@ const Projects = () => {
                           {(src) => (
                             <img
                               src={src}
-                              alt='an alternative text'
+                              alt={item.name}
                               style={{
                                 width: "100%",
                               }}

@@ -35,8 +35,8 @@ const projects = [
   },
   {
     id: 1,
-    name: "Kodemunit",
-    slug: "kodemunit",
+    name: "Kodemunit-v01",
+    slug: "kodemunit-v01",
     src: kodemunit2,
     source: "",
     category: ["Design", "All"],
