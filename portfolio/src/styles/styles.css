@@ -127,7 +127,7 @@ button {
 .primary-header {
   font-size: 20px;
   position: relative;
-  padding: 0 0 25px;
+  padding: 0 0 15px;
   margin: 15px 0;
   display: inline-block;
 }
@@ -1345,8 +1345,8 @@ form .field-group textarea {
 }
 
 .resume.main-content .resume-template {
-  -webkit-box-shadow: 4px 4px 15px 7px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 15px 7px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 4px 4px 15px 7px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 4px 15px 7px rgba(0, 0, 0, 0.05);
   margin: 20px 0;
   width: 100%;
   padding: 20px 0;
@@ -1566,7 +1566,6 @@ form .field-group textarea {
 
 .projects-content.project-content img {
   width: 100%;
-  max-width: 477px;
   height: auto;
 }
 
@@ -1575,7 +1574,7 @@ form .field-group textarea {
 }
 
 .projects-content.project-content .container section {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .projects-content.project-content .container section .showcase {
@@ -1589,14 +1588,15 @@ form .field-group textarea {
           justify-content: center;
 }
 
-.projects-content.project-content .container section .showcase article {
-  width: 20%;
-  min-width: 140px;
+.projects-content.project-content .container section.gallery .showcase {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
 }
 
 .projects-content.project-content .container section.gallery .showcase article {
-  width: 40%;
-  min-width: 250px;
+  width: 100%;
   margin: 10px;
 }
 
@@ -1612,6 +1612,10 @@ form .field-group textarea {
 
 .projects-content .container a:hover {
   text-decoration: none;
+}
+
+.projects-content .container img {
+  outline: 1px solid #EBEEEF;
 }
 
 .projects-content .container nav {
@@ -1688,7 +1692,7 @@ form .field-group textarea {
   width: 100%;
   overflow: hidden;
   display: block;
-  border: 1px solid #EBEEEF;
+  outline: 1px solid #EBEEEF;
 }
 
 .projects-content .container .showcase article.project-container .project-image {
@@ -1752,7 +1756,6 @@ form .field-group textarea {
   }
   .projects-content .container .showcase article .project-image {
     width: 100%;
-    height: 66.38%;
   }
   .projects-content .container .showcase article .project-info {
     padding-left: 0;
@@ -2105,6 +2108,10 @@ form .field-group textarea {
   color: #60828F;
 }
 
+.App.darkmode .projects-content img {
+  outline: 1px solid #3c4142;
+}
+
 .App.darkmode .projects-content nav {
   background: #191C1D;
   -webkit-box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2b2f30;
@@ -2122,7 +2129,7 @@ form .field-group textarea {
 }
 
 .App.darkmode .projects-content .showcase article.project-container {
-  border: 1px solid #3c4142;
+  outline: 1px solid #3c4142;
 }
 
 @media screen and (min-width: 1080px) {

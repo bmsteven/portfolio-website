@@ -9,8 +9,12 @@ const Project = () => {
   let param = useParams();
   let obj = projects.find((o) => o.slug === param.project);
   useEffect(() => {
-    document.title = `${obj.name} - Benedict's Portfolio`;
-  }, [obj.name]);
+    if (obj) {
+      document.title = `${obj.name} - Benedict's Portfolio`;
+    } else {
+      document.title = `404 - Project Not Found - Benedict's Portfolio`;
+    }
+  }, [obj]);
   return (
     <main className='projects-content project-content'>
       <div className='container'>
@@ -45,7 +49,7 @@ const Project = () => {
                   alt={obj.name}
                   style={{
                     width: "100%",
-                    maxWidth: "100%"
+                    maxWidth: "100%",
                   }}
                 />
               </div>
@@ -116,7 +120,7 @@ const Project = () => {
           </div>
         ) : (
           <div>
-            <h1>project not found</h1>
+            <h1>Project not Found</h1>
           </div>
         )}
       </div>
