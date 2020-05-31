@@ -1638,6 +1638,17 @@ form .field-group textarea {
   margin: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .projects-content .projects-content.project-container .container {
+    width: 90% !important;
+  }
+  .projects-content .projects-content.project-container .container .showcase {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .projects-content .container {
   width: 60% !important;
   max-width: 800px !important;
@@ -1787,9 +1798,7 @@ form .field-group textarea {
   }
   .projects-content .container .showcase article {
     position: relative;
-    height: 100%;
     margin: 20px 0;
-    width: 100%;
     overflow: hidden;
   }
   .projects-content .container .showcase article .project-image {

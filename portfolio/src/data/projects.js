@@ -34,7 +34,7 @@ const projects = [
     gallery: [],
   },
   {
-    id: 1,
+    id: 3,
     name: "Kodemunit-v01",
     slug: "kodemunit-v01",
     src: kodemunit2,
@@ -48,7 +48,7 @@ const projects = [
     gallery: [],
   },
   {
-    id: 3,
+    id: 4,
     name: "COVID19-TZ",
     slug: "covid19-tz",
     src: covid,
