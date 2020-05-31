@@ -1683,7 +1683,7 @@ form .field-group textarea {
   width: 100%;
   overflow: hidden;
   display: block;
-  border: 1px solid lightgray;
+  border: 1px solid #EBEEEF;
 }
 
 .projects-content .container .showcase article.project-container .project-image {
@@ -1727,7 +1727,7 @@ form .field-group textarea {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
+  width: 80%;
 }
 
 .projects-content .container .showcase article.project-container .project-info .btns a {
@@ -2123,6 +2123,10 @@ form .field-group textarea {
 .App.darkmode .projects-content nav ul li.active {
   background: #00A3E1;
   color: #000000;
+}
+
+.App.darkmode .projects-content .showcase article.project-container {
+  border: 1px solid #3c4142;
 }
 
 @media screen and (min-width: 1080px) {
