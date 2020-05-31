@@ -43,7 +43,7 @@
             // margin-bottom: 2em
             column-gap: 2em
             // row-gap: 2em
-            article
+            article.project-container
                 position: relative
                 height: 100%
                 margin-bottom: 3em
@@ -72,8 +72,25 @@
                     justify-content: center
                     align-items: center
                     // color: $white
+                    .project-name
+                        h2
+                            font-weight: 500
+                            font-size: 1.5em
+                    .category
+                        display: block
+                        margin: 20px 0
+                    .btns
+                        display: flex
+                        justify-content: space-around
+                        width: 100%
+                        a
+                            color: $primary
+                            text-decoration: underline
+                            &:hover
+                                text-decoration: none
 
-@media screen and ( max-width: 635px )
+
+@media screen and ( max-width: 768px )
     .projects-content
         .container
             width: 90% !important

@@ -1676,7 +1676,7 @@ form .field-group textarea {
           column-gap: 2em;
 }
 
-.projects-content .container .showcase article {
+.projects-content .container .showcase article.project-container {
   position: relative;
   height: 100%;
   margin-bottom: 3em;
@@ -1686,11 +1686,11 @@ form .field-group textarea {
   border: 1px solid lightgray;
 }
 
-.projects-content .container .showcase article .project-image {
+.projects-content .container .showcase article.project-container .project-image {
   width: 100%;
 }
 
-.projects-content .container .showcase article .project-info {
+.projects-content .container .showcase article.project-container .project-info {
   height: 100%;
   width: 100%;
   padding: 20px;
@@ -1711,7 +1711,35 @@ form .field-group textarea {
           align-items: center;
 }
 
-@media screen and (max-width: 635px) {
+.projects-content .container .showcase article.project-container .project-info .project-name h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.projects-content .container .showcase article.project-container .project-info .category {
+  display: block;
+  margin: 20px 0;
+}
+
+.projects-content .container .showcase article.project-container .project-info .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.projects-content .container .showcase article.project-container .project-info .btns a {
+  color: #00A3E1;
+  text-decoration: underline;
+}
+
+.projects-content .container .showcase article.project-container .project-info .btns a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
   .projects-content .container {
     width: 90% !important;
   }

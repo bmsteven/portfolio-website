@@ -42,7 +42,7 @@ const projects = [
     category: ["Design", "All"],
     about:
       "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
-    demo: "http://kodemunit.com",
+    demo: "",
     tools: ["Figma"],
     roles: ["UX/UI Designer"],
     gallery: [],

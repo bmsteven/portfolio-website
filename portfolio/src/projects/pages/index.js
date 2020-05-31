@@ -91,9 +91,9 @@ const Projects = () => {
                         <div className='project-name'>
                           <h2>{item.name}</h2>
                         </div>
-                        <span>#{item.category[0]}</span>
+                        <span className="category">#{item.category[0]}</span>
                         <div className='btns'>
-                          <Link to={`/portfolio/${item.slug}`} className='btn'>
+                          <Link to={`/portfolio/${item.slug}`} className='btn btn-secondary'>
                             <span>About</span>
                           </Link>
                           {item.demo && (
