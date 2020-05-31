@@ -129,6 +129,11 @@ const Project = () => {
         ) : (
           <div>
             <h1>Project {param.project} not Found</h1>
+            <div className=''>
+              <span>
+                Go back to my <Link to='/portfolio'>Project Collection</Link>
+              </span>
+            </div>
           </div>
         )}
       </div>
