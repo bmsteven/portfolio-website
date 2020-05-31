@@ -3,6 +3,11 @@
     .container
         width: 60% !important
         max-width: 800px !important
+        a
+            color: $primary
+            text-decoration: underline
+            &:hover
+                text-decoration: none
         nav
             width: 100%
             max-width: 350px 
@@ -83,11 +88,6 @@
                         display: flex
                         justify-content: space-around
                         width: 80%
-                        a
-                            color: $primary
-                            text-decoration: underline
-                            &:hover
-                                text-decoration: none
 
 
 @media screen and ( max-width: 768px )

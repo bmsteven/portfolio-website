@@ -1609,6 +1609,15 @@ form .field-group textarea {
   max-width: 800px !important;
 }
 
+.projects-content .container a {
+  color: #00A3E1;
+  text-decoration: underline;
+}
+
+.projects-content .container a:hover {
+  text-decoration: none;
+}
+
 .projects-content .container nav {
   width: 100%;
   max-width: 350px;
@@ -1728,15 +1737,6 @@ form .field-group textarea {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 80%;
-}
-
-.projects-content .container .showcase article.project-container .project-info .btns a {
-  color: #00A3E1;
-  text-decoration: underline;
-}
-
-.projects-content .container .showcase article.project-container .project-info .btns a:hover {
-  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
