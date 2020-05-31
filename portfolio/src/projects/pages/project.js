@@ -128,7 +128,7 @@ const Project = () => {
           </div>
         ) : (
           <div>
-            <h1>Project not Found</h1>
+            <h1>Project {param.project} not Found</h1>
           </div>
         )}
       </div>
