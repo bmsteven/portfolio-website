@@ -1570,10 +1570,6 @@ form .field-group textarea {
   height: auto;
 }
 
-.projects-content.project-content .container span {
-  color: gray;
-}
-
 .projects-content.project-content .container span a {
   color: #00A3E1;
 }
