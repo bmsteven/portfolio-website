@@ -1569,8 +1569,8 @@ form .field-group textarea {
   height: auto;
 }
 
-.projects-content.project-content .container span a {
-  color: #00A3E1;
+.projects-content.project-content .container div span {
+  display: block;
 }
 
 .projects-content.project-content .container section {
@@ -1586,6 +1586,7 @@ form .field-group textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0;
 }
 
 .projects-content.project-content .container section.gallery .showcase {

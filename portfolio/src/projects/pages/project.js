@@ -19,18 +19,12 @@ const Project = () => {
     <main className='projects-content project-content'>
       <div className='container'>
         {obj ? (
-          <span>
-            <Link to='/portfolio'>Project Collection</Link> >> {obj.name}
-          </span>
-        ) : (
-          ""
-        )}
-        {obj ? (
-          <div
-            style={{
-              width: "100%",
-            }}
-          >
+          <div>
+            <div className=''>
+              <span>
+                <Link to='/portfolio'>Project Collection</Link> >> {obj.name}
+              </span>
+            </div>
             <header className='project-header primary-header'>
               <h1>
                 <span></span>
@@ -58,26 +52,30 @@ const Project = () => {
               <section className='about-section'>
                 <h2>About</h2>
                 <p>{obj.about}</p>
+                {
+                  <div className='btns'>
+                    {obj.demo && (
+                      <a
+                        href={obj.demo}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        Live App
+                      </a>
+                    )}
+                    {obj.source && (
+                      <a
+                        href={obj.source}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        Source Code
+                      </a>
+                    )}
+                  </div>
+                }
               </section>
             )}
-            {
-              <section className='btns'>
-                {obj.demo && (
-                  <a href={obj.demo} target='_blank' rel='noopener noreferrer'>
-                    Live App
-                  </a>
-                )}
-                {obj.source && (
-                  <a
-                    href={obj.source}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    Source Code
-                  </a>
-                )}
-              </section>
-            }
 
             {obj.tools.length > 0 && (
               <section>
