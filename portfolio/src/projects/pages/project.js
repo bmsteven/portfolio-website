@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaCheck } from "react-icons/all";
+import ProgressiveImage from "react-progressive-graceful-image";
 
 //projects
 import projects from "../../data/projects";
@@ -32,20 +33,29 @@ const Project = () => {
               </h1>
             </header>
             {obj.src.length > 0 && (
-              <div
-                className='image-container'
-                style={{
-                  width: "100%",
-                }}
-              >
-                <img
+              <div className='image-container'>
+                {/* <img
                   src={obj.src}
                   alt={obj.name}
-                  style={{
-                    width: "100%",
-                    maxWidth: "100%",
-                  }}
-                />
+                  // style={{
+                  //   width: "100%",
+                  //   maxWidth: "100%",
+                  // }}
+                /> */}
+                <ProgressiveImage
+                  src={obj.src}
+                  placeholder={`https://placehold.it/30x20/a334d2/ffffff/&text=${obj.name}`}
+                >
+                  {(src) => (
+                    <img
+                      src={src}
+                      alt={obj.name}
+                      style={{
+                        width: "100%",
+                      }}
+                    />
+                  )}
+                </ProgressiveImage>
               </div>
             )}
             {obj.about.length > 0 && (

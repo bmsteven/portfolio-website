@@ -1569,12 +1569,34 @@ form .field-group textarea {
   height: auto;
 }
 
-.projects-content.project-content .container div span {
-  display: block;
+.projects-content.project-content .container .project-header {
+  margin: 35px 0;
 }
 
 .projects-content.project-content .container section {
-  margin: 30px 0;
+  margin: 70px 0;
+  line-height: 30px;
+}
+
+.projects-content.project-content .container section h2 {
+  margin-bottom: 25px;
+}
+
+.projects-content.project-content .container section .btns {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-content.project-content .container section .btns a {
+  margin: 0 30px;
 }
 
 .projects-content.project-content .container section .showcase {
@@ -1587,6 +1609,21 @@ form .field-group textarea {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0;
+}
+
+.projects-content.project-content .container section .showcase article {
+  margin: 10px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-content.project-content .container section .showcase article .icon {
+  margin-right: 15px;
+  font-weight: 100;
 }
 
 .projects-content.project-content .container section.gallery .showcase {
