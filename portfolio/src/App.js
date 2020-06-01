@@ -1,7 +1,5 @@
 import React from "react";
-
-//pose
-// import posed, { PoseGroup } from "react-pose";
+import axios from "axios"
 
 //redux
 import PropTypes from "prop-types";
@@ -27,11 +25,8 @@ import Error from "./pages/error";
 //styles
 import "./styles/styles.css";
 
-// page transition animations with pose
-// const RouteContainer = posed.div({
-//   enter: { opacity: 1, delay: 100, beforeChildren: false },
-//   exit: { opacity: 0 },
-// });
+//setting baseUrl
+axios.defaults.baseURL = "https://us-central1-bmsteven-4db5f.cloudfunctions.net/api"
 
 const App = ({ ui: { darkMode } }) => {
   return (

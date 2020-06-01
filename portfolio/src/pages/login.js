@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+
+import { login } from "../redux/actions/auth";
 
 import routes from "../data/routes";
 
@@ -9,7 +11,8 @@ import routes from "../data/routes";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 
-const Login = ({ ui: { loading }, ...rest }) => {
+const Login = ({ login, ui: { loading, errors }, ...rest }) => {
+  let history = useHistory();
   useEffect(() => {
     document.title = "Admin Login - Benedict's Portfolio ";
   }, []);
@@ -18,6 +21,8 @@ const Login = ({ ui: { loading }, ...rest }) => {
     password: "",
   });
 
+  const { email, password } = formData;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -25,6 +30,11 @@ const Login = ({ ui: { loading }, ...rest }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let user = {
+      email,
+      password,
+    };
+    login(user, history);
   };
   return (
     <div className='login-page'>
@@ -33,8 +43,7 @@ const Login = ({ ui: { loading }, ...rest }) => {
         <div
           className='container'
           style={{
-            maxWidth: "400px"
-            // minWidth: "90%"
+            maxWidth: "400px",
           }}
         >
           <header className='primary-header'>
@@ -62,23 +71,11 @@ const Login = ({ ui: { loading }, ...rest }) => {
                 name='password'
               />
             </div>
-            {/* {message && (
-              <p
-                className={
-                  message === "Success" ? "alert success" : "alert error"
-                }
-                id='alert'
-              >
-                {message === "Success"
-                  ? "Your message was sent successful, will get back to you ASAP"
-                  : "Error while submitting you message, please try again"}
-              </p>
-            )} */}
-            {/* {error && (
+            {errors && (
               <p className='alert error' id='alert'>
-                {error}
+                {errors.error}
               </p>
-            )} */}
+            )}
             <p>
               Not an Admin? <Link to='/'>Go Back Home</Link>
             </p>
@@ -99,10 +96,11 @@ const Login = ({ ui: { loading }, ...rest }) => {
 
 Login.propTypes = {
   ui: PropTypes.object.isRequired,
+  login: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  ui: state.auth,
+  ui: state.ui,
 });
 
-export default connect(mapStateToProps, {})(Login);
+export default connect(mapStateToProps, { login })(Login);

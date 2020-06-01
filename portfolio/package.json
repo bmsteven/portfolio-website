@@ -47,5 +47,6 @@
   "devDependencies": {
     "@iconify/icons-il": "^1.0.3",
     "@iconify/react": "^1.1.3"
-  }
+  }, 
+  "proxy": "https://us-central1-bmsteven-4db5f.cloudfunctions.net/api"
 }

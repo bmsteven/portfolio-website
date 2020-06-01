@@ -38,6 +38,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 button {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .App {
@@ -297,6 +298,26 @@ footer .container a:hover {
 img {
   width: 100%;
   height: auto;
+}
+
+.alert {
+  font-size: .9rem;
+  margin: 0 0 1rem 0;
+  border-radius: 8px;
+}
+
+.alert.success {
+  padding: .7rem;
+  background: #D4EDDA;
+  color: #15575C;
+  border: 1px solid #C3E6CB;
+}
+
+.alert.error {
+  padding: .7rem;
+  background: #F8D7DA;
+  color: #721c29;
+  border: 1px solid #F5C6CB;
 }
 
 form {
@@ -1933,26 +1954,6 @@ form p a:hover {
       -ms-flex-order: 1;
           order: 1;
   padding: 0 5% 20px;
-}
-
-.contact-page .main-content .container .form .alert {
-  font-size: .9rem;
-  margin: 0 0 1rem 0;
-  border-radius: 8px;
-}
-
-.contact-page .main-content .container .form .alert.success {
-  padding: .7rem;
-  background: #D4EDDA;
-  color: #15575C;
-  border: 1px solid #C3E6CB;
-}
-
-.contact-page .main-content .container .form .alert.error {
-  padding: .7rem;
-  background: #F8D7DA;
-  color: #721c29;
-  border: 1px solid #F5C6CB;
 }
 
 .contact-page .main-content .container .details {

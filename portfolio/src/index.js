@@ -9,6 +9,7 @@ import App from "./App";
 
 const hist = createBrowserHistory();
 const rootElement = document.getElementById("app");
+
 ReactDOM.render(
   <Provider store={store}>
     <Router history={hist}>
