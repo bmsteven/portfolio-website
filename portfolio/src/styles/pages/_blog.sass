@@ -11,8 +11,6 @@
                 background: #cdd7e2
                 position: relative
                 margin-bottom: 30px
-                // display: flex
-                // justify-content: space-between
                 .left
                     width: 60%
                     height: 100%
@@ -24,5 +22,16 @@
                     color: $white
                     h2
                         font-weight: 500
-                        // line-height: 100%
+                    
+
+@media screen and ( max-width: 768px )
+    .blog-content
+        .main-content
+            padding-top: 100px
+            .container
+                width: 90% !important
+                header.blog-header
+                    .left
+                        width: 70%
+                        clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%)
                     

@@ -1859,6 +1859,20 @@ form .field-group textarea {
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .blog-content .main-content {
+    padding-top: 100px;
+  }
+  .blog-content .main-content .container {
+    width: 90% !important;
+  }
+  .blog-content .main-content .container header.blog-header .left {
+    width: 70%;
+    -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+  }
+}
+
 .contact-page footer {
   bottom: 0;
   position: relative;
@@ -2210,6 +2224,15 @@ form .field-group textarea {
 
 .App.darkmode .projects-content .showcase article.project-container {
   outline: 1px solid #3c4142;
+}
+
+.App.darkmode .blog-content .main-content .container header.blog-header {
+  background: #2d3033;
+}
+
+.App.darkmode .blog-content .main-content .container header.blog-header .left {
+  background: #00A3E1;
+  color: #000000;
 }
 
 @media screen and (min-width: 1080px) {
