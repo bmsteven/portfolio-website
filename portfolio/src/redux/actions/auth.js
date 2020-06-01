@@ -8,7 +8,28 @@ import {
   SET_ERRORS,
   ClEAR_ERRORS,
   SET_UNAUTHENTICATED,
+  LOADING_ADMIN,
+  ADMIN_LOADED,
+  AUTH_ERROR,
 } from "../types";
+
+export const getAdminDetails = () => (dispatch) => {
+  dispatch({ type: LOADING_ADMIN });
+  axios
+    .get("/admin")
+    .then((res) => {
+      dispatch({
+        type: ADMIN_LOADED,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: AUTH_ERROR,
+      });
+      console.log(err);
+    });
+};
 
 export const login = (user, history) => async (dispatch) => {
   dispatch({
@@ -25,6 +46,7 @@ export const login = (user, history) => async (dispatch) => {
       dispatch({
         type: ClEAR_ERRORS,
       });
+      dispatch(getAdminDetails());
       dispatch({ type: STOP_LOADING });
       history.push(`/admin`);
     })

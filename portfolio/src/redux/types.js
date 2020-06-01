@@ -9,4 +9,7 @@ export const ClEAR_ERRORS = "CLEAR_ERRORS";
 //auth
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
-export const SET_UNAUTHENTICATED = "SET_UNAUTHENTICATED"
+export const SET_UNAUTHENTICATED = "SET_UNAUTHENTICATED";
+export const LOADING_ADMIN = "LOADING_ADMIN";
+export const ADMIN_LOADED = "ADMIN_LOADED";
+export const AUTH_ERROR = "AUTH_ERROR";

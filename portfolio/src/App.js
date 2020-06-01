@@ -1,9 +1,13 @@
 import React from "react";
-import axios from "axios"
+import axios from "axios";
+import jwtDecode from "jwt-decode";
 
 //redux
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import store from "./redux/store";
+import { LOGIN_SUCCESS } from "./redux/types";
+import { logout } from "./redux/actions/auth";
 
 //protected-route
 import AuthRoute from "./util/auth-route";
@@ -26,7 +30,20 @@ import Error from "./pages/error";
 import "./styles/styles.css";
 
 //setting baseUrl
-axios.defaults.baseURL = "https://us-central1-bmsteven-4db5f.cloudfunctions.net/api"
+axios.defaults.baseURL =
+  "https://us-central1-bmsteven-4db5f.cloudfunctions.net/api";
+
+const token = localStorage.FBIdToken;
+if (token) {
+  const decodedToken = jwtDecode(token);
+  if (decodedToken.exp * 1000 < Date.now()) {
+    store.dispatch(logout());
+    window.location.href = "/login";
+  } else {
+    store.dispatch({ type: LOGIN_SUCCESS });
+    axios.defaults.headers.common["Authorization"] = token;
+  }
+}
 
 const App = ({ ui: { darkMode } }) => {
   return (
