@@ -3,6 +3,7 @@ import { Switch, Route, useRouteMatch } from "react-router-dom";
 
 //pages
 import BlogPosts from "./pages";
+import AllPosts from "./pages/allPosts"
 import Post from "./pages/post";
 
 import routes from "../data/routes";
@@ -20,6 +21,9 @@ const Blog = ({ ...rest }) => {
         <Switch>
           <Route exact path={`${path}`} key='projects'>
             <BlogPosts />
+          </Route>
+          <Route exact path={`${path}/all-posts`} key='projects'>
+            <AllPosts />
           </Route>
           <Route path={`${path}/:post`}>
             <Post />
