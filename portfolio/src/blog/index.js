@@ -40,7 +40,7 @@ const Blog = ({ auth: { isAuthenticated }, ...rest }) => {
         >
           {isAuthenticated ? (
             <>
-              <Link to='/admin'>Admin Panel</Link>
+              <Link to='/admin'>Admin Panbel</Link>
             </>
           ) : (
             <>
