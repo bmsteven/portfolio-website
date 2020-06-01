@@ -33,8 +33,8 @@ const Login = ({ ui: { loading }, ...rest }) => {
         <div
           className='container'
           style={{
-            maxWidth: "400px",
-            minWidth: "90%"
+            maxWidth: "400px"
+            // minWidth: "90%"
           }}
         >
           <header className='primary-header'>
