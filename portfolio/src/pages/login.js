@@ -43,7 +43,7 @@ const Login = ({ ...rest }) => {
               <label htmlFor='Email'>Email:</label>
               <input
                 type='email'
-                placeholder='email'
+                placeholder='Email Address'
                 id='email'
                 name='email'
                 onChange={(e) => handleChange(e)}

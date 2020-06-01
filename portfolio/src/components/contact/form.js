@@ -78,7 +78,7 @@ const Form = () => {
           <label htmlFor='Email'>Email:</label>
           <input
             type='email'
-            placeholder='Email'
+            placeholder='Email Address'
             id='Email'
             name='Email'
             onChange={(e) => handleChange(e)}
