@@ -53,9 +53,9 @@ const Login = ({ ui: { loading }, ...rest }) => {
               />
             </div>
             <div className='field-group'>
-              <label htmlFor='password'>Subject:</label>
+              <label htmlFor='password'>Login:</label>
               <input
-                type='text'
+                type='password'
                 placeholder='password'
                 id='password'
                 onChange={(e) => handleChange(e)}
