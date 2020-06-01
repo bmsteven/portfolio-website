@@ -1,5 +1,7 @@
 import React from "react";
 import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 //pages
 import BlogPosts from "./pages";
@@ -12,7 +14,7 @@ import routes from "../data/routes";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 
-const Blog = ({ ...rest }) => {
+const Blog = ({ auth: { isAuthenticated }, ...rest }) => {
   let { path } = useRouteMatch();
   return (
     <div className='page blog-content'>
@@ -30,15 +32,33 @@ const Blog = ({ ...rest }) => {
           </Route>
         </Switch>
       </main>
-      <Footer> 
-      <span style={{
-        marginRight: "20px"
-      }}>
-          Admin? <Link to='/login'>Login</Link>
+      <Footer>
+        <span
+          style={{
+            marginRight: "20px",
+          }}
+        >
+          {isAuthenticated ? (
+            <>
+              <Link to='/admin'>Admin Panel</Link>
+            </>
+          ) : (
+            <>
+              Admin? <Link to='/login'>Login</Link>
+            </>
+          )}
         </span>
       </Footer>
     </div>
   );
 };
 
-export default Blog;
+Blog.propTypes = {
+  auth: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps)(Blog);

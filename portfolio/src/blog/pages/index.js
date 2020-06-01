@@ -10,7 +10,6 @@ const BlogPosts = () => {
         <div className='left'>
           <h2>Recent posts</h2>
         </div>
-        {/* <div className='right'></div> */}
       </header>
       <div className='showcase' style={{
         textAlign: "left"
