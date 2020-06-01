@@ -1,4 +1,4 @@
-// import { DARK_MODE, LIGHT_MODE } from "../types";
+// import { LOGIN_SUCCESS, LOGIN_FAIL } from "../types";
 
 const initialState = {
   isAuthenticated: false

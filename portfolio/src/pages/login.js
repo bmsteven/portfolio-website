@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
 import routes from "../data/routes";
 
@@ -7,7 +9,7 @@ import routes from "../data/routes";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 
-const Login = ({ ...rest }) => {
+const Login = ({ ui: { loading }, ...rest }) => {
   useEffect(() => {
     document.title = "Admin Login - Benedict's Portfolio ";
   }, []);
@@ -82,12 +84,9 @@ const Login = ({ ...rest }) => {
             <button
               type='submit'
               className='btn btn-primary'
-              // disabled={loading}
+              disabled={loading}
             >
-              <span>
-                {/* {loading ? "Submitting..." :  */}
-                Submit
-              </span>
+              <span>{loading ? "Please Wait..." : "Login"}</span>
             </button>
           </form>
         </div>
@@ -97,4 +96,12 @@ const Login = ({ ...rest }) => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  ui: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  ui: state.auth,
+});
+
+export default connect(mapStateToProps, {})(Login);

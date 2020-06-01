@@ -1,7 +1,8 @@
 import { DARK_MODE, LIGHT_MODE } from "../types";
 
 const initialState = {
-  darkMode: localStorage.getItem("darkMode")
+  darkMode: localStorage.getItem("darkMode"),
+  loading: false
 };
 
 export default function(state = initialState, action) {
