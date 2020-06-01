@@ -1,9 +1,12 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ children }) => {
   return (
     <footer>
-      <div className="container">&copy; bm dev</div>
+      <div className='container'>
+        {children}
+        <span>&copy; bm dev</span>
+      </div>
     </footer>
   );
 };

@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const BlogPosts = () => {
+  useEffect(() => {
+    document.title = "Blog - Benedict's Portfolio";
+  });
   return (
     <div className='container'>
       <header className='blog-header'>
@@ -9,7 +12,9 @@ const BlogPosts = () => {
         </div>
         {/* <div className='right'></div> */}
       </header>
-      <div className='showcase'>
+      <div className='showcase' style={{
+        textAlign: "left"
+      }}>
         <h2>No Posts available at the moment</h2>
       </div>
     </div>

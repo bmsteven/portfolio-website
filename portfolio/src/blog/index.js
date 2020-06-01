@@ -1,9 +1,9 @@
 import React from "react";
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
 
 //pages
 import BlogPosts from "./pages";
-import AllPosts from "./pages/allPosts"
+import AllPosts from "./pages/allPosts";
 import Post from "./pages/post";
 
 import routes from "../data/routes";
@@ -30,7 +30,13 @@ const Blog = ({ ...rest }) => {
           </Route>
         </Switch>
       </main>
-      <Footer />
+      <Footer> 
+      <span style={{
+        marginRight: "20px"
+      }}>
+          Admin? <Link to='/login'>Login</Link>
+        </span>
+      </Footer>
     </div>
   );
 };
