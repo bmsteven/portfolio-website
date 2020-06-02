@@ -2234,9 +2234,9 @@ form p a:hover {
     padding: 0 2.5%;
     bottom: 0;
     left: 0;
-    background: #ECECEC;
-    -webkit-box-shadow: -2px -3px 2px rgba(0, 0, 0, 0.1);
-            box-shadow: -2px -3px 2px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    -webkit-box-shadow: -2px -3px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: -2px -3px 10px rgba(0, 0, 0, 0.05);
   }
   .admin-content .main-content .container aside ul {
     display: -webkit-box;
@@ -2444,6 +2444,35 @@ form p a:hover {
 .App.darkmode .blog-content .main-content .container header.blog-header .left {
   background: #00A3E1;
   color: #000000;
+}
+
+.App.darkmode .admin-content .main-content .container aside ul li a {
+  color: #C4C4C4;
+}
+
+.App.darkmode .admin-content .main-content .container aside ul li a span {
+  color: #ffffff;
+}
+
+.App.darkmode .admin-content .main-content .container aside ul li a .icon {
+  color: #C4C4C4;
+}
+
+@media screen and (max-width: 768px) {
+  .App.darkmode .admin-content .main-content .container {
+    width: 90%;
+  }
+  .App.darkmode .admin-content .main-content .container aside {
+    background: #191C1D;
+    -webkit-box-shadow: -2px -3px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: -2px -3px 2px rgba(0, 0, 0, 0.1);
+  }
+  .App.darkmode .admin-content .main-content .container aside ul li a {
+    color: #C4C4C4;
+  }
+  .App.darkmode .admin-content .main-content .container aside ul li a .icon {
+    color: #C4C4C4;
+  }
 }
 
 @media screen and (min-width: 1080px) {
