@@ -2285,13 +2285,15 @@ form p a:hover {
     height: 17px;
     width: 17px;
     top: 0px;
-    left: 12px;
+    left: 0;
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
   }
   .admin-content .main-content .container aside ul li a .icon {
     color: #021F2B;
     margin-right: 0;
     margin-bottom: 4px;
-    font-size: .9rem;
+    font-size: 1.1rem;
   }
   .admin-content .main-content .container aside ul li a:hover {
     opacity: .7;
