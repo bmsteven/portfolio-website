@@ -36,14 +36,14 @@ const Admin = ({ logout, ...rest }) => {
             marginRight: "20px",
           }}
         >
-          <a href='#!'>Logout</a>
+          <a href='#!' onClick={logout}>Logout</a>
         </span>
       </Footer>
     </div>
   );
 };
 
-Home.propTypes = {
+Admin.propTypes = {
   logout: PropTypes.func.isRequired,
 };
 
