@@ -3,7 +3,7 @@ import React from 'react'
 const Notifications = () => {
     return (
         <div>
-            Hello from notiifications page
+            <h2>Hello from Notifications page</h2>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const Todo = () => {
     return (
         <div>
-            Hello from todo page
+            <h2>Hello from todo page</h2>
         </div>
     )
 }
