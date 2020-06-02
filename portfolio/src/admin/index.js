@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 
 //pages
@@ -17,6 +17,9 @@ import Footer from "../components/footer";
 
 const Admin = ({ logout, ...rest }) => {
   let { path } = useRouteMatch();
+  useEffect(() => {
+    document.title = "Admin Panel - Benedict's Portfolio";
+  }, []);
   return (
     <div className='page admin-content'>
       <Nav {...rest} navProps='nav-header' routes={routes} />
@@ -36,7 +39,9 @@ const Admin = ({ logout, ...rest }) => {
             marginRight: "20px",
           }}
         >
-          <a href='#!' onClick={logout}>Logout</a>
+          <a href='#!' onClick={logout}>
+            Logout
+          </a>
         </span>
       </Footer>
     </div>
