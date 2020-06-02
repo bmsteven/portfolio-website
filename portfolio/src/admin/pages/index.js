@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const Home = ({ logout }) => {
   return (
-    <div className='container'>
+    <div className=''>
       <h2>Hello from admin home</h2>
     </div>
   );
