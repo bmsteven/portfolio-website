@@ -12,6 +12,7 @@ import Message from "./pages/message";
 import Notifications from "./pages/notifications";
 
 import routes from "../data/routes";
+// import adminRoutes from "../data/admin-routes";
 
 //components
 import Nav from "../components/nav";
