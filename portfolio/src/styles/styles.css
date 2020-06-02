@@ -121,8 +121,8 @@ button {
   bottom: 0;
   height: 3px;
   width: 40px;
-  -webkit-transform: rotate(90deg) translate(20px, 19px);
-          transform: rotate(90deg) translate(20px, 19px);
+  -webkit-transform: rotate(90deg) translate(19px, 19px);
+          transform: rotate(90deg) translate(19px, 19px);
 }
 
 .primary-header {
