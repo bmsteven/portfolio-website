@@ -25,7 +25,7 @@ const Aside = ({ routes }) => {
         <li>
           <Link to='/admin/notifications'>
             <FaBell className='icon' />
-            Notifications <span>3</span>
+            Notifications <span>99+</span>
           </Link>
         </li>
         <li>

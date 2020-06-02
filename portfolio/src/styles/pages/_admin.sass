@@ -29,6 +29,19 @@
                             border-bottom: 1px solid $primary
                             padding: 0 10px
                             color: $menu-bg
+                            position: relative
+                            span
+                                margin-left: 20px
+                                background: red
+                                position: absolute
+                                right: 20px
+                                display: flex
+                                height: 30px
+                                width: 30px
+                                border-radius: 50%
+                                color: $white
+                                justify-content: center
+                                align-items: center
                             .icon
                                 color: $menu-bg
                                 margin-right: 20px
@@ -85,11 +98,15 @@
                                 color: $menu-bg
                                 position: relative
                                 span
-                                    position: absolute
+                                    height: 17px
+                                    width: 17px
+                                    top: 0px
+                                    left: 12px
                                 .icon
                                     color: $menu-bg
                                     margin-right: 0
                                     margin-bottom: 4px
+                                    font-size: .9rem
                                 &:hover
                                     opacity: .7
                 .admin-main-content
