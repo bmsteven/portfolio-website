@@ -3,6 +3,10 @@ import { Switch, Route, useRouteMatch } from "react-router-dom";
 
 //pages
 import Home from "./pages";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+
+import { logout } from "../redux/actions/auth";
 import CreatePost from "./pages/create-post";
 
 import routes from "../data/routes";
@@ -11,7 +15,7 @@ import routes from "../data/routes";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 
-const Admin = ({ ...rest }) => {
+const Admin = ({ logout, ...rest }) => {
   let { path } = useRouteMatch();
   return (
     <div className='page admin-content'>
@@ -26,9 +30,22 @@ const Admin = ({ ...rest }) => {
           </Route>
         </Switch>
       </main>
-      <Footer />
+      <Footer>
+        <span
+          style={{
+            marginRight: "20px",
+          }}
+        >
+          <a href='#!'>Logout</a>
+        </span>
+      </Footer>
     </div>
   );
 };
 
-export default Admin;
+Home.propTypes = {
+  logout: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({});
+export default connect(mapStateToProps, { logout })(Admin);
