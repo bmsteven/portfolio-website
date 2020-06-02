@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   MdDashboard,
   FaBell,
@@ -9,20 +9,16 @@ import {
 } from "react-icons/all";
 
 const Aside = ({ routes }) => {
-  const location = useLocation();
-  const activeRoute = (routeName) => {
-    return location.pathname.indexOf(routeName) > -1 ? "active" : "";
-  };
   return (
     <aside>
       <ul>
         <li>
-          <Link to='/admin' className={activeRoute ? "active" : ""}>
+          <Link to='/admin'>
             <MdDashboard className='icon' /> Dashboard
           </Link>
         </li>
         <li>
-          <Link to='/admin/blog' className={activeRoute ? "active" : ""}>
+          <Link to='/admin/blog'>
             <GrBlog className='icon' /> Blog
           </Link>
         </li>
