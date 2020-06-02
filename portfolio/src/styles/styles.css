@@ -2129,6 +2129,7 @@ form p a:hover {
 
 .admin-content .main-content {
   min-height: calc( 100vh - 100px);
+  height: 200vh;
 }
 
 .admin-content .main-content .container {
