@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import {
   MdDashboard,
   FaBell,
-  FcTodoList,
+  FaRegNewspaper,
   MdMessage,
-  GrBlog,
+  FaListUl,
 } from "react-icons/all";
 
 const Aside = ({ routes }) => {
@@ -19,7 +19,7 @@ const Aside = ({ routes }) => {
         </li>
         <li>
           <Link to='/admin/blog'>
-            <GrBlog className='icon' /> Blog
+            <FaRegNewspaper className='icon' /> Blog
           </Link>
         </li>
         <li>
@@ -37,7 +37,7 @@ const Aside = ({ routes }) => {
 
         <li>
           <Link to='/admin/todo'>
-            <FcTodoList className='icon' />
+            <FaListUl className='icon' />
             Todo
           </Link>
         </li>
