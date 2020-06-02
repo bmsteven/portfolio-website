@@ -22,6 +22,7 @@ export const getAdminDetails = () => (dispatch) => {
         type: ADMIN_LOADED,
         payload: res.data,
       });
+      console.log(res.data);
     })
     .catch((err) => {
       dispatch({
