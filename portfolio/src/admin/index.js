@@ -12,7 +12,6 @@ import Message from "./pages/message";
 import Notifications from "./pages/notifications";
 
 import routes from "../data/routes";
-// import adminRoutes from "../data/admin-routes";
 
 //components
 import Nav from "../components/nav";
@@ -28,9 +27,9 @@ const Admin = ({ logout, ...rest }) => {
     <div className='page admin-content'>
       <Nav {...rest} navProps='nav-header' routes={routes} />
       <main className='main-content'>
-        <div class='container'>
+        <div className='container'>
           <Aside />
-          <div class='admin-main-content'>
+          <div className='admin-main-content'>
             <Switch>
               <Route exact path={`${path}`} key='admin'>
                 <Home />
