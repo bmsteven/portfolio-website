@@ -2128,12 +2128,13 @@ form p a:hover {
 }
 
 .admin-content .main-content {
-  min-height: calc( 100vh - 100px);
-  height: 200vh;
+  min-height: calc( 100vh - 50px);
+  height: 100%;
 }
 
 .admin-content .main-content .container {
   width: 70%;
+  height: 200vh;
 }
 
 .admin-content .main-content .container aside {
@@ -2176,6 +2177,16 @@ form p a:hover {
   padding: 0 10px;
   color: #021F2B;
   position: relative;
+}
+
+.admin-content .main-content .container aside ul li a div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .admin-content .main-content .container aside ul li a span {
@@ -2242,7 +2253,7 @@ form p a:hover {
     float: left;
     width: 100%;
     height: 50px;
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: auto;
     position: fixed;
     top: calc( 100% - 50px);
@@ -2296,22 +2307,33 @@ form p a:hover {
     color: #021F2B;
     position: relative;
   }
+  .admin-content .main-content .container aside ul li a div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .admin-content .main-content .container aside ul li a span {
+    position: relative;
     height: 17px;
     width: 17px;
     top: 0px;
     left: 0;
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    margin: 0;
+    top: -5px;
+    left: -7px;
   }
   .admin-content .main-content .container aside ul li a .icon {
     color: #021F2B;
     margin-right: 0;
     margin-bottom: 4px;
     font-size: 1.1rem;
-  }
-  .admin-content .main-content .container aside ul li a:hover {
-    opacity: .7;
   }
   .admin-content .main-content .container .admin-main-content {
     margin-left: 0;

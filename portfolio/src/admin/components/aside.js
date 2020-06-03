@@ -14,30 +14,44 @@ const Aside = ({ routes }) => {
       <ul>
         <li>
           <Link to='/admin'>
-            <MdDashboard className='icon' /> Dashboard
+            <div>
+              <MdDashboard className='icon' />
+            </div>
+            Dashboard
           </Link>
         </li>
         <li>
           <Link to='/admin/blog'>
-            <FaRegNewspaper className='icon' /> Blog
+            <div>
+              <FaRegNewspaper className='icon' />
+            </div>
+            Blog
           </Link>
         </li>
         <li>
           <Link to='/admin/notifications'>
-            <FaBell className='icon' />
-            Notifications <span>99+</span>
+            <div>
+              <FaBell className='icon' />
+              <span>99+</span>
+            </div>
+            Notifications
           </Link>
         </li>
         <li>
           <Link to='/admin/inbox'>
-            <MdMessage className='icon' />
-            Messages <span>4</span>
+            <div>
+              <MdMessage className='icon' />
+              <span>4</span>
+            </div>
+            Messages
           </Link>
         </li>
 
         <li>
           <Link to='/admin/todo'>
-            <FaListUl className='icon' />
+            <div>
+              <FaListUl className='icon' />
+            </div>
             Todo
           </Link>
         </li>

@@ -1,9 +1,10 @@
 .admin-content
     .main-content
-        min-height: calc( 100vh - 100px )
-        height: 200vh
+        min-height: calc( 100vh - 50px )
+        height: 100%
         .container
             width: 70%
+            height: 200vh
             aside
                 float: left
                 width: 200px
@@ -31,6 +32,10 @@
                             padding: 0 10px
                             color: $menu-bg
                             position: relative
+                            div
+                                height: 100%
+                                display: flex
+                                align-items: center
                             span
                                 margin-left: 20px
                                 background: red
@@ -80,7 +85,7 @@
                     float: left
                     width: 100%
                     height: 50px
-                    overflow-x: hidden
+                    overflow-x: auto
                     overflow-y: auto
                     position: fixed
                     top: calc( 100% - 50px )
@@ -113,19 +118,26 @@
                                 padding: 0 5px
                                 color: $menu-bg
                                 position: relative
+                                div
+                                    display: flex
+                                    position: relative
+                                    justify-content: center
+                                    align-items: center
                                 span
+                                    position: relative
                                     height: 17px
                                     width: 17px
                                     top: 0px
                                     left: 0
-                                    transform: translateX(150%)
+                                    margin: 0
+                                    top: -5px
+                                    left: -7px
+                                    // transform: translateX(150%)
                                 .icon
                                     color: $menu-bg
                                     margin-right: 0
                                     margin-bottom: 4px
                                     font-size: 1.1rem
-                                &:hover
-                                    opacity: .7
                 .admin-main-content
                     margin-left: 0
                     text-align: left
@@ -133,4 +145,5 @@
                         text-align: left
         footer
             clear: both
+            // position: absolute
             bottom: 50px
