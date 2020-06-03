@@ -13,3 +13,7 @@ export const SET_UNAUTHENTICATED = "SET_UNAUTHENTICATED";
 export const LOADING_ADMIN = "LOADING_ADMIN";
 export const ADMIN_LOADED = "ADMIN_LOADED";
 export const AUTH_ERROR = "AUTH_ERROR";
+
+//blog
+export const POSTS_LOADED = "POSTS_LOADED";
+export const POSTS_NOT_LOADED = "POSTS_NOT_LOADED";

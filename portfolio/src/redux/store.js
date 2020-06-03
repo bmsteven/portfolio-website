@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 //reducers
 import ui from "./reducers/ui";
 import auth from "./reducers/auth";
+import data from "./reducers/data";
 
 const initialState = {};
 
@@ -12,7 +13,8 @@ const middleware = [thunk];
 
 const reducers = combineReducers({
   ui,
-  auth
+  auth,
+  data,
 });
 
 const store = createStore(
