@@ -32,7 +32,7 @@ const Aside = ({ routes }) => {
           <Link to='/admin/notifications'>
             <div>
               <FaBell className='icon' />
-              <span>99+</span>
+              {/* <span>99+</span> */}
             </div>
             Notifications
           </Link>
@@ -41,7 +41,7 @@ const Aside = ({ routes }) => {
           <Link to='/admin/inbox'>
             <div>
               <MdMessage className='icon' />
-              <span>4</span>
+              {/* <span>4</span> */}
             </div>
             Messages
           </Link>
