@@ -48,6 +48,10 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                     }}
                   >
                     <h1>{post.title}</h1>
+                    <img src={post.imageUrl} alt={post.title} style={{
+                      width: "100%",
+                      height: "auto"
+                    }}/>
                     <p
                       style={{
                         marginBottom: "25px",
