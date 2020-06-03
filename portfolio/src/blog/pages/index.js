@@ -15,6 +15,7 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
   }, [getPosts]);
 
   // if (posts) console.log(posts);
+  // console.log(posts)
 
   return (
     <div className='container'>
@@ -30,19 +31,20 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
         }}
       >
         {loading ? (
-          <small>loading... please wait</small>
+          <h2>loading... please wait</h2>
         ) : (
           <>
-            {!posts ? (
-              <h2>No Posts available at the moment</h2>
-            ) : (
+            {posts && posts.length > 0 ? (
               <>
                 {posts.map((post) => (
-                  <article key={post.postId} style={{
-                    border: "1px solid lightgray",
-                    margin: "20px 0", 
-                    padding: "20px"
-                  }}>
+                  <article
+                    key={post.postId}
+                    style={{
+                      border: "1px solid lightgray",
+                      margin: "20px 0",
+                      padding: "20px",
+                    }}
+                  >
                     <h1>{post.title}</h1>
                     <h2>{post.subtitle}</h2>
                     <small>{post.createdAt}</small>
@@ -50,6 +52,8 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                   </article>
                 ))}
               </>
+            ) : (
+              <h2>No Posts available at the moment</h2>
             )}
           </>
         )}
