@@ -45,6 +45,7 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                       border: "1px solid lightgray",
                       margin: "20px 0",
                       padding: "20px",
+                      textAlign: "center"
                     }}
                   >
                     <h1>{post.title}</h1>
