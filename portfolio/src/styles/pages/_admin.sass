@@ -4,7 +4,7 @@
         height: 100%
         .container
             width: 70%
-            height: 200vh
+            // height: 200vh
             aside
                 float: left
                 width: 200px
@@ -56,10 +56,13 @@
             .admin-main-content
                 margin-left: 200px
                 text-align: left
+                height: 200vh
                 .container
                     text-align: left
-    footer
-        clear: both
+        footer
+            clear: both
+            position: absolute
+            bottom: 0
 
 @media screen and ( max-width: 992px )
     .admin-content
@@ -123,6 +126,7 @@
                                     position: relative
                                     justify-content: center
                                     align-items: center
+                                    height: 20px
                                 span
                                     position: relative
                                     height: 17px
@@ -136,14 +140,14 @@
                                 .icon
                                     color: $menu-bg
                                     margin-right: 0
-                                    margin-bottom: 4px
+                                    margin-bottom: 2px
                                     font-size: 1.1rem
                 .admin-main-content
                     margin-left: 0
                     text-align: left
                     .container
                         text-align: left
-        footer
-            clear: both
-            // position: absolute
-            bottom: 50px
+            footer
+                clear: both
+                // position: absolute
+                // bottom: 50px
