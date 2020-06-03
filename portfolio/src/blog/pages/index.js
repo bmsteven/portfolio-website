@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../redux/store";
@@ -16,6 +17,7 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
 
   // if (posts) console.log(posts);
   // console.log(posts)
+  let fromnow = "fromNow()";
 
   return (
     <div className='container'>
@@ -46,8 +48,21 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                     }}
                   >
                     <h1>{post.title}</h1>
-                    <h2>{post.subtitle}</h2>
-                    <small>{post.createdAt}</small>
+                    <p
+                      style={{
+                        marginBottom: "25px",
+                      }}
+                    >
+                      {post.subtitle}
+                    </p>
+                    <small
+                      style={{
+                        display: "block",
+                        marginBottom: "15px",
+                      }}
+                    >
+                      posted {post.createdAt}
+                    </small>
                     <p>{post.body}</p>
                   </article>
                 ))}
