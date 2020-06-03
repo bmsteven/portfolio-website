@@ -38,7 +38,11 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
             ) : (
               <>
                 {posts.map((post) => (
-                  <article key={post.postId}>
+                  <article key={post.postId} style={{
+                    border: "1px solid lightgray",
+                    margin: "20px 0", 
+                    padding: "20px"
+                  }}>
                     <h1>{post.title}</h1>
                     <h2>{post.subtitle}</h2>
                     <small>{post.createdAt}</small>
