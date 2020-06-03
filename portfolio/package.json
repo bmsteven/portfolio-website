@@ -11,6 +11,7 @@
   "dependencies": {
     "@tanem/react-nprogress": "^3.0.24",
     "aos": "^2.3.4",
+    "artyom.js": "^1.0.6",
     "axios": "^0.19.2",
     "jwt-decode": "^2.2.0",
     "react": "16.12.0",
