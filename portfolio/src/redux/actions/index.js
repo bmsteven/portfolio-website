@@ -6,6 +6,7 @@ import {
   STOP_LOADING,
   POSTS_LOADED,
   POSTS_NOT_LOADED,
+  SUCCESS_MESSAGE,
 } from "../types";
 
 export const useDarkMode = () => (dispatch) => {
@@ -25,6 +26,10 @@ export const createPost = (post) => async (dispatch) => {
     .then((res) => {
       dispatch({
         type: STOP_LOADING,
+      });
+      dispatch({
+        type: SUCCESS_MESSAGE,
+        payload: res.data,
       });
     })
     .catch((err) => {

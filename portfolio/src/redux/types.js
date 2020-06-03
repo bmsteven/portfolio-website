@@ -5,6 +5,7 @@ export const SET_LOADING = "SET_LOADING";
 export const STOP_LOADING = "STOP_LOADING";
 export const SET_ERRORS = "SET_ERRORS";
 export const ClEAR_ERRORS = "CLEAR_ERRORS";
+export const SUCCESS_MESSAGE = "SUCCESS_MESSAGE"
 
 //auth
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";

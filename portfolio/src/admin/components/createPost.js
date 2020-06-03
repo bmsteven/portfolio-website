@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 import { createPost } from "../../redux/actions/index";
 
-const CreatePost = ({ createPost, ui: { loading, errors } }) => {
+const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
   const [formData, setFormData] = useState({
     title: "",
     subtitle: "",
@@ -86,6 +86,11 @@ const CreatePost = ({ createPost, ui: { loading, errors } }) => {
           {errors && (
             <p className='alert error' id='alert'>
               {errors.error}
+            </p>
+          )}
+          {message && (
+            <p className='alert success' id='alert'>
+              {message.message}
             </p>
           )}
           <button type='submit' className='btn btn-primary' disabled={loading}>
