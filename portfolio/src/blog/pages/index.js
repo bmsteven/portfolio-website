@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 // import dayjs from "dayjs";
+// import moment from "moment"
+import Moment from "react-moment"
 import Parser from "html-react-parser";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -75,7 +77,9 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                         marginBottom: "15px",
                       }}
                     >
-                      posted {post.createdAt}
+                      Posted {" "}
+                      {/* {moment(post.createdAt, "YYYY-MM-DD HH:mm")} */}
+                      <Moment fromNow>{post.createdAt}</Moment>
                     </small>
                     <p>{Parser(post.body)}</p>
                   </article>

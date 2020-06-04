@@ -107,7 +107,6 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
               {errors.error}
             </p>
           )}
-          <div>{body}</div>
           {message && (
             <p className='alert success' id='alert'>
               {message.message}
