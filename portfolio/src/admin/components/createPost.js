@@ -21,6 +21,11 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
     console.log(formData);
   };
 
+  const handleEditorChange = (e) => {
+    setFormData({ ...formData, body: e.target.getContent() });
+    console.log(formData);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let post = {
@@ -74,20 +79,23 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
               name='imageUrl'
             />
           </div>
-          <div className='field-group'>
+          {/* <div className='field-group'>
             <label htmlFor='body'>Body:</label>
             <textarea id='body' name='body' onChange={(e) => handleChange(e)} />
-          </div>
+          </div> */}
           <div className='field-group'>
             <label htmlFor='body'>Body:</label>
             <Editor
-              initialValue='<p>This is the initial content of the editor</p>'
+              id='body'
+              name='body'
+              apiKey='f8iq5845cqpywd23at7ax0vkhywh0wj9sd0g26963exhjema'
+              initialValue={body}
               init={{
                 plugins: "link image code",
                 toolbar:
                   "undo redo | bold italic | alignleft aligncenter alignright | code",
               }}
-              onChange={this.onChange}
+              onChange={(e) => handleEditorChange(e)}
             />
           </div>
           {errors && (
@@ -95,6 +103,7 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
               {errors.error}
             </p>
           )}
+          <div>{body}</div>
           {message && (
             <p className='alert success' id='alert'>
               {message.message}

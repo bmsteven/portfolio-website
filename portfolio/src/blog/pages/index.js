@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
+import Parser from "html-react-parser";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../redux/store";
@@ -17,7 +18,7 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
 
   // if (posts) console.log(posts);
   // console.log(posts)
-  let fromnow = "fromNow()";
+  // let fromnow = "fromNow()";
 
   return (
     <div className='container'>
@@ -45,16 +46,20 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                       border: "1px solid lightgray",
                       margin: "20px 0",
                       padding: "20px",
-                      textAlign: "center"
+                      textAlign: "center",
                     }}
                   >
                     <h1>{post.title}</h1>
-                    <img src={post.imageUrl} alt={post.title} style={{
-                      width: "30%",
-                      minWidth: "280px",
-                      height: "auto",
-                      background: "gray"
-                    }}/>
+                    <img
+                      src={post.imageUrl}
+                      alt={post.title}
+                      style={{
+                        width: "30%",
+                        minWidth: "280px",
+                        height: "auto",
+                        background: "gray",
+                      }}
+                    />
                     <p
                       style={{
                         marginBottom: "25px",
@@ -70,7 +75,7 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                     >
                       posted {post.createdAt}
                     </small>
-                    <p>{post.body}</p>
+                    <p>{Parser(post.body)}</p>
                   </article>
                 ))}
               </>
