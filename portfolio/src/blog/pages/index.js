@@ -50,16 +50,18 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                     }}
                   >
                     <h1>{post.title}</h1>
-                    <img
-                      src={post.imageUrl}
-                      alt={post.title}
-                      style={{
-                        width: "30%",
-                        minWidth: "280px",
-                        height: "auto",
-                        background: "gray",
-                      }}
-                    />
+                    {post.imageUrl && (
+                      <img
+                        src={post.imageUrl}
+                        alt={post.title}
+                        style={{
+                          width: "30%",
+                          minWidth: "280px",
+                          height: "auto",
+                          background: "gray",
+                        }}
+                      />
+                    )}
                     <p
                       style={{
                         marginBottom: "25px",

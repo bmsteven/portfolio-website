@@ -35,6 +35,7 @@ export const createPost = (post) => async (dispatch) => {
     .catch((err) => {
       dispatch({
         type: STOP_LOADING,
+        payload: err.response.data,
       });
     });
 };

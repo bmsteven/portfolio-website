@@ -41,7 +41,7 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
       <div
         className='container'
         style={{
-          maxWidth: "400px",
+          // maxWidth: "400px",
         }}
       >
         <header className='primary-header'>
@@ -91,9 +91,13 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
               apiKey='f8iq5845cqpywd23at7ax0vkhywh0wj9sd0g26963exhjema'
               initialValue={body}
               init={{
-                plugins: "link image code",
+                plugins:
+                  "a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker",
                 toolbar:
-                  "undo redo | bold italic | alignleft aligncenter alignright | code",
+                  "undo redo a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table",
+                toolbar_mode: "floating",
+                tinycomments_mode: "embedded",
+                tinycomments_author: "Author name",
               }}
               onChange={(e) => handleEditorChange(e)}
             />
