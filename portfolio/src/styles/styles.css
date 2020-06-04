@@ -27,10 +27,6 @@ a {
   text-decoration: none;
 }
 
-li {
-  list-style: none;
-}
-
 input:focus, select:focus, textarea:focus, button:focus {
   outline: none !important;
 }
@@ -416,6 +412,10 @@ form p a:hover {
   z-index: 19;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+.nav li {
+  list-style: none;
 }
 
 .nav.nav-header {
@@ -1377,6 +1377,10 @@ form p a:hover {
   }
 }
 
+.resume li {
+  list-style: none;
+}
+
 .resume.main-content header.primary-header {
   text-align: center;
 }
@@ -1694,6 +1698,10 @@ form p a:hover {
   }
 }
 
+.projects-content li {
+  list-style: none;
+}
+
 .projects-content .container {
   width: 60% !important;
   max-width: 800px !important;
@@ -1922,6 +1930,10 @@ form p a:hover {
   }
 }
 
+.contact-page li {
+  list-style: none;
+}
+
 .contact-page footer {
   bottom: 0;
   position: relative;
@@ -2125,6 +2137,10 @@ form p a:hover {
             order: 1;
     padding: 30px;
   }
+}
+
+.admin-content li {
+  list-style: none;
 }
 
 .admin-content .main-content {
