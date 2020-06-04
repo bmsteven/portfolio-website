@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Editor } from "@tinymce/tinymce-react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
@@ -76,11 +76,18 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
           </div>
           <div className='field-group'>
             <label htmlFor='body'>Body:</label>
-            <textarea
-              // placeholder='body'
-              id='body'
-              name='body'
-              onChange={(e) => handleChange(e)}
+            <textarea id='body' name='body' onChange={(e) => handleChange(e)} />
+          </div>
+          <div className='field-group'>
+            <label htmlFor='body'>Body:</label>
+            <Editor
+              initialValue='<p>This is the initial content of the editor</p>'
+              init={{
+                plugins: "link image code",
+                toolbar:
+                  "undo redo | bold italic | alignleft aligncenter alignright | code",
+              }}
+              onChange={this.onChange}
             />
           </div>
           {errors && (

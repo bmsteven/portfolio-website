@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tanem/react-nprogress": "^3.0.24",
+    "@tinymce/tinymce-react": "^3.6.0",
     "aos": "^2.3.4",
     "artyom.js": "^1.0.6",
     "axios": "^0.19.2",
