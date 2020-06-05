@@ -124,7 +124,6 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
               <option value=''>Please select</option>
               <option value='Social'>Social</option>
               <option value='Career'>Career</option>
-              <option value='Software'>Software</option>
               <option value='Technology'>Technology</option>
             </select>
           </div>
@@ -142,10 +141,10 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
           <div className='field-group'>
             {/* will change this to select tag */}
             <h2>Keywords</h2>
-            {tags.map((tag) => {
+            {tags.map((tag, index) => {
               return (
-                <div>
-                  <label htmlFor={tag.key} key={tag.key}>
+                <div key={index}>
+                  <label htmlFor={tag.key}>
                     <input
                       type='checkbox'
                       name='keywords'

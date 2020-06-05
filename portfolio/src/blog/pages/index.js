@@ -1,13 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/all";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
+  const [keyWord, setKeyWord] = useState("All");
+
+  const setAll = () => {
+    setKeyWord("All");
+  };
+
+  const setSocial = () => {
+    setKeyWord("Social");
+  };
+
+  const setCareer = () => {
+    setKeyWord("Career");
+  };
+
+  const setTechnology = () => {
+    setKeyWord("Technology");
+  };
+
+  let filteredPosts;
+
   useEffect(() => {
     document.title = "Blog - Benedict's Portfolio";
   }, []);
+  if (posts) {
+    filteredPosts = posts.filter((o) => o.category.includes(keyWord));
+  }
+
+  console.log(filteredPosts);
 
   return (
     <div className='container'>
@@ -22,13 +47,23 @@ const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
           textAlign: "left",
         }}
       >
+        <div className='keywords'>
+          <nav>
+            <ul>
+              <li onClick={setAll}>All</li>
+              <li onClick={setTechnology}>Technology</li>
+              <li onClick={setSocial}>Social</li>
+              <li onClick={setCareer}>Career</li>
+            </ul>
+          </nav>
+        </div>
         {loading ? (
           <h2>loading... please wait</h2>
         ) : (
           <>
-            {posts && posts.length > 0 ? (
+            {filteredPosts && filteredPosts.length > 0 ? (
               <>
-                {posts.map((post) => (
+                {filteredPosts.slice(0, 10).map((post) => (
                   <article
                     key={post.postId}
                     style={{
