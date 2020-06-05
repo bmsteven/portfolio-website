@@ -40,15 +40,52 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
               >
                 Posted <Moment fromNow>{post.createdAt}</Moment>
               </small>
-              <div>{Parser(post.body)}</div>
-              {post.category && <p>Category: {post.category[1]}</p>}
-              <p>Keywords: </p>
-              <ul>
-                {post.keywords &&
-                  post.keywords.map((keyword, index) => (
-                    <li key={index}>{keyword}</li>
-                  ))}
-              </ul>
+              <div
+                style={{
+                  margin: "20px 0 30px",
+                }}
+              >
+                {Parser(post.body)}
+              </div>
+              {post.category && (
+                <p>
+                  Category:{" "}
+                  <span
+                    style={{
+                      color: "#0684B4",
+                    }}
+                  >
+                    {post.category[1]}
+                  </span>
+                </p>
+              )}
+              {post.keywords && (
+                <>
+                  <p style={{
+                    margin: "20px 0"
+                  }}>Keywords: </p>
+                  <ul
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      alignItems: "center",
+                    }}
+                  >
+                    {post.keywords.map((keyword, index) => (
+                      <li
+                        key={index}
+                        style={{
+                          marginRight: "10px",
+                          listStyle: "none",
+                          color: "#0684B4",
+                        }}
+                      >
+                        {keyword}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
           ) : (
             <h2>No Post found</h2>
@@ -60,7 +97,6 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
 };
 
 Post.propTypes = {
-  // match: PropTypes.object
   getPost: PropTypes.func.isRequired,
 };
 
