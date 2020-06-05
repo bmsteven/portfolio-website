@@ -19,29 +19,6 @@ export const useLightMode = () => (dispatch) => {
   dispatch({ type: LIGHT_MODE });
 };
 
-export const createPost = (post) => async (dispatch) => {
-  dispatch({
-    type: SET_LOADING,
-  });
-  axios
-    .post("/create-post", post)
-    .then((res) => {
-      dispatch({
-        type: STOP_LOADING,
-      });
-      dispatch({
-        type: SUCCESS_MESSAGE,
-        payload: res.data,
-      });
-    })
-    .catch((err) => {
-      dispatch({
-        type: STOP_LOADING,
-        payload: err.response.data,
-      });
-    });
-};
-
 export const getPosts = () => async (dispatch) => {
   dispatch({ type: SET_LOADING });
   axios
@@ -65,6 +42,30 @@ export const getPosts = () => async (dispatch) => {
       });
       dispatch({
         type: STOP_LOADING,
+      });
+    });
+};
+
+export const createPost = (post) => async (dispatch) => {
+  dispatch({
+    type: SET_LOADING,
+  });
+  axios
+    .post("/create-post", post)
+    .then((res) => {
+      dispatch({
+        type: STOP_LOADING,
+      });
+      dispatch({
+        type: SUCCESS_MESSAGE,
+        payload: res.data,
+      });
+      dispatch(getPosts())
+    })
+    .catch((err) => {
+      dispatch({
+        type: STOP_LOADING,
+        payload: err.response.data,
       });
     });
 };
