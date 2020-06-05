@@ -2117,7 +2117,9 @@ form p a:hover {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 10px 15px;
+    padding: 10px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .blog-content .main-content .posts-container .container .divide .categories nav ul li {
     cursor: pointer;
@@ -2136,7 +2138,7 @@ form p a:hover {
     font-size: 14px;
     border-radius: 20px;
     background: #D3E5F8;
-    margin: 10px 40px 10px 0;
+    margin: 10px 30px 10px 0;
   }
   .blog-content .main-content .posts-container .container .divide .categories nav ul li.active {
     background: #08303F;
