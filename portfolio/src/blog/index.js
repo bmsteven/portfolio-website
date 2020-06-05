@@ -21,13 +21,13 @@ const Blog = ({ auth: { isAuthenticated }, ...rest }) => {
       <Nav {...rest} navProps='nav-header' routes={routes} />
       <main className='main-content'>
         <Switch>
-          <Route exact path={`${path}`} key='projects'>
+          <Route exact path={`${path}`} key='blog/'>
             <BlogPosts />
           </Route>
-          <Route exact path={`${path}/all-posts`} key='projects'>
+          <Route exact path={`${path}/all-posts`} key='blog/all-posts'>
             <AllPosts />
           </Route>
-          <Route path={`${path}/:post`}>
+          <Route path={`${path}/:post`} key='blog/post'>
             <Post />
           </Route>
         </Switch>

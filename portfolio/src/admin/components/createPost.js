@@ -8,7 +8,7 @@ import tags from "../../data/tags";
 
 import { createPost } from "../../redux/actions/index";
 
-const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
+const CreatePost = ({ createPost, data: { loading, error, message } }) => {
   const [formData, setFormData] = useState({
     title: "",
     subtitle: "",
@@ -177,9 +177,9 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
               onChange={(e) => handleEditorChange(e)}
             />
           </div>
-          {errors && (
+          {error && (
             <p className='alert error' id='alert'>
-              {errors.error}
+              {error.error}
             </p>
           )}
           {message && (
@@ -203,6 +203,7 @@ CreatePost.propTypes = {
 
 const mapStateToProps = (state) => ({
   ui: state.ui,
+  data: state.data
 });
 
 export default connect(mapStateToProps, { createPost })(CreatePost);

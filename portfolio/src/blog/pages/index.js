@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/all";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
+const BlogPosts = ({ data: { posts, loading, error } }) => {
   const [keyWord, setKeyWord] = useState("All");
 
   const setAll = () => {
@@ -31,8 +31,6 @@ const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
   if (posts) {
     filteredPosts = posts.filter((o) => o.category.includes(keyWord));
   }
-
-  console.log(filteredPosts);
 
   return (
     <div className='container'>
@@ -81,7 +79,10 @@ const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
                 ))}
               </>
             ) : (
-              <h2>No Posts available at the moment</h2>
+              <div className='no-content'>
+                {error && <h2>{error.error}</h2>}
+                {!error && <h2>No Posts available at the moment</h2>}
+              </div>
             )}
           </>
         )}

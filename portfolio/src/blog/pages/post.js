@@ -1,16 +1,15 @@
 import React, { useLayoutEffect } from "react";
-// import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getPost } from "../../redux/actions/index";
 import Parser from "html-react-parser";
 import Moment from "react-moment";
 
-const Post = ({ getPost, data: { post }, ui: { loading } }) => {
+const Post = ({ getPost, data: { post, error, loading } }) => {
   const search = window.location.search;
   const params = new URLSearchParams(search);
   const slug = params.get("postId");
-  // console.log(slug);
   if (post && post.title) console.log(post.title);
 
   useLayoutEffect(() => {
@@ -21,7 +20,7 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
     if (post && post.title) {
       document.title = `${post.title} - Benedict's Blog`;
     } else {
-      document.title = "Loading"
+      document.title = "Loading";
     }
   });
   return (
@@ -100,7 +99,12 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
               )}
             </div>
           ) : (
-            <h2>Post Not found</h2>
+            <div className='no-content'>
+              {error && <h2>{error.error}</h2>}
+              {!error && <h2>Post not found</h2>}
+              <Link to='/blog'>View Recent Posts</Link>
+              <Link to='/blog/all-posts'>View All Posts</Link>
+            </div>
           )}
         </div>
       )}
@@ -114,7 +118,6 @@ Post.propTypes = {
 
 const mapStateToProps = (state) => ({
   data: state.data,
-  ui: state.ui,
 });
 
 export default connect(mapStateToProps, { getPost })(Post);
