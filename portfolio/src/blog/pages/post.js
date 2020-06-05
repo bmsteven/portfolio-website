@@ -17,7 +17,12 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
     getPost(slug);
   }, [getPost, slug]);
   return (
-    <div className='container'>
+    <div
+      className='container'
+      style={{
+        textAlign: "left",
+      }}
+    >
       {loading ? (
         <h2>Loading post... Please wait</h2>
       ) : (
