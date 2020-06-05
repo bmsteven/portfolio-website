@@ -3,11 +3,15 @@ import {
   POSTS_NOT_LOADED,
   POST_LOADED,
   POST_NOT_LOADED,
+  LOADING_DATA,
+  STOP_LOADING_DATA,
 } from "../types";
 
 const initialState = {
   posts: null,
   post: null,
+  loading: null,
+  error: null
 };
 
 export default function (state = initialState, action) {

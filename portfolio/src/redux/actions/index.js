@@ -2,8 +2,8 @@ import axios from "axios";
 import {
   DARK_MODE,
   LIGHT_MODE,
-  SET_LOADING,
-  STOP_LOADING,
+  LOADING_DATA,
+  STOP_LOADING_DATA,
   POSTS_LOADED,
   POSTS_NOT_LOADED,
   POST_LOADED,
