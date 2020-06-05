@@ -83,7 +83,7 @@ const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
                       <Moment fromNow>{post.createdAt}</Moment>
                     </small> */}
                     {/* <p>{Parser(post.body)}</p> */}
-                    <Link to={`/blog/${post.postSlug}-${post.postId}`}>
+                    <Link to={`/blog/${post.slug}-${post.postId}`}>
                       Read More <FaArrowRight className='icon' />
                     </Link>
                   </article>
@@ -101,8 +101,6 @@ const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
 
 BlogPosts.propTypes = {
   ui: PropTypes.object.isRequired,
-  // data: PropTypes.object.isRequired,
-  // getPosts: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
