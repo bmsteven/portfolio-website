@@ -24,7 +24,19 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
     console.log(formData);
   };
 
-  const handleKeywordsChange = (e) => {};
+  const handleKeywordsChange = (e) => {
+    let checkedItem = formData.keywords;
+    if (e.target.checked) {
+      checkedItem.push(e.target.value);
+    } else {
+      checkedItem.remove(checkedItem, (obj) => {
+        return obj === e.target.value;
+      });
+    }
+    console.log(checkedItem);
+    setFormData({ ...formData, keywords: checkedItem });
+    console.log(formData);
+  };
 
   const handleEditorChange = (e) => {
     setFormData({ ...formData, body: e.target.getContent() });
