@@ -7,8 +7,7 @@
 }
 
 body {
-  overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
 }
@@ -265,7 +264,7 @@ main.main-content {
 
 footer {
   height: 50px;
-  width: 100vw;
+  width: 100%;
   opacity: .8;
 }
 
@@ -408,7 +407,7 @@ form p a:hover {
 
 .nav {
   height: 70px;
-  width: 100vw;
+  width: 100%;
   z-index: 19;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -747,6 +746,8 @@ form p a:hover {
 .banner {
   min-height: calc( 100vh - 70px);
   max-height: 900px;
+  max-width: 100%;
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,7 +831,8 @@ form p a:hover {
 }
 
 .banner .hero-bg {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   position: absolute;
   right: 0;
   top: 0;
@@ -1930,7 +1932,9 @@ form p a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -40px;
 }
 
 .blog-content .main-content .posts-container .container .divide .posts {
@@ -1989,12 +1993,8 @@ form p a:hover {
   opacity: .8;
 }
 
-.blog-content .main-content .posts-container .container .divide .categories {
-  width: 40%;
-}
-
 .blog-content .main-content .posts-container .container .divide .categories header.category-header {
-  height: 50px;
+  height: 40px;
   text-align: left;
 }
 
