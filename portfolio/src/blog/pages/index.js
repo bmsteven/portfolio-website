@@ -1,28 +1,13 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/all";
-// import dayjs from "dayjs";
-// import moment from "moment"
-// import Moment from "react-moment";
-// import Parser from "html-react-parser";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-// import store from "../../redux/store";
-
-// import { getPosts } from "../../redux/actions/index";
 
 const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
   useEffect(() => {
     document.title = "Blog - Benedict's Portfolio";
   }, []);
-
-  // useEffect(() => {
-  //   store.dispatch(getPosts);
-  // }, [getPosts]);
-
-  // if (posts) console.log(posts);
-  // console.log(posts)
-  // let fromnow = "fromNow()";
 
   return (
     <div className='container'>
@@ -50,40 +35,11 @@ const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
                       borderBottom: "1px solid lightgray",
                       margin: "20px 0",
                       padding: "20px 0",
-                      // textAlign: "center",
                     }}
                   >
                     <h1>{post.title}</h1>
-                    {/* {post.imageUrl && (
-                      <img
-                        src={post.imageUrl}
-                        alt={post.title}
-                        style={{
-                          width: "30%",
-                          minWidth: "280px",
-                          height: "auto",
-                          background: "gray",
-                        }}
-                      />
-                    )} */}
-                    <p
-                    // style={{
-                    //   marginBottom: "25px",
-                    // }}
-                    >
-                      {post.subtitle}
-                    </p>
-                    {/* <small
-                      style={{
-                        display: "block",
-                        marginBottom: "15px",
-                      }}
-                    >
-                      Posted {" "}
-                      <Moment fromNow>{post.createdAt}</Moment>
-                    </small> */}
-                    {/* <p>{Parser(post.body)}</p> */}
-                    <Link to={`/blog/${post.slug}-${post.postId}`}>
+                    <p>{post.subtitle}</p>
+                    <Link to={`/blog/${post.slug}?postId=${post.postId}`}>
                       Read More <FaArrowRight className='icon' />
                     </Link>
                   </article>
@@ -108,4 +64,4 @@ const mapStateToProps = (state) => ({
   data: state.data,
 });
 
-export default connect(mapStateToProps, { })(BlogPosts);
+export default connect(mapStateToProps, {})(BlogPosts);

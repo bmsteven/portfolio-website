@@ -6,6 +6,8 @@ import {
   STOP_LOADING,
   POSTS_LOADED,
   POSTS_NOT_LOADED,
+  POST_LOADED,
+  POST_NOT_LOADED,
   SUCCESS_MESSAGE,
 } from "../types";
 
@@ -59,6 +61,32 @@ export const getPosts = () => async (dispatch) => {
       console.log(err);
       dispatch({
         type: POSTS_NOT_LOADED,
+        payload: err.response.data,
+      });
+      dispatch({
+        type: STOP_LOADING,
+      });
+    });
+};
+
+export const getPost = (postId) => async (dispatch) => {
+  dispatch({ type: SET_LOADING });
+  axios
+    .get(`/posts/${postId}`)
+    .then((res) => {
+      dispatch({
+        type: POST_LOADED,
+        payload: res.data,
+      });
+      console.log(res.data);
+      dispatch({
+        type: STOP_LOADING,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: POST_NOT_LOADED,
+        // payload: err.response.data,
       });
       dispatch({
         type: STOP_LOADING,

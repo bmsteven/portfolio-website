@@ -18,3 +18,5 @@ export const AUTH_ERROR = "AUTH_ERROR";
 //blog
 export const POSTS_LOADED = "POSTS_LOADED";
 export const POSTS_NOT_LOADED = "POSTS_NOT_LOADED";
+export const POST_LOADED = "POST_LOADED";
+export const POST_NOT_LOADED = "POST_NOT_LOADED";
