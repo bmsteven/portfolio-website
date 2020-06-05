@@ -30,7 +30,8 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
           {post ? (
             <div>
               <h2>{post.title}</h2>
-              {post.subtitle ? <p>{post.subtitle}</p> : null}
+              {post.subtitle && <p>{post.subtitle}</p>}
+              {post.author && <small>by {post.author},</small>}
               <small
                 style={{
                   display: "block",
@@ -40,6 +41,14 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
                 Posted <Moment fromNow>{post.createdAt}</Moment>
               </small>
               <div>{Parser(post.body)}</div>
+              {post.category && <p>Category: {post.category[1]}</p>}
+              <p>Keywords: </p>
+              <ul>
+                {post.keywords &&
+                  post.keywords.map((keyword, index) => (
+                    <li key={index}>{keyword}</li>
+                  ))}
+              </ul>
             </div>
           ) : (
             <h2>No Post found</h2>

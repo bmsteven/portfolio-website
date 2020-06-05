@@ -10,16 +10,21 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
     title: "",
     subtitle: "",
     body: "",
-    imageUrl: "",
+    category: "",
+    author: "",
+    slug: "",
+    keywords: [],
   });
 
-  const { title, subtitle, body, imageUrl } = formData;
+  const { title, subtitle, body, category, author, slug, keywords } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     console.log(formData);
   };
+
+  const handleKeywordsChange = (e) => {};
 
   const handleEditorChange = (e) => {
     setFormData({ ...formData, body: e.target.getContent() });
@@ -32,17 +37,27 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
       title,
       subtitle,
       body,
-      imageUrl,
+      category,
+      author,
+      keywords,
+      slug,
     };
     createPost(post);
   };
   return (
-    <div className='create-post-component'>
+    <div
+      className='create-post-component'
+      style={{
+        marginBottom: "30px",
+      }}
+    >
       <div
         className='container'
-        style={{
-          // maxWidth: "400px",
-        }}
+        style={
+          {
+            // maxWidth: "400px",
+          }
+        }
       >
         <header className='primary-header'>
           <span></span>
@@ -70,19 +85,82 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
             />
           </div>
           <div className='field-group'>
-            <label htmlFor='imageUrl'>Image Url:</label>
+            {/* will change this to select tag */}
+            <label htmlFor='author'>Author:</label>
             <input
               type='text'
-              placeholder='image url'
-              id='imageUrl'
+              placeholder='Author'
+              id='author'
               onChange={(e) => handleChange(e)}
-              name='imageUrl'
+              name='author'
             />
           </div>
-          {/* <div className='field-group'>
-            <label htmlFor='body'>Body:</label>
-            <textarea id='body' name='body' onChange={(e) => handleChange(e)} />
-          </div> */}
+          <div className='field-group'>
+            {/* will change this to select tag */}
+            <label htmlFor='category'>Category:</label>
+            <input
+              type='text'
+              placeholder='Category'
+              id='category'
+              onChange={(e) => handleChange(e)}
+              name='category'
+            />
+          </div>
+          <div className='field-group'>
+            {/* will change this to select tag */}
+            <label htmlFor='slug'>Slug:</label>
+            <input
+              type='text'
+              placeholder='slug'
+              id='slug'
+              onChange={(e) => handleChange(e)}
+              name='slug'
+            />
+          </div>
+          <div className='field-group'>
+            {/* will change this to select tag */}
+            <h2>Keywords</h2>
+            <div>
+              <input
+                type='checkbox'
+                id='technology'
+                value='Technology'
+                onChange={(e) => handleKeywordsChange(e)}
+                name='keywords'
+              />{" "}
+              <label htmlFor='technology'>Technology</label>
+            </div>
+            <div>
+              <input
+                type='checkbox'
+                id='javascript'
+                value='Javascript'
+                onChange={(e) => handleKeywordsChange(e)}
+                name='keywords'
+              />{" "}
+              <label htmlFor='javascript'>Javascript</label>
+            </div>
+            <div>
+              <input
+                type='checkbox'
+                id='web'
+                value='Web'
+                onChange={(e) => handleKeywordsChange(e)}
+                name='keywords'
+              />{" "}
+              <label htmlFor='web'>Web</label>
+            </div>
+            <div>
+              <input
+                type='checkbox'
+                id='react'
+                value='React'
+                onChange={(e) => handleKeywordsChange(e)}
+                name='keywords'
+              />{" "}
+              <label htmlFor='react'>React</label>
+            </div>
+          </div>
           <div className='field-group'>
             <label htmlFor='body'>Body:</label>
             <Editor
