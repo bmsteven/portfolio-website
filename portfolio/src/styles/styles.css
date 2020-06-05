@@ -1925,13 +1925,16 @@ form p a:hover {
 }
 
 .blog-content .main-content .posts-container .container header.blog-header {
-  width: 60%;
+  width: 50%;
 }
 
 .blog-content .main-content .posts-container .container .divide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: -40px;
@@ -1939,7 +1942,7 @@ form p a:hover {
 
 .blog-content .main-content .posts-container .container .divide .posts {
   padding-top: 80px;
-  width: 60%;
+  width: 50%;
   text-align: left;
 }
 
@@ -1993,6 +1996,10 @@ form p a:hover {
   opacity: .8;
 }
 
+.blog-content .main-content .posts-container .container .divide .categories {
+  width: 40%;
+}
+
 .blog-content .main-content .posts-container .container .divide .categories header.category-header {
   height: 40px;
   text-align: left;
@@ -2023,7 +2030,6 @@ form p a:hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 10px 15px;
-  background: #ffffff;
 }
 
 .blog-content .main-content .posts-container .container .divide .categories nav ul li {
@@ -2049,6 +2055,93 @@ form p a:hover {
 .blog-content .main-content .posts-container .container .divide .categories nav ul li.active {
   background: #08303F;
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-content .main-content .posts-container .container {
+    width: 95%;
+    max-width: 1200px;
+  }
+  .blog-content .main-content .posts-container .container header.blog-header {
+    width: 100%;
+  }
+  .blog-content .main-content .posts-container .container .divide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: -40px;
+  }
+  .blog-content .main-content .posts-container .container .divide .posts {
+    padding-top: 40px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+  }
+  .blog-content .main-content .posts-container .container .divide .categories {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 60px;
+  }
+  .blog-content .main-content .posts-container .container .divide .categories header.category-header {
+    height: 40px;
+    text-align: left;
+  }
+  .blog-content .main-content .posts-container .container .divide .categories header.category-header h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding-left: 0;
+    font-weight: 500;
+  }
+  .blog-content .main-content .posts-container .container .divide .categories nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+  }
+  .blog-content .main-content .posts-container .container .divide .categories nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 10px 15px;
+  }
+  .blog-content .main-content .posts-container .container .divide .categories nav ul li {
+    cursor: pointer;
+    list-style: none;
+    height: 40px;
+    padding: 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px;
+    border-radius: 20px;
+    background: #D3E5F8;
+    margin: 10px 40px 10px 0;
+  }
+  .blog-content .main-content .posts-container .container .divide .categories nav ul li.active {
+    background: #08303F;
+    color: #ffffff;
+  }
 }
 
 @media screen and (max-width: 768px) {
