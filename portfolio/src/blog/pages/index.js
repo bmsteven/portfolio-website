@@ -1,22 +1,24 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/all";
 // import dayjs from "dayjs";
 // import moment from "moment"
-import Moment from "react-moment"
-import Parser from "html-react-parser";
+// import Moment from "react-moment";
+// import Parser from "html-react-parser";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import store from "../../redux/store";
+// import store from "../../redux/store";
 
-import { getPosts } from "../../redux/actions/index";
+// import { getPosts } from "../../redux/actions/index";
 
-const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
+const BlogPosts = ({ ui: { loading }, data: { posts } }) => {
   useEffect(() => {
     document.title = "Blog - Benedict's Portfolio";
   }, []);
 
-  useEffect(() => {
-    store.dispatch(getPosts);
-  }, [getPosts]);
+  // useEffect(() => {
+  //   store.dispatch(getPosts);
+  // }, [getPosts]);
 
   // if (posts) console.log(posts);
   // console.log(posts)
@@ -45,14 +47,14 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                   <article
                     key={post.postId}
                     style={{
-                      border: "1px solid lightgray",
+                      borderBottom: "1px solid lightgray",
                       margin: "20px 0",
-                      padding: "20px",
+                      padding: "20px 0",
                       // textAlign: "center",
                     }}
                   >
                     <h1>{post.title}</h1>
-                    {post.imageUrl && (
+                    {/* {post.imageUrl && (
                       <img
                         src={post.imageUrl}
                         alt={post.title}
@@ -63,25 +65,27 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
                           background: "gray",
                         }}
                       />
-                    )}
+                    )} */}
                     <p
-                      style={{
-                        marginBottom: "25px",
-                      }}
+                    // style={{
+                    //   marginBottom: "25px",
+                    // }}
                     >
                       {post.subtitle}
                     </p>
-                    <small
+                    {/* <small
                       style={{
                         display: "block",
                         marginBottom: "15px",
                       }}
                     >
                       Posted {" "}
-                      {/* {moment(post.createdAt, "YYYY-MM-DD HH:mm")} */}
                       <Moment fromNow>{post.createdAt}</Moment>
-                    </small>
-                    <p>{Parser(post.body)}</p>
+                    </small> */}
+                    {/* <p>{Parser(post.body)}</p> */}
+                    <Link to={`/blog/${post.postSlug}-${post.postId}`}>
+                      Read More <FaArrowRight className='icon' />
+                    </Link>
                   </article>
                 ))}
               </>
@@ -98,7 +102,7 @@ const BlogPosts = ({ getPosts, ui: { loading }, data: { posts } }) => {
 BlogPosts.propTypes = {
   ui: PropTypes.object.isRequired,
   // data: PropTypes.object.isRequired,
-  getPosts: PropTypes.func.isRequired,
+  // getPosts: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -106,4 +110,4 @@ const mapStateToProps = (state) => ({
   data: state.data,
 });
 
-export default connect(mapStateToProps, { getPosts })(BlogPosts);
+export default connect(mapStateToProps, { })(BlogPosts);

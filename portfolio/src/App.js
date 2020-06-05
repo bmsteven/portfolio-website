@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import store from "./redux/store";
 import { LOGIN_SUCCESS } from "./redux/types";
 import { logout } from "./redux/actions/auth";
+import { getPosts } from "./redux/actions/index";
 
 //protected-route
 import AuthRoute from "./util/auth-route";
@@ -45,7 +46,10 @@ if (token) {
   }
 }
 
-const App = ({ ui: { darkMode } }) => {
+const App = ({ getPosts, ui: { darkMode } }) => {
+  useEffect(() => {
+    store.dispatch(getPosts);
+  }, [getPosts]);
   return (
     <Route
       render={({ location }) => (
@@ -73,6 +77,7 @@ const mapStateToProps = (state) => ({
 
 App.propTypes = {
   ui: PropTypes.object.isRequired,
+  getPosts: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, {getPosts})(App);
