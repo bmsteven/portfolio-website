@@ -24,90 +24,50 @@ const Post = ({ getPost, data: { post, error, loading } }) => {
     }
   });
   return (
-    <div
-      className='container'
-      style={{
-        textAlign: "left",
-      }}
-    >
-      {loading ? (
-        <h2>Loading post... Please wait</h2>
-      ) : (
-        <div className='post-content'>
-          {post ? (
-            <div>
-              <h2>{post.title}</h2>
-              {post.subtitle && <p>{post.subtitle}</p>}
-              {post.author && <small>by {post.author},</small>}
-              <small
-                style={{
-                  display: "block",
-                  marginBottom: "15px",
-                }}
-              >
-                Posted <Moment fromNow>{post.createdAt}</Moment>
-              </small>
-              <div
-                style={{
-                  margin: "20px 0 30px",
-                }}
-              >
-                {Parser(post.body)}
-              </div>
-              {post.category && (
-                <p>
-                  Category:{" "}
-                  <span
-                    style={{
-                      color: "#0684B4",
-                    }}
-                  >
-                    {post.category[1]}
-                  </span>
-                </p>
-              )}
-              {post.keywords && (
-                <>
-                  <p
-                    style={{
-                      margin: "20px 0",
-                    }}
-                  >
-                    Keywords:{" "}
+    <div className='post-container'>
+      <div className='container'>
+        {loading ? (
+          <div className='loader'>
+            <h2> Loading post... Please wait</h2>
+          </div>
+        ) : (
+          <div className='post-content'>
+            {post ? (
+              <div>
+                <h2>{post.title}</h2>
+                {post.subtitle && <p>{post.subtitle}</p>}
+                {post.author && <small>by {post.author},</small>}
+                <small>
+                  Posted <Moment fromNow>{post.createdAt}</Moment>
+                </small>
+                <div>{Parser(post.body)}</div>
+                {post.category && (
+                  <p>
+                    Category: <span>{post.category[1]}</span>
                   </p>
-                  <ul
-                    style={{
-                      display: "flex",
-                      flexWrap: "wrap",
-                      alignItems: "center",
-                    }}
-                  >
-                    {post.keywords.map((keyword, index) => (
-                      <li
-                        key={index}
-                        style={{
-                          marginRight: "10px",
-                          listStyle: "none",
-                          color: "#0684B4",
-                        }}
-                      >
-                        {keyword}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </div>
-          ) : (
-            <div className='no-content'>
-              {error && <h2>{error.error}</h2>}
-              {!error && <h2>Post not found</h2>}
-              <Link to='/blog'>View Recent Posts</Link>
-              <Link to='/blog/all-posts'>View All Posts</Link>
-            </div>
-          )}
-        </div>
-      )}
+                )}
+                {post.keywords && (
+                  <>
+                    <p>Keywords: </p>
+                    <ul>
+                      {post.keywords.map((keyword, index) => (
+                        <li key={index}>{keyword}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
+            ) : (
+              <div className='no-content'>
+                {error && <h2>{error.error}</h2>}
+                {!error && <h2>Post not found</h2>}
+                <Link to='/blog'>View Recent Posts</Link>
+                <Link to='/blog/all-posts'>View All Posts</Link>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
