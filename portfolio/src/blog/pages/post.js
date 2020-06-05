@@ -21,7 +21,7 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
     if (post && post.title) {
       document.title = `${post.title} - Benedict's Blog`;
     } else {
-      document.title = "404 -Post not found"
+      document.title = "Loading"
     }
   });
   return (
@@ -100,7 +100,7 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
               )}
             </div>
           ) : (
-            <h2>No Post found</h2>
+            <h2>Post Not found</h2>
           )}
         </div>
       )}
