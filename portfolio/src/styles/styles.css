@@ -2059,7 +2059,7 @@ form p a:hover {
 
 @media screen and (max-width: 768px) {
   .blog-content .main-content .posts-container .container {
-    width: 95%;
+    width: 90%;
     max-width: 1200px;
   }
   .blog-content .main-content .posts-container .container header.blog-header {
