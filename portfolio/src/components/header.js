@@ -30,7 +30,8 @@ function useOnScreen(options) {
 
 const Header = ({ children, image, headerClass, ...rest }) => {
   const [ref, intersect] = useOnScreen({
-    rootMargin: "-70px",
+    rootMargin: "-200px",
+    // threshold: [1],
   });
   return (
     <header ref={ref} className={`page-header ${headerClass}`}>
