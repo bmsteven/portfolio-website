@@ -2,15 +2,12 @@
     .main-content
         padding-top: 100px
         .container
-            width: 60% !important
-            max-width: 800px !important
-            // background: red
             header.blog-header
                 width: 100%
                 height: 40px
                 background: #d3e5f8
                 position: relative
-                margin-bottom: 30px
+                // margin-bottom: 30px
                 transition: .3s
                 .left
                     width: 60%
@@ -24,6 +21,9 @@
                     transition: .3s
                     h2
                         font-weight: 500
+                        text-transform: uppercase
+        @import "../pages-components/blog/_post"
+        @import "../pages-components/blog/_posts"
                     
 
 @media screen and ( max-width: 768px )
@@ -31,9 +31,7 @@
         .main-content
             padding-top: 100px
             .container
-                width: 90% !important
                 header.blog-header
                     .left
                         width: 70%
                         clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%)
-                    

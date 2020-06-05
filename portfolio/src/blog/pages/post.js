@@ -46,9 +46,9 @@ const Post = ({ getPost, data: { post, error, loading } }) => {
                     Category: <span>{post.category[1]}</span>
                   </p>
                 )}
-                {post.keywords && (
+                {post.keywords.length > 0 && (
                   <>
-                    <p>Keywords: </p>
+                    <p>Keyword(s): </p>
                     <ul>
                       {post.keywords.map((keyword, index) => (
                         <li key={index}>{keyword}</li>

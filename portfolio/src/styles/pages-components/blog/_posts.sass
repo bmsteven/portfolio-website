@@ -1,0 +1,44 @@
+.posts-container
+    .container
+        width: 80%
+        max-width: 1200px
+        header.blog-header
+            width: 70%
+        .divide
+            display: flex
+            margin-top: -50px
+            .posts
+                padding-top: 80px
+                width: 70%
+                text-align: left
+                .showcase
+                    display: flex
+                    flex-direction: column
+                    article
+                        margin-bottom: 50px
+                        padding-bottom: 15px
+                        border-bottom: 1px solid #D3E5F8
+                        &:last-child
+                            border-bottom: none
+                        h1
+                            margin-bottom: 10px
+                            font-size: 24px
+                        p
+                            margin-bottom: 20px
+                            font-size: 18px
+                        a
+                            color: $link-bg
+                            display: inline-flex
+                            align-items: center
+                            .icon
+                                margin-left: 20px
+                                color: $primary
+                            &:hover
+                                opacity: .8
+            .categories
+                width: 30%
+                nav
+                    position: sticky
+                    top: 0
+                li
+                    list-style: none
