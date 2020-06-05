@@ -3,6 +3,9 @@ import { Editor } from "@tinymce/tinymce-react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
+//keywords
+import tags from "../../data/tags";
+
 import { createPost } from "../../redux/actions/index";
 
 const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
@@ -21,7 +24,6 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
   };
 
   const handleKeywordsChange = (e) => {
@@ -33,14 +35,11 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
         return obj === e.target.value;
       });
     }
-    console.log(checkedItem);
     setFormData({ ...formData, keywords: checkedItem });
-    console.log(formData);
   };
 
   const handleEditorChange = (e) => {
     setFormData({ ...formData, body: e.target.getContent() });
-    console.log(formData);
   };
 
   const handleSubmit = (e) => {
@@ -110,13 +109,24 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
           <div className='field-group'>
             {/* will change this to select tag */}
             <label htmlFor='category'>Category:</label>
-            <input
+            {/* <input
               type='text'
               placeholder='Category'
               id='category'
               onChange={(e) => handleChange(e)}
               name='category'
-            />
+            /> */}
+            <select
+              name='category'
+              id='category'
+              onChange={(e) => handleChange(e)}
+            >
+              <option value=''>Please select</option>
+              <option value='Social'>Social</option>
+              <option value='Career'>Career</option>
+              <option value='Software'>Software</option>
+              <option value='Technology'>Technology</option>
+            </select>
           </div>
           <div className='field-group'>
             {/* will change this to select tag */}
@@ -132,49 +142,25 @@ const CreatePost = ({ createPost, ui: { loading, errors, message } }) => {
           <div className='field-group'>
             {/* will change this to select tag */}
             <h2>Keywords</h2>
-            <div>
-              <input
-                type='checkbox'
-                id='technology'
-                value='Technology'
-                onChange={(e) => handleKeywordsChange(e)}
-                name='keywords'
-              />{" "}
-              <label htmlFor='technology'>Technology</label>
-            </div>
-            <div>
-              <input
-                type='checkbox'
-                id='javascript'
-                value='Javascript'
-                onChange={(e) => handleKeywordsChange(e)}
-                name='keywords'
-              />{" "}
-              <label htmlFor='javascript'>Javascript</label>
-            </div>
-            <div>
-              <input
-                type='checkbox'
-                id='web'
-                value='Web'
-                onChange={(e) => handleKeywordsChange(e)}
-                name='keywords'
-              />{" "}
-              <label htmlFor='web'>Web</label>
-            </div>
-            <div>
-              <input
-                type='checkbox'
-                id='react'
-                value='React'
-                onChange={(e) => handleKeywordsChange(e)}
-                name='keywords'
-              />{" "}
-              <label htmlFor='react'>React</label>
-            </div>
+            {tags.map((tag) => {
+              return (
+                <div>
+                  <label htmlFor={tag.key} key={tag.key}>
+                    <input
+                      type='checkbox'
+                      name='keywords'
+                      id={tag.key}
+                      value={tag.value}
+                      onChange={(e) => handleKeywordsChange(e)}
+                    />{" "}
+                    {tag.value}
+                  </label>
+                </div>
+              );
+            })}
           </div>
           <div className='field-group'>
-            <label htmlFor='body'>Body:</label>
+            <label htmlFor='body'>Content:</label>
             <Editor
               id='body'
               name='body'
