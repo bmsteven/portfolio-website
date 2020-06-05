@@ -19,7 +19,7 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
   return (
     <div className='container'>
       {loading ? (
-        <></>
+        <h2>Loading post... Please wait</h2>
       ) : (
         <div className='post-content'>
           {post ? (
