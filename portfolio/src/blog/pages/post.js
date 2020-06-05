@@ -10,12 +10,20 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
   const search = window.location.search;
   const params = new URLSearchParams(search);
   const slug = params.get("postId");
-  console.log(slug);
+  // console.log(slug);
   if (post && post.title) console.log(post.title);
 
   useLayoutEffect(() => {
     getPost(slug);
   }, [getPost, slug]);
+
+  useLayoutEffect(() => {
+    if (post && post.title) {
+      document.title = `${post.title} - Benedict's Blog`;
+    } else {
+      document.title = "404 -Post not found"
+    }
+  });
   return (
     <div
       className='container'
@@ -61,9 +69,13 @@ const Post = ({ getPost, data: { post }, ui: { loading } }) => {
               )}
               {post.keywords && (
                 <>
-                  <p style={{
-                    margin: "20px 0"
-                  }}>Keywords: </p>
+                  <p
+                    style={{
+                      margin: "20px 0",
+                    }}
+                  >
+                    Keywords:{" "}
+                  </p>
                   <ul
                     style={{
                       display: "flex",
