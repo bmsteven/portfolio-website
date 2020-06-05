@@ -1912,12 +1912,12 @@ form p a:hover {
 }
 
 .blog-content .main-content .posts-container .container {
-  width: 80%;
+  width: 85%;
   max-width: 1200px;
 }
 
 .blog-content .main-content .posts-container .container header.blog-header {
-  width: 70%;
+  width: 60%;
 }
 
 .blog-content .main-content .posts-container .container .divide {
@@ -1929,7 +1929,7 @@ form p a:hover {
 
 .blog-content .main-content .posts-container .container .divide .posts {
   padding-top: 80px;
-  width: 70%;
+  width: 60%;
   text-align: left;
 }
 
@@ -1946,6 +1946,7 @@ form p a:hover {
 .blog-content .main-content .posts-container .container .divide .posts .showcase article {
   margin-bottom: 50px;
   padding-bottom: 15px;
+  padding-right: 20px;
   border-bottom: 1px solid #D3E5F8;
 }
 
@@ -1983,17 +1984,65 @@ form p a:hover {
 }
 
 .blog-content .main-content .posts-container .container .divide .categories {
-  width: 30%;
+  width: 40%;
+}
+
+.blog-content .main-content .posts-container .container .divide .categories header.category-header {
+  height: 50px;
+  text-align: left;
+}
+
+.blog-content .main-content .posts-container .container .divide .categories header.category-header h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding-left: 30px;
+  font-weight: 500;
 }
 
 .blog-content .main-content .posts-container .container .divide .categories nav {
-  position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  position: -webkit-sticky;
+  top: 70px;
 }
 
-.blog-content .main-content .posts-container .container .divide .categories li {
+.blog-content .main-content .posts-container .container .divide .categories nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 15px;
+  background: #ffffff;
+}
+
+.blog-content .main-content .posts-container .container .divide .categories nav ul li {
+  cursor: pointer;
   list-style: none;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  border-radius: 20px;
+  background: #D3E5F8;
+  margin: 10px 5px;
+}
+
+.blog-content .main-content .posts-container .container .divide .categories nav ul li.active {
+  background: #08303F;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {

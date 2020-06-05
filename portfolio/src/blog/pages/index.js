@@ -78,10 +78,30 @@ const BlogPosts = ({ data: { posts, loading, error } }) => {
             <div className='keywords'>
               <nav>
                 <ul>
-                  <li onClick={setAll}>All</li>
-                  <li onClick={setTechnology}>Technology</li>
-                  <li onClick={setSocial}>Social</li>
-                  <li onClick={setCareer}>Career</li>
+                  <li
+                    onClick={setAll}
+                    className={keyWord === "All" ? "active" : ""}
+                  >
+                    All
+                  </li>
+                  <li
+                    onClick={setTechnology}
+                    className={keyWord === "Technology" ? "active" : ""}
+                  >
+                    Technology
+                  </li>
+                  <li
+                    onClick={setSocial}
+                    className={keyWord === "Social" ? "active" : ""}
+                  >
+                    Social
+                  </li>
+                  <li
+                    onClick={setCareer}
+                    className={keyWord === "Career" ? "active" : ""}
+                  >
+                    Career
+                  </li>
                 </ul>
               </nav>
             </div>
