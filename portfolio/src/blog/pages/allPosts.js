@@ -37,7 +37,7 @@ const AllPosts = ({ data: { posts, loading, error } }) => {
       <div className='container'>
         <header className='blog-header'>
           <div className='left'>
-            <h2>Recent posts</h2>
+            <h2>All Posts</h2>
           </div>
         </header>
         <div className='divide'>
