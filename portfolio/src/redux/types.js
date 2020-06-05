@@ -5,7 +5,6 @@ export const SET_LOADING = "SET_LOADING";
 export const STOP_LOADING = "STOP_LOADING";
 export const SET_ERRORS = "SET_ERRORS";
 export const ClEAR_ERRORS = "CLEAR_ERRORS";
-export const SUCCESS_MESSAGE = "SUCCESS_MESSAGE"
 
 //auth
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
@@ -22,3 +21,5 @@ export const POST_LOADED = "POST_LOADED";
 export const POST_NOT_LOADED = "POST_NOT_LOADED";
 export const LOADING_DATA = "LOADING_DATA"
 export const STOP_LOADING_DATA = "STOP_LOADING_DATA"
+export const POST_CREATED = "POST_CREATED"
+export const POST_CREATION_FAILED = "POST_CREATION_FAILED"

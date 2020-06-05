@@ -5,14 +5,12 @@ import {
   STOP_LOADING,
   SET_ERRORS,
   ClEAR_ERRORS,
-  SUCCESS_MESSAGE
 } from "../types";
 
 const initialState = {
   darkMode: localStorage.getItem("darkMode"),
   loading: false,
   errors: null,
-  message: null,
 };
 
 export default function (state = initialState, action) {
@@ -50,11 +48,6 @@ export default function (state = initialState, action) {
         ...state,
         errors: null,
       };
-    case SUCCESS_MESSAGE:
-      return {
-        ...state,
-        message: payload
-      }
     default:
       return state;
   }
