@@ -246,6 +246,7 @@ main.main-content {
 
 .social-media-container ul li {
   margin: 10px 0;
+  list-style: none;
 }
 
 .social-media-container ul li a {
@@ -426,7 +427,6 @@ form p a:hover {
 
 .nav.nav_static {
   position: static;
-  top: 0;
 }
 
 .nav.nav__sticky {
