@@ -19,8 +19,10 @@ const Post = ({ getPost, data: { post, error, loading } }) => {
   useLayoutEffect(() => {
     if (post && post.title) {
       document.title = `${post.title} - Benedict's Blog`;
+    } else if (error && error.error === "Post not found") {
+      document.title = "404 - Post Not Found";
     } else {
-      document.title = "Loading";
+      document.title = "Loading Post";
     }
   });
   return (
