@@ -430,8 +430,7 @@ form p a:hover {
 }
 
 .nav.nav__sticky {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   background: #ffffff;
   -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
