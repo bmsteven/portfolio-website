@@ -38,7 +38,7 @@ const Header = ({ children, image, headerClass, ...rest }) => {
       <Nav
         {...rest}
         routes={routes}
-        navProps={intersect ? `nav__static` : `nav__sticky`}
+        navProps={intersect ? `nav__sticky` : `nav__static`}
       />
       <Banner image={image} children={children} />
     </header>
