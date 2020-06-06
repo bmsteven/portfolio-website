@@ -425,16 +425,16 @@ form p a:hover {
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav.nav_static {
+/* .nav.nav_static {
   position: static;
-}
+} */
 
 .nav.nav__sticky {
-  position: fixed;
+  /* position: sticky; */
   top: 0;
-  background: #ffffff;
-  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  /* background: #ffffff; */
+  /* -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .nav .container {
@@ -2592,9 +2592,9 @@ form p a:hover {
 }
 
 .App.darkmode .nav.nav-header, .App.darkmode .nav.nav__sticky {
-  background: #191C1D;
-  -webkit-box-shadow: 4px 4px 12px #0c0d0e;
-          box-shadow: 4px 4px 12px #0c0d0e;
+  /* background: #191C1D; */
+  /* -webkit-box-shadow: 4px 4px 12px #0c0d0e;
+          box-shadow: 4px 4px 12px #0c0d0e; */
 }
 
 .App.darkmode .nav .container nav ul li a.active {
