@@ -425,18 +425,6 @@ form p a:hover {
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* .nav.nav_static {
-  position: static;
-} */
-
-.nav.nav__sticky {
-  /* position: sticky; */
-  top: 0;
-  /* background: #ffffff; */
-  /* -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); */
-}
-
 .nav .container {
   height: 100%;
   max-width: 1400px;
@@ -1962,10 +1950,6 @@ form p a:hover {
   border-bottom: 1px solid #D3E5F8;
 }
 
-.blog-content .main-content .posts-container .container .divide .posts .showcase article:last-child {
-  border-bottom: none;
-}
-
 .blog-content .main-content .posts-container .container .divide .posts .showcase article h1 {
   margin-bottom: 10px;
   font-size: 24px;
@@ -2591,10 +2575,10 @@ form p a:hover {
   }
 }
 
-.App.darkmode .nav.nav-header, .App.darkmode .nav.nav__sticky {
-  /* background: #191C1D; */
-  /* -webkit-box-shadow: 4px 4px 12px #0c0d0e;
-          box-shadow: 4px 4px 12px #0c0d0e; */
+.App.darkmode .nav.nav-header {
+  background: #191C1D;
+  -webkit-box-shadow: 4px 4px 12px #0c0d0e;
+          box-shadow: 4px 4px 12px #0c0d0e;
 }
 
 .App.darkmode .nav .container nav ul li a.active {
