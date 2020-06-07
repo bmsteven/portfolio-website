@@ -23,6 +23,10 @@ const BlogPosts = ({ data: { posts, loading, error } }) => {
     setKeyWord("Technology");
   };
 
+  const setHow = () => {
+    setKeyWord("How");
+  };
+
   let filteredPosts;
 
   useEffect(() => {
@@ -101,6 +105,12 @@ const BlogPosts = ({ data: { posts, loading, error } }) => {
                     className={keyWord === "Career" ? "active" : ""}
                   >
                     Career
+                  </li>
+                  <li
+                    onClick={setHow}
+                    className={keyWord === "How" ? "active" : ""}
+                  >
+                    How To
                   </li>
                 </ul>
               </nav>

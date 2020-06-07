@@ -125,6 +125,7 @@ const CreatePost = ({ createPost, data: { loading, error, message } }) => {
               <option value='Social'>Social</option>
               <option value='Career'>Career</option>
               <option value='Technology'>Technology</option>
+              <option value='How To'>How To</option>
             </select>
           </div>
           <div className='field-group'>
