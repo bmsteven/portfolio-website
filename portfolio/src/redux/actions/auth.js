@@ -52,13 +52,19 @@ export const login = (user, history) => async (dispatch) => {
       history.push(`/admin`);
     })
     .catch((err) => {
+    let errors
+    if(err) {
+      errors = err.response.data
+    } else {
+      errors = "Unable to process, please check your internet connection and try again"
+    }
       dispatch({
         type: LOGIN_FAIL,
-        payload: err.response.data,
+        payload: errors,
       });
       dispatch({
         type: SET_ERRORS,
-        payload: err.response.data,
+        payload: errors,
       });
       dispatch({ type: STOP_LOADING });
     });
