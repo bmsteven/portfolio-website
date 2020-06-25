@@ -1,9 +1,12 @@
 const tools = [
   "Figma",
   "HTML, CSS and JavaScript",
-  "React",
+  "Reactjs & React Native",
   "Bootstrap",
-  "Sass"
+  "Sass",
+  "nodejs",
+  "Firebase",
+  "MySql
 ];
 
 export default tools;
