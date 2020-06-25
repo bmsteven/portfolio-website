@@ -6,7 +6,7 @@ const tools = [
   "Sass",
   "nodejs",
   "Firebase",
-  "MySql
+  "MySql"
 ];
 
 export default tools;
