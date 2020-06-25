@@ -3,7 +3,8 @@ import {
   FaCheck,
   FaCode,
   AiOutlineAntDesign,
-  DiGitBranch
+  DiGitBranch,
+  IoMdApps
 } from "react-icons/all";
 
 import ResumeTemplate from "./resume";
@@ -12,13 +13,18 @@ import tools from "../../data/tools";
 const skills = [
   {
     id: 1,
-    title: "Web design",
+    title: "Web/App design",
     icon: <AiOutlineAntDesign className="icon" />
   },
   {
     id: 2,
     title: "Web development",
     icon: <FaCode className="icon" />
+  },
+  {
+    id: 3,
+    title: "Mobile App Development",
+    icon: <IoMdApps className="icon" />
   },
   {
     id: 3,
