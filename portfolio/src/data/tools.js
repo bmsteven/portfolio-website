@@ -1,6 +1,6 @@
 const tools = [
   "Figma",
-  "HTML, CSS and JavaScript",
+  "HTML, CSS & JavaScript",
   "Reactjs & React Native",
   "Bootstrap",
   "Sass",
