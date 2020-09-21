@@ -11,11 +11,11 @@ const education = [
   {
     id: 2,
     started: "2016",
-    finished: "Now",
+    finished: "2020",
     school: "Water Institute",
     course: "Bachelor Degree In Water Resources",
     description:
-      "I've been brilliant student at the Institute doing great in studies and modules involving Mathematics and Projects.\nDuring My time at the institute I learned several other computer skills like autoCAD, ArchiCad and others  \nMy average GPA is 3.8"
+      "I've been brilliant student at the Institute doing great in studies and modules involving Mathematics and Projects.\nDuring My time at the institute I learned several other computer skills like autoCAD, ArchiCad and others  \nMy average GPA is 4.4 which is first class"
   },
   {
     id: 3,
