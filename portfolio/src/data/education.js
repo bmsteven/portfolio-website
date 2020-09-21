@@ -15,7 +15,7 @@ const education = [
     school: "Water Institute",
     course: "Bachelor Degree In Water Resources",
     description:
-      "I've been brilliant student at the Institute doing great in studies and modules involving Mathematics and Projects.\nDuring My time at the institute I learned several other computer skills like autoCAD, ArchiCad and others  <br />My average GPA is 4.4 which is first class"
+      "I've been brilliant student at the Institute doing great in studies and modules involving Mathematics and Projects.\nDuring My time at the institute I learned several other computer skills like autoCAD, ArchiCad and others  <br />My average GPA is 4.4 - First Class"
   },
   {
     id: 3,
