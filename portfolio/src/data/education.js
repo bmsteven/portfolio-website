@@ -15,7 +15,7 @@ const education = [
     school: "Water Institute",
     course: "Bachelor Degree In Water Resources",
     description:
-      "I've been brilliant student at the Institute doing great in studies and modules involving Mathematics and Projects.\nDuring My time at the institute I learned several other computer skills like autoCAD, ArchiCad and others. \nMy average GPA is 4.4 - First Class"
+      "I've been brilliant student at the Institute doing great in studies and modules involving Mathematics and Projects.\nDuring My time at the institute I learned several other computer skills like autoCAD, ArchiCad and others. \nMy average GPA was 4.4 - First Class"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const education = [
     school: "Iyunga Technical School",
     course: "PCM",
     description:
-      " I pursued my high school education at Iyunga which is located at Mbeya Tanzania and I went on to become top 3 student in my class scoring division 1.7 with A in Pure Mathematics"
+      "I pursued my high school education at Iyunga which is located at Mbeya Tanzania and I went on to become top 3 student in my class scoring division 1.7 with A in Pure Mathematics"
   },
   {
     id: 4,
@@ -33,8 +33,7 @@ const education = [
     school: "Azania Secondary School",
     course: "Science",
     description:
-      "While studying at Azania I participated in different workshops that were established to boost Education System iin Tanzania. \nI was also one of brilliant students passing all subjects with an A in Basic Mathematics and division 1 point 15 score. I was also good in science practicals and projects"
+      "While studying at Azania I participated in different workshops that were established to boost Education System in Tanzania. \nI was also one of brilliant students passing all subjects with an A in Basic Mathematics and division 1 point 15 score. I was also good in science practicals and projects"
   }
 ];
-
 export default education;
