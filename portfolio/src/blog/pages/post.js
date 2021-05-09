@@ -26,11 +26,13 @@ const Post = ({ getPost, data: { post, error, loading } }) => {
     }
   });
   return (
-    <div className='post-container'>
+    <div className='post-container' style={{
+textAlign: "left"
+}}>
       <div className='container'>
         {loading ? (
           <div className='loader'>
-            <h2> Loading post... Please wait</h2>
+            <h2> Loading post...</h2>
           </div>
         ) : (
           <div className='post-content'>
