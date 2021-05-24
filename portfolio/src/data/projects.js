@@ -127,7 +127,7 @@ const projects = [
   tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript","React js", "Nextjs", "Nodejs", "Nestjs", "Postgresql"],
   roles: ["UI Designer, Frontend Developer"],
   //   gallery: [kodemunit, portfolio, jitangaze, portfolio, gramath],
-  // },
+  },
 ];
 
 export default projects;
