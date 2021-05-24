@@ -66,7 +66,6 @@ const Projects = () => {
               {filteredProjects.map((item) => (
                 // <FlipMove>
                 <article key={item.id} className='project-container project'>
-                  {item.src.length > 0 && (
                     <>
                       <figure className='project-image'>
                         {/* <LazyLoad debounce={false} offsetVertical={500}>
@@ -108,7 +107,6 @@ const Projects = () => {
                         </div>
                       </figcaption>
                     </>
-                  )}
                 </article>
                 // </FlipMove>
               ))}
