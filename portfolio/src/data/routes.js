@@ -21,11 +21,6 @@ const routes = [
   },
   {
     id: 5,
-    name: "Blog",
-    path: "/blog"
-  },
-  {
-    id: 6,
     name: "Contact",
     path: "/contact"
   }
