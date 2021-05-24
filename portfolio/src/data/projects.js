@@ -106,7 +106,7 @@ const projects = [
     id: 7,
    name: "My Portfolio",
    slug: "bm-dev",
-    src: portfolio,
+    src: "",
   //   source: "http://github.com/bmsteven/bm-dev",
    category: ["Web", "Design", "All"],
    about: "My Personal Portfolio website which you are looking at right now",
