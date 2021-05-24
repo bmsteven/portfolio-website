@@ -1,6 +1,6 @@
-import kodemunit from "../images/kodemunit.png";
-import kodemunit2 from "../images/kodemunit-v01.png";
-// import jitangaze from "../images/jitangaze.png";
+//import kodemunit from "../images/kodemunit.png";
+//import kodemunit2 from "../images/kodemunit-v01.png";
+// import from "../images/jitangaze.png";
 import ceeptz from "../images/ceeptz.png";
 // import gramath from "../images/gramath.png";
 import covid from "../images/covid19-tz.png";
