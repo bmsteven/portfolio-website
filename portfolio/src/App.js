@@ -57,9 +57,6 @@ const App = ({ ui: { darkMode } }) => {
             <Route exact path='/resume' component={Resume} key='resume' />
             <Route path='/portfolio' component={Portfolio} key='projects' />
             <Route exact path='/contact' component={Contact} key='contact' />
-           // <Route path='/blog' component={Blog} key='blog' />
-           // <Route exact path='/login' key='login' component={Login} />
-           // <AuthRoute path='/admin' component={Admin} key='admin' />
             <Route component={Error} key='error' />
           </Switch>
         </div>
