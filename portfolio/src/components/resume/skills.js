@@ -3,7 +3,7 @@ import {
   FaCheck,
   FaCode,
   AiOutlineAntDesign,
-  DiGitBranch,
+ // DiGitBranch,
   IoMdApps
 } from "react-icons/all";
 
@@ -26,11 +26,11 @@ const skills = [
     title: "Mobile App Development",
     icon: <IoMdApps className="icon" />
   },
-  {
-    id: 3,
-    title: "Git and Github",
-    icon: <DiGitBranch className="icon" />
-  }
+ // {
+ //   id: 3,
+ //   title: "Git and Github",
+ //   icon: <DiGitBranch className="icon" />
+//  }
 ];
 
 const Skills = () => {
