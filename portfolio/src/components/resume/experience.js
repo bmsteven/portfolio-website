@@ -5,7 +5,7 @@ import ResumeTemplate from "./resume";
 const experiences = [
   {
     id: 1,
-    title: "1.5 years experience",
+    title: "2.5 years experience",
     icon: <FaMedal className="icon" />
   },
   {
