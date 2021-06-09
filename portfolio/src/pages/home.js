@@ -26,8 +26,10 @@ const Home = () => {
               steps={[
                 "Designer",
                 3000,
-                "Web Developer",
+                "Software Developer",
                 4500,
+                "Water Engineer",
+                3500,
                 "Learner",
                 3000,
                 "Awesome Dude",
@@ -35,7 +37,7 @@ const Home = () => {
               ]}
             />
           </h2>
-          <p>Create unique and innovative websites and webapps with me.</p>
+          <p>Create unique and innovative websites, webapps and mobileapps with me.</p>
           <Link to="/portfolio" className="btn btn-primary">
             <span>My Portfolio</span>
           </Link>
