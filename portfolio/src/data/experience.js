@@ -1,7 +1,7 @@
 const experiences = [
   {
     id: 1,
-    title: "2 years experience",
+    title: "2.5 years experience",
     icon: "FaMedal"
   },
   {
