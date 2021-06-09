@@ -42,7 +42,7 @@ const Project = () => {
                   //   maxWidth: "100%",
                   // }}
                 /> */}
-                <ProgressiveImage
+               {/* <ProgressiveImage
                   src={obj.src}
                   placeholder={`https://placehold.it/30x20/a334d2/ffffff/&text=${obj.name}`}
                 >
@@ -55,7 +55,7 @@ const Project = () => {
                       }}
                     />
                   )}
-                </ProgressiveImage>
+                </ProgressiveImage>*/}
               </div>
             )}
             {obj.about.length > 0 && (
