@@ -43,6 +43,7 @@ const Project = () => {
                     maxWidth: "100%",
                     outline: "none",
                   }}
+                  loading="lazy"
                 />
               </div>
             )}
@@ -107,7 +108,7 @@ const Project = () => {
                 <div className="gallery">
                   {obj.gallery.map((item, index) => (
                     <article key={index} className="item">
-                      <img src={item} alt={`${obj.name} gallery`} />
+                      <img src={item} alt={`${obj.name} gallery`} loading="lazy"/>
                     </article>
                   ))}
                 </div>
