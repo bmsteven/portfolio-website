@@ -12,7 +12,7 @@ const Home = () => {
     return [
       "Software Designer",
       "Software Developer",
-      "Weter Engineer",
+      "Water Engineer",
       "Learner",
       "Awesome Dude",
     ]

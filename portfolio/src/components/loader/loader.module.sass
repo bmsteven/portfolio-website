@@ -1,0 +1,15 @@
+@import "../../styles/_variable"
+
+.loader
+    height: 100vh
+    header
+        height: 70px
+        width: 100vw
+    &.light
+        background: white
+        header
+            box-shadow: 4px 4px 4px rgba(0,0,0,.1)
+    &.dark
+        header
+            background: $darker
+            box-shadow: 4px 4px 12px #0c0d0e

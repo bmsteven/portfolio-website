@@ -1,0 +1,24 @@
+.loader {
+  height: 100vh;
+}
+
+.loader header {
+  height: 70px;
+  width: 100vw;
+}
+
+.loader.light {
+  background: white;
+}
+
+.loader.light header {
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loader.dark header {
+  background: #191C1D;
+  -webkit-box-shadow: 4px 4px 12px #0c0d0e;
+          box-shadow: 4px 4px 12px #0c0d0e;
+}
+/*# sourceMappingURL=loader.module.css.map */
