@@ -1,3 +1,13 @@
+// food uber
+import foodUber from "../images/projects/food-uber.png"
+import fU1 from "../images/projects/fu1.png"
+import fU2 from "../images/projects/fu2.png"
+import fU3 from "../images/projects/fu3.png"
+import fU4 from "../images/projects/fu4.png"
+import fU5 from "../images/projects/fu5.png"
+import fU6 from "../images/projects/fu6.png"
+import fU7 from "../images/projects/fu7.png"
+
 const projects = [
   {
     id: 1,
@@ -94,14 +104,14 @@ const projects = [
     id: 9,
     name: "Food Uber",
     slug: "food-uber",
-    src: "",
-    // source: "http://github.com/nab-in/portal-frontend",
+    src: foodUber,
+    source: "http://github.com/codeschool-africa/food-uber-client",
     category: ["Design", "Web", "All"],
-    about: "A web app to connect job seekers to the hob opportunities",
+    about: "An app that allows users to order food online",
     demo: "http://food-uber.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js", "mysql"],
     roles: ["UI Designer, Frontend Developer", "Backend Developer"],
-    gallery: [],
+    gallery: [fU1, fU2, fU3, fU4, fU5, fU6, fU7],
   },
 ]
 

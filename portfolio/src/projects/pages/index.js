@@ -59,7 +59,7 @@ const Projects = () => {
         {filteredProjects.length > 0 ? (
           <div className="showcase">
             {filteredProjects.map((item) => (
-              <article key={item.id} className="project-container">
+              <article key={item.id} className="item">
                 <div className="project">
                   {item.src && (
                     <figure className="project-image">

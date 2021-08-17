@@ -35,28 +35,15 @@ const Project = () => {
             </header>
             {obj.src?.length > 0 && (
               <div className="image-container">
-                {/* <img
-                  src={obj.src}
-                  alt={obj.name}
-                  // style={{
-                  //   width: "100%",
-                  //   maxWidth: "100%",
-                  // }}
-                /> */}
-                {/* <ProgressiveImage
-                  src={obj.src}
-                  placeholder={`https://placehold.it/30x20/a334d2/ffffff/&text=${obj.name}`}
-                >
-                  {(src) => (
-                    <img
-                      src={src}
-                      alt={obj.name}
-                      style={{
-                        width: "100%",
-                      }}
-                    />
-                  )}
-                </ProgressiveImage>*/}
+                <img
+                  src={obj?.src}
+                  alt={obj?.name}
+                  style={{
+                    width: "100%",
+                    maxWidth: "100%",
+                    outline: "none",
+                  }}
+                />
               </div>
             )}
             {obj.about?.length > 0 && (
@@ -115,11 +102,11 @@ const Project = () => {
             )}
 
             {obj.gallery?.length > 0 && (
-              <section className="gallery">
+              <section className="gallery-showcase">
                 <h2>Gallery</h2>
-                <div className="showcase">
+                <div className="gallery">
                   {obj.gallery.map((item, index) => (
-                    <article key={index}>
+                    <article key={index} className="item">
                       <img src={item} alt={`${obj.name} gallery`} />
                     </article>
                   ))}
