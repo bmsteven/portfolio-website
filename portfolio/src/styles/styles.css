@@ -1713,6 +1713,9 @@ form p a:hover {
 
 .projects-content .container nav {
   width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
   max-width: 350px;
   margin: 10px auto 20px;
   background: #ffffff;
@@ -1722,6 +1725,7 @@ form p a:hover {
   transition: .35s;
   height: 50px;
   border-radius: 25px;
+  z-index: 5;
 }
 
 .projects-content .container nav ul {
