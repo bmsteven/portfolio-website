@@ -60,8 +60,8 @@ const Projects = () => {
           {filteredProjects.length > 0 ? (
             <>
               {filteredProjects.map((item) => (
-                <article key={item.id} className="project-container project">
-                  <>
+                <article key={item.id} className="project-container">
+                  <div className="project">
                     <figure className="project-image">
                       <img
                         src={item.src}
@@ -94,7 +94,7 @@ const Projects = () => {
                         )}
                       </div>
                     </figcaption>
-                  </>
+                  </div>
                 </article>
               ))}
             </>

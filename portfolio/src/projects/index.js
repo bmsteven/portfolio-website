@@ -1,14 +1,14 @@
+import { lazy } from "react"
 import { Switch, Route, useRouteMatch } from "react-router-dom"
-
-//pages
-import Projects from "./pages/index"
-import Project from "./pages/project"
 
 import routes from "../data/routes"
 
 //components
 import Nav from "../components/nav"
 import Footer from "../components/footer"
+
+const Projects = lazy(() => import("./pages"))
+const Project = lazy(() => import("./pages/project"))
 
 const Portfolio = ({ ...rest }) => {
   let { path } = useRouteMatch()

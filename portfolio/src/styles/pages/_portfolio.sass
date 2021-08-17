@@ -3,18 +3,16 @@
     li
         list-style: none
     .container
-        width: 60% !important
-        max-width: 800px !important
         a
             color: $primary
             text-decoration: underline
             &:hover
                 text-decoration: none
         img
-            outline:  1px solid #EBEEEF
+            outline: 1px solid #EBEEEF
         nav
             width: 100%
-            max-width: 350px 
+            max-width: 350px
             margin: 10px auto 20px
             background: $white
             box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0
@@ -43,35 +41,33 @@
                         color: $white
                         &:hover
                             opacity: 1
-
         .showcase
             margin-top: 50px
             transition: .3s
             text-align: center
-            column-count: 2
-            // margin-bottom: 2em
-            column-gap: 2em
-            // row-gap: 2em
+            column-count: 3
+            padding-bottom: 2em
+            column-gap: 1em
             article.project-container
                 position: relative
                 height: 100%
-                margin-bottom: 3em
+                padding: 1rem .7rem
+                box-sizing: border-box
                 width: 100%
-                overflow: hidden
                 display: block
-                // box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0
-                outline: 1px solid #EBEEEF
-                // display: flex
-                // flex-wrap: wrap
-                // flex-direction: column
-                // justify-content: flex-start
-                // margin: 0 0 1em
+                transition: .25s
+                break-inside: avoid-column
+                -webkit-column-break-inside: avoid
+                page-break-inside: avoid
+                break-inside: avoid-column
+                display: table
+                .project
+                    border: 1px solid #bdc0c2
+                    &:hover
+                        box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0
                 .project-image
                     width: 100%
-                    // width: 33.19%
-                    // height: 33.19%
                 .project-info
-                    // padding-left: 30px
                     height: 100%
                     width: 100%
                     padding: 20px
@@ -93,6 +89,11 @@
                         justify-content: space-around
                         width: 80%
 
+@media screen and ( max-width: 1350px )
+    .projects-content
+        .container
+            .showcase
+                column-count: 2
 
 @media screen and ( max-width: 768px )
     .projects-content
@@ -100,25 +101,5 @@
             width: 90% !important
             .showcase
                 column-count: 1
-                article
-                    position: relative
-                    // height: 100%
-                    margin: 20px 0
-                    // width: 100%
-                    overflow: hidden
-                    // display: flex
-                    // flex-wrap: wrap
-                    // justify-content: flex-start
-                    // margin: 0 0 1em
-                    .project-image
-                        width: 100%
-                        // height: 66.38%
-                    .project-info
-                        padding-left: 0
-                        height: 100%
-                        width: 100%
-                        transition: all .35s
-                        display: flex
-                        flex-direction: column
-                        justify-content: center
-                        align-items: center
+                .article.project-container
+                    padding: 1em 0
