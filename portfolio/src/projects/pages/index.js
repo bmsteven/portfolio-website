@@ -56,52 +56,50 @@ const Projects = () => {
             </li>
           </ul>
         </nav>
-        <div className="showcase">
-          {filteredProjects.length > 0 ? (
-            <>
-              {filteredProjects.map((item) => (
-                <article key={item.id} className="project-container">
-                  <div className="project">
-                    <figure className="project-image">
-                      <img
-                        src={item.src}
-                        alt={item.name}
-                        style={{
-                          width: "100%",
-                        }}
-                      />
-                    </figure>
-                    <figcaption className="project-info">
-                      <div className="project-name">
-                        <h2>{item.name}</h2>
-                      </div>
-                      <span className="category">#{item.category[0]}</span>
-                      <div className="btns">
-                        <Link
-                          to={`/portfolio/${item.slug}`}
-                          className="btn btn-secondary"
+        {filteredProjects.length > 0 ? (
+          <div className="showcase">
+            {filteredProjects.map((item) => (
+              <article key={item.id} className="project-container">
+                <div className="project">
+                  <figure className="project-image">
+                    <img
+                      src={item.src}
+                      alt={item.name}
+                      style={{
+                        width: "100%",
+                      }}
+                    />
+                  </figure>
+                  <figcaption className="project-info">
+                    <div className="project-name">
+                      <h2>{item.name}</h2>
+                    </div>
+                    <span className="category">#{item.category[0]}</span>
+                    <div className="btns">
+                      <Link
+                        to={`/portfolio/${item.slug}`}
+                        className="btn btn-secondary"
+                      >
+                        <span>About</span>
+                      </Link>
+                      {item.demo && (
+                        <a
+                          href={item.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          <span>About</span>
-                        </Link>
-                        {item.demo && (
-                          <a
-                            href={item.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Live App
-                          </a>
-                        )}
-                      </div>
-                    </figcaption>
-                  </div>
-                </article>
-              ))}
-            </>
-          ) : (
-            <h2>No Project Added</h2>
-          )}
-        </div>
+                          Live App
+                        </a>
+                      )}
+                    </div>
+                  </figcaption>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <h2 className="none">No Project Added</h2>
+        )}
       </div>
     </main>
   )

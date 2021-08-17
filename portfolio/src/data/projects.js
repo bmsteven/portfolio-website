@@ -27,20 +27,6 @@ const projects = [
     gallery: [],
   },
   {
-    id: 3,
-    name: "Kodemunit-v01",
-    slug: "kodemunit-v01",
-    src: "",
-    source: "",
-    category: ["Design", "All"],
-    about:
-      "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
-    demo: "",
-    tools: ["Figma"],
-    roles: ["UX/UI Designer"],
-    gallery: [],
-  },
-  {
     id: 4,
     name: "COVID19-TZ",
     slug: "covid19-tz",
