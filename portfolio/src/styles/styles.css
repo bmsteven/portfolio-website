@@ -688,6 +688,7 @@ form p a:hover {
   }
   .nav .container nav ul li a.active {
     color: #000000;
+    font-weight: 700;
   }
   .nav .container nav ul li a:hover {
     background: none;
@@ -2200,11 +2201,11 @@ form p a:hover {
   color: #000000;
 }
 
-.App.darkmode .projects-content .showcase article.project-container {
+.App.darkmode .projects-content .showcase article.project-container .project {
   border: 1px solid #3c4142;
 }
 
-.App.darkmode .projects-content .showcase article.project-container:hover {
+.App.darkmode .projects-content .showcase article.project-container .project:hover {
   -webkit-box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b;
           box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b;
 }

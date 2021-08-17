@@ -61,15 +61,17 @@ const Projects = () => {
             {filteredProjects.map((item) => (
               <article key={item.id} className="project-container">
                 <div className="project">
-                  <figure className="project-image">
-                    <img
-                      src={item.src}
-                      alt={item.name}
-                      style={{
-                        width: "100%",
-                      }}
-                    />
-                  </figure>
+                  {item.src && (
+                    <figure className="project-image">
+                      <img
+                        src={item.src}
+                        alt={item.name}
+                        style={{
+                          width: "100%",
+                        }}
+                      />
+                    </figure>
+                  )}
                   <figcaption className="project-info">
                     <div className="project-name">
                       <h2>{item.name}</h2>

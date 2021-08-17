@@ -84,7 +84,6 @@
                         margin-left: 10px
                         a
                             clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%)
-                            
 
 .navlink
     opacity: 0
@@ -103,7 +102,6 @@
     100%
         opacity: 1
         transform: rotateZ(0) translateX(0)
-
 
 @media screen and ( min-width: 768px )
     .nav
@@ -149,6 +147,7 @@
                             clip-path: none
                             &.active
                                 color: $black
+                                font-weight: 700
                             &:hover
                                 background: none
                                 color: $black
@@ -156,8 +155,7 @@
                             margin-left: 25px
                             a
                                 clip-path: none
-                                
-    
+
 @media screen and ( min-width: 992px )
     .nav
         &.nav__static
@@ -181,5 +179,3 @@
                             font-size: 18px
                         &:nth-child(even)
                             margin-left: 50px
-                                
-    
