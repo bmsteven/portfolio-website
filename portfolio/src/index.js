@@ -1,22 +1,21 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Router } from "react-router-dom";
-import { createBrowserHistory } from "history";
-import { Provider } from "react-redux";
-import store from "./redux/store";
+import React from "react"
+import ReactDOM from "react-dom"
+import { Router } from "react-router-dom"
+import { createBrowserHistory } from "history"
+import UiProvider from "context/context"
 
-import App from "./App";
+import App from "./App"
 
-const hist = createBrowserHistory();
-const rootElement = document.getElementById("app");
+const hist = createBrowserHistory()
+const rootElement = document.getElementById("app")
 
 ReactDOM.render(
-  <Provider store={store}>
+  <UiProvider>
     <Router history={hist}>
       <React.StrictMode>
         <App />
       </React.StrictMode>
     </Router>
-  </Provider>,
+  </UiProvider>,
   rootElement
-);
+)

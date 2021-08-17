@@ -36,7 +36,7 @@
                     border-right: 3px solid $darker
                 &:hover
                     background: none
-                
+
     .steps
         .container
             .showcase
@@ -56,12 +56,12 @@
                     article
                         .icon-container
                             border-color: $primary
-                            color: $white              
+                            color: $white
                         &::before
                             background: $darker
                         h2
                             color: $white
-                        
+
     form
         .field-group
             label
@@ -96,7 +96,7 @@
                     .left
                         background: $primary
                         color: $black
-                    
+
     .admin-content
         .main-content
             .container
@@ -131,13 +131,13 @@
         .steps
             .container
                 .showcase
-                    .col  
+                    .col
                         &.col2
                             .circle
                                 border: 1px solid $white
                                 &::before
-                                    border: 1px solid $white    
-                    
+                                    border: 1px solid $white
+
 @media screen and ( min-width: 768px )
     .App.darkmode
         .nav
@@ -149,7 +149,7 @@
                                 color: $link-color
                                 &:hover
                                     color: $white
-        
+
 @media screen and ( min-width: 992px )
     .App.darkmode
         .contact-page
@@ -158,3 +158,116 @@
             .main-content
                 .container
                     box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b
+
+@media (prefers-color-scheme: dark)
+    .App.darkmode
+        .nav
+            &.nav-header
+                background: $darker
+                box-shadow: 4px 4px 12px #0c0d0e
+            .container
+                nav
+                    ul
+                        li
+                            a
+                                &.active
+                                    color: $white
+        .banner
+            .content
+                background: $darker
+        .services
+            .showcase
+                article
+                    span
+                        .icon
+                            color: $primary
+                    &::before
+                        background: $dark
+                    &::after
+                        background: $primary
+                    &:hover
+                        box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2e3536
+                        &::before
+                            border: 1px solid #323738
+        .hobbies
+            background: $darker
+            .showcase
+                .hobby
+                    background: $dark
+                    span
+                        border-right: 3px solid $darker
+                    &:hover
+                        background: none
+
+        .steps
+            .container
+                .showcase
+                    .col
+                        .row
+                            h4
+                                color: $link-color
+
+        .resume
+            &.main-content
+                .resume-template
+                    background: $darker
+                    box-shadow: none
+                    &:hover
+                        box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b
+                    .showcase
+                        article
+                            .icon-container
+                                border-color: $primary
+                                color: $white
+                            &::before
+                                background: $darker
+                            h2
+                                color: $white
+
+        form
+            .field-group
+                label
+                    color: $white
+                input, textarea
+                    outline: 1px solid #3E4C51
+                    color: $link-color
+                    &::placeholder
+                        color: #60828F
+
+        .projects-content
+            img
+                outline: 1px solid #3c4142
+            nav
+                background: $darker
+                box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2b2f30
+                ul
+                    li
+                        color: $white
+                        cursor: pointer
+                        &.active
+                            background: $primary
+                            color: $black
+            .showcase
+                article.project-container
+                    outline: 1px solid #3c4142
+        .blog-content
+            .main-content
+                .container
+                    header.blog-header
+                        background: #192a3b
+                        .left
+                            background: $primary
+                            color: $black
+
+        .admin-content
+            .main-content
+                .container
+                    aside
+                        ul
+                            li
+                                a
+                                    color: $link-color
+                                    span
+                                        color: $white
+                                    .icon
+                                        color: $link-color

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ResumeTemplate = ({ title, classname, children }) => {
   return (
     <section className={`resume-template ${classname}`}>
@@ -10,7 +8,7 @@ const ResumeTemplate = ({ title, classname, children }) => {
       </h2>
       {children}
     </section>
-  );
-};
+  )
+}
 
-export default ResumeTemplate;
+export default ResumeTemplate

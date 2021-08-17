@@ -1,29 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import heroLight from "../images/hero-bg-light.jpeg";
-import heroDark from "../images/hero-bg-dark.jpg";
+import heroLight from "../images/hero-bg-light.jpeg"
+import heroDark from "../images/hero-bg-dark.jpg"
+import { useUIContext } from "context/context"
 
-const Banner = ({ children, ui: { darkMode } }) => {
+const Banner = ({ children }) => {
+  const { mode } = useUIContext()
   return (
     <div className="banner">
       <div className="content">{children}</div>
       <div className="hero-bg">
-        <img src={darkMode ? heroDark : heroLight} alt="hero-bg" />
+        <img src={mode === "dark" ? heroDark : heroLight} alt="hero-bg" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-Banner.prototype = {
-  ui: PropTypes.object.isRequired
-};
-
-const mapStateToProps = state => ({
-  ui: state.ui
-});
-
-export default connect(
-  mapStateToProps,
-  {}
-)(Banner);
+export default Banner

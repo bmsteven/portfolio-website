@@ -1,10 +1,9 @@
-import React from "react";
 import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
-  FaLinkedinIn
-} from "react-icons/all";
+  FaLinkedinIn,
+} from "react-icons/all"
 
 const Social = () => {
   return (
@@ -48,7 +47,7 @@ const Social = () => {
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Social;
+export default Social

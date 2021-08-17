@@ -1,15 +1,14 @@
-import React from "react";
-import { FaCalendarAlt } from "react-icons/all";
+import { FaCalendarAlt } from "react-icons/all"
 
-import ResumeTemplate from "./resume";
+import ResumeTemplate from "./resume"
 
-import education from "../../data/education";
+import education from "../../data/education"
 
 const Education = () => {
   return (
     <ResumeTemplate classname="education" title="Education Background">
       <div className="showcase">
-        {education.map(item => (
+        {education.map((item) => (
           <article key={item.id}>
             <h2>{item.course}</h2>
             <div className="date-school">
@@ -26,7 +25,7 @@ const Education = () => {
         ))}
       </div>
     </ResumeTemplate>
-  );
-};
+  )
+}
 
-export default Education;
+export default Education

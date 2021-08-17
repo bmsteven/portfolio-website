@@ -1,31 +1,31 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react"
 
-import routes from "../data/routes";
+import routes from "../data/routes"
 
-import Education from "../components/resume/education";
-import Experience from "../components/resume/experience";
-import Skills from "../components/resume/skills";
+import Education from "../components/resume/education"
+import Experience from "../components/resume/experience"
+import Skills from "../components/resume/skills"
 
 //components
-import Nav from "../components/nav";
-import Footer from "../components/footer";
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 const Resume = ({ ...rest }) => {
   useEffect(() => {
-    document.title = "My Resume - Benedict's Portfolio ";
-  }, []);
+    document.title = "My Resume - Benedict's Portfolio "
+  }, [])
   return (
     <div>
-      <Nav {...rest} navProps='nav-header' routes={routes} />
-      <main className='main-content resume'>
-        <div className='container'>
-          <header className='primary-header resume-header'>
+      <Nav {...rest} navProps="nav-header" routes={routes} />
+      <main className="main-content resume">
+        <div className="container">
+          <header className="primary-header resume-header">
             <h2>
               <span></span>My Resume
             </h2>
           </header>
           <Experience />
-          <div className='row'>
+          <div className="row">
             <Education />
             <Skills />
           </div>
@@ -33,7 +33,7 @@ const Resume = ({ ...rest }) => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Resume;
+export default Resume

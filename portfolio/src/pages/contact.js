@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react"
 
-import routes from "../data/routes";
+import routes from "../data/routes"
 
-import Form from "../components/contact/form";
-import Details from "../components/contact/details";
+import Form from "../components/contact/form"
+import Details from "../components/contact/details"
 
 //components
-import Nav from "../components/nav";
-import Footer from "../components/footer";
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 const Contact = ({ ...rest }) => {
   useEffect(() => {
-    document.title = "Contact me - Benedict's Portfolio ";
-  }, []);
+    document.title = "Contact me - Benedict's Portfolio "
+  }, [])
   return (
     <div className="contact-page">
       <Nav {...rest} navProps="nav-header" routes={routes} />
@@ -25,7 +25,7 @@ const Contact = ({ ...rest }) => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

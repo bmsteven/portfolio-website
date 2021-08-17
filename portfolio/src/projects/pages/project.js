@@ -1,39 +1,40 @@
-import React, { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { FaCheck } from "react-icons/all";
-import ProgressiveImage from "react-progressive-graceful-image";
+import { useEffect } from "react"
+import { useParams, Link } from "react-router-dom"
+import { FaCheck } from "react-icons/all"
+// import ProgressiveImage from "react-progressive-graceful-image"
 
 //projects
-import projects from "../../data/projects";
+import projects from "../../data/projects"
 
 const Project = () => {
-  let param = useParams();
-  let obj = projects.find((o) => o.slug === param.project);
+  let param = useParams()
+  let obj = projects.find((o) => o.slug === param.project)
   useEffect(() => {
     if (obj) {
-      document.title = `${obj.name} - Benedict's Portfolio`;
+      document.title = `${obj.name} - Benedict's Portfolio`
     } else {
-      document.title = `404 - Project Not Found - Benedict's Portfolio`;
+      document.title = `404 - Project Not Found - Benedict's Portfolio`
     }
-  }, [obj]);
+  }, [obj])
   return (
-    <main className='projects-content project-content'>
-      <div className='container'>
+    <main className="projects-content project-content">
+      <div className="container">
         {obj ? (
           <div>
-            <div className=''>
+            <div className="">
               <span>
-                <Link to='/portfolio'>Project Collection</Link> >> {obj.name}
+                <Link to="/portfolio">Project Collection</Link> &gt;&gt;{" "}
+                {obj?.name}
               </span>
             </div>
-            <header className='project-header primary-header'>
+            <header className="project-header primary-header">
               <h1>
                 <span></span>
-                {obj.name}
+                {obj?.name}
               </h1>
             </header>
-            {obj.src.length > 0 && (
-              <div className='image-container'>
+            {obj.src?.length > 0 && (
+              <div className="image-container">
                 {/* <img
                   src={obj.src}
                   alt={obj.name}
@@ -42,7 +43,7 @@ const Project = () => {
                   //   maxWidth: "100%",
                   // }}
                 /> */}
-               {/* <ProgressiveImage
+                {/* <ProgressiveImage
                   src={obj.src}
                   placeholder={`https://placehold.it/30x20/a334d2/ffffff/&text=${obj.name}`}
                 >
@@ -58,26 +59,26 @@ const Project = () => {
                 </ProgressiveImage>*/}
               </div>
             )}
-            {obj.about.length > 0 && (
-              <section className='about-section'>
+            {obj.about?.length > 0 && (
+              <section className="about-section">
                 <h2>About</h2>
-                <p>{obj.about}</p>
+                <p>{obj?.about}</p>
                 {
-                  <div className='btns'>
-                    {obj.demo && (
+                  <div className="btns">
+                    {obj?.demo && (
                       <a
                         href={obj.demo}
-                        target='_blank'
-                        rel='noopener noreferrer'
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Live App
                       </a>
                     )}
                     {obj.source && (
                       <a
-                        href={obj.source}
-                        target='_blank'
-                        rel='noopener noreferrer'
+                        href={obj?.source}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Source Code
                       </a>
@@ -87,36 +88,36 @@ const Project = () => {
               </section>
             )}
 
-            {obj.tools.length > 0 && (
+            {obj.tools?.length > 0 && (
               <section>
                 <h2>Tool(s) Used</h2>
-                <div className='showcase'>
+                <div className="showcase">
                   {obj.tools.map((tool) => (
                     <article key={tool}>
-                      <FaCheck className='icon' /> {tool}
+                      <FaCheck className="icon" /> {tool}
                     </article>
                   ))}
                 </div>
               </section>
             )}
 
-            {obj.roles.length > 0 && (
-              <section className='roles'>
+            {obj.roles?.length > 0 && (
+              <section className="roles">
                 <h2>My Role(s) In This Project</h2>
-                <div className='showcase'>
+                <div className="showcase">
                   {obj.roles.map((role) => (
                     <article key={role}>
-                      <FaCheck className='icon' /> {role}
+                      <FaCheck className="icon" /> {role}
                     </article>
                   ))}
                 </div>
               </section>
             )}
 
-            {obj.gallery.length > 0 && (
-              <section className='gallery'>
+            {obj.gallery?.length > 0 && (
+              <section className="gallery">
                 <h2>Gallery</h2>
-                <div className='showcase'>
+                <div className="showcase">
                   {obj.gallery.map((item, index) => (
                     <article key={index}>
                       <img src={item} alt={`${obj.name} gallery`} />
@@ -128,17 +129,17 @@ const Project = () => {
           </div>
         ) : (
           <div>
-            <h1>Project {param.project} not Found</h1>
-            <div className=''>
+            <h1>Project {param?.project} not Found</h1>
+            <div className="">
               <span>
-                Go back to my <Link to='/portfolio'>Project Collection</Link>
+                Go back to my <Link to="/portfolio">Project Collection</Link>
               </span>
             </div>
           </div>
         )}
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

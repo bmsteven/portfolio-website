@@ -1,22 +1,22 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react"
 
 //components
-import Header from "../components/header";
-import Services from "../components/about/services";
-import Hobbies from "../components/about/hobbies";
-import Steps from "../components/about/steps";
-import Footer from "../components/footer";
+import Header from "../components/header"
+import Services from "../components/about/services"
+import Hobbies from "../components/about/hobbies"
+import Steps from "../components/about/steps"
+import Footer from "../components/footer"
 
 const About = () => {
   useEffect(() => {
-    document.title = "About Me - Benedict's Portfolio ";
-  }, []);
+    document.title = "About Me - Benedict's Portfolio "
+  }, [])
   return (
     <div className="about-page">
-      <Header headerClass='about-header'>
-        <div className='container'>
+      <Header headerClass="about-header">
+        <div className="container">
           <header>
-            <h2 className='header secondary-header'>About Me</h2>
+            <h2 className="header secondary-header">About Me</h2>
           </header>
           <p>
             Hello, I'm Benedict Steven. I'm a Designer and Developer. I am a
@@ -34,14 +34,14 @@ const About = () => {
           </p>
         </div>
       </Header>
-      <main className='main-content'>
+      <main className="main-content">
         <Services />
         <Hobbies />
         <Steps />
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

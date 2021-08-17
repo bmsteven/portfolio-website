@@ -1,52 +1,65 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
-import { FaMoon, FaSun, RiMenu3Line, IoMdClose } from "react-icons/all";
-import { useDarkMode, useLightMode } from "../redux/actions";
-import logo from "../images/logo.png";
-import logoLight from "../images/logo-dark.png";
+import { useState } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { FaMoon, FaSun, RiMenu3Line, IoMdClose } from "react-icons/all"
+import logo from "../images/logo.png"
+import logoLight from "../images/logo-dark.png"
+import {
+  useUIContext,
+  useUIDispatch,
+  LIGHTMODE,
+  DARKMODE,
+} from "context/context"
 
-const Nav = ({
-  routes,
-  navProps,
-  ui: { darkMode },
-  useDarkMode,
-  useLightMode,
-}) => {
-  const location = useLocation();
+const Nav = ({ routes, navProps }) => {
+  const dispatch = useUIDispatch()
+
+  const { mode } = useUIContext()
+
+  const location = useLocation()
   const activeRoute = (routeName) => {
-    return location.pathname.indexOf(routeName) > -1 ? "active" : "";
-  };
+    return location.pathname.indexOf(routeName) > -1 ? "active" : ""
+  }
 
-  const [navOpen, setNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false)
 
   const openMenu = () => {
-    setNavOpen(true);
-    document.body.classList.add("no-scrolling");
-  };
+    setNavOpen(true)
+    document.body.classList.add("no-scrolling")
+  }
 
   const closeMenu = () => {
-    setNavOpen(false);
-    document.body.classList.remove("no-scrolling");
-  };
+    setNavOpen(false)
+    document.body.classList.remove("no-scrolling")
+  }
+
+  const lightMode = () => {
+    dispatch({
+      type: LIGHTMODE,
+    })
+  }
+
+  const darkMode = () => {
+    dispatch({
+      type: DARKMODE,
+    })
+  }
 
   return (
     <div className={`nav ${navProps}`}>
-      <div className='container'>
-        <div className='logo'>
-          <Link to='/'>
+      <div className="container">
+        <div className="logo">
+          <Link to="/">
             <img
-              src={darkMode ? `${logo}` : `${logoLight}`}
-              alt='bm dev logo'
+              src={mode === "dark" ? `${logo}` : `${logoLight}`}
+              alt="bm dev logo"
             />
           </Link>
         </div>
-        <div className='burger open-menu' onClick={openMenu}>
+        <div className="burger open-menu" onClick={openMenu}>
           <RiMenu3Line />
         </div>
         <nav className={navOpen ? "open" : ""}>
-          <div className='burger close-menu' onClick={closeMenu}>
+          <div className="burger close-menu" onClick={closeMenu}>
             <IoMdClose />
           </div>
           <ul>
@@ -66,34 +79,24 @@ const Nav = ({
                     {prop.name}
                   </Link>
                 </li>
-              );
+              )
             })}
           </ul>
         </nav>
-        <div className='change-mode'>
-          {darkMode ? (
-            <span onClick={useLightMode}>
-              <FaSun className='icon icon-light' />
+        <div className="change-mode">
+          {mode === "dark" ? (
+            <span onClick={lightMode}>
+              <FaSun className="icon icon-light" />
             </span>
           ) : (
-            <span onClick={useDarkMode}>
-              <FaMoon className='icon icon-dark' />
+            <span onClick={darkMode}>
+              <FaMoon className="icon icon-dark" />
             </span>
           )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-const mapStateToProps = (state) => ({
-  ui: state.ui,
-});
-
-Nav.propTypes = {
-  ui: PropTypes.object.isRequired,
-  useDarkMode: PropTypes.func.isRequired,
-  useLightMode: PropTypes.func.isRequired,
-};
-
-export default connect(mapStateToProps, { useDarkMode, useLightMode })(Nav);
+export default Nav

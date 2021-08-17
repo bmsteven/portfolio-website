@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react"
 
-import routes from "../data/routes";
+import routes from "../data/routes"
 
 //components
-import Nav from "../components/nav";
-import Footer from "../components/footer";
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 const Error = ({ ...rest }) => {
   useEffect(() => {
-    document.title = "404 Page Not Found - Benedict's Portfolio ";
-  }, []);
+    document.title = "404 Page Not Found - Benedict's Portfolio "
+  }, [])
   return (
     <div className="contact-page">
       <Nav {...rest} navProps="nav-header" routes={routes} />
@@ -20,7 +20,7 @@ const Error = ({ ...rest }) => {
       </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Error;
+export default Error

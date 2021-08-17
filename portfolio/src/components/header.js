@@ -1,38 +1,38 @@
-import React, { useState, useEffect, useRef } from "react";
-import routes from "../data/routes";
-import Nav from "./nav";
-import Banner from "./banner";
+import { useState, useEffect, useRef } from "react"
+import routes from "../data/routes"
+import Nav from "./nav"
+import Banner from "./banner"
 
 function useOnScreen(options) {
-  const ref = useRef();
-  const [intersect, setIntersect] = useState();
+  const ref = useRef()
+  const [intersect, setIntersect] = useState()
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIntersect(entry.isIntersecting);
-    }, options);
+      setIntersect(entry.isIntersecting)
+    }, options)
 
-    let el = ref.current;
+    let el = ref.current
 
     if (el) {
-      observer.observe(el);
+      observer.observe(el)
     }
 
     return () => {
       if (el) {
-        observer.unobserve(el);
+        observer.unobserve(el)
       }
-    };
-  }, [ref, options]);
+    }
+  }, [ref, options])
 
-  return [ref, intersect];
+  return [ref, intersect]
 }
 
 const Header = ({ children, image, headerClass, ...rest }) => {
   const [ref, intersect] = useOnScreen({
     rootMargin: "-200px",
     // threshold: [1],
-  });
+  })
   return (
     <header ref={ref} className={`page-header ${headerClass}`}>
       <Nav
@@ -42,7 +42,7 @@ const Header = ({ children, image, headerClass, ...rest }) => {
       />
       <Banner image={image} children={children} />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
