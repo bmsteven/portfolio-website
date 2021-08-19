@@ -1,5 +1,5 @@
 // food uber
-import foodUber from "../images/projects/food-uber.svg"
+import foodUber from "../images/projects/food-uber.jpg"
 import fU1 from "../images/projects/fu1.png"
 import fU2 from "../images/projects/fu2.png"
 import fU3 from "../images/projects/fu3.png"
