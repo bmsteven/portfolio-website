@@ -3,9 +3,14 @@ import portfolio from "../images/projects/portfolio/portfolio.jpg"
 
 // kodemunit
 
+// eaig
+import EAIG from "../images/projects/eaig/eaig.jpg"
+
 // job-portal
+import portal from "../images/projects/portal/portal.jpg"
 
 // job-portal-dashboaed
+import portalDashboard from "../images/projects/portal-dashboard/portal.jpg"
 
 // covd19tz
 
@@ -97,7 +102,7 @@ const projects = [
     id: 8,
     name: "JobPortal",
     slug: "job-portal",
-    src: "",
+    src: portal,
     source: "http://github.com/nab-in/portal-frontend",
     categories: ["Design", "Web", "All"],
     about: "A web app to connect job seekers to the hob opportunities",
@@ -121,7 +126,7 @@ const projects = [
     id: 9,
     name: "JobPortal Dashboard",
     slug: "job-portal-dashboard",
-    src: "",
+    src: portalDashboard,
     source: "http://github.com/nab-in/portal-dashboard",
     categories: ["Design", "Web", "All"],
     about: "A web app to connect job seekers to the hob opportunities",
@@ -165,6 +170,19 @@ const projects = [
     demo: "http://sozthegovt.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js", "mysql"],
     roles: ["UI Designer", "Frontend Developer", "Backend Developer"],
+    gallery: [],
+  },
+  {
+    id: 12,
+    name: "EAIG",
+    slug: "eaig",
+    src: EAIG,
+    // source: "http://github.com/codeschool-africa/food-uber-client",
+    categories: ["Design", "All"],
+    about: "Landing page",
+    // demo: "http://sozthegovt.netlify.app",
+    tools: ["Figma"],
+    roles: ["UI Designer"],
     gallery: [],
   },
 ]
