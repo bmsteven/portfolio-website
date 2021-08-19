@@ -1,15 +1,29 @@
 // my portfolio
-import portfolio from "../images/projects/portfolio.jpg"
+import portfolio from "../images/projects/portfolio/portfolio.jpg"
+
+// kodemunit
+
+// job-portal
+
+// job-portal-dashboaed
+
+// covd19tz
+
+// ceeptz
+
+// kilimoshare
+
+// soz-pns
 
 // food uber
-import foodUber from "../images/projects/food-uber.jpg"
-import fU1 from "../images/projects/fu1.png"
-import fU2 from "../images/projects/fu2.png"
-import fU3 from "../images/projects/fu3.png"
-import fU4 from "../images/projects/fu4.png"
-import fU5 from "../images/projects/fu5.png"
-import fU6 from "../images/projects/fu6.png"
-import fU7 from "../images/projects/fu7.png"
+import foodUber from "../images/projects/food-uber/food-uber.jpg"
+import fU1 from "../images/projects/food-uber/fu1.png"
+import fU3 from "../images/projects/food-uber/fu3.png"
+import fU4 from "../images/projects/food-uber/fu4.png"
+import fU5 from "../images/projects/food-uber/fu5.png"
+import fU6 from "../images/projects/food-uber/fu6.png"
+import fU7 from "../images/projects/food-uber/fu7.png"
+import fU2 from "../images/projects/food-uber/fu2.png"
 
 const projects = [
   {
@@ -105,6 +119,30 @@ const projects = [
   },
   {
     id: 9,
+    name: "JobPortal Dashboard",
+    slug: "job-portal-dashboard",
+    src: "",
+    source: "http://github.com/nab-in/portal-dashboard",
+    categories: ["Design", "Web", "All"],
+    about: "A web app to connect job seekers to the hob opportunities",
+    demo: "http://jobportal-tz.herokuapp.com",
+    tools: [
+      "Figma",
+      "HTML",
+      "CSS",
+      "SASS",
+      "JavaScript",
+      "React js",
+      "Nextjs",
+      "Nodejs",
+      "Nestjs",
+      "Postgresql",
+    ],
+    roles: ["UI Designer, Frontend Developer"],
+    gallery: [],
+  },
+  {
+    id: 10,
     name: "Food Uber",
     slug: "food-uber",
     src: foodUber,
@@ -117,7 +155,7 @@ const projects = [
     gallery: [fU1, fU2, fU3, fU4, fU5, fU6, fU7],
   },
   {
-    id: 10,
+    id: 11,
     name: "Soz PNS",
     slug: "soz-pns",
     src: "",
