@@ -10,8 +10,6 @@
             text-decoration: underline
             &:hover
                 text-decoration: none
-        img
-            outline: 1px solid #EBEEEF
         nav
             width: 100%
             position: sticky
@@ -54,7 +52,6 @@
             column-count: 3
             padding-bottom: 2em
             column-gap: 1em
-            // column-rule: 4px double #ff00ff
             column-fill: auto
             article.item
                 position: relative
@@ -75,6 +72,9 @@
                         box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0
                 .project-image
                     width: 100%
+                    img
+                        // background: #bdc0c2
+                        filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, .3))
                 .project-info
                     height: 100%
                     width: 100%
@@ -87,10 +87,12 @@
                     .project-name
                         h2
                             font-weight: 500
-                            font-size: 1.5em
-                    .category
-                        display: block
+                            font-size: clamp(1.3rem, 5vw, .7rem)
+                    .categories-showcase
+                        display: flex
                         margin: 10px 0
+                        .category
+                            margin: .8rem .4rem
                     .btns
                         display: flex
                         justify-content: space-around

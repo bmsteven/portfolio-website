@@ -1711,10 +1711,6 @@ form p a:hover {
   text-decoration: none;
 }
 
-.projects-content .container img {
-  outline: 1px solid #EBEEEF;
-}
-
 .projects-content .container nav {
   width: 100%;
   position: -webkit-sticky;
@@ -1820,6 +1816,11 @@ form p a:hover {
   width: 100%;
 }
 
+.projects-content .container .showcase article.item .project-image img, .projects-content .container .gallery article.item .project-image img {
+  -webkit-filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.3));
+}
+
 .projects-content .container .showcase article.item .project-info, .projects-content .container .gallery article.item .project-info {
   height: 100%;
   width: 100%;
@@ -1843,12 +1844,18 @@ form p a:hover {
 
 .projects-content .container .showcase article.item .project-info .project-name h2, .projects-content .container .gallery article.item .project-info .project-name h2 {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: clamp(1.3rem, 5vw, 0.7rem);
 }
 
-.projects-content .container .showcase article.item .project-info .category, .projects-content .container .gallery article.item .project-info .category {
-  display: block;
+.projects-content .container .showcase article.item .project-info .categories-showcase, .projects-content .container .gallery article.item .project-info .categories-showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 10px 0;
+}
+
+.projects-content .container .showcase article.item .project-info .categories-showcase .category, .projects-content .container .gallery article.item .project-info .categories-showcase .category {
+  margin: .8rem .4rem;
 }
 
 .projects-content .container .showcase article.item .project-info .btns, .projects-content .container .gallery article.item .project-info .btns {
@@ -1863,6 +1870,10 @@ form p a:hover {
 .projects-content .container .gallery {
   -webkit-column-gap: .2em;
           column-gap: .2em;
+}
+
+.projects-content .container .gallery img {
+  outline: 1px solid #EBEEEF;
 }
 
 @media screen and (max-width: 1350px) {
@@ -1888,6 +1899,10 @@ form p a:hover {
 .gallery {
   -webkit-column-gap: .2em;
           column-gap: .2em;
+}
+
+.gallery img {
+  outline: 1px solid #EBEEEF;
 }
 
 .contact-page li {
@@ -2203,10 +2218,6 @@ form p a:hover {
   color: #60828F;
 }
 
-.App.darkmode .projects-content img {
-  outline: 1px solid #3c4142;
-}
-
 .App.darkmode .projects-content nav {
   background: #191C1D;
   -webkit-box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #2b2f30;
@@ -2230,6 +2241,10 @@ form p a:hover {
 .App.darkmode .projects-content .showcase article.item .project:hover {
   -webkit-box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b;
           box-shadow: 12px 12px 24px #0c0d0e, -12px -12px 24px #292a2b;
+}
+
+.App.darkmode .gallery img {
+  outline: 1px solid #3c4142;
 }
 
 .App.darkmode .blog-content .main-content .container header.blog-header {

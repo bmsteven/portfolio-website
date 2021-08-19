@@ -1,5 +1,5 @@
 // food uber
-import foodUber from "../images/projects/food-uber.png"
+import foodUber from "../images/projects/food-uber.svg"
 import fU1 from "../images/projects/fu1.png"
 import fU2 from "../images/projects/fu2.png"
 import fU3 from "../images/projects/fu3.png"
@@ -15,7 +15,7 @@ const projects = [
     slug: "kodemunit",
     src: "",
     source: "",
-    category: ["Web", "All"],
+    categories: ["Web", "All"],
     about:
       "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
     demo: "http://kodemunit.com",
@@ -29,7 +29,7 @@ const projects = [
     slug: "ceeptz",
     // src: ceeptz,
     source: "",
-    category: ["Web", "All"],
+    categories: ["Web", "All"],
     about: "CEEPTz website with all information about CEEPTZ startup",
     demo: "http://ceeptz.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
@@ -42,7 +42,7 @@ const projects = [
     slug: "covid19-tz",
     // src: covid,
     source: "http://github.com/bmsteven/corona",
-    category: ["Web", "All"],
+    categories: ["Web", "All"],
     about:
       "Corona Covid19 tracker special made for Tanzanians to provide necessary information on Corona Virus pandemic made in Swahili",
     demo: "http://covid19-tz.netlify.app",
@@ -56,7 +56,7 @@ const projects = [
     slug: "kilimoshare",
     src: "",
     source: "",
-    category: ["Web", "All"],
+    categories: ["Web", "All"],
     about: "Agritech website with all information about kilimoshare startup",
     demo: "http://kilimoshare.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
@@ -69,7 +69,7 @@ const projects = [
     slug: "bm-dev",
     src: "",
     //   source: "http://github.com/bmsteven/bm-dev",
-    category: ["Web", "Design", "All"],
+    categories: ["Web", "Design", "All"],
     about: "My Personal Portfolio website which you are looking at right now",
     demo: "http://bm-dev.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "React"],
@@ -82,7 +82,7 @@ const projects = [
     slug: "job-portal",
     src: "",
     source: "http://github.com/nab-in/portal-frontend",
-    category: ["Design", "Web", "All"],
+    categories: ["Design", "Web", "All"],
     about: "A web app to connect job seekers to the hob opportunities",
     demo: "http://jobportal-tz.herokuapp.com",
     tools: [
@@ -106,7 +106,7 @@ const projects = [
     slug: "food-uber",
     src: foodUber,
     source: "http://github.com/codeschool-africa/food-uber-client",
-    category: ["Design", "Web", "All"],
+    categories: ["Design", "Web", "All"],
     about: "An app that allows users to order food online",
     demo: "http://food-uber.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js", "mysql"],
