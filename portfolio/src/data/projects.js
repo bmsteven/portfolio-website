@@ -1,5 +1,5 @@
 // food uber
-import foodUber from "../images/projects/food-uber.svg"
+import foodUber from "../images/projects/food-uber.jpg"
 import fU1 from "../images/projects/fu1.png"
 import fU2 from "../images/projects/fu2.png"
 import fU3 from "../images/projects/fu3.png"
@@ -110,8 +110,21 @@ const projects = [
     about: "An app that allows users to order food online",
     demo: "http://food-uber.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js", "mysql"],
-    roles: ["UI Designer, Frontend Developer", "Backend Developer"],
+    roles: ["UI Designer", "Frontend Developer", "Backend Developer"],
     gallery: [fU1, fU2, fU3, fU4, fU5, fU6, fU7],
+  },
+  {
+    id: 10,
+    name: "Soz PNS",
+    slug: "soz-pns",
+    src: "",
+    // source: "http://github.com/codeschool-africa/food-uber-client",
+    categories: ["Design", "Web", "All"],
+    about: "Music App",
+    demo: "http://sozthegovt.netlify.app",
+    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js", "mysql"],
+    roles: ["UI Designer", "Frontend Developer", "Backend Developer"],
+    gallery: [],
   },
 ]
 
