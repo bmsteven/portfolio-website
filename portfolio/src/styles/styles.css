@@ -1803,10 +1803,6 @@ form p a:hover {
   display: table;
 }
 
-.projects-content .container .showcase article.item .project, .projects-content .container .gallery article.item .project {
-  border: 1px solid #bdc0c2;
-}
-
 .projects-content .container .showcase article.item .project:hover, .projects-content .container .gallery article.item .project:hover {
   -webkit-box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
           box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #f0f0f0;
@@ -2232,10 +2228,6 @@ form p a:hover {
 .App.darkmode .projects-content nav ul li.active {
   background: #00A3E1;
   color: #000000;
-}
-
-.App.darkmode .projects-content .showcase article.item .project {
-  border: 1px solid #3c4142;
 }
 
 .App.darkmode .projects-content .showcase article.item .project:hover {
