@@ -1,3 +1,6 @@
+// my portfolio
+import portfolio from "../images/projects/portfolio.jpg"
+
 // food uber
 import foodUber from "../images/projects/food-uber.jpg"
 import fU1 from "../images/projects/fu1.png"
@@ -67,7 +70,7 @@ const projects = [
     id: 7,
     name: "My Portfolio",
     slug: "bm-dev",
-    src: "",
+    src: portfolio,
     //   source: "http://github.com/bmsteven/bm-dev",
     categories: ["Web", "Design", "All"],
     about: "My Personal Portfolio website which you are looking at right now",
