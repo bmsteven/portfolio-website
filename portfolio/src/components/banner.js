@@ -5,7 +5,7 @@ const Banner = ({ children }) => {
     <div className="banner">
       <div className="content">{children}</div>
       <div className="hero-bg">
-        <img src={heroLight} alt="hero-bg" />
+        <img src={heroLight} alt="hero-bg" loading="lazy" />
       </div>
     </div>
   )

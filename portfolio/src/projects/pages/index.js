@@ -71,6 +71,7 @@ const Projects = () => {
                           style={{
                             width: "100%",
                           }}
+                          loading="lazy"
                         />
                       </figure>
                     )}

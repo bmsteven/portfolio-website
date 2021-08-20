@@ -2,6 +2,7 @@
 import portfolio from "../images/projects/portfolio/portfolio.jpg"
 
 // kodemunit
+import kodemunit from "../images/projects/kodemunit/kodemunit.jpg"
 
 // eaig
 import EAIG from "../images/projects/eaig/eaig.jpg"
@@ -13,12 +14,16 @@ import portal from "../images/projects/portal/portal.jpg"
 import portalDashboard from "../images/projects/portal-dashboard/portal.jpg"
 
 // covd19tz
+import covid from "../images/projects/covid/covid.jpg"
 
 // ceeptz
+import ceep from "../images/projects/ceep/ceep.jpg"
 
-// kilimoshare
+// gramath
+import gramath from "../images/projects/gramath/gramath.jpg"
 
 // soz-pns
+import soz from "../images/projects/soz/soz.jpg"
 
 // food uber
 import foodUber from "../images/projects/food-uber/food-uber.jpg"
@@ -35,13 +40,13 @@ const projects = [
     id: 1,
     name: "Kodemunit",
     slug: "kodemunit",
-    src: "",
+    src: kodemunit,
     source: "",
     categories: ["Web", "All"],
     about:
       "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
     demo: "http://kodemunit.com",
-    tools: ["Figma", "HTML", "CSS", "SASS", "React", "Redux", "Firebase"],
+    tools: ["Figma", "HTML", "CSS", "SASS", "React"],
     roles: ["UX/UI Designer", "Developer"],
     gallery: [],
   },
@@ -49,7 +54,7 @@ const projects = [
     id: 2,
     name: "CEEPTz",
     slug: "ceeptz",
-    // src: ceeptz,
+    src: ceep,
     source: "",
     categories: ["Web", "All"],
     about: "CEEPTz website with all information about CEEPTZ startup",
@@ -62,27 +67,27 @@ const projects = [
     id: 4,
     name: "COVID19-TZ",
     slug: "covid19-tz",
-    // src: covid,
+    src: covid,
     source: "http://github.com/bmsteven/corona",
     categories: ["Web", "All"],
     about:
       "Corona Covid19 tracker special made for Tanzanians to provide necessary information on Corona Virus pandemic made in Swahili",
     demo: "http://covid19-tz.netlify.app",
     tools: ["HTML", "CSS", "SASS", "React"],
-    roles: ["Frontend Developer"],
+    roles: ["Developer"],
     gallery: [],
   },
   {
     id: 5,
-    name: "Kilimoshare",
-    slug: "kilimoshare",
-    src: "",
+    name: "Gramath",
+    slug: "gramath",
+    src: gramath,
     source: "",
-    categories: ["Web", "All"],
-    about: "Agritech website with all information about kilimoshare startup",
-    demo: "http://kilimoshare.netlify.app",
-    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript"],
-    roles: ["UX/UI Designer", "Developer"],
+    categories: ["Others", "All"],
+    about: "Graphic card for kisamvu (Cassava leaves) products",
+    demo: "",
+    tools: ["Figma"],
+    roles: ["Graphics Designer"],
     gallery: [],
   },
   {
@@ -90,7 +95,7 @@ const projects = [
     name: "My Portfolio",
     slug: "bm-dev",
     src: portfolio,
-    //   source: "http://github.com/bmsteven/bm-dev",
+    source: "http://github.com/bmsteven/portfolio-website",
     categories: ["Web", "Design", "All"],
     about: "My Personal Portfolio website which you are looking at right now",
     demo: "http://bm-dev.netlify.app",
@@ -148,12 +153,13 @@ const projects = [
   },
   {
     id: 10,
-    name: "Food Uber",
-    slug: "food-uber",
+    name: "Food Uber App",
+    slug: "food-uber-app",
     src: foodUber,
     source: "http://github.com/codeschool-africa/food-uber-client",
-    categories: ["Design", "Web", "All"],
-    about: "An app that allows users to order food online",
+    categories: ["Design", "All"],
+    about:
+      "An app that allows users to order food online currently available as a website",
     demo: "http://food-uber.netlify.app",
     tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js", "mysql"],
     roles: ["UI Designer", "Frontend Developer", "Backend Developer"],
@@ -163,13 +169,12 @@ const projects = [
     id: 11,
     name: "Soz PNS",
     slug: "soz-pns",
-    src: "",
-    // source: "http://github.com/codeschool-africa/food-uber-client",
+    src: soz,
     categories: ["Design", "Web", "All"],
     about: "Music App",
     demo: "http://sozthegovt.netlify.app",
-    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js", "mysql"],
-    roles: ["UI Designer", "Frontend Developer", "Backend Developer"],
+    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js"],
+    roles: ["UI/UX Designer", "Developer"],
     gallery: [],
   },
   {
@@ -177,10 +182,9 @@ const projects = [
     name: "EAIG",
     slug: "eaig",
     src: EAIG,
-    // source: "http://github.com/codeschool-africa/food-uber-client",
     categories: ["Design", "All"],
     about: "Landing page",
-    // demo: "http://sozthegovt.netlify.app",
+    demo: "http://sozthegovt.netlify.app",
     tools: ["Figma"],
     roles: ["UI Designer"],
     gallery: [],

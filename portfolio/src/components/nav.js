@@ -52,6 +52,7 @@ const Nav = ({ routes, navProps }) => {
             <img
               src={mode === "dark" ? `${logo}` : `${logoLight}`}
               alt="bm dev logo"
+              loading="lazy"
             />
           </Link>
         </div>
