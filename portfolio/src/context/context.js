@@ -41,7 +41,7 @@ const UiProvider = ({ children }) => {
   )
 }
 
-export const useUIContext = () => useContext(UiContext)
+export const useUIState = () => useContext(UiContext)
 export const useUIDispatch = () => useContext(UiDispatch)
 
 export default UiProvider

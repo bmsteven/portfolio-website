@@ -1,8 +1,8 @@
 import { lazy, useEffect } from "react"
 import { Switch, Route } from "react-router-dom"
-import { useUIContext } from "context/context"
-import { useModalContext } from "context/modal"
-import Modal from "components/image-modal/Modal"
+import { useUIState } from "context/context"
+import { useModalState } from "context/modal"
+import Modal from "components/modal/Modal"
 import "./styles/styles.css"
 
 const home = lazy(() => import("./pages/home"))
@@ -13,8 +13,8 @@ const contact = lazy(() => import("./pages/contact"))
 const error = lazy(() => import("./pages/error"))
 
 const App = () => {
-  const { mode } = useUIContext()
-  const { open } = useModalContext()
+  const { mode } = useUIState()
+  const { open } = useModalState()
 
   useEffect(() => {
     window.scrollTo(0, 0)

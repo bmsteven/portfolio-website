@@ -1,8 +1,8 @@
 import styles from "./loader.module.css"
-import { useUIContext } from "context/context"
+import { useUIState } from "context/context"
 
 const Loader = () => {
-  const { mode } = useUIContext()
+  const { mode } = useUIState()
   return (
     <div
       className={

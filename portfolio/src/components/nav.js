@@ -3,17 +3,12 @@ import { Link, useLocation } from "react-router-dom"
 import { FaMoon, FaSun, RiMenu3Line, IoMdClose } from "react-icons/all"
 import logo from "../images/logo.png"
 import logoLight from "../images/logo-dark.png"
-import {
-  useUIContext,
-  useUIDispatch,
-  LIGHTMODE,
-  DARKMODE,
-} from "context/context"
+import { useUIState, useUIDispatch, LIGHTMODE, DARKMODE } from "context/context"
 
 const Nav = ({ routes, navProps }) => {
   const dispatch = useUIDispatch()
 
-  const { mode } = useUIContext()
+  const { mode } = useUIState()
 
   const location = useLocation()
   const activeRoute = (routeName) => {

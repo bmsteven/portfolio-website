@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+}
+
+.modal .backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+}
+
+.modal .modal__container {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.modal .modal__container .img__container {
+  position: relative;
+  width: 80%;
+  max-width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal .modal__container .img__container.img__container__wide {
+  width: 100%;
+}
+
+.modal .modal__container .img__container.img__container__wide img {
+  height: auto;
+  max-height: 100vh;
+  width: auto;
+  max-width: 95%;
+  margin: auto;
+  z-index: 21;
+  position: relative;
+}
+/*# sourceMappingURL=modal.module.css.map */

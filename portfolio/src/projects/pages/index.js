@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import projects from "../../data/projects"
+import { useModalDispatch, ADD_PROJECTS } from "../../context/modal"
 
 const Projects = () => {
+  const dispatch = useModalDispatch()
   const [keyWord, setKeyWord] = useState("All")
 
   const setAll = () => {
@@ -65,10 +67,21 @@ const Projects = () => {
           <div className="showcase">
             {filteredProjects.map(
               ({ id, src, name, slug, categories, demo }) => (
-                <article key={id} className="item">
+                <article key={id} className="item project-item">
                   <div className="project">
                     {src && (
-                      <figure className="project-image">
+                      <figure
+                        className="project-image"
+                        onClick={() =>
+                          dispatch({
+                            type: ADD_PROJECTS,
+                            payload: {
+                              list: filteredProjects,
+                              active: id,
+                            },
+                          })
+                        }
+                      >
                         <img
                           src={src}
                           alt={name}

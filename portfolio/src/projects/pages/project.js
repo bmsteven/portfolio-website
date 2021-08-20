@@ -1,12 +1,13 @@
 import { useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { FaCheck } from "react-icons/all"
-// import ProgressiveImage from "react-progressive-graceful-image"
+import { useModalDispatch, ADD_PROJECT, ADD_GALLERY } from "../../context/modal"
 
 //projects
 import projects from "../../data/projects"
 
 const Project = () => {
+  const dispatch = useModalDispatch()
   let param = useParams()
   let obj = projects.find((o) => o.slug === param.project)
   useEffect(() => {
@@ -49,6 +50,12 @@ const Project = () => {
                     outline: "none",
                   }}
                   loading="lazy"
+                  onClick={() =>
+                    dispatch({
+                      type: ADD_PROJECT,
+                      payload: obj,
+                    })
+                  }
                 />
               </div>
             )}
@@ -117,6 +124,15 @@ const Project = () => {
                         src={item}
                         alt={`${obj.name} gallery`}
                         loading="lazy"
+                        onClick={() =>
+                          dispatch({
+                            type: ADD_GALLERY,
+                            payload: {
+                              list: obj.gallery,
+                              active: index,
+                            },
+                          })
+                        }
                       />
                     </article>
                   ))}

@@ -1,6 +1,6 @@
 @import "../_variable"
-  
-* 
+
+*
     margin: 0
     padding: 0
     box-sizing: border-box
@@ -12,8 +12,8 @@ body
     position: relative
 
 body.no-scrolling
-    overflow: hidden
-    
+    overflow-y: : hidden
+
 body, html
     scroll-behavior: smooth
     position: relative
@@ -115,7 +115,6 @@ button
     &::after
         right: calc( 50% - 60px )
 
-
 .tertiary-header
     color: $darker
     position: relative
@@ -125,7 +124,7 @@ button
         width: 20px
         height: 40px
         background-color: #C6E0EA
-        position: relative 
+        position: relative
         top: 3px
     span.span
         width: 7px
@@ -133,7 +132,7 @@ button
         background-color: #60828F
         display: block
         transform: skewY(-30deg)
-        position: relative 
+        position: relative
         top: 1.5px
     span.title
         padding: 0 20px
@@ -215,10 +214,10 @@ img
         color: #15575C
         border: 1px solid #C3E6CB
     &.error
-        padding: .7rem 
+        padding: .7rem
         background: #F8D7DA
         color: #721c29
-        border: 1px solid #F5C6CB 
+        border: 1px solid #F5C6CB
 
 form
     width: 100%
@@ -253,7 +252,6 @@ form
             text-decoration: underline
             &:hover
                 text-decoration: none
-
 
 @media screen and ( min-width: 480px )
     .container
