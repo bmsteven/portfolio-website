@@ -25,6 +25,7 @@ const Modal = () => {
       type: REMOVE_ARRAY,
     })
     setDetails({})
+    document.body.classList.remove("no-scrolling")
   }
 
   const toggleOpen = () => {
