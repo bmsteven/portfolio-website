@@ -45,7 +45,7 @@ const projects = [
     categories: ["Web", "All"],
     about:
       "Kodemunit is a simple platform where they provide mentorship programmes by connecting learners and dedicated mentors",
-    demo: "http://kodemunit.com",
+    demo: "http://kodemunit.netlify.com",
     tools: ["Figma", "HTML", "CSS", "SASS", "React"],
     roles: ["UX/UI Designer", "Developer"],
     gallery: [],
@@ -135,7 +135,7 @@ const projects = [
     source: "http://github.com/nab-in/portal-dashboard",
     categories: ["Design", "Web", "All"],
     about: "A web app to connect job seekers to the hob opportunities",
-    demo: "http://jobportal-tz.herokuapp.com",
+    demo: "https://portaltz-dashboard.herokuapp.com/",
     tools: [
       "Figma",
       "HTML",
