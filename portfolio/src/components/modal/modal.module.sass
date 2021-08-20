@@ -25,16 +25,17 @@
         max-width: 100vw
         .img__container
             position: relative
-            width: 80%
             max-width: 100%
             height: 100%
             display: flex
             justify-content: center
             align-items: center
-            flex-wrap: wrap
-            transition: .25s
-            &.img__container__wide
-                width: 100%
+            .item
+                width: calc( 100% - 300px )
+                transition: width .25s ease-in-out
+                text-align: center
+                &.open
+                    width: 100%
             img
                 height: auto
                 max-height: 100vh
@@ -43,3 +44,34 @@
                 margin: auto
                 z-index: 21
                 position: relative
+            .details
+                transition: width .25s ease-in-out
+                width: 0
+                overflow: hidden
+                background: white
+                height: 100vh
+                position: relative
+                z-index: 21
+                &.open
+                    width: 300px
+
+@media screen and ( max-width: 992px )
+    .modal
+        .modal__container
+            .img__container
+                .item
+                    width: calc( 100% - 200px )
+                .details
+                    &.open
+                        width: 200px
+
+@media screen and ( max-width: 768px )
+    .modal
+        .modal__container
+            .img__container
+                .item
+                    width: 100%
+                .details
+                    display: none
+                    &.open
+                        width: 200px

@@ -29,7 +29,6 @@
 
 .modal .modal__container .img__container {
   position: relative;
-  width: 80%;
   max-width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -41,13 +40,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-transition: .25s;
-  transition: .25s;
 }
 
-.modal .modal__container .img__container.img__container__wide {
+.modal .modal__container .img__container .item {
+  width: calc( 100% - 300px);
+  -webkit-transition: width .25s ease-in-out;
+  transition: width .25s ease-in-out;
+  text-align: center;
+}
+
+.modal .modal__container .img__container .item.open {
   width: 100%;
 }
 
@@ -59,5 +61,41 @@
   margin: auto;
   z-index: 21;
   position: relative;
+}
+
+.modal .modal__container .img__container .details {
+  -webkit-transition: width .25s ease-in-out;
+  transition: width .25s ease-in-out;
+  width: 0;
+  overflow: hidden;
+  background: white;
+  height: 100vh;
+  position: relative;
+  z-index: 21;
+}
+
+.modal .modal__container .img__container .details.open {
+  width: 300px;
+}
+
+@media screen and (max-width: 992px) {
+  .modal .modal__container .img__container .item {
+    width: calc( 100% - 200px);
+  }
+  .modal .modal__container .img__container .details.open {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal .modal__container .img__container .item {
+    width: 100%;
+  }
+  .modal .modal__container .img__container .details {
+    display: none;
+  }
+  .modal .modal__container .img__container .details.open {
+    width: 200px;
+  }
 }
 /*# sourceMappingURL=modal.module.css.map */

@@ -18,6 +18,8 @@ const Modal = () => {
   const { mode } = useUIState()
   const dispatch = useModalDispatch()
 
+  console.log(isOpen)
+
   const close = () => {
     dispatch({
       type: REMOVE_ARRAY,
@@ -41,32 +43,38 @@ const Modal = () => {
       }
     >
       <div className={styles.modal__container}>
-        <div
-          className={
-            isOpen
-              ? `${styles.img__container} ${styles.img__container__wide}`
-              : `${styles.img__container}`
-          }
-        >
+        <div className={styles.img__container}>
           {project?.id ? (
-            <div className={`${styles.project} ${styles.item}`}>
+            <div
+              className={
+                isOpen && !gallery?.active
+                  ? `${styles.project} ${styles.item}`
+                  : `${styles.project} ${styles.item} ${styles.open}`
+              }
+            >
               <div className={styles.backdrop} onClick={close} />
               <img src={details.src} alt="" onClick={toggleOpen} />
             </div>
           ) : projects?.active ? (
-            <div className={`${styles.projects} ${styles.item}`}>
+            <div
+              className={
+                isOpen && !gallery?.active
+                  ? `${styles.projects} ${styles.item}`
+                  : `${styles.projects} ${styles.item} ${styles.open}`
+              }
+            >
               <div className={styles.backdrop} onClick={close} />
               <img src={details.src} alt="" onClick={toggleOpen} />
             </div>
           ) : gallery?.active ? (
-            <div className={`${styles.gallery} ${styles.item}`}>
+            <div className={`${styles.galery}`}>
               <div className={styles.backdrop} onClick={close} />
               <img src={details.src} alt="" />
             </div>
           ) : (
             <div></div>
           )}
-          {/* <div
+          <div
             className={
               isOpen && !gallery.active
                 ? `${styles.details} ${styles.open}`
@@ -74,7 +82,7 @@ const Modal = () => {
             }
           >
             {details.name}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
