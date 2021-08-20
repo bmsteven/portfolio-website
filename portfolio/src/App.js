@@ -1,6 +1,8 @@
 import { lazy, useEffect } from "react"
 import { Switch, Route } from "react-router-dom"
 import { useUIContext } from "context/context"
+import { useModalContext } from "context/modal"
+import Modal from "components/image-modal/Modal"
 import "./styles/styles.css"
 
 const home = lazy(() => import("./pages/home"))
@@ -12,6 +14,7 @@ const error = lazy(() => import("./pages/error"))
 
 const App = () => {
   const { mode } = useUIContext()
+  const { open } = useModalContext()
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -30,6 +33,7 @@ const App = () => {
             <Route exact path="/contact" component={contact} key="contact" />
             <Route component={error} key="error" />
           </Switch>
+          {open && <Modal />}
         </div>
       )}
     />
