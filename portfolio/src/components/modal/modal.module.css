@@ -43,13 +43,15 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 .modal .modal__container .img__container.img__container__wide {
   width: 100%;
 }
 
-.modal .modal__container .img__container.img__container__wide img {
+.modal .modal__container .img__container img {
   height: auto;
   max-height: 100vh;
   width: auto;
