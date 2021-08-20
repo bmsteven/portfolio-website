@@ -10,6 +10,11 @@ const Error = ({ ...rest }) => {
   useEffect(() => {
     document.title = "404 Page Not Found - Benedict's Portfolio "
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="contact-page">
       <Nav {...rest} navProps="nav-header" routes={routes} />

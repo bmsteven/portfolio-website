@@ -1,4 +1,4 @@
-import { lazy } from "react"
+import { lazy, useEffect } from "react"
 import { Switch, Route } from "react-router-dom"
 import { useUIContext } from "context/context"
 import "./styles/styles.css"
@@ -12,6 +12,11 @@ const error = lazy(() => import("./pages/error"))
 
 const App = () => {
   const { mode } = useUIContext()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Route
       render={({ location }) => (

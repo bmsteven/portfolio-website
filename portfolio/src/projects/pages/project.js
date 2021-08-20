@@ -16,6 +16,11 @@ const Project = () => {
       document.title = `404 - Project Not Found - Benedict's Portfolio`
     }
   }, [obj])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <main className="projects-content project-content">
       <div className="container">
@@ -108,7 +113,11 @@ const Project = () => {
                 <div className="gallery">
                   {obj.gallery.map((item, index) => (
                     <article key={index} className="item">
-                      <img src={item} alt={`${obj.name} gallery`} loading="lazy"/>
+                      <img
+                        src={item}
+                        alt={`${obj.name} gallery`}
+                        loading="lazy"
+                      />
                     </article>
                   ))}
                 </div>

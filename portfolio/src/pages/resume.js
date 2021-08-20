@@ -14,6 +14,10 @@ const Resume = ({ ...rest }) => {
   useEffect(() => {
     document.title = "My Resume - Benedict's Portfolio "
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div>
       <Nav {...rest} navProps="nav-header" routes={routes} />

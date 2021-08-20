@@ -11,6 +11,11 @@ const About = () => {
   useEffect(() => {
     document.title = "About Me - Benedict's Portfolio "
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="about-page">
       <Header headerClass="about-header">

@@ -33,6 +33,10 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     const typed = new Typed("#text", options)
     return () => {
       typed.destroy()

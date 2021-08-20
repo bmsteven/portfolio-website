@@ -13,6 +13,11 @@ const Contact = ({ ...rest }) => {
   useEffect(() => {
     document.title = "Contact me - Benedict's Portfolio "
   }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="contact-page">
       <Nav {...rest} navProps="nav-header" routes={routes} />

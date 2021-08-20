@@ -27,6 +27,10 @@ const Projects = () => {
     document.title = "Project Collections - Benedict's Portfolio "
   }, [])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <main className="projects-content">
       <div className="container">
