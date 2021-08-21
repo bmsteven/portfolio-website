@@ -94,12 +94,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: fle;
-      -ms-flex-pack: fle;
-          justify-content: fle;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: -webkit-transform .35s ease-in;
+  transition: -webkit-transform .35s ease-in;
+  transition: transform .35s ease-in;
+  transition: transform .35s ease-in, -webkit-transform .35s ease-in;
 }
 
 .modal .modal__container .img__container .item .image__showcase article {

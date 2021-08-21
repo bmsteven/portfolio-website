@@ -57,7 +57,7 @@ const Modal = () => {
 
   const next = () => {
     setActive((prev) => {
-      if (prev >= lengthy) {
+      if (prev >= lengthy - 1) {
         return prev
       } else {
         return prev + 1
@@ -87,8 +87,6 @@ const Modal = () => {
     })
   }
 
-  console.log(active)
-
   const Arrows = () => {
     return (
       <>
@@ -96,9 +94,9 @@ const Modal = () => {
           className={styles.next}
           onClick={next}
           style={{
-            background: active >= lengthy ? "#3e4c5130" : "#3E4C51",
-            cursor: active >= lengthy ? "default" : "pointer",
-            color: active >= lengthy ? "#ffffff50" : "#ffffff",
+            background: active >= lengthy - 1 ? "#3e4c5130" : "#3E4C51",
+            cursor: active >= lengthy - 1 ? "default" : "pointer",
+            color: active >= lengthy - 1 ? "#ffffff50" : "#ffffff",
           }}
         >
           <FaAngleRight className={styles.icon} />
@@ -151,16 +149,25 @@ const Modal = () => {
               <div className={styles.backdrop} onClick={close} />
               <Arrows />
               <div
-                className={styles.image__showcase}
+                className={styles.images}
                 style={{
-                  minWidth: 100 * lengthy + "%",
+                  width: "100%",
+                  overflow: "hidden",
                 }}
               >
-                {projects.list.map(({ id, src }) => (
-                  <article key={id}>
-                    <img src={src} alt="" onClick={toggleOpen} />
-                  </article>
-                ))}
+                <div
+                  className={styles.image__showcase}
+                  style={{
+                    minWidth: 100 * lengthy + "%",
+                    transform: `translateX(-${active * 10}%)`,
+                  }}
+                >
+                  {projects.list.map(({ id, src }) => (
+                    <article key={id}>
+                      <img src={src} alt="" onClick={toggleOpen} />
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           ) : gallery?.list.length > 0 ? (
@@ -168,16 +175,24 @@ const Modal = () => {
               <div className={styles.backdrop} onClick={close} />
               <Arrows />
               <div
-                className={styles.image__showcase}
+                className={styles.images}
                 style={{
-                  minWidth: 100 * lengthy + "%",
+                  width: "100%",
+                  overflow: "hidden",
                 }}
               >
-                {gallery.list.map((item, index) => (
-                  <article key={index}>
-                    <img src={item} alt="" />
-                  </article>
-                ))}
+                <div
+                  className={styles.image__showcase}
+                  style={{
+                    minWidth: 100 * lengthy + "%",
+                  }}
+                >
+                  {gallery.list.map((item, index) => (
+                    <article key={index}>
+                      <img src={item} alt="" />
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           ) : (
