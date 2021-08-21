@@ -90,7 +90,12 @@
   width: 100%;
 }
 
+.modal .modal__container .img__container .item .images {
+  pointer-events: none;
+}
+
 .modal .modal__container .img__container .item .image__showcase {
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,6 +113,7 @@
 
 .modal .modal__container .img__container .item .image__showcase article {
   width: 100%;
+  pointer-events: all;
 }
 
 .modal .modal__container .img__container .prev {
