@@ -147,6 +147,7 @@
   height: 100vh;
   position: relative;
   z-index: 21;
+  color: black;
 }
 
 .modal .modal__container .img__container .details.open {

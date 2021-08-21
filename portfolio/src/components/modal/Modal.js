@@ -56,32 +56,38 @@ const Modal = () => {
   }, [open])
 
   const next = () => {
+    let arrIndex
     setActive((prev) => {
       if (prev >= lengthy - 1) {
+        arrIndex = prev
         return prev
       } else {
+        arrIndex = prev + 1
         return prev + 1
       }
     })
     setDetails((prev) => {
       let arr
-      if (lengthy > 0) arr = objectArray.find((el, index) => index === active)
+      if (lengthy > 0) arr = objectArray.find((el, index) => index === arrIndex)
       if (arr) return arr
       return prev
     })
   }
 
   const prev = () => {
+    let arrIndex
     setActive((prev) => {
       if (prev === 0) {
+        arrIndex = prev
         return prev
       } else {
+        arrIndex = prev - 1
         return prev - 1
       }
     })
     setDetails((prev) => {
       let arr
-      if (lengthy > 0) arr = objectArray.find((el, index) => index === active)
+      if (lengthy > 0) arr = objectArray.find((el, index) => index === arrIndex)
       if (arr) return arr
       return prev
     })
