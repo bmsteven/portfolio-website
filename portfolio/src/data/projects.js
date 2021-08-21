@@ -71,7 +71,7 @@ const projects = [
     source: "http://github.com/bmsteven/corona",
     categories: ["Web", "All"],
     about:
-      "Corona Covid19 tracker special made for Tanzanians to provide necessary information on Corona Virus pandemic made in Swahili",
+      "Corona Covid19 tracker special made for Tanzanians to provide necessary information on Corona Virus pandemic in Swahili language",
     demo: "http://covid19-tz.netlify.app",
     tools: ["HTML", "CSS", "SASS", "React"],
     roles: ["Developer"],
@@ -184,7 +184,7 @@ const projects = [
     src: EAIG,
     categories: ["Design", "All"],
     about: "Landing page",
-    demo: "http://sozthegovt.netlify.app",
+    // demo: "http://sozthegovt.netlify.app",
     tools: ["Figma"],
     roles: ["UI Designer"],
     gallery: [],
