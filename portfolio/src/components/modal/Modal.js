@@ -87,7 +87,7 @@ const Modal = () => {
     })
   }
 
-  console.log(details, lengthy.find, objectArray, gallery)
+  console.log(active)
 
   const Arrows = () => {
     return (
@@ -150,13 +150,35 @@ const Modal = () => {
             >
               <div className={styles.backdrop} onClick={close} />
               <Arrows />
-              <img src={details.src} alt="" onClick={toggleOpen} />
+              <div
+                className={styles.image__showcase}
+                style={{
+                  minWidth: 100 * lengthy + "%",
+                }}
+              >
+                {projects.list.map(({ id, src }) => (
+                  <article key={id}>
+                    <img src={src} alt="" onClick={toggleOpen} />
+                  </article>
+                ))}
+              </div>
             </div>
           ) : gallery?.list.length > 0 ? (
             <div className={`${styles.gallery} ${styles.item}`}>
               <div className={styles.backdrop} onClick={close} />
               <Arrows />
-              <img src={details} alt="" />
+              <div
+                className={styles.image__showcase}
+                style={{
+                  minWidth: 100 * lengthy + "%",
+                }}
+              >
+                {gallery.list.map((item, index) => (
+                  <article key={index}>
+                    <img src={item} alt="" />
+                  </article>
+                ))}
+              </div>
             </div>
           ) : (
             <div></div>

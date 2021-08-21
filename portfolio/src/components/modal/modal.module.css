@@ -90,6 +90,22 @@
   width: 100%;
 }
 
+.modal .modal__container .img__container .item .image__showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: fle;
+      -ms-flex-pack: fle;
+          justify-content: fle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal__container .img__container .item .image__showcase article {
+  width: 100%;
+}
+
 .modal .modal__container .img__container .prev {
   left: 3%;
   top: 50%;
