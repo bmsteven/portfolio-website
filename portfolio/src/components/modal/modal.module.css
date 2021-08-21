@@ -114,6 +114,10 @@
 
 .modal .modal__container .img__container .item .image__showcase article {
   width: 100%;
+  pointer-events: none;
+}
+
+.modal .modal__container .img__container .item .image__showcase article img {
   pointer-events: all;
 }
 
