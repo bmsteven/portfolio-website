@@ -6,27 +6,42 @@
     left: 0
     width: 100vw
     height: 100vh
+    max-height: 100vh
+    overflow: hidden
     z-index: 20
     .backdrop
         position: absolute
         left: 0
         top: 0
         width: 100%
-        height: 100%
+        height: 100vh
         background: rgba(0, 0, 0, .85)
         cursor: pointer
+    .close
+        left: 1rem
+        top: 1rem
     .modal__container
         position: relative
-        overflow-y: auto
-        overflow-x: hidden
-        height: 100%
+        overflow: hidden
+        height: 100vh
         max-height: 100vh
         width: 100%
         max-width: 100vw
+        span
+            background: $lighter-dark
+            position: absolute
+            z-index: 23
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 30px
+            width: 30px
+            border-radius: 50%
+            cursor: pointer
         .img__container
             position: relative
             max-width: 100%
-            height: 100%
+            height: 100vh
             display: flex
             justify-content: center
             align-items: center
@@ -34,8 +49,26 @@
                 width: calc( 100% - 300px )
                 transition: width .25s ease-in-out
                 text-align: center
+                height: 100vh
+                max-height: 100vh
+                position: relative
+                display: flex
+                justify-content: center
+                align-items: center
                 &.open
                     width: 100%
+            .prev
+                left: 3%
+                top: 50%
+                transform: translateY(-50%)
+                width: 40px
+                height: 40px
+            .next
+                width: 40px
+                height: 40px
+                right: 3%
+                top: 50%
+                transform: translateY(-50%)
             img
                 height: auto
                 max-height: 100vh

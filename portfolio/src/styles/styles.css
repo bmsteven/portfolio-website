@@ -13,7 +13,7 @@ body {
 }
 
 body.no-scrolling {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 body, html {
