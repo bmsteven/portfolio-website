@@ -165,7 +165,7 @@ const Modal = () => {
                   className={styles.image__showcase}
                   style={{
                     minWidth: 100 * lengthy + "%",
-                    transform: `translateX(-${active * 10}%)`,
+                    transform: `translateX(-${(active * 100) / lengthy}%)`,
                   }}
                 >
                   {projects.list.map(({ id, src }) => (
@@ -177,7 +177,7 @@ const Modal = () => {
               </div>
             </div>
           ) : gallery?.list.length > 0 ? (
-            <div className={`${styles.gallery} ${styles.item}`}>
+            <div className={`${styles.gallery} ${styles.item} ${styles.open}`}>
               <div className={styles.backdrop} onClick={close} />
               <Arrows />
               <div
@@ -191,6 +191,7 @@ const Modal = () => {
                   className={styles.image__showcase}
                   style={{
                     minWidth: 100 * lengthy + "%",
+                    transform: `translateX(-${(active * 100) / lengthy}%)`,
                   }}
                 >
                   {gallery.list.map((item, index) => (
