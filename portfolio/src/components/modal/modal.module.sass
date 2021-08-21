@@ -17,6 +17,7 @@
         height: 100vh
         background: rgba(0, 0, 0, .85)
         cursor: pointer
+        z-index: 20
     .close
         left: 1rem
         top: 1rem
@@ -65,7 +66,9 @@
                     display: flex
                     justify-content: flex-start
                     align-items: center
-                    transition: transform .35s linear
+                    transition: transform .2s linear
+                    z-index: 22
+                    position: relative
                     article
                         width: 100%
                         pointer-events: none
