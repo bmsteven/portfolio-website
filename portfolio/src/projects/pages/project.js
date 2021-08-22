@@ -31,7 +31,8 @@ const Project = () => {
     dispatch({
       type: REMOVE_ARRAY,
     })
-  }, [])
+    document.body.classList.remove("no-scrolling")
+  }, [dispatch])
 
   return (
     <main className="projects-content project-content">

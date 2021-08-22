@@ -41,7 +41,8 @@ const Projects = () => {
     dispatch({
       type: REMOVE_ARRAY,
     })
-  }, [])
+    document.body.classList.remove("no-scrolling")
+  }, [dispatch])
 
   useEffect(() => {
     setLoading(true)
