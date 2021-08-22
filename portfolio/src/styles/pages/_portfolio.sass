@@ -53,12 +53,6 @@
             padding-bottom: 2em
             column-gap: 1em
             column-fill: auto
-            // &.showcase-1
-            //     column-count: 1
-            //     display: flex
-            //     justify-content: center
-            // &.showcase-2
-            //     column-count: 2
             article.item
                 position: relative
                 height: 100%
@@ -72,41 +66,37 @@
                 page-break-inside: avoid
                 break-inside: avoid-column
                 display: table
-                // &.project-item
-                    // max-width: 700px
                 .project
                     border: 1px solid #bdc0c2
                     &:hover
                         box-shadow: 0px 10px 20px #d9d9d9, 0px 0 20px #f0f0f0
                 .project-image
                     width: 100%
-                    // img
-                        // background: #bdc0c2
-                        // filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, .3))
-                .project-info
-                    height: 100%
-                    width: 100%
-                    padding: 20px
-                    transition: all .35s
-                    display: flex
-                    flex-direction: column
-                    justify-content: center
-                    align-items: center
-                    .project-name
-                        h2
-                            font-weight: 500
-                            font-size: clamp(1.3rem, 5vw, .7rem)
-                    .categories-showcase
-                        display: flex
-                        margin: 10px 0
-                        .category
-                            margin: .8rem .4rem
-                    .btns
-                        display: flex
-                        justify-content: space-around
-                        width: 80%
 
         @import "./_project"
+
+.project-info
+    height: 100%
+    width: 100%
+    padding: 20px
+    transition: all .35s
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .project-name
+        h2
+            font-weight: 500
+            font-size: clamp(1.3rem, 5vw, .7rem)
+    .categories-showcase
+        display: flex
+        margin: 10px 0
+    .category
+        margin: .8rem .4rem
+    .btns
+        display: flex
+        justify-content: space-around
+        width: 80%
 
 @media screen and ( max-width: 1350px )
     .projects-content

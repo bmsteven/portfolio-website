@@ -1816,7 +1816,16 @@ form p a:hover {
   width: 100%;
 }
 
-.projects-content .container .showcase article.item .project-info, .projects-content .container .gallery article.item .project-info {
+.projects-content .container .gallery {
+  -webkit-column-gap: .2em;
+          column-gap: .2em;
+}
+
+.projects-content .container .gallery img {
+  outline: 1px solid #EBEEEF;
+}
+
+.project-info {
   height: 100%;
   width: 100%;
   padding: 20px;
@@ -1837,38 +1846,29 @@ form p a:hover {
           align-items: center;
 }
 
-.projects-content .container .showcase article.item .project-info .project-name h2, .projects-content .container .gallery article.item .project-info .project-name h2 {
+.project-info .project-name h2 {
   font-weight: 500;
   font-size: clamp(1.3rem, 5vw, 0.7rem);
 }
 
-.projects-content .container .showcase article.item .project-info .categories-showcase, .projects-content .container .gallery article.item .project-info .categories-showcase {
+.project-info .categories-showcase {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 10px 0;
 }
 
-.projects-content .container .showcase article.item .project-info .categories-showcase .category, .projects-content .container .gallery article.item .project-info .categories-showcase .category {
+.project-info .category {
   margin: .8rem .4rem;
 }
 
-.projects-content .container .showcase article.item .project-info .btns, .projects-content .container .gallery article.item .project-info .btns {
+.project-info .btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 80%;
-}
-
-.projects-content .container .gallery {
-  -webkit-column-gap: .2em;
-          column-gap: .2em;
-}
-
-.projects-content .container .gallery img {
-  outline: 1px solid #EBEEEF;
 }
 
 @media screen and (max-width: 1350px) {

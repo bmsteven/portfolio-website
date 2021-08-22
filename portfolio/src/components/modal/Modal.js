@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useModalState, useModalDispatch, REMOVE_ARRAY } from "context/modal"
+import { Link } from "react-router-dom"
 import { FaAngleLeft, FaAngleRight, FaTimes } from "react-icons/fa"
 import { useUIState } from "context/context"
 import styles from "./modal.module.css"
@@ -93,11 +94,15 @@ const Modal = () => {
     })
   }
 
+  // useEffect(() => {
+
+  // }, [details])
+
   const Arrows = () => {
     return (
       <>
         <span
-          className={styles.next}
+          className={`${styles.next} ${styles.span}`}
           onClick={next}
           style={{
             background: active >= lengthy - 1 ? "#3e4c5130" : "#3E4C51",
@@ -108,7 +113,7 @@ const Modal = () => {
           <FaAngleRight className={styles.icon} />
         </span>
         <span
-          className={styles.prev}
+          className={`${styles.prev} ${styles.span}`}
           onClick={prev}
           style={{
             background: active === 0 ? "#3e4c5130" : "#3E4C51",
@@ -130,7 +135,7 @@ const Modal = () => {
     >
       <div className={styles.modal__container}>
         <div className={styles.img__container}>
-          <span className={styles.close} onClick={close}>
+          <span className={`${styles.close} ${styles.span}`} onClick={close}>
             <FaTimes className={styles.icon} />
           </span>
           {project?.id ? (
@@ -138,7 +143,7 @@ const Modal = () => {
               className={
                 isOpen && !gallery?.active
                   ? `${styles.project} ${styles.item}`
-                  : `${styles.project} ${styles.item} ${styles.open}`
+                  : `${styles.project} ${styles.item} ${styles.wide}`
               }
             >
               <div className={styles.backdrop} onClick={close} />
@@ -149,7 +154,7 @@ const Modal = () => {
               className={
                 isOpen && !gallery?.active
                   ? `${styles.projects} ${styles.item}`
-                  : `${styles.projects} ${styles.item} ${styles.open}`
+                  : `${styles.projects} ${styles.item} ${styles.wide}`
               }
             >
               <div className={styles.backdrop} onClick={close} />
@@ -209,11 +214,51 @@ const Modal = () => {
             <div
               className={
                 isOpen
-                  ? `${styles.details} ${styles.open}`
-                  : `${styles.details}`
+                  ? `${styles.details} ${styles.open} project-info`
+                  : `${styles.details} project-info`
               }
             >
-              {details.name}
+              <div className="project-name">
+                <h2>{details.name}</h2>
+              </div>
+              {details.about && <p>{details.about}</p>}
+              {details.categories?.length > 0 && (
+                <div className="categories-showcase">
+                  <div
+                    style={{
+                      display: "none",
+                    }}
+                  >
+                    {
+                      (details.categories = details.categories.filter(
+                        (el) => el !== "All"
+                      ))
+                    }
+                  </div>
+                  {details.categories.map((category, index) => (
+                    <span className="category" key={index}>
+                      #{category}
+                    </span>
+                  ))}
+                </div>
+              )}
+              <div className="btns">
+                <Link
+                  to={`/portfolio/${details.slug}`}
+                  className="btn btn-secondary"
+                >
+                  <span>About</span>
+                </Link>
+                {details.demo && (
+                  <a
+                    href={details.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live App
+                  </a>
+                )}
+              </div>
             </div>
           )}
         </div>

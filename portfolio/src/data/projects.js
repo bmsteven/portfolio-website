@@ -110,7 +110,7 @@ const projects = [
     src: portal,
     source: "http://github.com/nab-in/portal-frontend",
     categories: ["Design", "Web", "All"],
-    about: "A web app to connect job seekers to the hob opportunities",
+    about: "A web app to connect job seekers to the job opportunities",
     demo: "http://jobportal-tz.herokuapp.com",
     tools: [
       "Figma",
@@ -134,7 +134,7 @@ const projects = [
     src: portalDashboard,
     source: "http://github.com/nab-in/portal-dashboard",
     categories: ["Design", "Web", "All"],
-    about: "A web app to connect job seekers to the hob opportunities",
+    about: "A web app to connect job seekers to the job opportunities",
     demo: "https://portaltz-dashboard.herokuapp.com/",
     tools: [
       "Figma",

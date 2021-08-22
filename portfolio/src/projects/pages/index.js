@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import projects from "../../data/projects"
-import { useModalDispatch, ADD_PROJECTS } from "../../context/modal"
+import {
+  useModalDispatch,
+  ADD_PROJECTS,
+  REMOVE_ARRAY,
+} from "../../context/modal"
 
 const Projects = () => {
   const dispatch = useModalDispatch()
   const [keyWord, setKeyWord] = useState("All")
+  const [filteredProjects, setFilteredProjects] = useState([])
 
   const setAll = () => {
     setKeyWord("All")
@@ -23,8 +28,6 @@ const Projects = () => {
     setKeyWord("Others")
   }
 
-  let filteredProjects = projects.filter((o) => o.categories.includes(keyWord))
-
   useEffect(() => {
     document.title = "Project Collections - Benedict's Portfolio "
   }, [])
@@ -32,6 +35,24 @@ const Projects = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  useEffect(() => {
+    dispatch({
+      type: REMOVE_ARRAY,
+    })
+  }, [])
+
+  useEffect(() => {
+    if (keyWord === "All") {
+      console.log("here2")
+      setFilteredProjects(projects)
+    } else {
+      console.log("here3")
+      setFilteredProjects(
+        projects.filter((o) => o.categories.includes(keyWord))
+      )
+    }
+  }, [keyWord])
 
   return (
     <main className="projects-content">
@@ -63,9 +84,9 @@ const Projects = () => {
             </li>
           </ul>
         </nav>
-        {filteredProjects.length > 0 ? (
+        {filteredProjects?.length > 0 ? (
           <div className="showcase">
-            {filteredProjects.map(
+            {filteredProjects?.map(
               ({ id, src, name, slug, categories, demo }) => (
                 <article key={id} className="item project-item">
                   <div className="project">

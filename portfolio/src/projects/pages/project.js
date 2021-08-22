@@ -1,7 +1,12 @@
 import { useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { FaCheck } from "react-icons/all"
-import { useModalDispatch, ADD_PROJECT, ADD_GALLERY } from "../../context/modal"
+import {
+  useModalDispatch,
+  ADD_PROJECT,
+  ADD_GALLERY,
+  REMOVE_ARRAY,
+} from "../../context/modal"
 
 //projects
 import projects from "../../data/projects"
@@ -20,6 +25,12 @@ const Project = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
+    dispatch({
+      type: REMOVE_ARRAY,
+    })
   }, [])
 
   return (

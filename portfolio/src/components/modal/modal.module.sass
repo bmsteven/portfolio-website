@@ -28,8 +28,9 @@
         max-height: 100vh
         width: 100%
         max-width: 100vw
-        span
+        .span
             background: $lighter-dark
+            color: white
             position: absolute
             z-index: 23
             display: flex
@@ -44,12 +45,9 @@
             max-width: 100vw
             width: 100vw
             height: 100vh
-            display: flex
-            justify-content: center
-            align-items: center
             .item
                 width: calc( 100% - 300px )
-                transition: width .25s ease-in-out
+                transition: width .25s ease-in-out, height .25s ease-in-out
                 text-align: center
                 height: 100vh
                 max-height: 100vh
@@ -57,7 +55,7 @@
                 display: flex
                 justify-content: center
                 align-items: center
-                &.open
+                &.wide
                     width: 100%
                 .images
                     pointer-events: none
@@ -95,16 +93,43 @@
                 z-index: 21
                 position: relative
             .details
-                transition: width .25s ease-in-out
-                width: 0
+                transition: transform .25s ease-in-out
+                width: 300px
+                transform: translateX(100%)
                 overflow: hidden
                 background: white
                 height: 100vh
-                position: relative
+                position: absolute
+                right: 0
+                top: 0
                 z-index: 21
                 color: black
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 1rem
+                p
+                    text-align: center
+                    margin-top: 1rem
+                    -webkit-box-orient: vertical
+                    display: -webkit-box
+                    -webkit-line-clamp: 2
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    white-space: pre-line
+                a
+                    color: $primary
+                    text-decoration: underline
+                    &:hover
+                        text-decoration: none
                 &.open
-                    width: 300px
+                    transform: translateX(0)
+    &.dark
+        .img__container
+            .details
+                background: $dark
+                color: white
 
 @media screen and ( max-width: 992px )
     .modal
@@ -113,8 +138,7 @@
                 .item
                     width: calc( 100% - 200px )
                 .details
-                    &.open
-                        width: 200px
+                    width: 200px
 
 @media screen and ( max-width: 768px )
     .modal
@@ -122,7 +146,23 @@
             .img__container
                 .item
                     width: 100%
+                    height: 60vh
+                    &.wide
+                        height: 100vh
                 .details
-                    display: none
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    top: auto
+                    height: 40vh
+                    width: 100%
+                    z-index: 24
+                    transform: translateX(0)
+                    transform: translateY(100%)
+                    overflow-y: auto
                     &.open
-                        width: 200px
+                        width: 100%
+                        transform: translateY(0)
+                    p
+                        display: none
