@@ -67,15 +67,6 @@ const Modal = () => {
         return prev + 1
       }
     })
-    console.log(active)
-    setDetails((prev) => {
-      let arr
-      if (lengthy > 0) arr = objectArray.find((el, index) => index === active)
-      console.log(arr)
-      console.log(prev)
-      if (arr) return arr
-      return prev
-    })
   }
 
   const prev = () => {
@@ -89,16 +80,16 @@ const Modal = () => {
         return prev - 1
       }
     })
-    console.log(active)
+  }
+
+  useEffect(() => {
     setDetails((prev) => {
       let arr
       if (lengthy > 0) arr = objectArray.find((el, index) => index === active)
-      console.log(arr)
-      console.log(prev)
       if (arr) return arr
       return prev
     })
-  }
+  }, [active])
 
   const Arrows = () => {
     return (
@@ -128,8 +119,6 @@ const Modal = () => {
       </>
     )
   }
-
-  console.log(details, active)
 
   return (
     <div
