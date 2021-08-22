@@ -127,6 +127,8 @@ const Modal = () => {
     )
   }
 
+  console.log(details)
+
   return (
     <div
       className={
