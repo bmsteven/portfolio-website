@@ -67,9 +67,12 @@ const Modal = () => {
         return prev + 1
       }
     })
+    console.log(arrIndex)
     setDetails((prev) => {
       let arr
       if (lengthy > 0) arr = objectArray.find((el, index) => index === arrIndex)
+      console.log(arr)
+      console.log(prev)
       if (arr) return arr
       return prev
     })
