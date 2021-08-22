@@ -57,26 +57,20 @@ const Modal = () => {
   }, [open])
 
   const next = () => {
-    let arrIndex
     setActive((prev) => {
       if (prev >= lengthy - 1) {
-        arrIndex = prev
         return prev
       } else {
-        arrIndex = prev + 1
         return prev + 1
       }
     })
   }
 
   const prev = () => {
-    let arrIndex
     setActive((prev) => {
       if (prev === 0) {
-        arrIndex = prev
         return prev
       } else {
-        arrIndex = prev - 1
         return prev - 1
       }
     })
