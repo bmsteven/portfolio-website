@@ -67,10 +67,10 @@ const Modal = () => {
         return prev + 1
       }
     })
-    console.log(arrIndex)
+    console.log(active)
     setDetails((prev) => {
       let arr
-      if (lengthy > 0) arr = objectArray.find((el, index) => index === arrIndex)
+      if (lengthy > 0) arr = objectArray.find((el, index) => index === active)
       console.log(arr)
       console.log(prev)
       if (arr) return arr
@@ -89,10 +89,10 @@ const Modal = () => {
         return prev - 1
       }
     })
-    console.log(arrIndex)
+    console.log(active)
     setDetails((prev) => {
       let arr
-      if (lengthy > 0) arr = objectArray.find((el, index) => index === arrIndex)
+      if (lengthy > 0) arr = objectArray.find((el, index) => index === active)
       console.log(arr)
       console.log(prev)
       if (arr) return arr
