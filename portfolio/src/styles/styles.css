@@ -1856,6 +1856,7 @@ form p a:hover {
 .project-info .project-name h2 {
   font-weight: 500;
   font-size: clamp(1.3rem, 5vw, 0.7rem);
+  text-align: center;
 }
 
 .project-info .categories-showcase {
