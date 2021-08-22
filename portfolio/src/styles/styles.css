@@ -44,6 +44,11 @@ button {
   font-family: 'Saira Semi Condensed', sans-serif;
 }
 
+p {
+  line-height: 25px;
+  font-size: 16px;
+}
+
 .App.darkmode {
   background: #1D2122;
   color: #ffffff;
@@ -1446,6 +1451,7 @@ form p a:hover {
   font-size: 20px;
   color: #08303F;
   font-weight: 400;
+  text-align: left;
 }
 
 .resume.main-content .skills .tools h2 {
@@ -1517,6 +1523,7 @@ form p a:hover {
 .resume.main-content .experience .showcase article h2 {
   font-size: 20px;
   color: #08303F;
+  text-align: left;
 }
 
 .resume.main-content .education .showcase {
@@ -2107,6 +2114,12 @@ form p a:hover {
             order: 1;
     padding: 30px;
   }
+}
+
+.App.darkmode p {
+  color: #C4C4C4;
+  line-height: 25px;
+  font-size: 16px;
 }
 
 .App.darkmode .nav.nav-header {

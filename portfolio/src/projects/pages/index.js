@@ -11,6 +11,7 @@ const Projects = () => {
   const dispatch = useModalDispatch()
   const [keyWord, setKeyWord] = useState("All")
   const [filteredProjects, setFilteredProjects] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const setAll = () => {
     setKeyWord("All")
@@ -43,15 +44,15 @@ const Projects = () => {
   }, [])
 
   useEffect(() => {
+    setLoading(true)
     if (keyWord === "All") {
-      console.log("here2")
       setFilteredProjects(projects)
     } else {
-      console.log("here3")
       setFilteredProjects(
         projects.filter((o) => o.categories.includes(keyWord))
       )
     }
+    setLoading(false)
   }, [keyWord])
 
   return (
@@ -84,84 +85,90 @@ const Projects = () => {
             </li>
           </ul>
         </nav>
-        {filteredProjects?.length > 0 ? (
-          <div className="showcase">
-            {filteredProjects?.map(
-              ({ id, src, name, slug, categories, demo }) => (
-                <article key={id} className="item project-item">
-                  <div className="project">
-                    {src && (
-                      <figure
-                        className="project-image"
-                        onClick={() =>
-                          dispatch({
-                            type: ADD_PROJECTS,
-                            payload: {
-                              list: filteredProjects,
-                              active: id,
-                            },
-                          })
-                        }
-                      >
-                        <img
-                          src={src}
-                          alt={name}
-                          style={{
-                            width: "100%",
-                          }}
-                          loading="lazy"
-                        />
-                      </figure>
-                    )}
-                    <figcaption className="project-info">
-                      <div className="project-name">
-                        <h2>{name}</h2>
-                      </div>
-                      {categories?.length > 0 && (
-                        <div className="categories-showcase">
-                          <div
-                            style={{
-                              display: "none",
-                            }}
-                          >
-                            {
-                              (categories = categories.filter(
-                                (el) => el !== "All"
-                              ))
-                            }
-                          </div>
-                          {categories.map((category, index) => (
-                            <span className="category" key={index}>
-                              #{category}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                      <div className="btns">
-                        <Link
-                          to={`/portfolio/${slug}`}
-                          className="btn btn-secondary"
-                        >
-                          <span>About</span>
-                        </Link>
-                        {demo && (
-                          <a
-                            href={demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Live App
-                          </a>
-                        )}
-                      </div>
-                    </figcaption>
-                  </div>
-                </article>
-              )
-            )}
-          </div>
+        {loading ? (
+          <></>
         ) : (
-          <h2 className="none">No Project Added</h2>
+          <>
+            {filteredProjects?.length > 0 ? (
+              <div className="showcase">
+                {filteredProjects?.map(
+                  ({ id, src, name, slug, categories, demo }) => (
+                    <article key={id} className="item project-item">
+                      <div className="project">
+                        {src && (
+                          <figure
+                            className="project-image"
+                            onClick={() =>
+                              dispatch({
+                                type: ADD_PROJECTS,
+                                payload: {
+                                  list: filteredProjects,
+                                  active: id,
+                                },
+                              })
+                            }
+                          >
+                            <img
+                              src={src}
+                              alt={name}
+                              style={{
+                                width: "100%",
+                              }}
+                              loading="lazy"
+                            />
+                          </figure>
+                        )}
+                        <figcaption className="project-info">
+                          <div className="project-name">
+                            <h2>{name}</h2>
+                          </div>
+                          {categories?.length > 0 && (
+                            <div className="categories-showcase">
+                              <div
+                                style={{
+                                  display: "none",
+                                }}
+                              >
+                                {
+                                  (categories = categories.filter(
+                                    (el) => el !== "All"
+                                  ))
+                                }
+                              </div>
+                              {categories.map((category, index) => (
+                                <span className="category" key={index}>
+                                  #{category}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                          <div className="btns">
+                            <Link
+                              to={`/portfolio/${slug}`}
+                              className="btn btn-secondary"
+                            >
+                              <span>About</span>
+                            </Link>
+                            {demo && (
+                              <a
+                                href={demo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                Live App
+                              </a>
+                            )}
+                          </div>
+                        </figcaption>
+                      </div>
+                    </article>
+                  )
+                )}
+              </div>
+            ) : (
+              <h2 className="none">No Project Added</h2>
+            )}
+          </>
         )}
       </div>
     </main>
