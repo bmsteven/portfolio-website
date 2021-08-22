@@ -83,7 +83,7 @@ const Modal = () => {
       if (arr) return arr
       return prev
     })
-  }, [active])
+  }, [active, lengthy, objectArray])
 
   const Arrows = () => {
     return (
