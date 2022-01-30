@@ -9,7 +9,7 @@ const experiences = [
   },
   {
     id: 2,
-    title: "10+ Projects",
+    title: "15+ Projects",
     icon: <IoIosRocket className="icon" />,
   },
 //   {
