@@ -1,4 +1,8 @@
-import { FaMedal, IoIosRocket, GiPaperWindmill } from "react-icons/all"
+import { 
+  FaMedal, 
+  IoIosRocket, 
+//   GiPaperWindmill
+} from "react-icons/all"
 import ResumeTemplate from "./resume"
 
 const experiences = [
