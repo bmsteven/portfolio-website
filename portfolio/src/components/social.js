@@ -24,7 +24,7 @@ const Social = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub className="icon" /> Github
+                <FaGithub className="icon" />
               </a>
         </li>
         <li>
