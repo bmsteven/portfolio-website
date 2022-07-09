@@ -1,5 +1,5 @@
 import {
-  FaFacebookF,
+  FaGithub,
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
@@ -20,12 +20,12 @@ const Social = () => {
         </li>
         <li>
           <a
-            href="http://facebook.com/profile.php?id=100006234616525"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebookF className="icon" />
-          </a>
+                href="https://github.com/bmsteven"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub className="icon" /> Github
+              </a>
         </li>
         <li>
           <a
