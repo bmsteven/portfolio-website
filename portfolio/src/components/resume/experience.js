@@ -1,14 +1,14 @@
-import { 
-  FaMedal, 
-  IoIosRocket, 
-//   GiPaperWindmill
-} from "react-icons/all"
-import ResumeTemplate from "./resume"
+import {
+  FaMedal,
+  IoIosRocket,
+  //   GiPaperWindmill
+} from "react-icons/all";
+import ResumeTemplate from "./resume";
 
 const experiences = [
   {
     id: 1,
-    title: "3+ years experience",
+    title: "4+ years experience",
     icon: <FaMedal className="icon" />,
   },
   {
@@ -16,12 +16,12 @@ const experiences = [
     title: "15+ Projects",
     icon: <IoIosRocket className="icon" />,
   },
-//   {
-//     id: 3,
-//     title: "Available for freelance",
-//     icon: <GiPaperWindmill className="icon" />,
-//   },
-]
+  //   {
+  //     id: 3,
+  //     title: "Available for freelance",
+  //     icon: <GiPaperWindmill className="icon" />,
+  //   },
+];
 
 const Experience = () => {
   return (
@@ -35,7 +35,7 @@ const Experience = () => {
         ))}
       </div>
     </ResumeTemplate>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

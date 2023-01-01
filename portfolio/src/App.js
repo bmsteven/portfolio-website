@@ -16,10 +16,6 @@ const App = () => {
   const { mode } = useUIState()
   const { open } = useModalState()
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
   return (
     <Route
       render={({ location }) => (

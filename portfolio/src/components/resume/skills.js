@@ -1,13 +1,19 @@
-import { FaCheck, FaCode, AiOutlineAntDesign, IoMdApps } from "react-icons/all"
+import {
+  FaCheck,
+  FaCode,
+  AiOutlineAntDesign,
+  IoMdApps,
+  FaEdit,
+} from "react-icons/all";
 
-import ResumeTemplate from "./resume"
-import tools from "../../data/tools"
+import ResumeTemplate from "./resume";
+import tools from "../../data/tools";
 
 const skills = [
   {
     id: 1,
     title: "Web/App design",
-    icon: <AiOutlineAntDesign className="icon" />,
+    icon: <FaEdit className="icon" />,
   },
   {
     id: 2,
@@ -19,7 +25,7 @@ const skills = [
     title: "Mobile App Development",
     icon: <IoMdApps className="icon" />,
   },
-]
+];
 
 const Skills = () => {
   return (
@@ -45,7 +51,7 @@ const Skills = () => {
         </div>
       </div>
     </ResumeTemplate>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

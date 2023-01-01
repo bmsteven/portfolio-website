@@ -1,19 +1,19 @@
 const experiences = [
   {
     id: 1,
-    title: "3 years experience",
-    icon: "FaMedal"
+    title: "4+ years experience",
+    icon: "FaMedal",
   },
   {
     id: 2,
     title: "15+ Projects",
-    icon: "IoIosRocket"
+    icon: "IoIosRocket",
   },
-//   {
-//     id: 3,
-//     title: "Available for freelance",
-//     icon: "GiPaperWindmill"
-//   }
+  //   {
+  //     id: 3,
+  //     title: "Available for freelance",
+  //     icon: "GiPaperWindmill"
+  //   }
 ];
 
 export default experiences;

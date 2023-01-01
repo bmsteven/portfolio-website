@@ -1,4 +1,9 @@
-import { AiOutlineAntDesign, FaCode, RiQuestionLine } from "react-icons/all"
+import {
+  AiOutlineAntDesign,
+  FaCode,
+  FaEdit,
+  RiQuestionLine,
+} from "react-icons/all";
 
 const services = [
   {
@@ -6,7 +11,7 @@ const services = [
     title: "Web design",
     description:
       "I provide the best and current trending UI/UX designs for the websites that suits the theme of the website",
-    icon: <AiOutlineAntDesign className="icon" />,
+    icon: <FaEdit className="icon" />,
   },
   {
     id: 2,
@@ -22,7 +27,7 @@ const services = [
       "I help startups and small businesses improve their business/services by advising the best way to implement/add value to their products with tech solutions and I develop websites at cheap rates depending on the complexity of work",
     icon: <RiQuestionLine className="icon" />,
   },
-]
+];
 
 const Services = () => {
   return (
@@ -44,7 +49,7 @@ const Services = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

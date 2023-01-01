@@ -1,43 +1,59 @@
 // my portfolio
-import portfolio from "../images/projects/portfolio/portfolio.jpg"
+import portfolio from "../images/projects/portfolio/portfolio.jpg";
 
 // kodemunit
-import kodemunit from "../images/projects/kodemunit/kodemunit.jpg"
+import kodemunit from "../images/projects/kodemunit/kodemunit.jpg";
 
 // eaig
-import EAIG from "../images/projects/eaig/eaig.jpg"
+import EAIG from "../images/projects/eaig/eaig.jpg";
 
 // job-portal
-import portal from "../images/projects/portal/portal.jpg"
+import portal from "../images/projects/portal/portal.jpg";
 
 // job-portal-dashboaed
-import portalDashboard from "../images/projects/portal-dashboard/portal.jpg"
+import portalDashboard from "../images/projects/portal-dashboard/portal.jpg";
 
 // covd19tz
-import covid from "../images/projects/covid/covid.jpg"
+import covid from "../images/projects/covid/covid.jpg";
 
 // ceeptz
-import ceep from "../images/projects/ceep/ceep.jpg"
+import ceep from "../images/projects/ceep/ceep.jpg";
 
 // gramath
-import gramath from "../images/projects/gramath/gramath.jpg"
+import gramath from "../images/projects/gramath/gramath.jpg";
 
 // soz-pns
-import soz from "../images/projects/soz/soz.jpg"
+import soz from "../images/projects/soz/soz.jpg";
+
+// flexbeats
+import flexbeats from "../images/projects/flexbeats/flexbeats.jpg";
 
 // food uber
-import foodUber from "../images/projects/food-uber/food-uber.jpg"
-import fU1 from "../images/projects/food-uber/fu1.png"
-import fU3 from "../images/projects/food-uber/fu3.png"
-import fU4 from "../images/projects/food-uber/fu4.png"
-import fU5 from "../images/projects/food-uber/fu5.png"
-import fU6 from "../images/projects/food-uber/fu6.png"
-import fU7 from "../images/projects/food-uber/fu7.png"
-import fU2 from "../images/projects/food-uber/fu2.png"
+import foodUber from "../images/projects/food-uber/food-uber.jpg";
+import fU1 from "../images/projects/food-uber/fu1.png";
+import fU3 from "../images/projects/food-uber/fu3.png";
+import fU4 from "../images/projects/food-uber/fu4.png";
+import fU5 from "../images/projects/food-uber/fu5.png";
+import fU6 from "../images/projects/food-uber/fu6.png";
+import fU7 from "../images/projects/food-uber/fu7.png";
+import fU2 from "../images/projects/food-uber/fu2.png";
 
 const projects = [
   {
     id: 1,
+    name: "Flexbeats",
+    slug: "flexbeats",
+    src: flexbeats,
+    source: "",
+    categories: ["Web", "All"],
+    about: "A marketplace to buy and sell beats",
+    demo: "http://flexbeats.studio",
+    tools: ["HTML", "CSS", "SASS", "React", "Nodejs", "NestJs", "GraphQL"],
+    roles: ["FrontEnd Developer", "Project lead"],
+    gallery: [],
+  },
+  {
+    id: 2,
     name: "Kodemunit",
     slug: "kodemunit",
     src: kodemunit,
@@ -51,7 +67,7 @@ const projects = [
     gallery: [],
   },
   {
-    id: 2,
+    id: 3,
     name: "CEEPTz",
     slug: "ceeptz",
     src: ceep,
@@ -91,7 +107,7 @@ const projects = [
     gallery: [],
   },
   {
-    id: 7,
+    id: 6,
     name: "My Portfolio",
     slug: "bm-dev",
     src: portfolio,
@@ -104,7 +120,7 @@ const projects = [
     gallery: [],
   },
   {
-    id: 8,
+    id: 7,
     name: "JobPortal",
     slug: "job-portal",
     src: portal,
@@ -128,7 +144,7 @@ const projects = [
     gallery: [],
   },
   {
-    id: 9,
+    id: 8,
     name: "JobPortal Dashboard",
     slug: "job-portal-dashboard",
     src: portalDashboard,
@@ -152,7 +168,7 @@ const projects = [
     gallery: [],
   },
   {
-    id: 10,
+    id: 9,
     name: "Food Uber App",
     slug: "food-uber-app",
     src: foodUber,
@@ -165,30 +181,30 @@ const projects = [
     roles: ["UI Designer", "Frontend Developer", "Backend Developer"],
     gallery: [fU1, fU2, fU3, fU4, fU5, fU6, fU7],
   },
-  {
-    id: 11,
-    name: "Soz PNS",
-    slug: "soz-pns",
-    src: soz,
-    categories: ["Design", "Web", "All"],
-    about: "Music App",
-    demo: "http://sozthegovt.netlify.app",
-    tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js"],
-    roles: ["UI/UX Designer", "Developer"],
-    gallery: [],
-  },
-  {
-    id: 12,
-    name: "EAIG",
-    slug: "eaig",
-    src: EAIG,
-    categories: ["Design", "All"],
-    about: "Landing page",
-    // demo: "http://sozthegovt.netlify.app",
-    tools: ["Figma"],
-    roles: ["UI Designer"],
-    gallery: [],
-  },
-]
+  // {
+  //   id: 10,
+  //   name: "Soz PNS",
+  //   slug: "soz-pns",
+  //   src: soz,
+  //   categories: ["Design", "Web", "All"],
+  //   about: "Music App",
+  //   demo: "http://sozthegovt.netlify.app",
+  //   tools: ["Figma", "HTML", "CSS", "SASS", "JavaScript", "React js"],
+  //   roles: ["UI/UX Designer", "Developer"],
+  //   gallery: [],
+  // },
+  // {
+  //   id: 11,
+  //   name: "EAIG",
+  //   slug: "eaig",
+  //   src: EAIG,
+  //   categories: ["Design", "All"],
+  //   about: "Landing page",
+  //   // demo: "http://sozthegovt.netlify.app",
+  //   tools: ["Figma"],
+  //   roles: ["UI Designer"],
+  //   gallery: [],
+  // },
+];
 
-export default projects
+export default projects;

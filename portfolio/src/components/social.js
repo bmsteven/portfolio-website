@@ -3,7 +3,7 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedinIn,
-} from "react-icons/all"
+} from "react-icons/all";
 
 const Social = () => {
   return (
@@ -14,24 +14,27 @@ const Social = () => {
             href="https://linkedin.com/in/benedict-steven/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Linkedin"
           >
             <FaLinkedinIn className="icon" />
           </a>
         </li>
         <li>
           <a
-                href="https://github.com/bmsteven"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="icon" />
-              </a>
+            href="https://github.com/bmsteven"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Github"
+          >
+            <FaGithub className="icon" />
+          </a>
         </li>
         <li>
           <a
             href="https://twitter.com/bmsteven_"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
           >
             <FaTwitter className="icon" />
           </a>
@@ -41,13 +44,14 @@ const Social = () => {
             href="https://instagram.com/bmsteven_"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <FaInstagram className="icon" />
           </a>
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Social
+export default Social;

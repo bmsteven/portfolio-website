@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react"
-import { useModalState, useModalDispatch, REMOVE_ARRAY } from "context/modal"
-import { Link } from "react-router-dom"
-import { FaAngleLeft, FaAngleRight, FaTimes } from "react-icons/fa"
-import { useUIState } from "context/context"
-import styles from "./modal.module.css"
+import { useEffect, useState } from "react";
+import { useModalState, useModalDispatch, REMOVE_ARRAY } from "context/modal";
+import { Link } from "react-router-dom";
+import { FaAngleLeft, FaAngleRight, FaTimes } from "react-icons/fa";
+import { useUIState } from "context/context";
+import styles from "./modal.module.css";
 
 const Modal = () => {
-  const { project, projects, gallery, open } = useModalState()
+  const { project, projects, gallery, open } = useModalState();
   let lengthy = projects?.active
     ? projects?.list?.length
     : gallery?.active === 0 || gallery?.active
     ? gallery?.list?.length
-    : 0
+    : 0;
 
   let objectArray = projects?.active
     ? projects?.list
     : gallery?.active === 0 || gallery.active
     ? gallery?.list
-    : 0
+    : 0;
   const [details, setDetails] = useState(
     projects?.active
       ? projects?.list.find((el) => el.id === projects.active)
@@ -28,62 +28,79 @@ const Modal = () => {
       : project?.id
       ? project
       : {}
-  )
+  );
   const [active, setActive] = useState(
     projects?.active
       ? projects?.list?.findIndex((el) => el.id === projects.active)
       : gallery?.active
       ? gallery.active
       : 0
-  )
-  const [isOpen, setIsOpen] = useState(true)
-  const { mode } = useUIState()
-  const dispatch = useModalDispatch()
+  );
+  const [isOpen, setIsOpen] = useState(true);
+  const { mode } = useUIState();
+  const dispatch = useModalDispatch();
 
   const close = () => {
     dispatch({
       type: REMOVE_ARRAY,
-    })
-    setDetails({})
-    document.body.classList.remove("no-scrolling")
-  }
+    });
+    setDetails({});
+    document.body.classList.remove("no-scrolling");
+  };
 
   const toggleOpen = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen((prev) => setIsOpen(!prev));
+  };
 
   useEffect(() => {
-    if (open) document.body.classList.add("no-scrolling")
-  }, [open])
+    if (open) document.body.classList.add("no-scrolling");
+  }, [open]);
 
   const next = () => {
     setActive((prev) => {
       if (prev >= lengthy - 1) {
-        return prev
+        return prev;
       } else {
-        return prev + 1
+        return prev + 1;
       }
-    })
-  }
+    });
+  };
 
   const prev = () => {
     setActive((prev) => {
       if (prev === 0) {
-        return prev
+        return prev;
       } else {
-        return prev - 1
+        return prev - 1;
       }
-    })
-  }
+    });
+  };
 
   useEffect(() => {
     setDetails((prev) => {
-      let arr
-      if (lengthy > 0) arr = objectArray.find((el, index) => index === active)
-      if (arr) return arr
-      return prev
-    })
-  }, [active, lengthy, objectArray])
+      let arr;
+      if (lengthy > 0) arr = objectArray.find((el, index) => index === active);
+      if (arr) return arr;
+      return prev;
+    });
+  }, [active, lengthy, objectArray]);
+
+  const keydown = (e) => {
+    if (e.key === "Escape") return close();
+
+    if (e.key === "ArrowLeft") return prev();
+
+    if (e.key === "ArrowRight") return next();
+
+    if (e.key === "m" || e.key === "M") return setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", keydown, false);
+    return () => {
+      document.removeEventListener("keydown", keydown, false);
+    };
+  }, []);
 
   const Arrows = () => {
     return (
@@ -111,8 +128,8 @@ const Modal = () => {
           <FaAngleLeft className={styles.icon} />
         </span>
       </>
-    )
-  }
+    );
+  };
 
   return (
     <div
@@ -251,7 +268,7 @@ const Modal = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;
