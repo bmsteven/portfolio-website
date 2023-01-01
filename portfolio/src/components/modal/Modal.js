@@ -92,7 +92,7 @@ const Modal = () => {
 
     if (e.key === "ArrowRight") return next();
 
-    if (e.key === "m" || e.key === "M") return setIsOpen(!isOpen);
+    if (e.key === "m" || e.key === "M") return toggleOpen();
   };
 
   useEffect(() => {

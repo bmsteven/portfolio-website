@@ -1,10 +1,4 @@
-import {
-  FaCheck,
-  FaCode,
-  AiOutlineAntDesign,
-  IoMdApps,
-  FaEdit,
-} from "react-icons/all";
+import { FaCheck, FaCode, IoMdApps, FaEdit } from "react-icons/all";
 
 import ResumeTemplate from "./resume";
 import tools from "../../data/tools";

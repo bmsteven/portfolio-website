@@ -1,60 +1,60 @@
-import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
-import projects from "../../data/projects"
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import projects from "../../data/projects";
 import {
   useModalDispatch,
   ADD_PROJECTS,
   REMOVE_ARRAY,
-} from "../../context/modal"
+} from "../../context/modal";
 
 const Projects = () => {
-  const dispatch = useModalDispatch()
-  const [keyWord, setKeyWord] = useState("All")
-  const [filteredProjects, setFilteredProjects] = useState([])
-  const [loading, setLoading] = useState(true)
+  const dispatch = useModalDispatch();
+  const [keyWord, setKeyWord] = useState("All");
+  const [filteredProjects, setFilteredProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const setAll = () => {
-    setKeyWord("All")
-  }
+    setKeyWord("All");
+  };
 
   const setWeb = () => {
-    setKeyWord("Web")
-  }
+    setKeyWord("Web");
+  };
 
   const setDesign = () => {
-    setKeyWord("Design")
-  }
+    setKeyWord("Design");
+  };
 
   const setOthers = () => {
-    setKeyWord("Others")
-  }
+    setKeyWord("Others");
+  };
 
   useEffect(() => {
-    document.title = "Project Collections - Benedict's Portfolio "
-  }, [])
+    document.title = "Project Collections - Benedict's Portfolio ";
+  }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     dispatch({
       type: REMOVE_ARRAY,
-    })
-    document.body.classList.remove("no-scrolling")
-  }, [dispatch])
+    });
+    document.body.classList.remove("no-scrolling");
+  }, [dispatch]);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     if (keyWord === "All") {
-      setFilteredProjects(projects)
+      setFilteredProjects(projects);
     } else {
       setFilteredProjects(
         projects.filter((o) => o.categories.includes(keyWord))
-      )
+      );
     }
-    setLoading(false)
-  }, [keyWord])
+    setLoading(false);
+  }, [keyWord]);
 
   return (
     <main className="projects-content">
@@ -173,7 +173,7 @@ const Projects = () => {
         )}
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

@@ -1,9 +1,4 @@
-import {
-  AiOutlineAntDesign,
-  FaCode,
-  FaEdit,
-  RiQuestionLine,
-} from "react-icons/all";
+import { FaCode, FaEdit, RiQuestionLine } from "react-icons/all";
 
 const services = [
   {

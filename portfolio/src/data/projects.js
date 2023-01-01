@@ -4,9 +4,6 @@ import portfolio from "../images/projects/portfolio/portfolio.jpg";
 // kodemunit
 import kodemunit from "../images/projects/kodemunit/kodemunit.jpg";
 
-// eaig
-import EAIG from "../images/projects/eaig/eaig.jpg";
-
 // job-portal
 import portal from "../images/projects/portal/portal.jpg";
 
@@ -21,9 +18,6 @@ import ceep from "../images/projects/ceep/ceep.jpg";
 
 // gramath
 import gramath from "../images/projects/gramath/gramath.jpg";
-
-// soz-pns
-import soz from "../images/projects/soz/soz.jpg";
 
 // flexbeats
 import flexbeats from "../images/projects/flexbeats/flexbeats.jpg";
