@@ -1790,8 +1790,8 @@ form p a:hover {
   padding-bottom: 2em;
   -webkit-column-gap: 1em;
           column-gap: 1em;
-  -webkit-column-fill: auto;
-          column-fill: auto;
+/*  -webkit-column-fill: auto;
+          column-fill: auto; */
 }
 
 .projects-content .container .showcase article.item, .projects-content .container .gallery article.item {
