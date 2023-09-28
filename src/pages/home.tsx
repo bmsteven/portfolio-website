@@ -1,6 +1,5 @@
 import { useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-// @ts-ignore
 import Typed from "typed.js";
 
 //components
@@ -38,10 +37,12 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const typed = new Typed("#text", options);
-    return () => {
-      typed.destroy();
-    };
+    if (document.getElementById("#text")) {
+      const typed = new Typed("#text", options);
+      return () => {
+        typed.destroy();
+      };
+    }
   }, [options]);
 
   return (
@@ -50,6 +51,7 @@ const Home = () => {
         <div className="container">
           <h1 className="span">Hello, I'm Benedict Steven</h1>
           <h2 className="typing header">
+            {/* million-ignore */}
             <span id="text"></span>
           </h2>
           <p>
