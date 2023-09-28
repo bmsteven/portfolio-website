@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     million.vite({
       auto: {
-        threshold: 1,
+        threshold: 0.1,
         skip: ["Nav", "Hobbies", "Skills"],
       },
     }),

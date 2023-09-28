@@ -37,7 +37,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (document.getElementById("#text")) {
+    if (document.getElementById("text")) {
       const typed = new Typed("#text", options);
       return () => {
         typed.destroy();
