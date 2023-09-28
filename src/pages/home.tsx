@@ -1,11 +1,12 @@
-import { useEffect, useMemo } from "react"
-import { Link } from "react-router-dom"
-import Typed from "typed.js"
+import { useEffect, useMemo } from "react";
+import { Link } from "react-router-dom";
+// @ts-ignore
+import Typed from "typed.js";
 
 //components
-import Header from "../components/header"
-import Social from "../components/social"
-import Footer from "../components/footer"
+import Header from "../components/header";
+import Social from "../components/social";
+import Footer from "../components/footer";
 
 const Home = () => {
   const words = useMemo(() => {
@@ -15,8 +16,8 @@ const Home = () => {
       "Water Engineer",
       "Learner",
       "Awesome Dude",
-    ]
-  }, [])
+    ];
+  }, []);
 
   const options = useMemo(() => {
     return {
@@ -25,23 +26,23 @@ const Home = () => {
       backSpeed: 50,
       loop: true,
       cursorChar: "|",
-    }
-  }, [words])
+    };
+  }, [words]);
 
   useEffect(() => {
-    document.title = "Benedict's Portfolio"
-  }, [])
+    document.title = "Benedict's Portfolio";
+  }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
-    const typed = new Typed("#text", options)
+    const typed = new Typed("#text", options);
     return () => {
-      typed.destroy()
-    }
-  }, [options])
+      typed.destroy();
+    };
+  }, [options]);
 
   return (
     <div className="home-page">
@@ -63,7 +64,7 @@ const Home = () => {
       <Social />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

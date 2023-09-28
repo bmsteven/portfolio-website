@@ -43,7 +43,7 @@ const ModalContext = createContext<ModalState>({
   project: {},
 });
 const ModalDispatch = createContext<Dispatch<ModalAction>>(
-  (action: ModalAction) => {}
+  () => {}
 );
 
 const reducer = (state: ModalState, action: ModalAction): ModalState => {

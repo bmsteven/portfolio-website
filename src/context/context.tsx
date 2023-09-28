@@ -22,7 +22,7 @@ type UiAction = { type: typeof LIGHTMODE } | { type: typeof DARKMODE };
 const UiContext = createContext<UiState>({
   mode: defaultMode ?? "dark",
 });
-const UiDispatch = createContext<Dispatch<UiAction>>((action: UiAction) => {});
+const UiDispatch = createContext<Dispatch<UiAction>>(() => {});
 
 const reducer = (state: UiState, action: UiAction): UiState => {
   const { type } = action;
