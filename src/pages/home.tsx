@@ -37,12 +37,10 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    if (document.getElementById("text")) {
-      const typed = new Typed("#text", options);
-      return () => {
-        typed.destroy();
-      };
-    }
+    const typed = new Typed("#text", options);
+    return () => {
+      typed.destroy();
+    };
   }, [options]);
 
   return (
@@ -51,8 +49,7 @@ const Home = () => {
         <div className="container">
           <h1 className="span">Hello, I'm Benedict Steven</h1>
           <h2 className="typing header">
-            {/* million-ignore */}
-            <span id="text"></span>
+            <span id={"text"}></span>
           </h2>
           <p>
             Create unique and innovative websites, webapps and mobileapps with
