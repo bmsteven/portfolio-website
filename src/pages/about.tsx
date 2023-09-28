@@ -31,12 +31,6 @@ const About = () => {
             web development. Nothing compares to the feeling of creating
             something from nothing.
           </p>
-          {/* <p>
-             I am currently available for any small freelance projects, as well
-             as full time positions as a web designer or developer. Please
-             contact me using the form in contact page or using the social media
-             links.
-           </p>*/}
         </div>
       </Header>
       <main className="main-content">
