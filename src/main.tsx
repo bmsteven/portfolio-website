@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import UiProvider from "./context/context";
 import ModalProvider from "./context/modal";
 import Loader from "./components/loader/Loader";
-import App from "./App.tsx";
+import App from "./App1.tsx";
 
 ReactDOM.createRoot(document.getElementById("app")!).render(
   <StrictMode>
