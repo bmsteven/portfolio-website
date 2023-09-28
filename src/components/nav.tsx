@@ -11,6 +11,7 @@ import {
   DARKMODE,
 } from "../context/context";
 import { FC, useState } from "react";
+// import { For } from "million/react";
 
 interface NavProps {
   routes: Array<{
@@ -74,6 +75,26 @@ const Nav: FC<NavProps> = ({ routes, navProps }) => {
           <div className="burger close-menu" onClick={closeMenu}>
             <IoMdClose />
           </div>
+
+          {/* <For each={routes} as="ul" ssr={false}>
+            {(prop, key) => (
+              <li
+                key={key}
+                className={navOpen ? `navlink navlink-${prop.id}` : ""}
+              >
+                <Link
+                  to={prop.path}
+                  className={
+                    activeRoute(prop.path) + (prop.pro ? " active" : "")
+                  }
+                  onClick={closeMenu}
+                >
+                  {prop.name}
+                </Link>
+              </li>
+            )}
+          </For> */}
+          {/* million-ignore */}
           <ul>
             {routes.map((prop, key) => {
               return (
