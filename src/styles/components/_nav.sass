@@ -1,8 +1,9 @@
 .nav
     height: 70px
     width: 100%
-    z-index: 19
+    z-index: 190000
     transition: .3s ease-in-out
+    position: relative
     li
         list-style: none
     &.nav-header
@@ -10,10 +11,12 @@
         background: $white
         box-shadow: 4px 4px 4px rgba(0,0,0,.1)
     &.nav__sticky
-        // position: sticky
-        // top: 0
-        // background: $white
-        // box-shadow: 4px 4px 4px rgba(0,0,0,.1)
+        position: sticky
+        top: 0
+        background: $white
+        box-shadow: 4px 4px 4px rgba(0,0,0,.1)
+    &.nav__static
+        height: 100px !important
     .container
         height: 100%
         max-width: 1400px
@@ -29,8 +32,6 @@
             right: 15%
             cursor: pointer
             color: $dark-icon
-            // .icon-dark
-            //     color: $dark
         .burger
             font-size: 30px
             cursor: pointer
@@ -130,7 +131,7 @@
                     li
                         min-width: 0
                         height: 100%
-                        margin-left: 25px
+                        margin-left: 15px
                         margin-bottom: 0
                         a
                             color: $link-bg
@@ -145,9 +146,22 @@
                             transition: .3s
                             box-shadow: none
                             clip-path: none
+                            position: relative
+                            &::before
+                                content: ""
+                                position: absolute
+                                left: 0
+                                top: 0
+                                height: 2px
+                                width: 0
+                                background: $darker
+                                transition: .2s
                             &.active
                                 color: $black
-                                font-weight: 700
+                                font-weight: 900
+                                &::before
+                                    width: 50%
+
                             &:hover
                                 background: none
                                 color: $black
@@ -159,22 +173,21 @@
 @media screen and ( min-width: 992px )
     .nav
         &.nav__static
+            height: 100px !important
             .container
-                justify-content: flex-end
+                justify-content: flex-between
+                align-items: center
                 .logo
-                    position: absolute
-                    top: 80px
-                    left: 7.5%
                     a
                         img
-                            height: 70px
+                            height: 60px
         .container
             .change-mode
                 right: 3%
             nav
                 ul
                     li
-                        margin-left: 50px
+                        margin-left: 30px
                         a
                             font-size: 18px
                         &:nth-child(even)

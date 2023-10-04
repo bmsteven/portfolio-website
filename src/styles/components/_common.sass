@@ -4,8 +4,9 @@
     margin: 0
     padding: 0
     box-sizing: border-box
+    font-family: 'Poppins', sans-serif
 
-body
+body, html
     // overflow-x: hidden
     width: 100%
     height: 100vh
@@ -22,6 +23,9 @@ body, html
 a
     text-decoration: none
 
+#app
+    height: 100%
+
 //focus
 input:focus, select:focus, textarea:focus, button:focus
     outline: none !important
@@ -32,10 +36,11 @@ button
     cursor: pointer
 
 .App
+    height: 100%
     background: $white
     color: $black
     transition: all .4s
-    font-family: 'Saira Semi Condensed', sans-serif
+    font-family: 'Poppins', sans-serif
 
 p
     line-height: 25px
@@ -159,16 +164,15 @@ main.main-content
 
 .social-media-container
     position: fixed
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, .25)
     left: 0
     bottom: 0
-    min-height: 50vh
+    min-height: 100vh
     z-index: 18
-    width: 40px
+    width: 60px
     display: flex
     justify-content: center
     align-items: center
-    background: $darker
+    background: $white
     ul
         display: flex
         flex-direction: column
@@ -176,12 +180,14 @@ main.main-content
             margin: 10px 0
             list-style: none
             a
-                color: $white
-                font-size: 14px
+                color: $darker
+                font-size: 18px
                 &:hover
                     color: $primary
 
 .home-page
+    height: 100%
+    // min-height: 100vh
     footer
         position: absolute
         bottom: 0px

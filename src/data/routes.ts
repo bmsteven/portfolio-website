@@ -1,29 +1,29 @@
 const routes = [
   {
     id: 1,
-    name: "Home",
+    name: "home",
     path: "/home",
   },
   {
     id: 2,
-    name: "About",
+    name: "about",
     path: "/about",
   },
   {
     id: 3,
-    name: "Resume",
+    name: "resume",
     path: "/resume",
   },
   {
     id: 4,
-    name: "Portfolio",
+    name: "portfolio",
     path: "/portfolio",
   },
   {
     id: 5,
-    name: "Contact",
+    name: "contact",
     path: "/contact",
   },
-]
+];
 
-export default routes
+export default routes;

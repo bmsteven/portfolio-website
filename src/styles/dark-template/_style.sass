@@ -116,6 +116,15 @@
                                 .icon
                                     color: $link-color
 
+    .social-media-container
+        background: $dark
+        ul
+            li
+                a
+                    color: $white
+                    &:hover
+                        color: $primary
+
 @media screen and ( max-width: 768px )
     .App.darkmode
         .admin-content
@@ -155,6 +164,21 @@
                                 color: $link-color
                                 &:hover
                                     color: $white
+                                &.active
+                                    &::before
+                                        background: $white
+        .page-header
+            .nav
+                .container
+                    nav
+                        li
+                            a
+                                color: $darker
+                                &.active, &:hover
+                                    color: $darker
+                                &.active
+                                    &::before
+                                        background: $darker
 
 @media screen and ( min-width: 992px )
     .App.darkmode

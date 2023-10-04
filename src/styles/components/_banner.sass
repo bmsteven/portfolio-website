@@ -1,10 +1,11 @@
 .banner
-    min-height: calc( 100vh - 70px )
+    min-height: calc(100vh - 100vh)
     max-height: 900px
     max-width: 100%
     overflow-x: hidden
     display: flex
     position: relative
+    top: -100px
     .content
         background: $dark
         z-index: 5
@@ -12,12 +13,13 @@
         top: calc( 50% - 25px )
         width: 100%
         transform: translateY(-50%)
-        min-height: 70% 
+        min-height: 70%
         display: flex
         align-items: flex-start
         flex-direction: column
         justify-content: center
         color: $white
+        background: url(../images/logo.png)
         .container
             height: 100%
             width: 100%
@@ -51,14 +53,13 @@
                 line-height: 28px
                 color: $link-color
 
-
     .hero-bg
         overflow-x: hidden
         overflow-y: hidden
         position: absolute
         right: 0
         top: 0
-        width: 40%
+        width: 60%
         height: calc( 100% - 50px )
         img
             height: 100%
@@ -76,17 +77,16 @@
             .container
                 width: 90%
                 margin: auto
-                padding: 30px 0 
+                padding: 30px 0
                 h1
                     font-size: 30px
                 p
                     font-size: 16px
                     line-height: 25px
 
-
 @media screen and ( min-width: 768px )
     .banner
-        min-height: calc( 100vh - 70px )
+        min-height: 100vh
         display: flex
         position: relative
         .content
@@ -95,7 +95,7 @@
             left: 0
             width: 60%
             transform: translateY(calc( -28.5% ))
-            min-height: calc( 70% ) 
+            min-height: calc( 70% )
             .container
                 padding-left: 60px
                 h1
@@ -106,24 +106,24 @@
                 .btn
                     align-self: flex-end
         .hero-bg
-            width: 45%
-            height: calc( 80% - 50px )
+            width: 58%
+            height: calc( 70% - 50px )
 
     .about-header
         .banner
-            min-height: 700px
-            height: 100vh
-            max-height: 700px
+            min-height: 900px
+            // height: 100vh
+            max-height: 900px
             .content
                 position: relative
-                top: 100px
+                top: 300px
                 width: 70%
                 // transform: translateY(20%)
-                min-height: 70%
+                min-height: 100%
                 .container
                     width: 80%
                     margin: auto
-                    padding: 30px 0 
+                    padding: 30px 0
                     h1
                         font-size: 30px
                     p

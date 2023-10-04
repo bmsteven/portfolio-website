@@ -40,7 +40,13 @@ const Header: FC<HeaderProps> = ({ children, headerClass, ...rest }) => {
   });
 
   return (
-    <header ref={ref} className={`page-header ${headerClass}`}>
+    <header
+      ref={ref}
+      className={`page-header ${headerClass}`}
+      style={{
+        height: "100%",
+      }}
+    >
       <Nav
         {...rest}
         routes={routes}
